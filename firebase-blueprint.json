@@ -1,0 +1,42 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "User Profile",
+      "description": "Stores user information and branding preferences.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "The unique user ID from Firebase Auth." },
+        "displayName": { "type": "string", "description": "The user's display name." },
+        "email": { "type": "string", "description": "The user's email address." },
+        "photoURL": { "type": "string", "description": "The user's photo URL." },
+        "createdAt": { "type": "string", "format": "date-time", "description": "When the profile was created." }
+      },
+      "required": ["uid", "email"]
+    },
+    "BrandProject": {
+      "title": "Brand Project",
+      "description": "Stores a complete branding project for a user.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "The owner's user ID." },
+        "input": { "type": "object", "description": "The initial brand input data." },
+        "strategy": { "type": "object", "description": "The generated brand strategy." },
+        "logoCandidates": { "type": "array", "items": { "type": "object" }, "description": "The generated logo candidates." },
+        "activeTemplate": { "type": "string", "description": "The currently active template." },
+        "createdAt": { "type": "string", "format": "date-time", "description": "When the project was created." },
+        "updatedAt": { "type": "string", "format": "date-time", "description": "When the project was last updated." }
+      },
+      "required": ["uid", "input", "strategy"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profile data."
+    },
+    "/projects/{projectId}": {
+      "schema": "BrandProject",
+      "description": "Branding project data."
+    }
+  }
+}

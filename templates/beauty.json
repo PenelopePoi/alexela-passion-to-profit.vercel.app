@@ -1,0 +1,20 @@
+{
+  "companyName": "",
+  "ownerName": "",
+  "businessSuffix": "LLC",
+  "industry": "Hair Salon / Barber / Spa",
+  "services": [
+    "Haircuts & Styling",
+    "Color & Highlights",
+    "Blowouts & Treatments",
+    "Facials & Skincare",
+    "Nail Services"
+  ],
+  "vibe": "Modern & Elegant",
+  "location": "Florida, USA",
+  "audience": "Style-conscious adults seeking a premium self-care experience",
+  "additionalNotes": "Our salon offers a luxury experience at accessible prices. We stay current with the latest trends and techniques, and our stylists are trained in humidity-friendly styles perfect for the Florida climate.",
+  "yearsExperience": "",
+  "qrPreference": "booking",
+  "selectedTier": "premium"
+}

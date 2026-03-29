@@ -1,0 +1,20 @@
+{
+  "companyName": "",
+  "ownerName": "",
+  "businessSuffix": "LLC",
+  "industry": "Cleaning Service",
+  "services": [
+    "Residential Cleaning",
+    "Commercial Cleaning",
+    "Pressure Washing",
+    "Move-In / Move-Out Cleaning",
+    "Post-Construction Cleanup"
+  ],
+  "vibe": "Clean & Reliable",
+  "location": "Florida, USA",
+  "audience": "Homeowners, property managers, businesses, and Airbnb hosts needing consistent turnovers",
+  "additionalNotes": "Fully insured and bonded cleaning professionals serving the Florida market. We use eco-friendly products safe for families and pets, and offer flexible scheduling including same-day availability for urgent cleanings.",
+  "yearsExperience": "",
+  "qrPreference": "booking",
+  "selectedTier": "premium"
+}

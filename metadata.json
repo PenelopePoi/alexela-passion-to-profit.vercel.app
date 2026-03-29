@@ -1,0 +1,7 @@
+{
+  "name": "Xela | Elite AI Creative Studio",
+  "description": "Xela is your elite AI creative consultant, delivering high-conversion, emotionally impactful, and legally compliant branding packages for the modern entrepreneur. Precision-engineered for the Florida market and beyond.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
