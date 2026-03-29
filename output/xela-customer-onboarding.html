@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xela Elite — Client Onboarding Package</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  @page { size: letter; margin: 0.6in; }
+  @media print {
+    .no-print { display: none !important; }
+    .page-break { page-break-before: always; }
+    body { font-size: 11pt; }
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Outfit', sans-serif;
+    color: #111;
+    line-height: 1.5;
+    background: #f8f7f4;
+    padding: 0.5in;
+  }
+
+  .page {
+    max-width: 8.5in;
+    margin: 0 auto 0.4in;
+    background: white;
+    padding: 0.6in;
+    border: 1px solid #e0ddd8;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 3px solid #111;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+  }
+  .header h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28pt;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+  .header .subtitle {
+    font-size: 10pt;
+    color: #666;
+    margin-top: 2px;
+  }
+  .header .logo-area {
+    text-align: right;
+    font-size: 9pt;
+    color: #999;
+  }
+  .header .logo-area .x {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36pt;
+    font-weight: 700;
+    color: #00E0C6;
+    line-height: 1;
+  }
+
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16pt;
+    font-weight: 600;
+    margin: 24px 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 1.5px solid #00E0C6;
+    color: #111;
+  }
+
+  h3 {
+    font-size: 11pt;
+    font-weight: 600;
+    margin: 16px 0 6px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .field {
+    margin-bottom: 14px;
+  }
+  .field label {
+    display: block;
+    font-size: 9pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #666;
+    margin-bottom: 4px;
+  }
+  .field .line {
+    border-bottom: 1.5px solid #ddd;
+    min-height: 28px;
+    padding: 4px 0;
+    font-size: 11pt;
+  }
+  .field .line-tall {
+    border-bottom: 1.5px solid #ddd;
+    min-height: 60px;
+    padding: 4px 0;
+    font-size: 11pt;
+  }
+  .field .line-xl {
+    border: 1.5px solid #ddd;
+    border-radius: 4px;
+    min-height: 100px;
+    padding: 8px;
+    font-size: 10pt;
+  }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .three-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+  }
+
+  .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 8px 0;
+  }
+  .checkbox-group .option {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10pt;
+    padding: 4px 12px;
+    border: 1.5px solid #ddd;
+    border-radius: 16px;
+    cursor: pointer;
+  }
+  .checkbox-group .option input { margin: 0; }
+
+  .tier-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin: 16px 0;
+  }
+  .tier-card {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+  }
+  .tier-card.recommended { border-color: #00E0C6; background: #f0fdfb; }
+  .tier-card h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14pt;
+    margin-bottom: 4px;
+  }
+  .tier-card .price {
+    font-size: 20pt;
+    font-weight: 700;
+    color: #111;
+    margin: 8px 0;
+  }
+  .tier-card ul {
+    text-align: left;
+    font-size: 9pt;
+    list-style: none;
+    padding: 0;
+  }
+  .tier-card ul li { padding: 3px 0; }
+  .tier-card ul li::before { content: "✓ "; color: #00E0C6; font-weight: 700; }
+  .tier-card .select-box {
+    margin-top: 12px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #111;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .note {
+    font-size: 8.5pt;
+    color: #999;
+    font-style: italic;
+    margin-top: 4px;
+  }
+
+  .signature-area {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 24px;
+    margin-top: 32px;
+    align-items: end;
+  }
+  .sig-line {
+    border-bottom: 1.5px solid #111;
+    min-height: 40px;
+  }
+  .sig-label {
+    font-size: 8.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #666;
+    margin-top: 4px;
+  }
+  .sig-date { text-align: center; }
+
+  .footer {
+    margin-top: 32px;
+    padding-top: 12px;
+    border-top: 1px solid #eee;
+    font-size: 8pt;
+    color: #aaa;
+    text-align: center;
+  }
+
+  .print-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #111;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 14px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    z-index: 999;
+  }
+  .print-btn:hover { background: #00E0C6; color: #111; }
+</style>
+</head>
+<body>
+
+<button class="print-btn no-print" onclick="window.print()">Print / Save as PDF</button>
+
+<!-- PAGE 1: Business Foundation -->
+<div class="page">
+  <div class="header">
+    <div>
+      <h1>Client Onboarding</h1>
+      <div class="subtitle">Xela | Elite AI Creative Studio — Faith-Driven Branding</div>
+    </div>
+    <div class="logo-area">
+      <div class="x">X</div>
+      xela.studio
+    </div>
+  </div>
+
+  <h2>1. Business Foundation</h2>
+
+  <div class="two-col">
+    <div class="field">
+      <label>Company / Business Name</label>
+      <div class="line"></div>
+    </div>
+    <div class="field">
+      <label>Owner / Founder Name</label>
+      <div class="line"></div>
+    </div>
+  </div>
+
+  <div class="three-col">
+    <div class="field">
+      <label>Business Structure</label>
+      <div class="checkbox-group">
+        <span class="option"><input type="checkbox"> LLC</span>
+        <span class="option"><input type="checkbox"> Inc</span>
+        <span class="option"><input type="checkbox"> Sole Prop</span>
+        <span class="option"><input type="checkbox"> PLLC</span>
+        <span class="option"><input type="checkbox"> Other</span>
+      </div>
+    </div>
+    <div class="field">
+      <label>Years in Business</label>
+      <div class="line"></div>
+    </div>
+    <div class="field">
+      <label>Location (City, State)</label>
+      <div class="line"></div>
+    </div>
+  </div>
+
+  <div class="field">
+    <label>Industry / Business Type</label>
+    <div class="line"></div>
+  </div>
+
+  <div class="field">
+    <label>Services You Offer (list your top 3-5)</label>
+    <div class="line-tall"></div>
+  </div>
+
+  <div class="field">
+    <label>Who is your ideal customer? (age, lifestyle, budget, location)</label>
+    <div class="line-tall"></div>
+  </div>
+
+  <h2>2. Contact Information</h2>
+
+  <div class="two-col">
+    <div class="field">
+      <label>Phone Number</label>
+      <div class="line"></div>
+    </div>
+    <div class="field">
+      <label>Email Address</label>
+      <div class="line"></div>
+    </div>
+  </div>
+  <div class="two-col">
+    <div class="field">
+      <label>Website (if you have one)</label>
+      <div class="line"></div>
+    </div>
+    <div class="field">
+      <label>Booking / Scheduling Link</label>
+      <div class="line"></div>
+    </div>
+  </div>
+  <div class="two-col">
+    <div class="field">
+      <label>Google Business Profile Link</label>
+      <div class="line"></div>
+    </div>
+    <div class="field">
+      <label>Social Media Handles</label>
+      <div class="line"></div>
+    </div>
+  </div>
+
+  <h2>3. Brand Personality</h2>
+
+  <div class="field">
+    <label>What vibe should your brand have? (check all that apply)</label>
+    <div class="checkbox-group">
+      <span class="option"><input type="checkbox"> Modern</span>
+      <span class="option"><input type="checkbox"> Rustic</span>
+      <span class="option"><input type="checkbox"> Bold</span>
+      <span class="option"><input type="checkbox"> Elegant</span>
+      <span class="option"><input type="checkbox"> Eco-Friendly</span>
+      <span class="option"><input type="checkbox"> Minimalist</span>
+      <span class="option"><input type="checkbox"> Luxury</span>
+      <span class="option"><input type="checkbox"> Playful</span>
+      <span class="option"><input type="checkbox"> Industrial</span>
+      <span class="option"><input type="checkbox"> Warm</span>
+      <span class="option"><input type="checkbox"> Techy</span>
+      <span class="option"><input type="checkbox"> Artisan</span>
+      <span class="option"><input type="checkbox"> Professional</span>
+      <span class="option"><input type="checkbox"> Energetic</span>
+    </div>
+  </div>
+
+  <div class="field">
+    <label>Do you have an existing motto, slogan, or tagline?</label>
+    <div class="line"></div>
+  </div>
+
+  <div class="field">
+    <label>What makes you different from your competition?</label>
+    <div class="line-xl"></div>
+  </div>
+
+  <div class="footer">
+    Xela | Elite AI Creative Studio — Faith-Driven Branding — Page 1 of 3<br>"Commit to the Lord whatever you do, and He will establish your plans." — Proverbs 16:3
+  </div>
+</div>
+
+<!-- PAGE 2: Existing Branding + Visual Preferences -->
+<div class="page page-break">
+  <div class="header">
+    <div>
+      <h1>Visual & Brand Assets</h1>
+      <div class="subtitle">Tell us what you already have and what you want</div>
+    </div>
+    <div class="logo-area">
+      <div class="x">X</div>
+      xela.studio
+    </div>
+  </div>
+
+  <h2>4. Existing Brand Assets</h2>
+
+  <div class="field">
+    <label>Do you have an existing logo?</label>
+    <div class="checkbox-group">
+      <span class="option"><input type="checkbox"> Yes, I love it — keep it</span>
+      <span class="option"><input type="checkbox"> Yes, but I want a refresh</span>
+      <span class="option"><input type="checkbox"> No, I need one created</span>
+    </div>
+    <div class="note">If yes, please attach or email your logo file to your Xela consultant</div>
+  </div>
+
+  <div class="field">
+    <label>Do you have brand colors you want to keep?</label>
+    <div class="line"></div>
+    <div class="note">List hex codes if you have them, or describe the colors (e.g., "navy blue and gold")</div>
+  </div>
+
+  <div class="field">
+    <label>Existing Mission Statement (if any)</label>
+    <div class="line-tall"></div>
+  </div>
+
+  <div class="field">
+    <label>Existing Vision Statement (if any)</label>
+    <div class="line-tall"></div>
+  </div>
+
+  <h2>5. Visual Preferences</h2>
+
+  <div class="field">
+    <label>Logo style preference</label>
+    <div class="checkbox-group">
+      <span class="option"><input type="checkbox"> Minimalist</span>
+      <span class="option"><input type="checkbox"> Emblem / Badge</span>
+      <span class="option"><input type="checkbox"> Wordmark (text only)</span>
+      <span class="option"><input type="checkbox"> Abstract / Icon</span>
+      <span class="option"><input type="checkbox"> Geometric</span>
+      <span class="option"><input type="checkbox"> Classic / Vintage</span>
+      <span class="option"><input type="checkbox"> Let AI decide</span>
+    </div>
+  </div>
+
+  <div class="field">
+    <label>What should your QR code link to?</label>
+    <div class="checkbox-group">
+      <span class="option"><input type="checkbox"> Website</span>
+      <span class="option"><input type="checkbox"> Google Business Profile</span>
+      <span class="option"><input type="checkbox"> Booking / Scheduling Page</span>
+      <span class="option"><input type="checkbox"> Contact Card (vCard)</span>
+    </div>
+  </div>
+
+  <div class="field">
+    <label>Brands you admire (any industry — helps us understand your taste)</label>
+    <div class="line-xl"></div>
+  </div>
+
+  <div class="field">
+    <label>Anything else we should know? Special requests, deadlines, ideas, concerns?</label>
+    <div class="line-xl"></div>
+  </div>
+
+  <div class="footer">
+    Xela | Elite AI Creative Studio — Faith-Driven Branding — Page 2 of 3<br>"Whatever you do, work at it with all your heart, as working for the Lord." — Colossians 3:23
+  </div>
+</div>
+
+<!-- PAGE 3: Package Selection + Agreement -->
+<div class="page page-break">
+  <div class="header">
+    <div>
+      <h1>Package Selection</h1>
+      <div class="subtitle">Choose the tier that fits your goals and budget</div>
+    </div>
+    <div class="logo-area">
+      <div class="x">X</div>
+      xela.studio
+    </div>
+  </div>
+
+  <h2>6. Select Your Package</h2>
+
+  <div style="font-size:9pt;color:#666;margin-bottom:16px;text-align:center;font-style:italic;">Each tier includes Good / Better / Best options. Circle your selection.</div>
+
+  <!-- Foundation Tier -->
+  <div style="margin-bottom:20px;">
+    <h3 style="margin:0 0 8px;font-size:13pt;">The Foundation <span style="font-size:9pt;color:#999;">— Start with excellence</span></h3>
+    <table style="width:100%;border-collapse:collapse;font-size:9pt;">
+      <tr style="background:#f8f7f4;">
+        <td style="padding:8px;border:1px solid #ddd;font-weight:700;width:25%;">Good — Essential</td>
+        <td style="padding:8px;border:1px solid #ddd;font-weight:700;width:25%;">Better — Standard</td>
+        <td style="padding:8px;border:1px solid #ddd;font-weight:700;width:25%;">Best — Complete</td>
+        <td style="padding:8px;border:1px solid #ddd;width:25%;text-align:center;">Circle One</td>
+      </tr>
+      <tr>
+        <td style="padding:8px;border:1px solid #ddd;vertical-align:top;">
+          <div style="text-decoration:line-through;color:#999;">$750</div>
+          <div style="font-size:16pt;font-weight:700;">$297</div>
+          <div style="margin-top:6px;line-height:1.5;">Strategy & taglines<br>Color palette<br>3 logo concepts<br>48hr delivery</div>
+        </td>
+        <td style="padding:8px;border:1px solid #ddd;vertical-align:top;">
+          <div style="text-decoration:line-through;color:#999;">$1,200</div>
+          <div style="font-size:16pt;font-weight:700;">$497</div>
+          <div style="margin-top:6px;line-height:1.5;">Everything in Good<br>5 logos + biz card<br>LLC naming scan<br>Mission & vision<br>Same-day delivery</div>
+        </td>
+        <td style="padding:8px;border:1px solid #ddd;vertical-align:top;">
+          <div style="text-decoration:line-through;color:#999;">$2,000</div>
+          <div style="font-size:16pt;font-weight:700;">$697</div>
+          <div style="margin-top:6px;line-height:1.5;">Everything in Better<br>Social post ideas<br>Brand voice guide<br>Typography guide<br>2 revision rounds<br>4hr priority delivery</div>
+        </td>
+        <td style="padding:8px;border:1px solid #ddd;vertical-align:middle;text-align:center;">
+          <div style="width:50px;height:50px;border:2px solid #111;border-radius:50%;margin:0 auto;"></div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Growth Tier -->
+  <div style="margin-bottom:20px;">
+    <h3 style="margin:0 0 8px;font-size:13pt;">The Growth Engine <span style="font-size:9pt;color:#00E0C6;font-weight:700;">★ RECOMMENDED</span></h3>
+    <table style="width:100%;border-collapse:collapse;font-size:9pt;">
+      <tr style="background:#f0fdfb;">
+        <td style="padding:8px;border:1px solid #ddd;font-weight:700;width:25%;">Good — Marketing Ready</td>
+        <td style="padding:8px;border:1px solid #ddd;font-weight:700;width:25%;">Better — Growth Suite</td>
+        <td style="padding:8px;border:1px solid #ddd;font-weight:700;width:25%;">Best — Full Arsenal</td>
+        <td style="padding:8px;border:1px solid #ddd;width:25%;text-align:center;">Circle One</td>
+      </tr>
+      <tr>
+        <td style="padding:8px;border:1px solid #ddd;vertical-align:top;">
+          <div style="text-decoration:line-through;color:#999;">$2,500</div>
+          <div style="font-size:16pt;font-weight:700;">$797</div>
+          <div style="margin-top:6px;line-height:1.5;">Full Foundation Best<br>Flyer & ad copy<br>30-day calendar<br>Brand story</div>
+        </td>
+        <td style="padding:8px;border:1px solid #ddd;vertical-align:top;">
+          <div style="text-decoration:line-through;color:#999;">$3,500</div>
+          <div style="font-size:16pt;font-weight:700;">$1,297</div>
+          <div style="margin-top:6px;line-height:1.5;">Everything in Good<br>Email templates (5)<br>Social asset pack<br>Ad copy (3 platforms)<br>FL launch checklist<br>Unlimited AI regen</div>
+        </td>
+        <td style="padding:8px;border:1px solid #ddd;vertical-align:top;">
+          <div style="text-decoration:line-through;color:#999;">$5,000</div>
+          <div style="font-size:16pt;font-weight:700;">$1,797</div>
+          <div style="margin-top:6px;line-height:1.5;">Everything in Better<br>Competitor analysis (3)<br>Brand voice extraction<br>Guidelines PDF<br>90-day content road map<br>Priority support</div>
+        </td>
+        <td style="padding:8px;border:1px solid #ddd;vertical-align:middle;text-align:center;">
+          <div style="width:50px;height:50px;border:2px solid #111;border-radius:50%;margin:0 auto;"></div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Sovereign Tier -->
+  <div style="margin-bottom:20px;">
+    <h3 style="margin:0 0 8px;font-size:13pt;">The Sovereign <span style="font-size:9pt;color:#D255FF;">— Command your market</span></h3>
+    <table style="width:100%;border-collapse:collapse;font-size:9pt;">
+      <tr style="background:#1a1a1a;color:white;">
+        <td style="padding:8px;border:1px solid #333;font-weight:700;width:25%;">Good — Executive</td>
+        <td style="padding:8px;border:1px solid #333;font-weight:700;width:25%;">Better — Empire</td>
+        <td style="padding:8px;border:1px solid #333;font-weight:700;width:25%;">Best — Dynasty</td>
+        <td style="padding:8px;border:1px solid #333;width:25%;text-align:center;">Circle One</td>
+      </tr>
+      <tr style="background:#111;color:#ccc;">
+        <td style="padding:8px;border:1px solid #333;vertical-align:top;">
+          <div style="text-decoration:line-through;color:#666;">$7,500</div>
+          <div style="font-size:16pt;font-weight:700;color:white;">$2,497</div>
+          <div style="margin-top:6px;line-height:1.5;">Full Growth Best<br>Landing page mockup<br>AI video ad (1080p)<br>Sticker & flyer suite</div>
+        </td>
+        <td style="padding:8px;border:1px solid #333;vertical-align:top;">
+          <div style="text-decoration:line-through;color:#666;">$12,000</div>
+          <div style="font-size:16pt;font-weight:700;color:white;">$3,497</div>
+          <div style="margin-top:6px;line-height:1.5;">Everything in Good<br>Video ads (3 platforms)<br>Local ad strategy<br>Print-ready assets<br>Social profile setup<br>Google Business SEO</div>
+        </td>
+        <td style="padding:8px;border:1px solid #333;vertical-align:top;">
+          <div style="text-decoration:line-through;color:#666;">$25,000</div>
+          <div style="font-size:16pt;font-weight:700;color:white;">$4,997</div>
+          <div style="margin-top:6px;line-height:1.5;">Everything in Better<br>Website copy (5 pages)<br>Pitch deck slides<br>Quarterly strategy (4)<br>Account manager<br>White-glove onboarding<br>Lifetime asset access<br>VIP 2hr delivery</div>
+        </td>
+        <td style="padding:8px;border:1px solid #333;vertical-align:middle;text-align:center;">
+          <div style="width:50px;height:50px;border:2px solid #D255FF;border-radius:50%;margin:0 auto;"></div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <h2>7. Add-Ons (Optional)</h2>
+
+  <div class="checkbox-group">
+    <span class="option"><input type="checkbox"> Extra logo concepts (+$29/each)</span>
+    <span class="option"><input type="checkbox"> Rush delivery 12hr (+$49)</span>
+    <span class="option"><input type="checkbox"> Social profile setup (+$39)</span>
+    <span class="option"><input type="checkbox"> Google Business optimization (+$49)</span>
+    <span class="option"><input type="checkbox"> Video ad production (+$79)</span>
+    <span class="option"><input type="checkbox"> Print-ready files (+$29)</span>
+  </div>
+
+  <h2>8. Agreement</h2>
+
+  <div style="font-size:9pt; color:#444; line-height:1.6; margin-bottom: 16px;">
+    By signing below, I confirm that:
+    <br>• The information provided is accurate and I have authority to act on behalf of this business
+    <br>• I understand the selected package scope, deliverables, and pricing
+    <br>• I agree to Xela's terms of service including revision policy (2 rounds included), payment terms (50% deposit, 50% on delivery), and IP transfer (all deliverables become client property upon full payment)
+    <br>• I understand that AI-generated content may require human review and that Xela provides creative direction, not legal or financial advice
+    <br>• Refund policy: Full refund if work has not begun; 50% refund if first draft delivered; no refund after final delivery
+  </div>
+
+  <div class="signature-area">
+    <div>
+      <div class="sig-line"></div>
+      <div class="sig-label">Client Signature</div>
+    </div>
+    <div class="sig-date">
+      <div class="sig-line" style="min-width:140px;"></div>
+      <div class="sig-label">Date</div>
+    </div>
+    <div>
+      <div class="sig-line"></div>
+      <div class="sig-label">Print Name</div>
+    </div>
+  </div>
+
+  <div style="margin-top:24px;">
+    <div class="two-col">
+      <div class="field">
+        <label>Preferred Payment Method</label>
+        <div class="checkbox-group">
+          <span class="option"><input type="checkbox"> Zelle</span>
+          <span class="option"><input type="checkbox"> Cash App</span>
+          <span class="option"><input type="checkbox"> Stripe</span>
+          <span class="option"><input type="checkbox"> Cash</span>
+        </div>
+      </div>
+      <div class="field">
+        <label>Deposit Amount</label>
+        <div class="line"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    Xela | Elite AI Creative Studio — Faith-Driven Branding — Page 3 of 3
+    <br>"For I know the plans I have for you," declares the Lord, "plans to prosper you and not to harm you, plans to give you hope and a future." — Jeremiah 29:11
+    <br>© 2026 Xela Elite. All rights reserved. A Christ-centered company. Florida, USA.
+  </div>
+</div>
+
+</body>
+</html>
