@@ -593,6 +593,7 @@ const App: React.FC = () => {
   const [saveSuccess, setSaveSuccess] = useState(false);
   const [projects, setProjects] = useState<SavedProject[]>([]);
   const [isProjectsModalOpen, setIsProjectsModalOpen] = useState(false);
+  const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
   const [headerSolid, setHeaderSolid] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const [showPayment, setShowPayment] = useState(false);
@@ -1765,7 +1766,7 @@ const App: React.FC = () => {
                   <li><a href="tel:3213759685" className="hover:text-white transition-colors flex items-center gap-1"><Phone size={10} /> Call Us</a></li>
                   <li><a href="mailto:xelabrandingstudio@gmail.com" className="hover:text-white transition-colors flex items-center gap-1"><Mail size={10} /> Email Us</a></li>
                   <li><a href="https://www.google.com/search?q=XELA+Creative+Branding+Studio+Cocoa+FL" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-1"><Globe size={10} /> Google Business</a></li>
-                  <li><button onClick={(e) => { window.alert('Xela Studio Privacy: Your data is encrypted client-side with keys only you hold. You can export or delete all your data at any time from the Data Rights tab. We do not sell or share your data. Contact: privacy@xela.studio'); }} className="hover:text-white transition-colors text-left">Privacy Policy</button></li>
+                  <li><button onClick={() => setIsPrivacyOpen(true)} className="hover:text-white transition-colors text-left">Privacy Policy</button></li>
                 </ul>
               </div>
             </div>
@@ -1938,6 +1939,56 @@ const App: React.FC = () => {
         onLoad={handleLoadProject}
         onDelete={handleDeleteProject}
       />
+
+      {/* ═══════════ PRIVACY POLICY MODAL ═══════════ */}
+      {isPrivacyOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-stone-900/60 backdrop-blur-sm animate-fade-in-up" onClick={() => setIsPrivacyOpen(false)}>
+          <div className="bg-stone-900 border border-stone-700 rounded-3xl shadow-2xl w-full max-w-lg max-h-[85vh] flex flex-col overflow-hidden" onClick={(e) => e.stopPropagation()}>
+            <div className="p-6 border-b border-stone-700 flex justify-between items-center">
+              <h2 className="text-xl font-serif font-bold text-white">Privacy Policy</h2>
+              <button onClick={() => setIsPrivacyOpen(false)} className="p-2 hover:bg-stone-700 rounded-full transition-colors text-stone-400 hover:text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              </button>
+            </div>
+            <div className="flex-1 overflow-y-auto p-6 space-y-5 text-stone-300 text-sm leading-relaxed scrollbar-thin">
+              <p className="text-stone-400 text-xs uppercase tracking-widest font-bold">XELA Creative Branding Studio</p>
+
+              <div>
+                <h3 className="text-white font-bold mb-1">Data We Collect</h3>
+                <p>When you use our intake form or consultation wizard, we collect the information you provide: your name, email address, business name, and details about your branding needs. We do not collect data beyond what you voluntarily submit.</p>
+              </div>
+
+              <div>
+                <h3 className="text-white font-bold mb-1">How We Use Your Data</h3>
+                <p>Your information is used solely to provide branding services — generating brand packages, logos, marketing assets, and delivering your completed work. We do not sell, rent, or share your personal data with third parties for marketing purposes.</p>
+              </div>
+
+              <div>
+                <h3 className="text-white font-bold mb-1">Third-Party Services</h3>
+                <p>To deliver our services, we use the following third-party platforms:</p>
+                <ul className="list-disc list-inside mt-1 space-y-1 text-stone-400">
+                  <li><span className="text-stone-300">Firebase</span> — authentication and data storage</li>
+                  <li><span className="text-stone-300">Stripe</span> — secure payment processing</li>
+                  <li><span className="text-stone-300">Google Gemini</span> — AI-powered brand asset generation</li>
+                </ul>
+                <p className="mt-2">Each service operates under its own privacy policy. We only share the minimum data necessary for each service to function.</p>
+              </div>
+
+              <div>
+                <h3 className="text-white font-bold mb-1">Data Retention & Deletion</h3>
+                <p>You may request export or deletion of your data at any time by contacting us. We retain project data only as long as needed to deliver your services.</p>
+              </div>
+
+              <div>
+                <h3 className="text-white font-bold mb-1">Contact</h3>
+                <p>Questions about this policy? Reach us at <a href="mailto:xelabrandingstudio@gmail.com" className="text-brand-teal hover:underline">xelabrandingstudio@gmail.com</a></p>
+              </div>
+
+              <p className="text-stone-500 text-xs pt-2 border-t border-stone-700">Last updated: April 2026</p>
+            </div>
+          </div>
+        </div>
+      )}
 
       <SmartNav
         currentView={step}

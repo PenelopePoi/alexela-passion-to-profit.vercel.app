@@ -327,7 +327,7 @@ export const BusinessCard: React.FC<BusinessCardProps> = ({ data, input, logoUrl
                               
                               <div className="flex flex-col items-end gap-1 opacity-40">
                                   <span className="text-[7px] font-black uppercase tracking-widest text-stone-400">Established</span>
-                                  <span className="text-[10px] font-serif italic font-bold" style={{ color: activeTheme.primary }}>{input.yearsExperience || '2024'}</span>
+                                  <span className="text-[10px] font-serif italic font-bold" style={{ color: activeTheme.primary }}>{input.yearsExperience || '2026'}</span>
                               </div>
                           </div>
                       </div>

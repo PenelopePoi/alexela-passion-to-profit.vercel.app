@@ -6,8 +6,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 
 const ALLOWED_ORIGINS = [
-  'https://xelacreative.com',
-  'https://www.xelacreative.com',
+  'https://xela-elite-ai-creative-studio.vercel.app',
   /^https:\/\/.*\.vercel\.app$/,
 ];
 

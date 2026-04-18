@@ -1,5 +1,5 @@
 /**
- * XELA Elite AI Creative Studio — Pipeline Simulator
+ * XELA Creative Branding Studio — Pipeline Simulator
  * Simulates 20,000 clients through the full branding pipeline
  */
 

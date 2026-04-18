@@ -1,5 +1,5 @@
 /**
- * XELA Elite AI Creative Studio — Synthetic Client Generator
+ * XELA Creative Branding Studio — Synthetic Client Generator
  * Generates 20,000 diverse client profiles for pipeline simulation
  */
 

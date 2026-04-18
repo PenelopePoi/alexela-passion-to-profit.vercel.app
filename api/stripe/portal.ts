@@ -21,7 +21,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
     const session = await stripe.billingPortal.sessions.create({
       customer: customerId,
-      return_url: returnUrl || req.headers.origin || 'https://xelacreative.com',
+      return_url: returnUrl || req.headers.origin || 'https://xela-elite-ai-creative-studio.vercel.app',
     });
 
     return res.json({ url: session.url });

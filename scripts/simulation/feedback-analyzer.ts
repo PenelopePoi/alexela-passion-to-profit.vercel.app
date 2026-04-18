@@ -1,5 +1,5 @@
 /**
- * XELA Elite AI Creative Studio — Feedback Analyzer
+ * XELA Creative Branding Studio — Feedback Analyzer
  * Tracks system improvement over batches of 1,000 clients
  */
 

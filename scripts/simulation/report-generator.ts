@@ -1,5 +1,5 @@
 /**
- * XELA Elite AI Creative Studio — Simulation Report Generator
+ * XELA Creative Branding Studio — Simulation Report Generator
  * Generates a comprehensive Markdown report from simulation data
  */
 
@@ -168,7 +168,7 @@ const npsScore = Math.round(((npsPromoters - npsDetractors) / deliveredResults.l
 const lines: string[] = [];
 const w = (s: string) => lines.push(s);
 
-w('# XELA Elite AI Creative Studio — Pipeline Simulation Report');
+w('# XELA Creative Branding Studio — Pipeline Simulation Report');
 w('');
 w(`**Generated:** ${new Date().toISOString().split('T')[0]}`);
 w(`**Simulation Size:** ${total.toLocaleString()} synthetic clients`);

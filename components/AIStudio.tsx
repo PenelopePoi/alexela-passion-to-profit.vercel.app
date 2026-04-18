@@ -131,7 +131,7 @@ export const AIStudio: React.FC = () => {
             <Sparkles className="text-white" size={24} />
           </div>
           <div>
-            <h2 className="text-3xl font-serif font-black text-brand-black tracking-tight uppercase">Elite AI Studio</h2>
+            <h2 className="text-3xl font-serif font-black text-brand-black tracking-tight uppercase">AI Creative Studio</h2>
             <p className="text-[10px] font-black tracking-widest text-stone-400 uppercase">Multimodal Generation & Intelligence</p>
           </div>
         </div>
