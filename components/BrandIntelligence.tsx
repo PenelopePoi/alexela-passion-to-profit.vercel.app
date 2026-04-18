@@ -79,7 +79,7 @@ export const BrandIntelligence: React.FC<BrandIntelligenceProps> = ({ input, str
         <div>
           <h2 className="text-4xl font-black text-brand-black tracking-tighter mb-2">Brand Intelligence</h2>
           <p className="text-stone-500 font-medium max-w-2xl">
-            Leverage elite AI to analyze competitors, refine your brand voice, and visualize your narrative.
+            Leverage AI-powered tools to analyze competitors, refine your brand voice, and visualize your narrative.
           </p>
         </div>
         <div className="flex items-center gap-2 px-4 py-2 bg-brand-teal/10 rounded-full border border-brand-teal/20">

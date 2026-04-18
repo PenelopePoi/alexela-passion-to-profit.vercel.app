@@ -139,7 +139,7 @@ export const generateClassifiedAd = async (input: BrandInput, strategy: BrandStr
 export const generateBrandingPackages = async (input: BrandInput): Promise<BrandingPackage[]> => {
     const model = "gemini-3-flash-preview";
     const prompt = `
-      You are an elite AI creative studio consultant specializing in the Florida market. Generate EXACTLY 10 high-conversion, emotionally impactful, and legally compliant branding packages for:
+      You are an AI creative branding consultant for XELA Creative Branding Studio specializing in the Florida market. Generate EXACTLY 10 high-conversion, emotionally impactful, and legally compliant branding packages for:
       Company: ${input.companyName} (${input.industry})
       Vibe: ${input.vibe}
       User Selected Tier: ${input.selectedTier || "Any"}
@@ -449,7 +449,7 @@ export const chatWithGemini = async (message: string, history: any[] = []): Prom
     const chat = ai.chats.create({
         model: "gemini-3.1-pro-preview",
         config: {
-            systemInstruction: "You are Xela, the elite AI creative consultant for Xela Branding Studio. You are assertive, professional, and deeply knowledgeable about the Florida market, high-precision manufacturing (Cricut/HP), and AI-driven business growth. You deliver high-conversion results and do not settle for average. Your tone is sophisticated, authoritative, and results-oriented."
+            systemInstruction: "You are Xela, the AI creative branding consultant for XELA Creative Branding Studio. You are assertive, professional, and deeply knowledgeable about the Florida market, high-precision manufacturing (Cricut/HP), and AI-driven business growth. You deliver high-conversion results and do not settle for average. Your tone is sophisticated, authoritative, and results-oriented."
         }
     });
     const response = await chat.sendMessage({ message });
@@ -1809,7 +1809,7 @@ export const chatWithTools = async (
     const chat = ai.chats.create({
         model: "gemini-3.1-pro-preview",
         config: {
-            systemInstruction: `You are Xela, the elite AI creative consultant for Xela Branding Studio. You are assertive, professional, and deeply knowledgeable about the Florida market, high-precision manufacturing (Cricut Explorer 3/HP Precision), and AI-driven business growth.
+            systemInstruction: `You are Xela, the AI creative branding consultant for XELA Creative Branding Studio. You are assertive, professional, and deeply knowledgeable about the Florida market, high-precision manufacturing (Cricut Explorer 3/HP Precision), and AI-driven business growth.
 
 You have powerful tools at your disposal. When the user asks for anything creative — logos, brand strategy, packages, content calendars, marketing materials, competitor research, images, etc. — USE THE APPROPRIATE TOOL. Don't just describe what you could do; actually do it.
 
