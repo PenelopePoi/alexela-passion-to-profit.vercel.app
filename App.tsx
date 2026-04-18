@@ -29,7 +29,7 @@ import { canAccessView } from './services/authGuard';
 import { pollPaymentStatus, formatCurrency } from './services/stripeService';
 import ClientProfilePage from './components/ClientProfilePage';
 import { getProfileBySlug } from './services/clientProfileService';
-import { FolderOpen, Target, Zap, ArrowDown, TrendingUp, Anchor, CheckCircle, ArrowLeft, Sparkles, Palette, Rocket, Clock, Users, Award, Star, ChevronDown, ChevronUp, Eye, Layers, BarChart3, Send, Phone, Quote, ArrowRight, Plus, Minus, MessageSquare, Shuffle, Mail, Globe, ExternalLink } from 'lucide-react';
+import { FolderOpen, Target, Zap, ArrowDown, TrendingUp, Anchor, CheckCircle, AlertCircle, ArrowLeft, Sparkles, Palette, Rocket, Clock, Users, Award, Star, ChevronDown, ChevronUp, Eye, Layers, BarChart3, Send, Phone, Quote, ArrowRight, Plus, Minus, MessageSquare, Shuffle, Mail, Globe, ExternalLink } from 'lucide-react';
 
 /* ── Error Boundary — catches render errors and AI generation failures ── */
 interface EBProps { children: React.ReactNode }
@@ -307,7 +307,7 @@ const GalleryStrip: React.FC = () => {
             exit={{ opacity: 0, scale: 0.9 }}
             transition={{ duration: 0.5, delay: i * 0.08 }}
             layout
-            className="aspect-square rounded-2xl overflow-hidden group cursor-pointer relative"
+            className="aspect-square rounded-2xl overflow-hidden group relative"
           >
             <img
               src={src}
@@ -317,9 +317,6 @@ const GalleryStrip: React.FC = () => {
               width={400}
               height={400}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
-              <span className="text-white text-[9px] font-black uppercase tracking-widest">View Project</span>
-            </div>
           </motion.div>
         ))}
       </AnimatePresence>
@@ -559,7 +556,7 @@ function PaymentSuccessView({ onBack }: { onBack: () => void }) {
       {status === 'error' && (
         <>
           <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto">
-            <CheckCircle size={32} className="text-red-400" />
+            <AlertCircle size={32} className="text-red-400" />
           </div>
           <h1 className="text-2xl font-black text-white tracking-tight">Payment Received</h1>
           <p className="text-white/60 text-sm leading-relaxed">
@@ -938,7 +935,7 @@ const App: React.FC = () => {
                   alt="XELA Creative Branding Studio"
                   width={200}
                   height={80}
-                  className="h-10 sm:h-14 md:h-20 w-auto max-w-[140px] sm:max-w-[180px] md:max-w-none object-contain group-hover:scale-105 transition-transform duration-300"
+                  className="h-14 sm:h-18 md:h-24 w-auto max-w-[200px] sm:max-w-[240px] md:max-w-none object-contain group-hover:scale-105 transition-transform duration-300"
                   style={{
                     filter: 'brightness(1.2) saturate(1.4) drop-shadow(0 0 16px rgba(0, 224, 198, 0.7)) drop-shadow(0 0 32px rgba(255, 140, 66, 0.5)) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.6))',
                   }}
@@ -1909,7 +1906,7 @@ const App: React.FC = () => {
       {step === 'dashboard' && brandData && inputData && (
         <>
         {inputData.companyName === 'Velvet Bean Coffee Co.' && (
-          <div className="fixed top-0 left-0 right-0 z-[100] bg-gradient-to-r from-amber-500 via-orange-500 to-amber-500 text-white text-center py-2.5 px-4 shadow-lg">
+          <div className="sticky top-0 left-0 right-0 z-[100] bg-gradient-to-r from-amber-500 via-orange-500 to-amber-500 text-white text-center py-2.5 px-4 shadow-lg">
             <span className="text-xs font-black uppercase tracking-widest flex items-center justify-center gap-2">
               <Eye size={14} /> THIS IS A DEMO — Sample output for Velvet Bean Coffee Co. <Eye size={14} />
             </span>

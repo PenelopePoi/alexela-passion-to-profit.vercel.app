@@ -928,7 +928,7 @@ export const InputForm: React.FC<InputFormProps> = ({ initialData, onSubmit, onS
                       <label className="cursor-pointer inline-flex items-center gap-2 text-brand-teal text-[10px] font-black uppercase tracking-widest hover:text-brand-teal/80 transition-colors">
                         <input type="file" className="hidden" accept="image/*" multiple onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                           const files = Array.from(e.target.files || []);
-                          files.forEach(file => {
+                          files.forEach((file: File) => {
                             const reader = new FileReader();
                             reader.onloadend = () => {
                               const result = reader.result;
@@ -951,7 +951,7 @@ export const InputForm: React.FC<InputFormProps> = ({ initialData, onSubmit, onS
                       <input type="file" className="hidden" accept="image/*" multiple onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                         const files = Array.from(e.target.files || []);
                         const newLogos: string[] = [];
-                        files.forEach(file => {
+                        files.forEach((file: File) => {
                           const reader = new FileReader();
                           reader.onloadend = () => {
                             const result = reader.result;
