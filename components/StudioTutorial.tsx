@@ -19,7 +19,7 @@ interface TutorialStep {
 const steps: TutorialStep[] = [
   {
     id: 'welcome',
-    title: 'Welcome to Xela Elite Studio',
+    title: 'Welcome to XELA Creative Branding Studio',
     description: 'I am Xela, your elite AI creative consultant. I am here to guide you through the process of launching your legacy. We will build your identity, marketing, and legal foundation in 4 easy steps.',
     tab: 'identity',
     tip: 'Think of this as your business "Cake" - we are mixing the best ingredients.',

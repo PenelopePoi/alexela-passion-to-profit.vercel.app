@@ -22,7 +22,7 @@ export const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose, p
         <div className="p-6 border-b border-stone-100 flex justify-between items-center bg-stone-50/50">
           <div>
             <h2 className="text-xl font-serif font-bold text-stone-900 flex items-center gap-2">
-              <FolderOpen className="text-forest-600" size={24} />
+              <FolderOpen className="text-brand-teal" size={24} />
               My Projects
             </h2>
             <p className="text-xs text-stone-500 mt-1">Manage your saved brand packages</p>
@@ -52,11 +52,11 @@ export const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose, p
               {projects.sort((a,b) => b.lastModified - a.lastModified).map((project) => (
                 <div 
                   key={project.id} 
-                  className="group bg-white border border-stone-200 rounded-xl p-4 hover:border-forest-300 hover:shadow-md transition-all flex items-center justify-between"
+                  className="group bg-white border border-stone-200 rounded-xl p-4 hover:border-brand-teal/30 hover:shadow-md transition-all flex items-center justify-between"
                 >
                   <div className="flex-1 cursor-pointer" onClick={() => onLoad(project)}>
                     <div className="flex items-center gap-2">
-                        <h3 className="font-bold text-stone-900 text-lg group-hover:text-forest-700 transition-colors">
+                        <h3 className="font-bold text-stone-900 text-lg group-hover:text-brand-teal transition-colors">
                         {project.name}
                         </h3>
                         {project.status === 'draft' && (
@@ -79,12 +79,12 @@ export const ProjectsModal: React.FC<ProjectsModalProps> = ({ isOpen, onClose, p
                   <div className="flex items-center gap-2">
                     <button 
                       onClick={() => onLoad(project)}
-                      className={`px-4 py-2 rounded-lg text-xs font-bold transition-colors flex items-center gap-1 ${project.status === 'draft' ? 'bg-orange-50 text-orange-700 hover:bg-orange-100' : 'bg-forest-50 text-forest-700 hover:bg-forest-100'}`}
+                      className={`px-4 py-2 rounded-lg text-xs font-bold transition-colors flex items-center gap-1 ${project.status === 'draft' ? 'bg-orange-50 text-orange-700 hover:bg-orange-100' : 'bg-brand-teal/10 text-brand-teal hover:bg-brand-teal/20'}`}
                     >
                       {project.status === 'draft' ? <><PenTool size={12} /> Edit</> : <>Open <ArrowRight size={14} /></>}
                     </button>
                     <button 
-                      onClick={(e) => { e.stopPropagation(); onDelete(project.id); }}
+                      onClick={(e) => { e.stopPropagation(); if (window.confirm(`Delete "${project.name}"? This cannot be undone.`)) onDelete(project.id); }}
                       className="p-2 text-stone-300 hover:text-red-500 hover:bg-red-50 rounded-lg transition-colors"
                       title="Delete Project"
                     >

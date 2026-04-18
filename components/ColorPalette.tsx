@@ -14,12 +14,18 @@ const ColorSwatch: React.FC<{
 }> = ({ color, label, onEdit }) => {
   const [copied, setCopied] = React.useState(false);
   const colorInputRef = React.useRef<HTMLInputElement>(null);
+  const copyTimerRef = React.useRef<ReturnType<typeof setTimeout>>();
+
+  React.useEffect(() => {
+    return () => clearTimeout(copyTimerRef.current);
+  }, []);
 
   const copyToClipboard = (e: React.MouseEvent) => {
     e.stopPropagation();
     navigator.clipboard.writeText(color);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    clearTimeout(copyTimerRef.current);
+    copyTimerRef.current = setTimeout(() => setCopied(false), 2000);
   };
 
   return (
@@ -32,7 +38,7 @@ const ColorSwatch: React.FC<{
         <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/10 backdrop-blur-[2px] gap-2">
             <button 
                 onClick={copyToClipboard}
-                className={`bg-white text-stone-900 px-3 py-1.5 rounded-lg text-xs font-bold shadow-xl transform scale-90 hover:scale-100 transition-all ${copied ? 'bg-forest-600 text-white' : ''}`}
+                className={`bg-white text-stone-900 px-3 py-1.5 rounded-lg text-xs font-bold shadow-xl transform scale-90 hover:scale-100 transition-all ${copied ? 'bg-brand-teal text-white' : ''}`}
             >
                 {copied ? 'Copied!' : 'Copy Hex'}
             </button>
@@ -66,8 +72,8 @@ export const ColorPaletteDisplay: React.FC<ColorPaletteProps> = ({ palette, onCo
   return (
     <div className="glass rounded-3xl shadow-lg border-white/50 p-8 h-full flex flex-col">
       <div className="mb-8">
-         <h3 className="font-bold text-forest-900 flex items-center gap-2 mb-1">
-            <div className="p-1.5 bg-forest-100 text-forest-600 rounded-lg">
+         <h3 className="font-bold text-stone-900 flex items-center gap-2 mb-1">
+            <div className="p-1.5 bg-brand-teal/10 text-brand-teal rounded-lg">
                 <Palette size={18} />
             </div>
             Color Palette

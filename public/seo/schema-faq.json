@@ -1,0 +1,127 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://xela-elite-ai-creative-studio.vercel.app/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What branding services does XELA Creative Branding Studio offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "XELA Creative Branding Studio offers 68 services across 10 categories: Brand Identity, Print Materials, Digital Presence, Marketing, Content, Strategy, Web Development, Video & Media, Social Media, and Consulting. Services range from business cards and logo design to full website builds, e-commerce stores, social media management, and complete business launch packages. We serve businesses across Brevard County, the Space Coast, Orlando, Tampa, Miami, and all of Florida. Whether you need a $75 business card or a $2,000 full-service brand launch, we have a package that fits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a branding package cost at XELA Creative Branding Studio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our services range from $75 to $2,000 across three tiers. The Budget tier (Get Started) includes essentials like business cards at $75, flyers at $100, and the Promotion Pal starter brand package at $125. The Premium tier (Get Customers) offers marketing kits, email templates, landing pages, and video production from $200 to $650. The Elite tier (Get Everything) includes full website builds at $1,200, e-commerce stores at $1,500, and the Ultimate Premium Suite at $2,000 which includes every deliverable we offer. Bundle three or more services and save 10-15%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's included in the Promotion Pal package?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Promotion Pal is our most popular starter branding package at $125. It includes 3 professional logo options designed to match your industry and personality, a slogan and mission statement that sounds authentically like you, a complete color palette and font pairing matched to your vibe, and a Florida business name check through Sunbiz to make sure your name is available. The entire package is delivered in approximately 4 hours using our AI-powered design workflow. It's the fastest way for a new Florida business to look like they've been established for years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you serve businesses outside Florida?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "While XELA Creative Branding Studio is based in Brevard County on Florida's Space Coast, we serve clients across the entire state of Florida and can work with businesses anywhere in the United States. Our digital services including logo design, website builds, social media management, and content creation require no in-person meetings. For print materials, we provide print-ready files that work with any local printer, or we can coordinate printing and shipping. Our Florida-specific services like Sunbiz business name checks and LLC filing guidance are designed specifically for Florida entrepreneurs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How fast can you deliver a logo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our Promotion Pal package delivers 3 professional logo options in approximately 4 hours. The Logo Evolution Suite, which includes 5 logo variations with light and dark versions in SVG, PNG, and PDF formats, is delivered in about 6 hours. For the absolute fastest turnaround, add our Rush Delivery add-on for $50 to get priority 2-hour processing. Our AI-powered design workflow combined with professional human review means you get quality logos at speeds that traditional agencies can't match. Same-day logo delivery is standard at XELA Creative Branding Studio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between Budget, Premium, and Elite tiers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our three tiers are designed for different stages of business growth. The Budget tier (Get Started) at $75-$175 covers essential single-service needs like business cards, flyers, and starter branding. The Premium tier (Get Customers) at $200-$650 bundles multiple services together for businesses ready to market aggressively, including marketing kits, email templates, landing pages, and video production. The Elite tier (Get Everything) at $800-$2,000 provides comprehensive packages that combine branding, web, print, video, and strategy into complete business launch solutions. The Ultimate Premium Suite at $2,000 includes every deliverable we offer with priority delivery."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer payment plans for branding services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, XELA Creative Branding Studio understands that starting a business means watching every dollar. We offer flexible payment options for our Premium and Elite tier packages. For packages over $500, we can split payments into two installments. For our Elite packages like the Ultimate Premium Suite at $2,000, we offer up to three monthly payments. We accept credit cards, debit cards, Zelle, CashApp, and Stripe. Contact us at (321) 375-9685 to discuss payment options that work for your budget."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you help me register my business in Florida?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. Our Registered Rebellion package at $500 is specifically designed for Florida entrepreneurs who need to go from idea to legal business. It includes a complete Florida business launch roadmap, brand guidelines document, LLC filing guidance through Sunbiz, and a 30-day action plan to get you operational. We also offer the FL Startup Checklist at $150 which covers entity selection, license and permit lookup, insurance recommendations, and tax registration guidance. Both services include Florida Sunbiz name availability searches to make sure your business name is clear before you file."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you build websites?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we offer multiple web development options. Our Landing Page service at $500 gives you a single-page, mobile-optimized site with a contact form or booking widget and SEO basics configured. Our Full Website Build at $1,200 includes a 5-page responsive website with a blog section, full SEO optimization, and analytics tracking. For businesses selling products, our E-Commerce Store at $1,500 sets up a complete Shopify or WooCommerce store with up to 20 products, payment processing, and shipping. All websites are built to rank in local Florida search results."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's a Google Property Stack?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Google Property Stack is an SEO strategy where we create and optimize your presence across multiple Google-owned properties to boost your search rankings. This includes Google Business Profile, Google Sites, Google Maps, YouTube, Google Drive public documents, and more. Each property links back to your main website, creating a network of trusted signals that tells Google your business is legitimate and relevant. Our Google Business Setup service at $100 gets you started with the most important piece: your Google Business Profile, fully optimized with categories, services, posts, and review templates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you manage social media accounts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Our Social Media Management service at $500 per month is a hands-off solution where we post for you consistently and professionally. It includes 20 posts per month across 2 platforms, custom graphics for each post, hashtag research, and a monthly performance report. We also offer one-time setup services: the Social Starter Kit at $150 sets up your profiles on 4 platforms, the Instagram Grid Overhaul at $250 transforms your feed into a professional portfolio, and the TikTok Launch Strategy at $200 gets you from zero to your first 1,000 followers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you create video ads for my business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we offer several video production services. Our 30-Second Video Ad at $300 creates a scroll-stopping animated video for social ads, including a script and storyboard, both vertical and horizontal versions, and a thumbnail image. The Brand Intro Video at $500 gives you a full 60-second brand story video with professional voiceover, music, and motion graphics optimized for web and social. We also provide 10 Reel/TikTok Templates at $200 with branded Canva and CapCut templates you can customize yourself. AI-powered production keeps costs low while maintaining broadcast quality."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What industries do you work with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "XELA Creative Branding Studio works with any small business, startup, or entrepreneur across all industries. We have particular experience with service-based businesses in Brevard County and the Space Coast including contractors, landscapers, cleaning services, real estate agents, fitness trainers, restaurants, salons, auto detailers, and home service providers. Our branding packages are designed to be industry-flexible, so whether you're launching a tech startup in Orlando or opening a food truck in Melbourne, we can build your brand. The key is that if you serve customers, we can help you look professional and get found."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer monthly retainer services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we offer several ongoing monthly services. Our Social Media Management at $500 per month handles your social posting across 2 platforms with custom graphics and reporting. Our Creative Retainer at $800 per month gives you 10 hours of creative work each month with priority turnaround, Slack and text access, and a monthly strategy review. This is ideal for growing businesses that need ongoing design, content, and marketing support without hiring a full-time employee. We also offer SEO retainer packages starting at $149 per month to keep your search rankings climbing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get started with XELA Creative Branding Studio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Getting started is simple. Call us at (321) 375-9685 or visit xela-elite-ai-creative-studio.vercel.app to book a free consultation. We'll discuss your business, your goals, and recommend the right package for your budget. If you already know what you need, you can order directly from our services page and we'll start working immediately. Most Budget-tier services are delivered the same day. For new businesses just starting out, we recommend the Promotion Pal at $125 as the perfect first step, or the Registered Rebellion at $500 if you need help with the full Florida business registration process."
+      }
+    }
+  ]
+}

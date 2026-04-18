@@ -1,7 +1,7 @@
 
-import { initializeApp } from 'firebase/app';
-import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged, User } from 'firebase/auth';
-import { getFirestore, doc, getDoc, setDoc, updateDoc, deleteDoc, collection, query, where, onSnapshot, serverTimestamp, Timestamp, getDocFromServer } from 'firebase/firestore';
+import { initializeApp } from '@firebase/app';
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged, User } from '@firebase/auth';
+import { getFirestore, doc, getDoc, setDoc, updateDoc, deleteDoc, collection, query, where, onSnapshot, serverTimestamp, Timestamp, getDocFromServer } from '@firebase/firestore';
 import firebaseConfig from './firebase-applet-config.json';
 
 // Initialize Firebase SDK

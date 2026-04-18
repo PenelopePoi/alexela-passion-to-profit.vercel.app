@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xela Elite — Branding Consultation</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;900&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  @page { size: letter; margin: 0.4in; }
+  @media print { .no-print{display:none!important;} .page-break{page-break-before:always;} body{font-size:9.5pt;background:white;padding:0;} .page{border:none;box-shadow:none;margin:0;padding:0.25in 0.35in;} }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Outfit',sans-serif;color:#111;line-height:1.4;background:#f0efec;padding:0.25in;}
+  .page{max-width:8.5in;margin:0 auto 0.25in;background:white;padding:0.4in 0.45in;border:1px solid #ddd;box-shadow:0 4px 20px rgba(0,0,0,0.06);position:relative;}
+  .bar{background:#111;color:white;margin:-0.4in -0.45in 0;padding:8px 0.45in;display:flex;justify-content:space-between;align-items:center;}
+  .bar .logo{font-family:'Cormorant Garamond',serif;font-size:20pt;font-weight:700;color:#00E0C6;}
+  .bar .tag{font-size:6.5pt;text-transform:uppercase;letter-spacing:2px;opacity:0.5;}
+  .bar .verse{font-size:6.5pt;font-style:italic;opacity:0.4;text-align:right;max-width:200px;line-height:1.3;}
+  .hero{margin:14px 0 10px;}
+  .hero h1{font-family:'Cormorant Garamond',serif;font-size:22pt;font-weight:700;line-height:1.1;}
+  .hero h1 em{font-style:normal;color:#00E0C6;}
+  .hero .sub{font-size:9pt;color:#888;margin-top:2px;}
+  .hook{background:linear-gradient(135deg,#f8fffe,#f0fdfb);border-left:3px solid #00E0C6;padding:8px 12px;margin:10px 0 12px;border-radius:0 6px 6px 0;font-size:8.5pt;color:#444;line-height:1.5;}
+  .hook strong{color:#111;}
+  h2{font-family:'Cormorant Garamond',serif;font-size:12pt;font-weight:700;margin:14px 0 6px;padding-bottom:3px;border-bottom:1.5px solid #00E0C6;display:flex;align-items:center;gap:6px;}
+  h2 .n{background:#111;color:#00E0C6;width:18px;height:18px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-family:'Outfit';font-size:8pt;font-weight:700;}
+  .f{margin-bottom:8px;} .f label{display:block;font-size:7pt;font-weight:700;text-transform:uppercase;letter-spacing:0.7px;color:#888;margin-bottom:2px;}
+  .f .l{border-bottom:1.5px solid #ddd;min-height:22px;padding:2px 0;} .f .lt{border-bottom:1.5px solid #ddd;min-height:36px;padding:2px 0;}
+  .f .pre{border-bottom:1.5px solid #00E0C6;min-height:22px;padding:2px 0;color:#00E0C6;font-weight:600;font-size:9pt;}
+  .g2{display:grid;grid-template-columns:1fr 1fr;gap:10px;} .g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;}
+  .cg{display:flex;flex-wrap:wrap;gap:4px;margin:4px 0;}
+  .o{display:flex;align-items:center;gap:3px;font-size:8pt;padding:2px 7px;border:1.5px solid #ddd;border-radius:12px;}
+  .o input{margin:0;width:10px;height:10px;} .o.on{border-color:#00E0C6;background:#f0fdfb;font-weight:600;}
+  .stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin:10px 0;}
+  .stat{background:#111;color:white;border-radius:6px;padding:8px 10px;}
+  .stat .num{font-size:16pt;font-weight:900;color:#00E0C6;font-family:'Cormorant Garamond',serif;}
+  .stat .lbl{font-size:6pt;text-transform:uppercase;letter-spacing:1.5px;opacity:0.5;}
+  .stat .desc{font-size:7pt;margin-top:2px;opacity:0.7;}
+  /* Package ladder */
+  .ladder{width:100%;border-collapse:collapse;font-size:7.5pt;margin:6px 0;}
+  .ladder th{background:#111;color:white;padding:5px 6px;text-align:left;font-size:7pt;text-transform:uppercase;letter-spacing:1px;}
+  .ladder td{padding:4px 6px;border:1px solid #eee;vertical-align:middle;}
+  .ladder .pkg-name{font-weight:900;font-size:8.5pt;}
+  .ladder .pkg-quote{font-style:italic;color:#888;font-size:7pt;}
+  .ladder .pkg-price{font-size:14pt;font-weight:900;text-align:center;}
+  .ladder .pkg-adds{color:#00E0C6;font-weight:600;}
+  .ladder .check-col{text-align:center;width:30px;}
+  .ladder .tier-label{font-size:6pt;text-transform:uppercase;letter-spacing:1px;font-weight:700;padding:2px 6px;border-radius:8px;display:inline-block;}
+  .tier-b{background:#e8f5e9;color:#2e7d32;} .tier-p{background:#e3f2fd;color:#1565c0;} .tier-e{background:#f3e5f5;color:#7b1fa2;}
+  .ladder tr.pop{background:#f0fdfb;}
+  .ladder tr.elite-row{background:#111;color:#ccc;}
+  .ladder tr.elite-row .pkg-price{color:white;}
+  .ladder tr.elite-row .pkg-adds{color:#D255FF;}
+  /* A la carte */
+  .alc{width:100%;border-collapse:collapse;font-size:7.5pt;margin:6px 0;}
+  .alc th{background:#f8f8f8;padding:4px 6px;text-align:left;font-size:7pt;text-transform:uppercase;letter-spacing:1px;color:#888;}
+  .alc td{padding:3px 6px;border-bottom:1px solid #f0f0f0;}
+  .alc .alc-price{text-align:right;font-weight:900;}
+  /* Signature */
+  .sig{display:grid;grid-template-columns:1fr 120px 1fr;gap:14px;margin-top:14px;align-items:end;}
+  .sl{border-bottom:1.5px solid #111;min-height:30px;} .slbl{font-size:6.5pt;text-transform:uppercase;letter-spacing:0.7px;color:#888;margin-top:2px;}
+  .foot{margin-top:12px;padding-top:6px;border-top:1px solid #eee;font-size:6pt;color:#bbb;text-align:center;line-height:1.5;}
+  .print-btn{position:fixed;bottom:16px;right:16px;background:#111;color:white;border:none;padding:12px 24px;font-size:13px;font-family:'Outfit';font-weight:700;border-radius:8px;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,0.3);z-index:999;}
+  .print-btn:hover{background:#00E0C6;color:#111;}
+  .today{display:inline-block;background:#00E0C6;color:#111;font-size:6.5pt;font-weight:900;text-transform:uppercase;letter-spacing:2px;padding:2px 8px;border-radius:8px;margin-left:6px;}
+</style>
+</head>
+<body>
+<button class="print-btn no-print" onclick="window.print()">Print / Save PDF</button>
+
+<!-- ===== PAGE 1: INTAKE ===== -->
+<div class="page">
+  <div class="bar">
+    <div><span class="logo">X</span> <span class="tag">Xela | Elite AI Creative Studio</span></div>
+    <div class="verse">"Behold, I have set before you an open door." — Rev 3:8</div>
+  </div>
+  <div class="hero">
+    <h1>Let's Build Your <em>Brand</em> Today <span class="today">Same-Day</span></h1>
+    <div class="sub">Garage Door & Access Systems — Cocoa, FL · Brevard County</div>
+  </div>
+  <div class="hook"><strong>Welcome.</strong> We just need a few details and we'll have your complete brand package built <strong>before you leave today.</strong></div>
+
+  <h2><span class="n">1</span> Your Business</h2>
+  <div class="g2">
+    <div class="f"><label>Company Name</label><div class="l"></div></div>
+    <div class="f"><label>Your Name</label><div class="l"></div></div>
+  </div>
+  <div class="g3">
+    <div class="f"><label>Structure</label><div class="cg"><span class="o on"><input type="checkbox" checked> LLC</span><span class="o"><input type="checkbox"> Inc</span><span class="o"><input type="checkbox"> Sole Prop</span></div></div>
+    <div class="f"><label>Years in Business</label><div class="l"></div></div>
+    <div class="f"><label>Service Area</label><div class="pre">Cocoa / Brevard County, FL</div></div>
+  </div>
+  <div class="f"><label>Industry</label><div class="pre">Garage Door Sales, Installation, Repair & Access Systems</div></div>
+  <div class="f"><label>Your Services (check all)</label>
+    <div class="cg">
+      <span class="o on"><input type="checkbox" checked> Installation</span>
+      <span class="o on"><input type="checkbox" checked> Repair</span>
+      <span class="o on"><input type="checkbox" checked> Springs</span>
+      <span class="o on"><input type="checkbox" checked> Openers</span>
+      <span class="o"><input type="checkbox"> Commercial</span>
+      <span class="o"><input type="checkbox"> Gates</span>
+      <span class="o"><input type="checkbox"> Smart/WiFi</span>
+      <span class="o"><input type="checkbox"> 24hr Emergency</span>
+      <span class="o"><input type="checkbox"> Hurricane-Rated</span>
+      <span class="o"><input type="checkbox"> Custom/Carriage</span>
+      <span class="o"><input type="checkbox"> Maintenance</span>
+      <span class="o"><input type="checkbox"> Insulation</span>
+    </div>
+  </div>
+  <div class="f"><label>Ideal Customer</label><div class="cg"><span class="o on"><input type="checkbox" checked> Homeowners</span><span class="o"><input type="checkbox"> Property Mgrs</span><span class="o"><input type="checkbox"> Realtors</span><span class="o"><input type="checkbox"> Commercial</span><span class="o"><input type="checkbox"> HOA</span><span class="o"><input type="checkbox"> New Build</span></div></div>
+
+  <h2><span class="n">2</span> Contact</h2>
+  <div class="g2"><div class="f"><label>Phone</label><div class="l"></div></div><div class="f"><label>Email</label><div class="l"></div></div></div>
+  <div class="g2"><div class="f"><label>Website</label><div class="l"></div></div><div class="f"><label>Google Business (Y/N)</label><div class="l"></div></div></div>
+
+  <h2><span class="n">3</span> Brand Personality</h2>
+  <div class="f"><div class="cg"><span class="o on"><input type="checkbox" checked> Trustworthy</span><span class="o on"><input type="checkbox" checked> Professional</span><span class="o"><input type="checkbox"> Bold</span><span class="o"><input type="checkbox"> Modern</span><span class="o"><input type="checkbox"> Industrial</span><span class="o"><input type="checkbox"> Premium</span><span class="o"><input type="checkbox"> Friendly</span><span class="o"><input type="checkbox"> High-Tech</span><span class="o"><input type="checkbox"> Patriotic</span><span class="o"><input type="checkbox"> Family</span></div></div>
+  <div class="g2">
+    <div class="f"><label>Slogan (if any)</label><div class="l"></div></div>
+    <div class="f"><label>Logo?</label><div class="cg"><span class="o"><input type="checkbox"> Keep</span><span class="o"><input type="checkbox"> Refresh</span><span class="o"><input type="checkbox"> New</span></div></div>
+  </div>
+  <div class="f"><label>What makes you different?</label><div class="lt"></div></div>
+
+  <div class="stats">
+    <div class="stat"><div class="num">98%</div><div class="lbl">Brand Recall</div><div class="desc">Branded = called first</div></div>
+    <div class="stat"><div class="num">3.2x</div><div class="lbl">More Leads</div><div class="desc">Pro Google profile</div></div>
+    <div class="stat"><div class="num">60s</div><div class="lbl">Built Today</div><div class="desc">While you wait</div></div>
+  </div>
+  <div class="foot">Xela | Elite AI Creative Studio — Cocoa, FL — Page 1 of 3<br>"Commit to the Lord whatever you do, and He will establish your plans." — Proverbs 16:3</div>
+</div>
+
+<!-- ===== PAGE 2: THE 10-PACKAGE LADDER ===== -->
+<div class="page page-break">
+  <div class="bar">
+    <div><span class="logo">X</span> <span class="tag">Xela | Elite AI Creative Studio</span></div>
+    <div class="verse">"The Lord will open the heavens to bless all the work of your hands." — Deut 28:12</div>
+  </div>
+  <div class="hero">
+    <h1>10 Packages — <em>Each Builds on the Last</em></h1>
+    <div class="sub">Start anywhere. Each level includes everything below it + more. Circle your package.</div>
+  </div>
+
+  <table class="ladder">
+    <tr>
+      <th style="width:24px;">○</th>
+      <th style="width:8%;">#</th>
+      <th style="width:32%;">Package</th>
+      <th>What's Added at This Level</th>
+      <th style="width:14%;text-align:center;">Price</th>
+    </tr>
+    <!-- 1 -->
+    <tr>
+      <td class="check-col"><input type="checkbox" style="width:14px;height:14px;"></td>
+      <td style="font-weight:900;">1</td>
+      <td><div class="pkg-name">The First Impression</div><span class="tier-label tier-b">Budget</span><br><span class="pkg-quote">"The first door they see is yours."</span></td>
+      <td><span class="pkg-adds">BASE:</span> AI brand strategy · 5 taglines · color palette · typography recommendation</td>
+      <td class="pkg-price">$97</td>
+    </tr>
+    <!-- 2 -->
+    <tr style="background:#fafafa;">
+      <td class="check-col"><input type="checkbox" style="width:14px;height:14px;"></td>
+      <td style="font-weight:900;">2</td>
+      <td><div class="pkg-name">The Threshold</div><span class="tier-label tier-b">Budget</span><br><span class="pkg-quote">"Cross from side hustle to business."</span></td>
+      <td><span class="pkg-adds">+ #1 plus:</span> 3 AI logo concepts · slogan & mission statement generation</td>
+      <td class="pkg-price">$149</td>
+    </tr>
+    <!-- 3 -->
+    <tr>
+      <td class="check-col"><input type="checkbox" style="width:14px;height:14px;"></td>
+      <td style="font-weight:900;">3</td>
+      <td><div class="pkg-name">The Access Pass</div><span class="tier-label tier-b">Budget</span><br><span class="pkg-quote">"The key that gets you in the door."</span></td>
+      <td><span class="pkg-adds">+ #2 plus:</span> Business card design (print-ready PDF) · QR code · LLC naming scan</td>
+      <td class="pkg-price">$199</td>
+    </tr>
+    <!-- 4 -->
+    <tr class="pop">
+      <td class="check-col"><input type="checkbox" style="width:14px;height:14px;"></td>
+      <td style="font-weight:900;">4</td>
+      <td><div class="pkg-name">The Keystone</div><span class="tier-label tier-p">Premium</span><br><span class="pkg-quote">"The stone that holds the arch together."</span></td>
+      <td><span class="pkg-adds">+ #3 plus:</span> Flyer copy & design · classified ad copy · vinyl sticker slogans</td>
+      <td class="pkg-price">$259</td>
+    </tr>
+    <!-- 5 -->
+    <tr>
+      <td class="check-col"><input type="checkbox" style="width:14px;height:14px;"></td>
+      <td style="font-weight:900;">5</td>
+      <td><div class="pkg-name">The Foundation Stone</div><span class="tier-label tier-p">Premium</span><br><span class="pkg-quote">"Build on rock, not sand."</span></td>
+      <td><span class="pkg-adds">+ #4 plus:</span> 30-day content calendar · social media post ideas (4 platforms)</td>
+      <td class="pkg-price">$319</td>
+    </tr>
+    <!-- 6 -->
+    <tr class="pop">
+      <td class="check-col"><input type="checkbox" style="width:14px;height:14px;"></td>
+      <td style="font-weight:900;">6</td>
+      <td><div class="pkg-name">The Gatekeeper</div><span class="tier-label tier-p">Premium</span><br><span class="pkg-quote">"Guard your brand like you guard your home."</span></td>
+      <td><span class="pkg-adds">+ #5 plus:</span> Email templates (5 types) · social media asset pack · FL launch checklist</td>
+      <td class="pkg-price">$379</td>
+    </tr>
+    <!-- 7 -->
+    <tr>
+      <td class="check-col"><input type="checkbox" style="width:14px;height:14px;"></td>
+      <td style="font-weight:900;">7</td>
+      <td><div class="pkg-name">The Master Builder</div><span class="tier-label tier-e">Elite</span><br><span class="pkg-quote">"Craft it right. Craft it once."</span></td>
+      <td><span class="pkg-adds">+ #6 plus:</span> Vinyl sticker suite (Cricut-cut) · flyer print suite (HP precision) · ad copy (3 platforms)</td>
+      <td class="pkg-price">$449</td>
+    </tr>
+    <!-- 8 -->
+    <tr style="background:#faf5ff;">
+      <td class="check-col"><input type="checkbox" style="width:14px;height:14px;"></td>
+      <td style="font-weight:900;">8</td>
+      <td><div class="pkg-name">The Cornerstone</div><span class="tier-label tier-e">Elite</span><br><span class="pkg-quote">"The stone the builders rejected."</span></td>
+      <td><span class="pkg-adds">+ #7 plus:</span> Competitor analysis (3 competitors) · brand guidelines PDF · local ad strategy</td>
+      <td class="pkg-price">$499</td>
+    </tr>
+    <!-- 9 -->
+    <tr class="elite-row">
+      <td class="check-col"><input type="checkbox" style="width:14px;height:14px;"></td>
+      <td style="font-weight:900;color:white;">9</td>
+      <td><div class="pkg-name" style="color:white;">The Open Door</div><span class="tier-label" style="background:#D255FF;color:white;">Elite</span><br><span class="pkg-quote" style="color:#888;">"Behold, I set before you an open door." — Rev 3:8</span></td>
+      <td><span class="pkg-adds">+ #8 plus:</span> Landing page mockup · cinematic AI video ad (1080p) · brand story narrative</td>
+      <td class="pkg-price">$559</td>
+    </tr>
+    <!-- 10 -->
+    <tr class="elite-row" style="border-top:2px solid #D255FF;">
+      <td class="check-col"><input type="checkbox" style="width:14px;height:14px;"></td>
+      <td style="font-weight:900;color:#D255FF;">10</td>
+      <td><div class="pkg-name" style="color:#D255FF;">★ The Grand Opening</div><span class="tier-label" style="background:#D255FF;color:white;">Elite Max</span><br><span class="pkg-quote" style="color:#D255FF;">"The day you became undeniable."</span></td>
+      <td style="color:#ccc;"><span class="pkg-adds">+ #9 plus:</span> 5 logo concepts (upgrade) · 500 printed business cards · VIP 2hr priority delivery · lifetime asset access</td>
+      <td class="pkg-price" style="color:#D255FF;">$649</td>
+    </tr>
+  </table>
+
+  <div style="text-align:center;font-size:8pt;color:#666;margin:6px 0;">
+    <strong>One install = $800–$2,500+.</strong> Brand pays for itself on the first job. · Freelancer: $500–$3K · Agency: $5K–$25K+ · <strong>Xela: $97–$649</strong>
+  </div>
+
+  <!-- THE THREE YESES — humor-driven upsell prompts -->
+  <div style="background:#111;color:white;border-radius:8px;padding:10px 14px;margin:8px 0;font-size:8pt;line-height:1.6;">
+    <div style="font-weight:900;color:#00E0C6;font-size:9pt;margin-bottom:6px;text-align:center;">BEFORE YOU DECIDE — THREE QUICK QUESTIONS</div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;">
+      <div style="background:rgba(255,255,255,0.05);border-radius:6px;padding:8px;border:1px solid rgba(255,255,255,0.1);">
+        <div style="color:#00E0C6;font-weight:900;font-size:8pt;">QUESTION 1:</div>
+        <div style="margin:4px 0;">"So you're telling me your competitor's truck looks better than yours and you're <em>okay</em> with that?"</div>
+        <div style="font-size:7pt;color:#888;margin-top:4px;">If no → you need at least Package #3 (The Access Pass). Cards, logo, the works. Don't let Gary's Garage Doors out-brand you. Gary doesn't even have a logo. It's clip art.</div>
+        <div style="margin-top:6px;text-align:center;">
+          <span style="display:inline-block;padding:2px 10px;border:1px solid #00E0C6;border-radius:10px;color:#00E0C6;font-weight:700;font-size:7pt;">□ YES, FIX MY TRUCK</span>
+        </div>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.05);border-radius:6px;padding:8px;border:1px solid rgba(255,255,255,0.1);">
+        <div style="color:#D255FF;font-weight:900;font-size:8pt;">QUESTION 2:</div>
+        <div style="margin:4px 0;">"You don't want the video ad? Is it because you don't think I'm pretty enough to be on camera for you?"</div>
+        <div style="font-size:7pt;color:#888;margin-top:4px;">A 30-second video ad gets 1,200% more shares than text and images combined. Your competitors are still posting blurry phone pics. This is your unfair advantage.</div>
+        <div style="margin-top:6px;text-align:center;">
+          <span style="display:inline-block;padding:2px 10px;border:1px solid #D255FF;border-radius:10px;color:#D255FF;font-weight:700;font-size:7pt;">□ FINE, ADD THE VIDEO</span>
+        </div>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.05);border-radius:6px;padding:8px;border:1px solid rgba(255,255,255,0.1);">
+        <div style="color:#FFD700;font-weight:900;font-size:8pt;">QUESTION 3:</div>
+        <div style="margin:4px 0;">"So you'll install a $2,000 door but hand someone a business card you made at the library? In <em>2026?</em>"</div>
+        <div style="font-size:7pt;color:#888;margin-top:4px;">500 premium business cards with UV coating, your logo, QR code to your booking page — for less than one service call. Your card should hit as hard as your work does.</div>
+        <div style="margin-top:6px;text-align:center;">
+          <span style="display:inline-block;padding:2px 10px;border:1px solid #FFD700;border-radius:10px;color:#FFD700;font-weight:700;font-size:7pt;">□ YEAH, GIVE ME THE CARDS</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:8px;font-size:7pt;color:#666;font-style:italic;">
+      (If you checked all three, just go with Package #10. You clearly have taste.)
+    </div>
+  </div>
+
+  <div class="foot">Xela | Elite AI Creative Studio — Cocoa, FL — Page 2 of 3<br>"Whatever you do, work at it with all your heart, as working for the Lord." — Colossians 3:23</div>
+</div>
+
+<!-- ===== PAGE 3: A LA CARTE + CLOSE ===== -->
+<div class="page page-break">
+  <div class="bar">
+    <div><span class="logo">X</span> <span class="tag">Xela | Elite AI Creative Studio</span></div>
+    <div class="verse">"For I know the plans I have for you," declares the Lord. — Jer 29:11</div>
+  </div>
+  <div class="hero">
+    <h1>A La Carte <em>Menu</em> + Agreement <span class="today">Start Today</span></h1>
+    <div class="sub">Want just one thing? Check individual services below. Or use your package from page 2.</div>
+  </div>
+
+  <table class="alc">
+    <tr><th></th><th>Individual Service</th><th>Details</th><th style="text-align:right;">Price</th></tr>
+    <tr style="background:#f0fdfb;"><td colspan="4" style="font-weight:900;font-size:7pt;text-transform:uppercase;letter-spacing:1.5px;color:#00E0C6;padding:4px 6px;">Brand Foundation</td></tr>
+    <tr><td><input type="checkbox"></td><td style="font-weight:700;">AI Brand Strategy</td><td>5 taglines, mission, vision, voice, palette, type</td><td class="alc-price">$97</td></tr>
+    <tr><td><input type="checkbox"></td><td style="font-weight:700;">3 Logo Concepts</td><td>AI-generated, multiple styles</td><td class="alc-price">$75</td></tr>
+    <tr><td><input type="checkbox"></td><td style="font-weight:700;">5 Logo Concepts</td><td>Expanded suite + edits</td><td class="alc-price">$119</td></tr>
+    <tr><td><input type="checkbox"></td><td style="font-weight:700;">LLC Naming Scan</td><td>Sunbiz + domain search</td><td class="alc-price">$35</td></tr>
+    <tr style="background:#f0fdfb;"><td colspan="4" style="font-weight:900;font-size:7pt;text-transform:uppercase;letter-spacing:1.5px;color:#00E0C6;padding:4px 6px;">Print & Physical</td></tr>
+    <tr><td><input type="checkbox"></td><td style="font-weight:700;">Business Card Design (PDF)</td><td>Dual-sided, QR code, print-ready</td><td class="alc-price">$65</td></tr>
+    <tr><td><input type="checkbox"></td><td style="font-weight:700;">500 Business Cards (Printed)</td><td>16pt cardstock, UV, HP precision</td><td class="alc-price">$85</td></tr>
+    <tr><td><input type="checkbox"></td><td style="font-weight:700;">Vinyl Sticker Suite</td><td>Die-cut, weatherproof, Cricut precision</td><td class="alc-price">$95</td></tr>
+    <tr><td><input type="checkbox"></td><td style="font-weight:700;">Flyer Design + 250 Printed</td><td>Full color, glossy, 8.5x11</td><td class="alc-price">$110</td></tr>
+    <tr style="background:#f0fdfb;"><td colspan="4" style="font-weight:900;font-size:7pt;text-transform:uppercase;letter-spacing:1.5px;color:#00E0C6;padding:4px 6px;">Digital Marketing</td></tr>
+    <tr><td><input type="checkbox"></td><td style="font-weight:700;">30-Day Content Calendar</td><td>Daily posts, 4 platforms, captions + visuals</td><td class="alc-price">$95</td></tr>
+    <tr><td><input type="checkbox"></td><td style="font-weight:700;">Email Template Pack (5)</td><td>Welcome, promo, newsletter, follow-up, re-engage</td><td class="alc-price">$85</td></tr>
+    <tr><td><input type="checkbox"></td><td style="font-weight:700;">Social Media Asset Pack</td><td>Profile graphics, templates, bio copy</td><td class="alc-price">$75</td></tr>
+    <tr><td><input type="checkbox"></td><td style="font-weight:700;">Ad Copy (3 Platforms)</td><td>FB, Nextdoor, Google — hook-driven</td><td class="alc-price">$95</td></tr>
+    <tr><td><input type="checkbox"></td><td style="font-weight:700;">FL Launch Checklist</td><td>Sunbiz, EIN, insurance, Google, domain</td><td class="alc-price">$45</td></tr>
+    <tr style="background:#f0fdfb;"><td colspan="4" style="font-weight:900;font-size:7pt;text-transform:uppercase;letter-spacing:1.5px;color:#D255FF;padding:4px 6px;">Elite Services</td></tr>
+    <tr><td><input type="checkbox"></td><td style="font-weight:700;">Landing Page Mockup</td><td>High-fidelity, hero + CTA + features</td><td class="alc-price">$149</td></tr>
+    <tr><td><input type="checkbox"></td><td style="font-weight:700;">AI Video Ad (1080p)</td><td>30-60s cinematic, platform-optimized</td><td class="alc-price">$149</td></tr>
+    <tr><td><input type="checkbox"></td><td style="font-weight:700;">Competitor Analysis (3)</td><td>Strengths, weaknesses, differentiation</td><td class="alc-price">$129</td></tr>
+    <tr><td><input type="checkbox"></td><td style="font-weight:700;">Brand Guidelines PDF</td><td>Logo, color, type, voice, imagery rules</td><td class="alc-price">$119</td></tr>
+    <tr><td><input type="checkbox"></td><td style="font-weight:700;">Local Ad Strategy</td><td>Targeting + budget plan for FB/Nextdoor/Google</td><td class="alc-price">$95</td></tr>
+  </table>
+
+  <!-- Totals -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0;font-size:9pt;">
+    <div class="f"><label>Package from Page 2 (#___)</label><div class="l"></div></div>
+    <div class="f"><label>Package Price</label><div class="l"></div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:9pt;">
+    <div class="f"><label>A La Carte Add-Ons Total</label><div class="l"></div></div>
+    <div class="f"><label style="font-size:9pt;color:#111;font-weight:900;">GRAND TOTAL</label><div class="l" style="border-color:#111;border-width:2px;font-size:14pt;font-weight:900;"></div></div>
+  </div>
+
+  <h2><span class="n">4</span> Agreement — Let's Go</h2>
+  <div style="font-size:7.5pt;color:#444;line-height:1.5;margin-bottom:8px;">
+    ✓ Information is accurate · ✓ Package scope understood · ✓ Unlimited AI regen + 2 revision rounds<br>
+    ✓ 50% deposit today, balance on delivery · ✓ Deliverables = client property on full payment<br>
+    ✓ Satisfaction guarantee — we work until you're proud to put it on your truck
+  </div>
+  <div class="g2" style="margin-bottom:8px;">
+    <div class="f"><label>Deposit (50%)</label><div class="l"></div></div>
+    <div class="f"><label>Payment</label><div class="cg"><span class="o"><input type="checkbox"> Zelle</span><span class="o"><input type="checkbox"> Cash App</span><span class="o"><input type="checkbox"> Stripe</span><span class="o"><input type="checkbox"> Cash</span></div></div>
+  </div>
+  <div class="sig">
+    <div><div class="sl"></div><div class="slbl">Client Signature</div></div>
+    <div style="text-align:center;"><div class="sl"></div><div class="slbl">Date</div></div>
+    <div><div class="sl"></div><div class="slbl">Print Name</div></div>
+  </div>
+  <div style="text-align:center;margin-top:10px;padding:8px;background:#f8f8f8;border-radius:6px;">
+    <div style="font-size:9pt;font-weight:700;">What happens next?</div>
+    <div style="font-size:7.5pt;color:#666;line-height:1.5;margin-top:3px;">1. Process deposit → 2. Brand generates in 60s → 3. Walk through together → 4. Leave with your brand today</div>
+  </div>
+  <div class="foot">Xela | Elite AI Creative Studio — A Christ-Centered Company · Cocoa, FL<br>"For I know the plans I have for you," declares the Lord. — Jeremiah 29:11<br>© 2026 Xela Elite. Confidential.</div>
+</div>
+</body>
+</html>

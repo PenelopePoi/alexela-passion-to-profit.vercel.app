@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { BrandStrategy, BrandInput } from '../types';
 import { Printer, Scissors, Download, Sparkles, Layout, Loader2, StickyNote, Edit3, MessageCircle, Copy, ShoppingCart, Grid, Maximize, FileCheck, ScanLine, QrCode, Globe, MapPin, Calendar, Phone, Zap, Paintbrush, Palette, RefreshCw, CheckCircle } from 'lucide-react';
-import { jsPDF } from "jspdf";
+import { generateFlyerPDF, generateStickerPDF } from '../services/pdfGenerator';
 import { generateFlyerCopy, generateClassifiedAd, generateStickerSlogans, generateBrandStory } from '../services/geminiService';
 
 interface MarketingMaterialsProps {
@@ -94,65 +94,28 @@ export const MarketingMaterials: React.FC<MarketingMaterialsProps> = ({ data, in
   };
 
   const handleDownloadFlyer = () => {
-    const doc = new jsPDF();
-    const pageWidth = doc.internal.pageSize.getWidth();
-    doc.setFillColor(data.colorPalette.primary);
-    doc.rect(0, 0, pageWidth, 50, 'F');
-    doc.setTextColor(255, 255, 255);
-    doc.setFontSize(28);
-    doc.text(input.companyName, pageWidth / 2, 25, { align: 'center' });
-    doc.setFontSize(14);
-    doc.text(data.taglines[0], pageWidth / 2, 35, { align: 'center' });
-    doc.setTextColor(0, 0, 0);
-    doc.setFontSize(22);
-    doc.text(data.flyerCopy?.headline || "Expert Service", 20, 70);
-    doc.setFontSize(12);
-    doc.text(data.flyerCopy?.hook || "Quality you can trust.", 20, 85, { maxWidth: 170 });
-    
-    // Attempt to add logo if it's a data URL
-    if (logoUrl && logoUrl.startsWith('data:image')) {
-        try {
-            doc.addImage(logoUrl, 'PNG', 10, 10, 30, 30);
-        } catch (e) { console.warn("Could not add logo to PDF", e); }
-    }
-
-    doc.save(`${input.companyName}_Flyer.pdf`);
+    generateFlyerPDF({
+      companyName: input.companyName,
+      tagline: data.taglines[0],
+      headline: data.flyerCopy?.headline || "Expert Service",
+      hook: data.flyerCopy?.hook || "Quality you can trust.",
+      phone,
+      qrUrl: getQrUrl(),
+      logoUrl: logoUrl && logoUrl.startsWith('data:image') ? logoUrl : undefined,
+      primaryColor: data.colorPalette.primary,
+    });
   };
 
   const handleDownloadSticker = () => {
-    const doc = new jsPDF({
-        orientation: 'landscape',
-        unit: 'mm',
-        format: [100, 100]
+    generateStickerPDF({
+      companyName: input.companyName,
+      stickerText,
+      stickerStyle,
+      bgColor: stickerBgColor,
+      primaryColor: data.colorPalette.primary,
+      location: input.location,
+      logoUrl: logoUrl && logoUrl.startsWith('data:image') ? logoUrl : undefined,
     });
-    
-    // Background
-    if (stickerStyle !== 'diecut') {
-        doc.setFillColor(stickerBgColor);
-        if (stickerStyle === 'round') {
-            doc.circle(50, 50, 48, 'F');
-        } else {
-            doc.rect(2, 2, 96, 96, 'F');
-        }
-    } else {
-         // Diecut simulation (simplified for PDF)
-         doc.setFillColor(255, 255, 255);
-         doc.circle(50, 50, 45, 'F');
-    }
-
-    // Text & Content
-    doc.setTextColor(data.colorPalette.primary);
-    doc.setFontSize(16);
-    const splitTitle = doc.splitTextToSize(stickerText, 80);
-    doc.text(splitTitle, 50, 55, { align: 'center', baseline: 'middle' });
-
-    if (logoUrl && logoUrl.startsWith('data:image')) {
-        try {
-           doc.addImage(logoUrl, 'PNG', 35, 10, 30, 30);
-        } catch(e) { console.warn("Could not add logo to sticker PDF", e); }
-    }
-
-    doc.save(`${input.companyName}_Sticker.pdf`);
   };
 
   const handleOrderPrint = (item: string, price: string) => {

@@ -1,0 +1,1507 @@
+{
+  "batchMetrics": [
+    {
+      "batchNumber": 1,
+      "clientRange": "1-1000",
+      "totalClients": 1000,
+      "clientsDelivered": 303,
+      "avgRevisions": 4.26,
+      "medianRevisions": 4,
+      "avgSatisfaction": 6.44,
+      "medianSatisfaction": 6.5,
+      "avgTimeToApproval": 31.24,
+      "satisfactionPct": 39.27,
+      "npsAvg": 3.69,
+      "topRevisedElements": [
+        [
+          "color_palette",
+          105
+        ],
+        [
+          "typography",
+          99
+        ],
+        [
+          "tagline",
+          82
+        ],
+        [
+          "logo_mark",
+          77
+        ],
+        [
+          "minor_tweaks",
+          71
+        ]
+      ],
+      "revenueTotal": 120347,
+      "upsellRate": 12.21,
+      "referralRate": 8.58
+    },
+    {
+      "batchNumber": 2,
+      "clientRange": "1001-2000",
+      "totalClients": 1000,
+      "clientsDelivered": 296,
+      "avgRevisions": 3.36,
+      "medianRevisions": 3,
+      "avgSatisfaction": 7.12,
+      "medianSatisfaction": 7.2,
+      "avgTimeToApproval": 24.93,
+      "satisfactionPct": 56.42,
+      "npsAvg": 5.03,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          139
+        ],
+        [
+          "color_palette",
+          57
+        ],
+        [
+          "typography",
+          53
+        ],
+        [
+          "logo_mark",
+          45
+        ],
+        [
+          "tagline",
+          39
+        ]
+      ],
+      "revenueTotal": 119304,
+      "upsellRate": 20.27,
+      "referralRate": 10.81
+    },
+    {
+      "batchNumber": 3,
+      "clientRange": "2001-3000",
+      "totalClients": 1000,
+      "clientsDelivered": 292,
+      "avgRevisions": 3.19,
+      "medianRevisions": 3,
+      "avgSatisfaction": 7.38,
+      "medianSatisfaction": 7.5,
+      "avgTimeToApproval": 24.57,
+      "satisfactionPct": 67.12,
+      "npsAvg": 5.6,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          152
+        ],
+        [
+          "color_palette",
+          53
+        ],
+        [
+          "logo_mark",
+          47
+        ],
+        [
+          "typography",
+          43
+        ],
+        [
+          "tagline",
+          28
+        ]
+      ],
+      "revenueTotal": 111308,
+      "upsellRate": 16.78,
+      "referralRate": 15.75
+    },
+    {
+      "batchNumber": 4,
+      "clientRange": "3001-4000",
+      "totalClients": 1000,
+      "clientsDelivered": 289,
+      "avgRevisions": 2.81,
+      "medianRevisions": 3,
+      "avgSatisfaction": 7.44,
+      "medianSatisfaction": 7.5,
+      "avgTimeToApproval": 20.28,
+      "satisfactionPct": 71.28,
+      "npsAvg": 5.81,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          165
+        ],
+        [
+          "color_palette",
+          49
+        ],
+        [
+          "tagline",
+          33
+        ],
+        [
+          "typography",
+          31
+        ],
+        [
+          "logo_mark",
+          27
+        ]
+      ],
+      "revenueTotal": 117861,
+      "upsellRate": 21.8,
+      "referralRate": 16.26
+    },
+    {
+      "batchNumber": 5,
+      "clientRange": "4001-5000",
+      "totalClients": 1000,
+      "clientsDelivered": 293,
+      "avgRevisions": 2.75,
+      "medianRevisions": 3,
+      "avgSatisfaction": 7.56,
+      "medianSatisfaction": 7.6,
+      "avgTimeToApproval": 21.88,
+      "satisfactionPct": 76.45,
+      "npsAvg": 6.02,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          163
+        ],
+        [
+          "logo_mark",
+          41
+        ],
+        [
+          "typography",
+          41
+        ],
+        [
+          "color_palette",
+          40
+        ],
+        [
+          "tagline",
+          27
+        ]
+      ],
+      "revenueTotal": 107457,
+      "upsellRate": 19.11,
+      "referralRate": 13.31
+    },
+    {
+      "batchNumber": 6,
+      "clientRange": "5001-6000",
+      "totalClients": 1000,
+      "clientsDelivered": 296,
+      "avgRevisions": 2.7,
+      "medianRevisions": 3,
+      "avgSatisfaction": 7.46,
+      "medianSatisfaction": 7.5,
+      "avgTimeToApproval": 20.41,
+      "satisfactionPct": 69.59,
+      "npsAvg": 5.83,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          182
+        ],
+        [
+          "color_palette",
+          44
+        ],
+        [
+          "typography",
+          37
+        ],
+        [
+          "tagline",
+          28
+        ],
+        [
+          "logo_mark",
+          26
+        ]
+      ],
+      "revenueTotal": 113304,
+      "upsellRate": 18.92,
+      "referralRate": 14.53
+    },
+    {
+      "batchNumber": 7,
+      "clientRange": "6001-7000",
+      "totalClients": 1000,
+      "clientsDelivered": 274,
+      "avgRevisions": 2.84,
+      "medianRevisions": 3,
+      "avgSatisfaction": 7.49,
+      "medianSatisfaction": 7.4,
+      "avgTimeToApproval": 22.12,
+      "satisfactionPct": 68.98,
+      "npsAvg": 5.72,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          171
+        ],
+        [
+          "color_palette",
+          39
+        ],
+        [
+          "tagline",
+          27
+        ],
+        [
+          "typography",
+          26
+        ],
+        [
+          "logo_mark",
+          26
+        ]
+      ],
+      "revenueTotal": 108426,
+      "upsellRate": 20.07,
+      "referralRate": 12.77
+    },
+    {
+      "batchNumber": 8,
+      "clientRange": "7001-8000",
+      "totalClients": 1000,
+      "clientsDelivered": 262,
+      "avgRevisions": 2.64,
+      "medianRevisions": 2,
+      "avgSatisfaction": 7.55,
+      "medianSatisfaction": 7.5,
+      "avgTimeToApproval": 20.73,
+      "satisfactionPct": 75.19,
+      "npsAvg": 6.1,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          162
+        ],
+        [
+          "color_palette",
+          37
+        ],
+        [
+          "logo_mark",
+          25
+        ],
+        [
+          "typography",
+          24
+        ],
+        [
+          "layout",
+          19
+        ]
+      ],
+      "revenueTotal": 101838,
+      "upsellRate": 19.08,
+      "referralRate": 18.7
+    },
+    {
+      "batchNumber": 9,
+      "clientRange": "8001-9000",
+      "totalClients": 1000,
+      "clientsDelivered": 288,
+      "avgRevisions": 2.72,
+      "medianRevisions": 3,
+      "avgSatisfaction": 7.55,
+      "medianSatisfaction": 7.6,
+      "avgTimeToApproval": 21.54,
+      "satisfactionPct": 76.04,
+      "npsAvg": 6.07,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          190
+        ],
+        [
+          "color_palette",
+          36
+        ],
+        [
+          "logo_mark",
+          30
+        ],
+        [
+          "typography",
+          28
+        ],
+        [
+          "tagline",
+          18
+        ]
+      ],
+      "revenueTotal": 105112,
+      "upsellRate": 19.44,
+      "referralRate": 17.01
+    },
+    {
+      "batchNumber": 10,
+      "clientRange": "9001-10000",
+      "totalClients": 1000,
+      "clientsDelivered": 272,
+      "avgRevisions": 2.72,
+      "medianRevisions": 3,
+      "avgSatisfaction": 7.53,
+      "medianSatisfaction": 7.6,
+      "avgTimeToApproval": 21.3,
+      "satisfactionPct": 71.32,
+      "npsAvg": 5.84,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          170
+        ],
+        [
+          "color_palette",
+          36
+        ],
+        [
+          "typography",
+          32
+        ],
+        [
+          "logo_mark",
+          23
+        ],
+        [
+          "tagline",
+          23
+        ]
+      ],
+      "revenueTotal": 107328,
+      "upsellRate": 19.85,
+      "referralRate": 17.65
+    },
+    {
+      "batchNumber": 11,
+      "clientRange": "10001-11000",
+      "totalClients": 1000,
+      "clientsDelivered": 288,
+      "avgRevisions": 2.78,
+      "medianRevisions": 3,
+      "avgSatisfaction": 7.63,
+      "medianSatisfaction": 7.7,
+      "avgTimeToApproval": 22.2,
+      "satisfactionPct": 77.78,
+      "npsAvg": 6.16,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          181
+        ],
+        [
+          "logo_mark",
+          36
+        ],
+        [
+          "color_palette",
+          34
+        ],
+        [
+          "typography",
+          34
+        ],
+        [
+          "tagline",
+          22
+        ]
+      ],
+      "revenueTotal": 104712,
+      "upsellRate": 19.79,
+      "referralRate": 17.71
+    },
+    {
+      "batchNumber": 12,
+      "clientRange": "11001-12000",
+      "totalClients": 1000,
+      "clientsDelivered": 265,
+      "avgRevisions": 2.82,
+      "medianRevisions": 3,
+      "avgSatisfaction": 7.58,
+      "medianSatisfaction": 7.7,
+      "avgTimeToApproval": 22.35,
+      "satisfactionPct": 74.72,
+      "npsAvg": 5.92,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          158
+        ],
+        [
+          "color_palette",
+          30
+        ],
+        [
+          "tagline",
+          28
+        ],
+        [
+          "typography",
+          28
+        ],
+        [
+          "logo_mark",
+          25
+        ]
+      ],
+      "revenueTotal": 99485,
+      "upsellRate": 26.04,
+      "referralRate": 17.74
+    },
+    {
+      "batchNumber": 13,
+      "clientRange": "12001-13000",
+      "totalClients": 1000,
+      "clientsDelivered": 269,
+      "avgRevisions": 2.85,
+      "medianRevisions": 3,
+      "avgSatisfaction": 7.59,
+      "medianSatisfaction": 7.6,
+      "avgTimeToApproval": 22.79,
+      "satisfactionPct": 77.7,
+      "npsAvg": 6.17,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          179
+        ],
+        [
+          "color_palette",
+          38
+        ],
+        [
+          "typography",
+          23
+        ],
+        [
+          "tagline",
+          20
+        ],
+        [
+          "layout",
+          17
+        ]
+      ],
+      "revenueTotal": 98281,
+      "upsellRate": 18.22,
+      "referralRate": 15.99
+    },
+    {
+      "batchNumber": 14,
+      "clientRange": "13001-14000",
+      "totalClients": 1000,
+      "clientsDelivered": 299,
+      "avgRevisions": 2.77,
+      "medianRevisions": 3,
+      "avgSatisfaction": 7.58,
+      "medianSatisfaction": 7.7,
+      "avgTimeToApproval": 20.63,
+      "satisfactionPct": 71.91,
+      "npsAvg": 6,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          186
+        ],
+        [
+          "color_palette",
+          42
+        ],
+        [
+          "logo_mark",
+          31
+        ],
+        [
+          "tagline",
+          30
+        ],
+        [
+          "typography",
+          27
+        ]
+      ],
+      "revenueTotal": 117751,
+      "upsellRate": 15.72,
+      "referralRate": 14.05
+    },
+    {
+      "batchNumber": 15,
+      "clientRange": "14001-15000",
+      "totalClients": 1000,
+      "clientsDelivered": 297,
+      "avgRevisions": 2.63,
+      "medianRevisions": 2,
+      "avgSatisfaction": 7.58,
+      "medianSatisfaction": 7.6,
+      "avgTimeToApproval": 19.63,
+      "satisfactionPct": 72.73,
+      "npsAvg": 6.06,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          198
+        ],
+        [
+          "color_palette",
+          38
+        ],
+        [
+          "typography",
+          31
+        ],
+        [
+          "logo_mark",
+          25
+        ],
+        [
+          "layout",
+          19
+        ]
+      ],
+      "revenueTotal": 122453,
+      "upsellRate": 23.23,
+      "referralRate": 16.16
+    },
+    {
+      "batchNumber": 16,
+      "clientRange": "15001-16000",
+      "totalClients": 1000,
+      "clientsDelivered": 282,
+      "avgRevisions": 2.74,
+      "medianRevisions": 3,
+      "avgSatisfaction": 7.68,
+      "medianSatisfaction": 7.8,
+      "avgTimeToApproval": 20.62,
+      "satisfactionPct": 78.01,
+      "npsAvg": 6.2,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          188
+        ],
+        [
+          "color_palette",
+          31
+        ],
+        [
+          "logo_mark",
+          28
+        ],
+        [
+          "typography",
+          25
+        ],
+        [
+          "tagline",
+          22
+        ]
+      ],
+      "revenueTotal": 115018,
+      "upsellRate": 20.21,
+      "referralRate": 20.92
+    },
+    {
+      "batchNumber": 17,
+      "clientRange": "16001-17000",
+      "totalClients": 1000,
+      "clientsDelivered": 291,
+      "avgRevisions": 2.69,
+      "medianRevisions": 3,
+      "avgSatisfaction": 7.62,
+      "medianSatisfaction": 7.7,
+      "avgTimeToApproval": 21.42,
+      "satisfactionPct": 76.63,
+      "npsAvg": 6.11,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          190
+        ],
+        [
+          "color_palette",
+          39
+        ],
+        [
+          "typography",
+          26
+        ],
+        [
+          "logo_mark",
+          26
+        ],
+        [
+          "tagline",
+          22
+        ]
+      ],
+      "revenueTotal": 106559,
+      "upsellRate": 20.62,
+      "referralRate": 16.15
+    },
+    {
+      "batchNumber": 18,
+      "clientRange": "17001-18000",
+      "totalClients": 1000,
+      "clientsDelivered": 291,
+      "avgRevisions": 2.71,
+      "medianRevisions": 3,
+      "avgSatisfaction": 7.56,
+      "medianSatisfaction": 7.6,
+      "avgTimeToApproval": 21.29,
+      "satisfactionPct": 72.85,
+      "npsAvg": 5.92,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          176
+        ],
+        [
+          "typography",
+          44
+        ],
+        [
+          "color_palette",
+          39
+        ],
+        [
+          "tagline",
+          24
+        ],
+        [
+          "layout",
+          23
+        ]
+      ],
+      "revenueTotal": 113359,
+      "upsellRate": 18.21,
+      "referralRate": 17.87
+    },
+    {
+      "batchNumber": 19,
+      "clientRange": "18001-19000",
+      "totalClients": 1000,
+      "clientsDelivered": 289,
+      "avgRevisions": 2.78,
+      "medianRevisions": 3,
+      "avgSatisfaction": 7.47,
+      "medianSatisfaction": 7.5,
+      "avgTimeToApproval": 21.61,
+      "satisfactionPct": 69.2,
+      "npsAvg": 5.67,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          175
+        ],
+        [
+          "color_palette",
+          45
+        ],
+        [
+          "typography",
+          30
+        ],
+        [
+          "logo_mark",
+          27
+        ],
+        [
+          "layout",
+          23
+        ]
+      ],
+      "revenueTotal": 111061,
+      "upsellRate": 16.61,
+      "referralRate": 14.88
+    },
+    {
+      "batchNumber": 20,
+      "clientRange": "19001-20000",
+      "totalClients": 1000,
+      "clientsDelivered": 292,
+      "avgRevisions": 2.67,
+      "medianRevisions": 3,
+      "avgSatisfaction": 7.54,
+      "medianSatisfaction": 7.7,
+      "avgTimeToApproval": 20.28,
+      "satisfactionPct": 67.12,
+      "npsAvg": 5.73,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          194
+        ],
+        [
+          "color_palette",
+          32
+        ],
+        [
+          "typography",
+          31
+        ],
+        [
+          "tagline",
+          26
+        ],
+        [
+          "logo_mark",
+          23
+        ]
+      ],
+      "revenueTotal": 110908,
+      "upsellRate": 22.95,
+      "referralRate": 15.41
+    }
+  ],
+  "industryMetrics": [
+    {
+      "industry": "mobile_detailing",
+      "totalDelivered": 166,
+      "avgRevisions": 2.97,
+      "avgSatisfaction": 7.35,
+      "convergenceRate": 34.36,
+      "firstBatchAvgRevisions": 3.9,
+      "lastBatchAvgRevisions": 2.56,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          96
+        ],
+        [
+          "color_palette",
+          27
+        ],
+        [
+          "typography",
+          21
+        ]
+      ]
+    },
+    {
+      "industry": "pet_grooming",
+      "totalDelivered": 164,
+      "avgRevisions": 3.15,
+      "avgSatisfaction": 7.38,
+      "convergenceRate": 34.33,
+      "firstBatchAvgRevisions": 4.02,
+      "lastBatchAvgRevisions": 2.64,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          89
+        ],
+        [
+          "color_palette",
+          26
+        ],
+        [
+          "typography",
+          25
+        ]
+      ]
+    },
+    {
+      "industry": "salon",
+      "totalDelivered": 543,
+      "avgRevisions": 2.85,
+      "avgSatisfaction": 7.5,
+      "convergenceRate": 32.68,
+      "firstBatchAvgRevisions": 4.1,
+      "lastBatchAvgRevisions": 2.76,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          339
+        ],
+        [
+          "logo_mark",
+          65
+        ],
+        [
+          "color_palette",
+          64
+        ]
+      ]
+    },
+    {
+      "industry": "cleaning",
+      "totalDelivered": 302,
+      "avgRevisions": 2.86,
+      "avgSatisfaction": 7.4,
+      "convergenceRate": 32.6,
+      "firstBatchAvgRevisions": 3.62,
+      "lastBatchAvgRevisions": 2.44,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          180
+        ],
+        [
+          "color_palette",
+          51
+        ],
+        [
+          "typography",
+          50
+        ]
+      ]
+    },
+    {
+      "industry": "pressure_washing",
+      "totalDelivered": 112,
+      "avgRevisions": 3.24,
+      "avgSatisfaction": 7.31,
+      "convergenceRate": 30.89,
+      "firstBatchAvgRevisions": 3.82,
+      "lastBatchAvgRevisions": 2.64,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          63
+        ],
+        [
+          "color_palette",
+          22
+        ],
+        [
+          "layout",
+          15
+        ]
+      ]
+    },
+    {
+      "industry": "photography",
+      "totalDelivered": 199,
+      "avgRevisions": 2.95,
+      "avgSatisfaction": 7.45,
+      "convergenceRate": 29.32,
+      "firstBatchAvgRevisions": 3.82,
+      "lastBatchAvgRevisions": 2.7,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          116
+        ],
+        [
+          "color_palette",
+          31
+        ],
+        [
+          "typography",
+          30
+        ]
+      ]
+    },
+    {
+      "industry": "contractor",
+      "totalDelivered": 711,
+      "avgRevisions": 2.79,
+      "avgSatisfaction": 7.54,
+      "convergenceRate": 29.03,
+      "firstBatchAvgRevisions": 3.72,
+      "lastBatchAvgRevisions": 2.64,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          463
+        ],
+        [
+          "color_palette",
+          88
+        ],
+        [
+          "typography",
+          74
+        ]
+      ]
+    },
+    {
+      "industry": "real_estate",
+      "totalDelivered": 323,
+      "avgRevisions": 2.87,
+      "avgSatisfaction": 7.53,
+      "convergenceRate": 27.81,
+      "firstBatchAvgRevisions": 3.74,
+      "lastBatchAvgRevisions": 2.7,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          189
+        ],
+        [
+          "color_palette",
+          50
+        ],
+        [
+          "logo_mark",
+          38
+        ]
+      ]
+    },
+    {
+      "industry": "landscaping",
+      "totalDelivered": 206,
+      "avgRevisions": 2.84,
+      "avgSatisfaction": 7.38,
+      "convergenceRate": 27.32,
+      "firstBatchAvgRevisions": 3.66,
+      "lastBatchAvgRevisions": 2.66,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          105
+        ],
+        [
+          "color_palette",
+          37
+        ],
+        [
+          "typography",
+          35
+        ]
+      ]
+    },
+    {
+      "industry": "barber",
+      "totalDelivered": 180,
+      "avgRevisions": 2.9,
+      "avgSatisfaction": 7.53,
+      "convergenceRate": 26.67,
+      "firstBatchAvgRevisions": 3.6,
+      "lastBatchAvgRevisions": 2.64,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          109
+        ],
+        [
+          "color_palette",
+          26
+        ],
+        [
+          "logo_mark",
+          24
+        ]
+      ]
+    },
+    {
+      "industry": "fitness",
+      "totalDelivered": 358,
+      "avgRevisions": 2.74,
+      "avgSatisfaction": 7.47,
+      "convergenceRate": 24.71,
+      "firstBatchAvgRevisions": 3.48,
+      "lastBatchAvgRevisions": 2.62,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          203
+        ],
+        [
+          "color_palette",
+          60
+        ],
+        [
+          "typography",
+          57
+        ]
+      ]
+    },
+    {
+      "industry": "food_truck",
+      "totalDelivered": 242,
+      "avgRevisions": 2.79,
+      "avgSatisfaction": 7.55,
+      "convergenceRate": 24.02,
+      "firstBatchAvgRevisions": 3.58,
+      "lastBatchAvgRevisions": 2.72,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          133
+        ],
+        [
+          "color_palette",
+          44
+        ],
+        [
+          "logo_mark",
+          30
+        ]
+      ]
+    },
+    {
+      "industry": "auto",
+      "totalDelivered": 339,
+      "avgRevisions": 2.83,
+      "avgSatisfaction": 7.42,
+      "convergenceRate": 23.46,
+      "firstBatchAvgRevisions": 3.58,
+      "lastBatchAvgRevisions": 2.74,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          196
+        ],
+        [
+          "color_palette",
+          50
+        ],
+        [
+          "typography",
+          42
+        ]
+      ]
+    },
+    {
+      "industry": "retail",
+      "totalDelivered": 432,
+      "avgRevisions": 2.9,
+      "avgSatisfaction": 7.49,
+      "convergenceRate": 23.03,
+      "firstBatchAvgRevisions": 3.56,
+      "lastBatchAvgRevisions": 2.74,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          261
+        ],
+        [
+          "color_palette",
+          60
+        ],
+        [
+          "logo_mark",
+          42
+        ]
+      ]
+    },
+    {
+      "industry": "catering",
+      "totalDelivered": 112,
+      "avgRevisions": 3.02,
+      "avgSatisfaction": 7.25,
+      "convergenceRate": 21.3,
+      "firstBatchAvgRevisions": 3.38,
+      "lastBatchAvgRevisions": 2.66,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          67
+        ],
+        [
+          "color_palette",
+          20
+        ],
+        [
+          "typography",
+          20
+        ]
+      ]
+    },
+    {
+      "industry": "restaurant",
+      "totalDelivered": 909,
+      "avgRevisions": 2.86,
+      "avgSatisfaction": 7.52,
+      "convergenceRate": 21.16,
+      "firstBatchAvgRevisions": 3.78,
+      "lastBatchAvgRevisions": 2.98,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          566
+        ],
+        [
+          "color_palette",
+          129
+        ],
+        [
+          "typography",
+          95
+        ]
+      ]
+    },
+    {
+      "industry": "tutoring",
+      "totalDelivered": 178,
+      "avgRevisions": 2.75,
+      "avgSatisfaction": 7.38,
+      "convergenceRate": 20.96,
+      "firstBatchAvgRevisions": 3.34,
+      "lastBatchAvgRevisions": 2.64,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          90
+        ],
+        [
+          "color_palette",
+          34
+        ],
+        [
+          "logo_mark",
+          28
+        ]
+      ]
+    },
+    {
+      "industry": "nail_tech",
+      "totalDelivered": 191,
+      "avgRevisions": 3.01,
+      "avgSatisfaction": 7.37,
+      "convergenceRate": 18.24,
+      "firstBatchAvgRevisions": 3.4,
+      "lastBatchAvgRevisions": 2.78,
+      "topRevisedElements": [
+        [
+          "minor_tweaks",
+          108
+        ],
+        [
+          "color_palette",
+          30
+        ],
+        [
+          "typography",
+          27
+        ]
+      ]
+    },
+    {
+      "industry": "pool_service",
+      "totalDelivered": 61,
+      "avgRevisions": 3.54,
+      "avgSatisfaction": 6.95,
+      "convergenceRate": 7.73,
+      "firstBatchAvgRevisions": 3.62,
+      "lastBatchAvgRevisions": 3.34,
+      "topRevisedElements": [
+        [
+          "typography",
+          19
+        ],
+        [
+          "minor_tweaks",
+          17
+        ],
+        [
+          "color_palette",
+          15
+        ]
+      ]
+    }
+  ],
+  "elementRevisionFrequency": {
+    "typography": 713,
+    "logo_mark": 626,
+    "tagline": 550,
+    "color_palette": 864,
+    "layout": 435,
+    "minor_tweaks": 3390
+  },
+  "improvementCurve": [
+    {
+      "batch": 1,
+      "revisions": 4.26,
+      "satisfaction": 6.44
+    },
+    {
+      "batch": 2,
+      "revisions": 3.36,
+      "satisfaction": 7.12
+    },
+    {
+      "batch": 3,
+      "revisions": 3.19,
+      "satisfaction": 7.38
+    },
+    {
+      "batch": 4,
+      "revisions": 2.81,
+      "satisfaction": 7.44
+    },
+    {
+      "batch": 5,
+      "revisions": 2.75,
+      "satisfaction": 7.56
+    },
+    {
+      "batch": 6,
+      "revisions": 2.7,
+      "satisfaction": 7.46
+    },
+    {
+      "batch": 7,
+      "revisions": 2.84,
+      "satisfaction": 7.49
+    },
+    {
+      "batch": 8,
+      "revisions": 2.64,
+      "satisfaction": 7.55
+    },
+    {
+      "batch": 9,
+      "revisions": 2.72,
+      "satisfaction": 7.55
+    },
+    {
+      "batch": 10,
+      "revisions": 2.72,
+      "satisfaction": 7.53
+    },
+    {
+      "batch": 11,
+      "revisions": 2.78,
+      "satisfaction": 7.63
+    },
+    {
+      "batch": 12,
+      "revisions": 2.82,
+      "satisfaction": 7.58
+    },
+    {
+      "batch": 13,
+      "revisions": 2.85,
+      "satisfaction": 7.59
+    },
+    {
+      "batch": 14,
+      "revisions": 2.77,
+      "satisfaction": 7.58
+    },
+    {
+      "batch": 15,
+      "revisions": 2.63,
+      "satisfaction": 7.58
+    },
+    {
+      "batch": 16,
+      "revisions": 2.74,
+      "satisfaction": 7.68
+    },
+    {
+      "batch": 17,
+      "revisions": 2.69,
+      "satisfaction": 7.62
+    },
+    {
+      "batch": 18,
+      "revisions": 2.71,
+      "satisfaction": 7.56
+    },
+    {
+      "batch": 19,
+      "revisions": 2.78,
+      "satisfaction": 7.47
+    },
+    {
+      "batch": 20,
+      "revisions": 2.67,
+      "satisfaction": 7.54
+    }
+  ],
+  "convergenceRanking": [
+    {
+      "industry": "mobile_detailing",
+      "convergenceScore": 34.36
+    },
+    {
+      "industry": "pet_grooming",
+      "convergenceScore": 34.33
+    },
+    {
+      "industry": "salon",
+      "convergenceScore": 32.68
+    },
+    {
+      "industry": "cleaning",
+      "convergenceScore": 32.6
+    },
+    {
+      "industry": "pressure_washing",
+      "convergenceScore": 30.89
+    },
+    {
+      "industry": "photography",
+      "convergenceScore": 29.32
+    },
+    {
+      "industry": "contractor",
+      "convergenceScore": 29.03
+    },
+    {
+      "industry": "real_estate",
+      "convergenceScore": 27.81
+    },
+    {
+      "industry": "landscaping",
+      "convergenceScore": 27.32
+    },
+    {
+      "industry": "barber",
+      "convergenceScore": 26.67
+    },
+    {
+      "industry": "fitness",
+      "convergenceScore": 24.71
+    },
+    {
+      "industry": "food_truck",
+      "convergenceScore": 24.02
+    },
+    {
+      "industry": "auto",
+      "convergenceScore": 23.46
+    },
+    {
+      "industry": "retail",
+      "convergenceScore": 23.03
+    },
+    {
+      "industry": "catering",
+      "convergenceScore": 21.3
+    },
+    {
+      "industry": "restaurant",
+      "convergenceScore": 21.16
+    },
+    {
+      "industry": "tutoring",
+      "convergenceScore": 20.96
+    },
+    {
+      "industry": "nail_tech",
+      "convergenceScore": 18.24
+    },
+    {
+      "industry": "pool_service",
+      "convergenceScore": 7.73
+    }
+  ],
+  "optimalStrategies": [
+    {
+      "industry": "contractor",
+      "recommendedVibe": "Warm",
+      "recommendedFont": "sans",
+      "recommendedTone": "friendly"
+    },
+    {
+      "industry": "mobile_detailing",
+      "recommendedVibe": "Clean",
+      "recommendedFont": "sans",
+      "recommendedTone": "luxury"
+    },
+    {
+      "industry": "restaurant",
+      "recommendedVibe": "Playful",
+      "recommendedFont": "handwritten",
+      "recommendedTone": "friendly"
+    },
+    {
+      "industry": "photography",
+      "recommendedVibe": "Luxury",
+      "recommendedFont": "serif",
+      "recommendedTone": "edgy"
+    },
+    {
+      "industry": "cleaning",
+      "recommendedVibe": "Clean",
+      "recommendedFont": "sans",
+      "recommendedTone": "luxury"
+    },
+    {
+      "industry": "pool_service",
+      "recommendedVibe": "Bold",
+      "recommendedFont": "serif",
+      "recommendedTone": "playful"
+    },
+    {
+      "industry": "salon",
+      "recommendedVibe": "Bold",
+      "recommendedFont": "handwritten",
+      "recommendedTone": "playful"
+    },
+    {
+      "industry": "barber",
+      "recommendedVibe": "Bold",
+      "recommendedFont": "handwritten",
+      "recommendedTone": "professional"
+    },
+    {
+      "industry": "landscaping",
+      "recommendedVibe": "Warm",
+      "recommendedFont": "handwritten",
+      "recommendedTone": "edgy"
+    },
+    {
+      "industry": "pressure_washing",
+      "recommendedVibe": "Clean",
+      "recommendedFont": "handwritten",
+      "recommendedTone": "edgy"
+    },
+    {
+      "industry": "tutoring",
+      "recommendedVibe": "Bold",
+      "recommendedFont": "sans",
+      "recommendedTone": "luxury"
+    },
+    {
+      "industry": "retail",
+      "recommendedVibe": "Playful",
+      "recommendedFont": "display",
+      "recommendedTone": "professional"
+    },
+    {
+      "industry": "real_estate",
+      "recommendedVibe": "Playful",
+      "recommendedFont": "sans",
+      "recommendedTone": "friendly"
+    },
+    {
+      "industry": "food_truck",
+      "recommendedVibe": "Playful",
+      "recommendedFont": "serif",
+      "recommendedTone": "luxury"
+    },
+    {
+      "industry": "nail_tech",
+      "recommendedVibe": "Playful",
+      "recommendedFont": "serif",
+      "recommendedTone": "luxury"
+    },
+    {
+      "industry": "auto",
+      "recommendedVibe": "Playful",
+      "recommendedFont": "serif",
+      "recommendedTone": "friendly"
+    },
+    {
+      "industry": "fitness",
+      "recommendedVibe": "Luxury",
+      "recommendedFont": "serif",
+      "recommendedTone": "professional"
+    },
+    {
+      "industry": "pet_grooming",
+      "recommendedVibe": "Warm",
+      "recommendedFont": "sans",
+      "recommendedTone": "professional"
+    },
+    {
+      "industry": "catering",
+      "recommendedVibe": "Playful",
+      "recommendedFont": "handwritten",
+      "recommendedTone": "luxury"
+    }
+  ]
+}

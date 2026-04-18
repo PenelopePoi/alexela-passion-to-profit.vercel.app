@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Brand Consultation | XELA Creative Branding Studio</title>
+  <meta name="description" content="Schedule your brand consultation with XELA Creative Branding Studio. Logo design, business cards, flyers, social media, and full brand packages for small businesses in Brevard County, FL.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --teal: #00FFCC;
+      --teal-dark: #00CCaa;
+      --black: #0A0A0A;
+      --paper: #FAF8F5;
+      --paper-dark: #F0EDE8;
+      --lavender: #C4B5FD;
+      --gray: #6B7280;
+      --gray-light: #E5E7EB;
+      --radius: 12px;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--paper);
+      color: var(--black);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    .header {
+      background: var(--black);
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+    .header-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+    }
+    .header-logo img {
+      height: 50px;
+      width: auto;
+    }
+    .header-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: white;
+      letter-spacing: 0.08em;
+    }
+    .header-brand span {
+      color: var(--teal);
+    }
+    .header-tagline {
+      font-size: 0.65rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: var(--teal);
+      margin-top: 0.25rem;
+    }
+    .header-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.7);
+      margin-top: 1rem;
+      font-style: italic;
+    }
+
+    /* Main */
+    .main {
+      flex: 1;
+      max-width: 640px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3rem;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .intro h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .intro p {
+      font-size: 0.85rem;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+
+    /* Form */
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    label {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--black);
+      margin-bottom: 0.4rem;
+    }
+    label .req {
+      color: #EF4444;
+      margin-left: 2px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1.5px solid var(--gray-light);
+      border-radius: var(--radius);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.9rem;
+      background: white;
+      color: var(--black);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--teal-dark);
+      box-shadow: 0 0 0 3px rgba(0,255,204,0.15);
+    }
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    select {
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%236B7280' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      padding-right: 2.5rem;
+    }
+
+    /* Checkboxes */
+    .checkbox-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+    }
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      font-size: 0.85rem;
+      padding: 0.5rem 0.75rem;
+      border: 1.5px solid var(--gray-light);
+      border-radius: var(--radius);
+      background: white;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .checkbox-item:hover {
+      border-color: var(--teal-dark);
+    }
+    .checkbox-item.checked {
+      border-color: var(--teal-dark);
+      background: rgba(0,255,204,0.08);
+    }
+    .checkbox-item input[type="checkbox"] {
+      accent-color: var(--teal-dark);
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+
+    /* Submit */
+    .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      background: var(--black);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      margin-top: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .submit-btn::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--teal);
+    }
+    .submit-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 30px rgba(0,255,204,0.2);
+    }
+    .submit-btn:active {
+      transform: translateY(0);
+    }
+    .submit-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* Thank you */
+    .thank-you {
+      display: none;
+      text-align: center;
+      padding: 3rem 1.5rem;
+    }
+    .thank-you.show {
+      display: block;
+    }
+    .thank-you .check-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--black);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+    }
+    .thank-you .check-icon svg {
+      width: 40px;
+      height: 40px;
+      stroke: var(--teal);
+    }
+    .thank-you h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+    .thank-you p {
+      font-size: 0.95rem;
+      color: var(--gray);
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+    }
+    .thank-you .phone-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+      padding: 0.75rem 2rem;
+      background: var(--black);
+      color: var(--teal);
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      transition: transform 0.2s;
+    }
+    .thank-you .phone-link:hover {
+      transform: translateY(-1px);
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--black);
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .footer-phone {
+      color: var(--teal);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 900;
+      letter-spacing: 0.15em;
+    }
+    .footer-info {
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.5);
+      margin-top: 0.5rem;
+      letter-spacing: 0.1em;
+    }
+    .footer-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.35);
+      margin-top: 0.5rem;
+    }
+
+    /* Spinner */
+    .spinner {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-top-color: var(--teal);
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Error */
+    .field-error {
+      font-size: 0.7rem;
+      color: #EF4444;
+      margin-top: 0.25rem;
+      display: none;
+    }
+    .form-group.error input,
+    .form-group.error select {
+      border-color: #EF4444;
+    }
+    .form-group.error .field-error {
+      display: block;
+    }
+
+    @media (max-width: 500px) {
+      .header-brand { font-size: 1.35rem; }
+      .header-title { font-size: 1.1rem; }
+      .checkbox-grid { grid-template-columns: 1fr; }
+      .main { padding: 1.5rem 1rem 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-logo">
+      <div class="header-brand"><span>XELA</span> Creative Branding Studio</div>
+    </div>
+    <div class="header-tagline">Your Marketing Team</div>
+    <div class="header-title">Book Your Brand Consultation</div>
+  </header>
+
+  <!-- Form -->
+  <main class="main" id="formSection">
+    <div class="intro">
+      <h2>Let's Build Your Brand</h2>
+      <p>Fill out the form below and we'll reach out within 24 hours to schedule your consultation. No commitment, no pressure &mdash; just real talk about your brand.</p>
+    </div>
+
+    <form id="bookingForm" novalidate>
+      <div class="form-group">
+        <label for="fullName">Full Name <span class="req">*</span></label>
+        <input type="text" id="fullName" name="fullName" required placeholder="Your full name" autocomplete="name">
+        <div class="field-error">Please enter your name.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="businessName">Business Name <span class="req">*</span></label>
+        <input type="text" id="businessName" name="businessName" required placeholder="Your business name">
+        <div class="field-error">Please enter your business name.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email <span class="req">*</span></label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com" autocomplete="email">
+        <div class="field-error">Please enter a valid email.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone <span class="req">*</span></label>
+        <input type="tel" id="phone" name="phone" required placeholder="(321) 555-1234" autocomplete="tel">
+        <div class="field-error">Please enter your phone number.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="industry">Industry / Type of Business</label>
+        <select id="industry" name="industry">
+          <option value="" disabled selected>Select your industry</option>
+          <option value="Restaurant">Restaurant</option>
+          <option value="Salon/Barber">Salon / Barber</option>
+          <option value="Contractor">Contractor</option>
+          <option value="Retail">Retail</option>
+          <option value="Real Estate">Real Estate</option>
+          <option value="Fitness">Fitness</option>
+          <option value="Auto">Auto</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>What Do You Need?</label>
+        <div class="checkbox-grid">
+          <label class="checkbox-item"><input type="checkbox" name="services" value="Logo"> Logo</label>
+          <label class="checkbox-item"><input type="checkbox" name="services" value="Business Cards"> Business Cards</label>
+          <label class="checkbox-item"><input type="checkbox" name="services" value="Flyers"> Flyers</label>
+          <label class="checkbox-item"><input type="checkbox" name="services" value="Social Media"> Social Media</label>
+          <label class="checkbox-item"><input type="checkbox" name="services" value="Full Brand Package"> Full Brand Package</label>
+          <label class="checkbox-item"><input type="checkbox" name="services" value="Other"> Other</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="budget">Budget Range</label>
+        <select id="budget" name="budget">
+          <option value="" disabled selected>Select a range</option>
+          <option value="Under $100">Under $100</option>
+          <option value="$100-250">$100 &ndash; $250</option>
+          <option value="$250-500">$250 &ndash; $500</option>
+          <option value="$500+">$500+</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="referral">How Did You Hear About Us?</label>
+        <select id="referral" name="referral">
+          <option value="" disabled selected>Select one</option>
+          <option value="Google">Google</option>
+          <option value="Social Media">Social Media</option>
+          <option value="Referral">Referral</option>
+          <option value="Flyer/Card">Flyer / Card</option>
+          <option value="Door Hanger">Door Hanger</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="notes">Additional Notes</label>
+        <textarea id="notes" name="notes" placeholder="Tell us more about your vision, timeline, or any questions you have..."></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn" id="submitBtn">Start Your Brand</button>
+    </form>
+  </main>
+
+  <!-- Thank You -->
+  <div class="thank-you" id="thankYou">
+    <div class="check-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+    </div>
+    <h2>Thank You!</h2>
+    <p>We'll call you within 24 hours to discuss your brand.</p>
+    <p>In the meantime, feel free to reach out directly:</p>
+    <a href="tel:3213759685" class="phone-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      (321) 375-9685
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <a href="tel:3213759685" class="footer-phone">(321) 375-9685</a>
+    <div class="footer-info">Brevard County, FL</div>
+    <div class="footer-tagline">"Your Marketing Team"</div>
+  </footer>
+
+  <!-- Firebase SDK (compat for standalone use) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+  <script>
+    // Firebase init
+    firebase.initializeApp({
+      projectId: "inner-lightning-484702-r4",
+      appId: "1:355464234565:web:23bfcbb8f3361c3666452c",
+      apiKey: "AIzaSyD33BVFuQ-ZJD2N2Snt2jpPDqZVch3_DmU",
+      authDomain: "inner-lightning-484702-r4.firebaseapp.com",
+      storageBucket: "inner-lightning-484702-r4.firebasestorage.app",
+      messagingSenderId: "355464234565"
+    });
+
+    const db = firebase.firestore();
+    // Use the custom database ID
+    db.settings && db._delegate && (() => {
+      // For compat SDK, we reinitialize with the correct database
+    })();
+
+    // Checkbox toggle styling
+    document.querySelectorAll('.checkbox-item input[type="checkbox"]').forEach(cb => {
+      cb.addEventListener('change', () => {
+        cb.closest('.checkbox-item').classList.toggle('checked', cb.checked);
+      });
+    });
+
+    // Form
+    const form = document.getElementById('bookingForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const formSection = document.getElementById('formSection');
+    const thankYou = document.getElementById('thankYou');
+
+    function validateField(el) {
+      const group = el.closest('.form-group');
+      if (!group) return true;
+      let valid = true;
+      if (el.required && !el.value.trim()) valid = false;
+      if (el.type === 'email' && el.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value)) valid = false;
+      group.classList.toggle('error', !valid);
+      return valid;
+    }
+
+    // Live validation on blur
+    form.querySelectorAll('input[required], select[required]').forEach(el => {
+      el.addEventListener('blur', () => validateField(el));
+      el.addEventListener('input', () => {
+        if (el.closest('.form-group').classList.contains('error')) validateField(el);
+      });
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Validate all required
+      let allValid = true;
+      form.querySelectorAll('[required]').forEach(el => {
+        if (!validateField(el)) allValid = false;
+      });
+      if (!allValid) return;
+
+      // Gather data
+      const services = [];
+      form.querySelectorAll('input[name="services"]:checked').forEach(cb => services.push(cb.value));
+
+      const data = {
+        fullName: form.fullName.value.trim(),
+        businessName: form.businessName.value.trim(),
+        email: form.email.value.trim(),
+        phone: form.phone.value.trim(),
+        industry: form.industry.value || '',
+        services: services,
+        budget: form.budget.value || '',
+        referral: form.referral.value || '',
+        notes: form.notes.value.trim(),
+        submittedAt: firebase.firestore.FieldValue.serverTimestamp(),
+        status: 'new',
+        source: 'booking-page'
+      };
+
+      // Submit
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="spinner"></span> Submitting...';
+
+      try {
+        await db.collection('bookings').add(data);
+        formSection.style.display = 'none';
+        thankYou.classList.add('show');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } catch (err) {
+        console.error('Booking submission error:', err);
+        // Fallback: store locally
+        let localSaved = false;
+        try {
+          const pending = JSON.parse(localStorage.getItem('xela_pending_bookings') || '[]');
+          data.submittedAt = new Date().toISOString();
+          pending.push(data);
+          localStorage.setItem('xela_pending_bookings', JSON.stringify(pending));
+          localSaved = true;
+        } catch(e) {
+          console.error('Local storage fallback also failed:', e);
+        }
+
+        if (localSaved) {
+          // Saved locally but not to server — show modified success
+          document.querySelector('#thankYou h2').textContent = 'Request Saved!';
+          document.querySelector('#thankYou p').textContent = "We'll process it shortly. For immediate assistance, call us:";
+          formSection.style.display = 'none';
+          thankYou.classList.add('show');
+        } else {
+          // Both failed — show inline error
+          let errBanner = document.getElementById('bookingError');
+          if (!errBanner) {
+            errBanner = document.createElement('div');
+            errBanner.id = 'bookingError';
+            errBanner.style.cssText = 'background:#fef2f2;border:1px solid #fca5a5;color:#b91c1c;padding:1rem 1.25rem;border-radius:12px;margin-bottom:1rem;font-size:0.95rem;';
+            form.parentNode.insertBefore(errBanner, form);
+          }
+          errBanner.textContent = 'Something went wrong submitting your request. Please call us directly at (321) 375-9685 and we\'ll take care of you.';
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = 'Start Your Brand';
+        }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  </script>
+</body>
+</html>

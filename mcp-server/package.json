@@ -1,0 +1,24 @@
+{
+  "name": "xela-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for XELA Creative Branding Studio internal operations",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "npx tsx src/index.ts",
+    "build": "tsc",
+    "dev": "npx tsx --watch src/index.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "firebase-admin": "^13.4.0",
+    "stripe": "^22.0.1",
+    "@google/genai": "^1.50.0",
+    "zod": "^3.25.20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.13",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}

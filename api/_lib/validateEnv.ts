@@ -1,0 +1,16 @@
+/**
+ * Environment Variable Validation — XELA Creative Branding Studio
+ * Ensures required env vars are present at runtime with clear error messages.
+ */
+
+export function requireEnv(name: string): string {
+  const value = process.env[name];
+  if (!value) {
+    throw new Error(`Missing required environment variable: ${name}`);
+  }
+  return value;
+}
+
+export function optionalEnv(name: string, fallback: string = ''): string {
+  return process.env[name] ?? fallback;
+}

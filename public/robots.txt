@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xela-elite-ai-creative-studio.vercel.app/sitemap.xml
+Sitemap: https://xela-elite-ai-creative-studio.vercel.app/seo/sitemap-services.xml

@@ -116,6 +116,7 @@ const LAUNCH_RESOURCES = [
 ];
 
 export const Launchpad: React.FC<LaunchpadProps> = ({ input }) => {
+  const [isOpen, setIsOpen] = useState(false);
   const [openCategory, setOpenCategory] = useState<string | null>("Legal & Compliance");
 
   const toggleCategory = (category: string) => {
@@ -123,24 +124,34 @@ export const Launchpad: React.FC<LaunchpadProps> = ({ input }) => {
   };
 
   return (
-    <div className="glass rounded-[3.5rem] p-8 md:p-12 shadow-2xl border-white relative overflow-hidden animate-fade-in-up">
-      <div className="absolute top-0 right-0 w-64 h-64 bg-orange-500/5 blur-[100px] pointer-events-none"></div>
-      
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 mb-12">
-        <div>
-           <h3 className="text-4xl font-serif font-black text-stone-900 tracking-tight flex items-center gap-4">
-             <div className="p-4 bg-stone-900 text-white rounded-3xl shadow-xl">
-               <Rocket size={32} />
-             </div>
-             The Launchpad
-           </h3>
-           <p className="text-stone-500 font-medium mt-4 text-lg">Essential resources to launch {input.companyName}.</p>
-        </div>
-        <div className="flex items-center gap-3 bg-green-50 px-6 py-3 rounded-full border border-green-100 shadow-sm">
-           <CheckCircle2 size={18} className="text-green-600" />
-           <span className="text-xs font-black uppercase tracking-widest text-green-700">Startup Ready</span>
-        </div>
-      </div>
+    <div className="relative">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex items-center gap-2 text-white/70 hover:text-white transition-colors text-[10px] font-black uppercase tracking-widest"
+      >
+        <Rocket size={18} className="text-orange-500" /> Launchpad
+      </button>
+
+      {isOpen && (
+        <>
+          <div className="fixed inset-0 z-40" onClick={() => setIsOpen(false)} />
+          <div className="absolute bottom-16 right-0 z-50 w-[90vw] max-w-2xl max-h-[70vh] overflow-y-auto glass rounded-[2.5rem] p-6 md:p-8 shadow-2xl border border-white/20 animate-fade-in-up">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-orange-500/5 blur-[100px] pointer-events-none"></div>
+
+            <div className="flex justify-between items-center gap-4 mb-6">
+              <div className="flex items-center gap-3">
+                <div className="p-3 bg-stone-900 text-white rounded-2xl shadow-xl">
+                  <Rocket size={24} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-serif font-black text-stone-900">The Launchpad</h3>
+                  <p className="text-stone-500 text-xs">Resources to launch {input.companyName}</p>
+                </div>
+              </div>
+              <button onClick={() => setIsOpen(false)} className="p-2 rounded-full hover:bg-stone-100 transition-colors text-stone-400">
+                <ChevronDown size={20} />
+              </button>
+            </div>
 
       <div className="space-y-6">
         {LAUNCH_RESOURCES.map((section, idx) => (
@@ -182,20 +193,21 @@ export const Launchpad: React.FC<LaunchpadProps> = ({ input }) => {
         ))}
       </div>
 
-      <div className="mt-12 p-8 bg-stone-900 text-white rounded-[2.5rem] flex flex-col md:flex-row items-center justify-between gap-8 border border-stone-800 shadow-2xl">
-         <div className="flex items-center gap-6">
-            <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center shadow-lg animate-pulse">
-                <Zap size={28} className="text-white" />
-            </div>
+      <div className="mt-6 p-4 bg-stone-900 text-white rounded-2xl flex items-center justify-between gap-4 border border-stone-800 shadow-xl">
+         <div className="flex items-center gap-3">
+            <Zap size={20} className="text-orange-500" />
             <div>
-                <h4 className="text-xl font-bold font-serif">Official Startup Checklist</h4>
-                <p className="text-stone-400 text-sm">Download your consolidated startup guide.</p>
+                <h4 className="text-sm font-bold">Startup Checklist</h4>
+                <p className="text-stone-400 text-[10px]">Download your guide</p>
             </div>
          </div>
-         <button className="px-10 py-4 bg-white text-stone-900 rounded-full font-black text-xs uppercase tracking-[0.2em] hover:bg-orange-50 transition-colors shadow-xl">
-            Download PDF Checklist
+         <button className="px-6 py-2 bg-white text-stone-900 rounded-full font-black text-[9px] uppercase tracking-widest hover:bg-orange-50 transition-colors shadow-lg">
+            Download
          </button>
       </div>
+          </div>
+        </>
+      )}
     </div>
   );
 };

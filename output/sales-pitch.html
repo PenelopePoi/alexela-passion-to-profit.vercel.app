@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Xela Elite — Sales Pitch</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    @page{size:letter;margin:0;}
+    html,body{font-family:'DM Sans',sans-serif;color:#111;font-size:12pt;line-height:1.4;background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .page{width:8.5in;height:11in;padding:0.5in 0.6in;position:relative;display:flex;flex-direction:column;overflow:hidden;}
+    :root{--teal:#009E8C;--lav:#A830D6;--blk:#111;--gold:#D4A017;}
+
+    /* header */
+    .hdr{display:flex;justify-content:space-between;align-items:center;padding-bottom:10px;border-bottom:3px solid var(--blk);margin-bottom:16px;}
+    .brand{display:flex;align-items:center;gap:10px;}
+    .xm{width:34px;height:34px;background:var(--blk);border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:17pt;}
+    .bt h1{font-family:'Cormorant Garamond',serif;font-size:22pt;font-weight:600;font-style:italic;line-height:1;}
+    .bt small{font-size:7pt;text-transform:uppercase;letter-spacing:4px;font-weight:700;color:#aaa;}
+    .contact{text-align:right;font-size:9pt;color:#888;line-height:1.5;}
+    .contact b{color:#111;}
+
+    .accent{height:4px;border-radius:2px;margin-bottom:18px;background:linear-gradient(90deg,var(--teal),var(--lav),var(--blk));}
+
+    /* hero */
+    .hero{text-align:center;margin-bottom:20px;}
+    .hero h2{font-family:'Cormorant Garamond',serif;font-size:28pt;font-weight:700;font-style:italic;line-height:1.1;margin-bottom:6px;}
+    .hero h2 span{color:var(--teal);}
+    .hero p{font-size:13pt;color:#666;max-width:5.5in;margin:0 auto;line-height:1.4;}
+
+    /* stat row */
+    .stats{display:flex;justify-content:center;gap:30px;margin:16px 0;padding:12px 0;border-top:1.5px solid #eee;border-bottom:1.5px solid #eee;}
+    .stat{text-align:center;}
+    .stat .num{font-family:'Outfit',sans-serif;font-size:24pt;font-weight:900;line-height:1;}
+    .stat .num.teal{color:var(--teal);}
+    .stat .num.lav{color:var(--lav);}
+    .stat .num.gold{color:var(--gold);}
+    .stat .label{font-size:8pt;text-transform:uppercase;letter-spacing:2px;font-weight:700;color:#aaa;margin-top:2px;}
+
+    /* what you get */
+    .section-title{font-family:'Cormorant Garamond',serif;font-size:16pt;font-weight:600;font-style:italic;margin-bottom:8px;padding-bottom:4px;border-bottom:1.5px solid #eee;}
+
+    .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:16px;}
+    .card{padding:10px;border-radius:8px;border:1.5px solid #eee;}
+    .card.teal{border-color:#A8DDD5;background:#F0FAF8;}
+    .card.lav{border-color:#D5ACE8;background:#F8F0FC;}
+    .card.dark{border-color:#333;background:#F5F5F5;}
+    .card h3{font-family:'Outfit',sans-serif;font-size:11pt;font-weight:900;margin-bottom:4px;text-transform:uppercase;letter-spacing:1px;}
+    .card h3.teal{color:var(--teal);}
+    .card h3.lav{color:var(--lav);}
+    .card h3.dark{color:var(--blk);}
+    .card p{font-size:10pt;color:#555;line-height:1.35;}
+
+    /* comparison */
+    .compare{display:flex;gap:16px;margin-bottom:16px;}
+    .compare .col{flex:1;padding:12px;border-radius:8px;text-align:center;}
+    .compare .col.them{background:#FFF0F0;border:1.5px solid #F5C5C5;}
+    .compare .col.us{background:#F0FAF8;border:1.5px solid #A8DDD5;}
+    .compare .col h4{font-size:9pt;text-transform:uppercase;letter-spacing:2px;font-weight:900;margin-bottom:6px;}
+    .compare .col h4.red{color:#C44;}
+    .compare .col h4.green{color:var(--teal);}
+    .compare .col .price{font-family:'Outfit',sans-serif;font-size:22pt;font-weight:900;line-height:1;}
+    .compare .col .price.red{color:#C44;text-decoration:line-through;}
+    .compare .col .price.green{color:var(--teal);}
+    .compare .col .detail{font-size:9pt;color:#888;margin-top:4px;}
+
+    /* CTA */
+    .cta{text-align:center;padding:14px 20px;background:var(--blk);border-radius:10px;color:#fff;margin-bottom:12px;}
+    .cta h3{font-family:'Cormorant Garamond',serif;font-size:18pt;font-weight:600;font-style:italic;margin-bottom:4px;}
+    .cta p{font-size:11pt;color:rgba(255,255,255,0.7);line-height:1.35;}
+    .cta .teal{color:var(--teal);}
+
+    /* testimonial */
+    .quote{text-align:center;font-style:italic;font-size:11pt;color:#888;margin-bottom:8px;padding:0 0.5in;}
+    .quote b{color:#111;font-style:normal;}
+
+    /* footer */
+    .ft{display:flex;justify-content:space-between;font-size:7pt;color:#ccc;margin-top:auto;padding-top:4px;border-top:1px solid #eee;}
+    .verse{text-align:center;font-size:8pt;color:#ddd;font-style:italic;margin-top:6px;}
+
+    .wm{position:absolute;top:50%;right:0.4in;transform:translateY(-50%);font-size:160pt;font-weight:900;color:#f8f8f8;line-height:1;pointer-events:none;user-select:none;opacity:0.35;}
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="wm">X</div>
+
+  <!-- HEADER -->
+  <div class="hdr">
+    <div class="brand">
+      <div class="xm">X</div>
+      <div class="bt"><h1>Xela Elite</h1><small>AI Creative Studio &bull; Florida</small></div>
+    </div>
+    <div class="contact">
+      <b>Book a Session</b><br>
+      xelaelite.com &bull; @xelaelite
+    </div>
+  </div>
+  <div class="accent"></div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h2>Your Entire Brand.<br><span>Built in 60 Seconds.</span></h2>
+    <p>Logo, business cards, marketing strategy, social media kit, flyers, video ads, and more — powered by AI, crafted with precision, delivered while you watch.</p>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat"><div class="num teal">60s</div><div class="label">Delivery Time</div></div>
+    <div class="stat"><div class="num lav">10</div><div class="label">Package Options</div></div>
+    <div class="stat"><div class="num gold">$50</div><div class="label">Starting At</div></div>
+    <div class="stat"><div class="num" style="color:var(--blk);">100%</div><div class="label">Yours to Keep</div></div>
+  </div>
+
+  <!-- WHAT YOU GET -->
+  <div class="section-title">What You Walk Away With</div>
+  <div class="grid3">
+    <div class="card teal">
+      <h3 class="teal">Print Ready</h3>
+      <p>Business cards, vinyl stickers, flyers — designed, cut-ready for Cricut Explorer 3, printed on HP Precision. Hand them out today.</p>
+    </div>
+    <div class="card lav">
+      <h3 class="lav">Digital Presence</h3>
+      <p>Logo, social media pack, email templates, content calendar, landing page mockup, cinematic video ad. Your entire online identity.</p>
+    </div>
+    <div class="card dark">
+      <h3 class="dark">Business Launch</h3>
+      <p>LLC filing, EIN, DUNS number, brand guidelines, competitor analysis, marketing strategy, Google Business setup. Go from idea to official.</p>
+    </div>
+  </div>
+
+  <!-- COMPARISON -->
+  <div class="section-title">The Xela Advantage</div>
+  <div class="compare">
+    <div class="col them">
+      <h4 class="red">Traditional Agency</h4>
+      <div class="price red">$5,000+</div>
+      <div class="detail">4–6 weeks &bull; Hourly billing &bull; Revision fees &bull; No print included</div>
+    </div>
+    <div class="col us">
+      <h4 class="green">Xela Elite</h4>
+      <div class="price green">$50–$1,500</div>
+      <div class="detail">60 seconds &bull; Flat rate &bull; Revisions included &bull; Print-ready &bull; Yours forever</div>
+    </div>
+  </div>
+
+  <!-- TIERS QUICK VIEW -->
+  <div class="section-title">Three Tiers. One Vision.</div>
+  <div class="grid3">
+    <div class="card" style="border-color:var(--teal);text-align:center;">
+      <h3 class="teal">The Seedling</h3>
+      <div style="font-family:'Outfit',sans-serif;font-size:16pt;font-weight:900;">$50–$150</div>
+      <p style="font-size:9pt;margin-top:4px;">Cards, logos, stickers. The essentials to look legit from day one.</p>
+    </div>
+    <div class="card" style="border-color:var(--lav);text-align:center;border-width:2px;">
+      <h3 class="lav">The Growth</h3>
+      <div style="font-family:'Outfit',sans-serif;font-size:16pt;font-weight:900;">$250–$450</div>
+      <p style="font-size:9pt;margin-top:4px;">Full marketing engine. Strategy, content, social, email — the works.</p>
+    </div>
+    <div class="card" style="border-color:var(--blk);text-align:center;">
+      <h3 class="dark">The Sovereign</h3>
+      <div style="font-family:'Outfit',sans-serif;font-size:16pt;font-weight:900;">$600–$1,500</div>
+      <p style="font-size:9pt;margin-top:4px;">Everything. Video, landing page, print suite, LLC, guidelines. Nothing held back.</p>
+    </div>
+  </div>
+
+  <!-- TESTIMONIAL -->
+  <div class="quote">"I walked in with an idea and walked out with a whole business identity. Logo, cards, flyers, social media — all in one sitting. I couldn't believe it was real."<br><b>— Anthony, Coquina Ridge Shoreline Solutions</b></div>
+
+  <!-- CTA -->
+  <div class="cta">
+    <h3>Ready to Build Your Legacy?</h3>
+    <p>Book a session today. Bring your business name and your vision — we'll handle the rest.<br><span class="teal" style="font-weight:700;">60 seconds from now, you'll be holding your brand in your hands.</span></p>
+  </div>
+
+  <div class="verse">"Whatever you do, work at it with all your heart, as working for the Lord." — Colossians 3:23</div>
+  <div class="ft"><span>Xela Elite AI Creative Studio &bull; Cricut Explorer 3 + HP Precision &bull; AI-Powered Branding</span><span>xelaelite.com</span></div>
+</div>
+</body>
+</html>

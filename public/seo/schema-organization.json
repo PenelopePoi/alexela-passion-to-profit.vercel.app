@@ -1,0 +1,231 @@
+{
+  "@context": "https://schema.org",
+  "@type": ["Organization", "LocalBusiness"],
+  "@id": "https://xela-elite-ai-creative-studio.vercel.app/#organization",
+  "name": "XELA Creative Branding Studio",
+  "alternateName": "XELA Creative Studio",
+  "url": "https://xela-elite-ai-creative-studio.vercel.app",
+  "logo": "https://xela-elite-ai-creative-studio.vercel.app/xela-logo-new.png",
+  "image": "https://xela-elite-ai-creative-studio.vercel.app/xela-logo-new.png",
+  "telephone": "(321) 375-9685",
+  "email": "xelabrandingstudio@gmail.com",
+  "description": "AI-powered branding and marketing studio serving Florida businesses. 68 services across 10 categories — logos, print materials, websites, social media, video, and full business launch packages. We are your marketing team. Digital, print, everything.",
+  "slogan": "We are your marketing team. Digital, print, everything.",
+  "priceRange": "$75 - $2,000",
+  "currenciesAccepted": "USD",
+  "paymentAccepted": "Cash, Credit Card, Debit Card, Zelle, CashApp, Stripe",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Brevard County",
+    "addressRegion": "FL",
+    "addressCountry": "US",
+    "postalCode": "32901"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 28.3922,
+    "longitude": -80.6077
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Melbourne",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Florida"
+      }
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Brevard County"
+    },
+    {
+      "@type": "City",
+      "name": "Orlando"
+    },
+    {
+      "@type": "City",
+      "name": "Tampa"
+    },
+    {
+      "@type": "City",
+      "name": "Miami"
+    },
+    {
+      "@type": "State",
+      "name": "Florida"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/xelacreativestudio",
+    "https://www.instagram.com/xelacreativestudio",
+    "https://www.tiktok.com/@xelacreativestudio",
+    "https://www.linkedin.com/company/xelacreativestudio",
+    "https://www.youtube.com/@xelacreativestudio",
+    "https://www.threads.net/@xelacreativestudio",
+    "https://twitter.com/xelacreative"
+  ],
+  "foundingDate": "2026",
+  "foundingLocation": {
+    "@type": "Place",
+    "name": "Brevard County, Florida"
+  },
+  "knowsAbout": [
+    "Branding",
+    "Logo Design",
+    "Business Cards",
+    "Website Development",
+    "Social Media Marketing",
+    "Google Business Profile",
+    "SEO",
+    "Print Materials",
+    "Video Production",
+    "Small Business Consulting"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "XELA Creative Branding Studio Services",
+    "itemListElement": [
+      {
+        "@type": "OfferCatalog",
+        "name": "Brand Identity",
+        "description": "Logos, business cards, stickers, brand bibles, naming workshops, and complete visual identity packages for Florida businesses.",
+        "numberOfItems": 6,
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "CardCut Calibrated" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Promotion Pal" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sticker System" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brand Bible" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Logo Evolution Suite" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Naming Workshop" } }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Print Materials",
+        "description": "Flyers, yard signs, vehicle wraps, merchandise, invoices, and presentation decks — all print-ready.",
+        "numberOfItems": 6,
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Flyer Factory" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Yard Sign Kit" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Vehicle Wrap Design" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Merchandise Pack" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Invoice & Forms Suite" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Presentation Deck" } }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Digital Presence",
+        "description": "Google Business setup, social media profiles, landing pages, full websites, and booking systems.",
+        "numberOfItems": 5,
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Google Business Setup" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Social Starter Kit" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Landing Page" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full Website Build" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Booking System Setup" } }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Marketing",
+        "description": "Sales kits, email templates, Facebook ads, Google ads, referral programs, and Nextdoor domination.",
+        "numberOfItems": 7,
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Selling Sales Set" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Email Template Pack" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Nextdoor Domination" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Facebook Ads Starter" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Google Ads Starter" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Referral Program Kit" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Premiere Passion Pal" } }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Content",
+        "description": "Content calendars, blog writing, brand voice guides, caption libraries, and review response kits.",
+        "numberOfItems": 5,
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "30-Day Content Calendar" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Blog Starter Pack" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brand Voice Guide" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Caption Library (100 captions)" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Review Response Kit" } }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Strategy",
+        "description": "Business registration guidance, competitor analysis, startup checklists, pricing strategy, and business plans.",
+        "numberOfItems": 7,
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Registered Rebellion" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Competitor Analysis" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "FL Startup Checklist" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pricing Strategy Session" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business Plan (Lean)" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "The Sovereignty Set" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Entrepreneurship Enterprise" } }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Web & Development",
+        "description": "E-commerce stores, CRM setup, AI chatbots, and automation workflows.",
+        "numberOfItems": 5,
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "E-Commerce Store" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "CRM Setup & Automation" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Chatbot Setup" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automation Workflow" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Site Sales Solution" } }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Video & Media",
+        "description": "Video ads, brand intro videos, podcast branding kits, and Reel/TikTok templates.",
+        "numberOfItems": 4,
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "30-Second Video Ad" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brand Intro Video" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Podcast Branding Kit" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reel/TikTok Templates (10)" } }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Social Media",
+        "description": "Monthly social media management, Instagram overhauls, LinkedIn optimization, and TikTok launch strategies.",
+        "numberOfItems": 4,
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Social Media Management (Monthly)" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Instagram Grid Overhaul" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "LinkedIn Profile Overhaul" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "TikTok Launch Strategy" } }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Consulting",
+        "description": "Brand audits, strategy calls, monthly creative retainers, and VIP full-day brand sessions.",
+        "numberOfItems": 4,
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brand Audit" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "1-on-1 Strategy Call (60 min)" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Creative Retainer (Monthly)" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "VIP Brand Day" } }
+        ]
+      }
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "1",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}

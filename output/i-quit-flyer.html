@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The I Quit Accelerator — Xela Elite</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    @page{size:letter;margin:0;}
+    html,body{font-family:'DM Sans',sans-serif;color:#fff;font-size:12pt;line-height:1.35;background:#111;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .page{width:8.5in;height:11in;padding:0;position:relative;display:flex;flex-direction:column;overflow:hidden;background:#111;}
+
+    /* gradient overlay */
+    .bg{position:absolute;inset:0;background:linear-gradient(180deg,#111 0%,#0a0a0a 40%,#111 100%);z-index:0;}
+    .glow-teal{position:absolute;top:-2in;left:-1in;width:5in;height:5in;background:radial-gradient(circle,rgba(0,158,140,0.15) 0%,transparent 70%);z-index:0;}
+    .glow-lav{position:absolute;bottom:-1in;right:-1in;width:4in;height:4in;background:radial-gradient(circle,rgba(168,48,214,0.12) 0%,transparent 70%);z-index:0;}
+
+    .content{position:relative;z-index:1;padding:0.5in 0.6in;display:flex;flex-direction:column;height:100%;}
+
+    /* top bar */
+    .topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;}
+    .xm{width:32px;height:32px;background:#fff;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#111;font-weight:900;font-size:16pt;}
+    .topbar .right{font-size:9pt;color:rgba(255,255,255,0.4);text-align:right;}
+
+    /* accent */
+    .accent{height:3px;border-radius:2px;background:linear-gradient(90deg,#009E8C,#A830D6);margin-bottom:30px;opacity:0.6;}
+
+    /* hero */
+    .hero{text-align:center;margin-bottom:28px;}
+    .pretitle{font-size:9pt;text-transform:uppercase;letter-spacing:5px;font-weight:700;color:#009E8C;margin-bottom:8px;}
+    .hero h1{font-family:'Cormorant Garamond',serif;font-size:42pt;font-weight:700;font-style:italic;line-height:0.95;margin-bottom:10px;letter-spacing:-1px;}
+    .hero h1 span{color:#009E8C;}
+    .hero .sub{font-size:14pt;color:rgba(255,255,255,0.6);max-width:5in;margin:0 auto;line-height:1.4;}
+
+    /* divider */
+    .div{width:60px;height:2px;background:linear-gradient(90deg,#009E8C,#A830D6);margin:20px auto;border-radius:1px;}
+
+    /* pain points */
+    .pain{text-align:center;margin-bottom:24px;}
+    .pain p{font-size:13pt;color:rgba(255,255,255,0.5);font-style:italic;line-height:1.5;max-width:5.5in;margin:0 auto;}
+    .pain p b{color:#fff;font-style:normal;}
+
+    /* what you get grid */
+    .grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:24px;}
+    .gcard{padding:14px;border:1.5px solid rgba(255,255,255,0.1);border-radius:10px;background:rgba(255,255,255,0.03);text-align:center;}
+    .gcard .icon{font-size:22pt;margin-bottom:6px;}
+    .gcard h3{font-family:'Outfit',sans-serif;font-size:10pt;font-weight:900;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px;}
+    .gcard h3.teal{color:#009E8C;}
+    .gcard h3.lav{color:#A830D6;}
+    .gcard h3.gold{color:#D4A017;}
+    .gcard p{font-size:9.5pt;color:rgba(255,255,255,0.5);line-height:1.35;}
+
+    /* price anchor */
+    .price-section{text-align:center;margin-bottom:22px;padding:14px 20px;border:1.5px solid rgba(0,158,140,0.3);border-radius:12px;background:rgba(0,158,140,0.05);}
+    .price-section .old{font-size:11pt;color:rgba(255,255,255,0.3);text-decoration:line-through;margin-bottom:2px;}
+    .price-section .new{font-family:'Outfit',sans-serif;font-size:28pt;font-weight:900;color:#009E8C;line-height:1;}
+    .price-section .note{font-size:10pt;color:rgba(255,255,255,0.5);margin-top:4px;}
+
+    /* CTA */
+    .cta{text-align:center;margin-bottom:16px;}
+    .cta-box{display:inline-block;padding:14px 40px;background:#fff;color:#111;border-radius:10px;font-family:'Outfit',sans-serif;font-size:14pt;font-weight:900;text-transform:uppercase;letter-spacing:2px;}
+    .cta .phone{font-family:'Outfit',sans-serif;font-size:26pt;font-weight:900;color:#fff;margin-top:10px;letter-spacing:1px;}
+    .cta .or{font-size:9pt;color:rgba(255,255,255,0.3);margin-top:4px;}
+
+    /* social proof */
+    .proof{text-align:center;margin-bottom:12px;}
+    .proof p{font-size:10pt;font-style:italic;color:rgba(255,255,255,0.4);max-width:5in;margin:0 auto;}
+    .proof p b{color:rgba(255,255,255,0.7);font-style:normal;}
+
+    /* bottom */
+    .bottom{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;padding-top:10px;border-top:1px solid rgba(255,255,255,0.1);}
+    .bottom .left{font-size:9pt;color:rgba(255,255,255,0.3);}
+    .bottom .left b{color:rgba(255,255,255,0.6);}
+    .bottom .right{text-align:right;font-size:8pt;color:rgba(255,255,255,0.25);}
+    .bottom .slogan{font-family:'Cormorant Garamond',serif;font-size:11pt;font-style:italic;color:rgba(255,255,255,0.4);}
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="bg"></div>
+  <div class="glow-teal"></div>
+  <div class="glow-lav"></div>
+
+  <div class="content">
+    <!-- TOP -->
+    <div class="topbar">
+      <div class="xm">X</div>
+      <div class="right">Brevard County, FL<br>Serving Central Florida</div>
+    </div>
+    <div class="accent"></div>
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="pretitle">Introducing</div>
+      <h1>The I Quit<br><span>Accelerator.</span></h1>
+      <div class="sub">We turn your idea into a real, money-making business — logo, cards, marketing, website, LLC — built live in front of you. In 60 seconds.</div>
+    </div>
+
+    <div class="div"></div>
+
+    <!-- PAIN POINTS -->
+    <div class="pain">
+      <p><b>Tired of building someone else's dream?</b><br>Tired of clocking in, clocking out, and having nothing that's yours? You've got the skills. You've got the idea. You just need someone to make it <b>real</b> — fast.</p>
+    </div>
+
+    <!-- WHAT YOU GET -->
+    <div class="grid">
+      <div class="gcard">
+        <div class="icon">🎨</div>
+        <h3 class="teal">Look Legit</h3>
+        <p>Logo, business cards, stickers, flyers — printed and in your hands today. No more "I'll get around to it."</p>
+      </div>
+      <div class="gcard">
+        <div class="icon">📱</div>
+        <h3 class="lav">Get Found</h3>
+        <p>Google Business, social media, landing page, video ads — customers find you before they find your competitor.</p>
+      </div>
+      <div class="gcard">
+        <div class="icon">📋</div>
+        <h3 class="gold">Go Official</h3>
+        <p>LLC filing, EIN, DUNS number, business license research, sales tax cert — from idea to legal in one session.</p>
+      </div>
+    </div>
+
+    <!-- PRICE ANCHOR -->
+    <div class="price-section">
+      <div class="old">Typical Florida branding packages: $1,500–$5,000</div>
+      <div class="new">Starting at $50</div>
+      <div class="note">10 packages from $50 to $1,500 &bull; Everything built live &bull; Yours to keep forever</div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta">
+      <div class="cta-box">Call or Text Now</div>
+      <div class="phone">(321) 375-9685</div>
+      <div class="or">xelaelite.com &bull; Walk-ins welcome &bull; Same-day delivery</div>
+    </div>
+
+    <!-- PROOF -->
+    <div class="proof">
+      <p>"I walked in with an idea and walked out with a whole business identity. Cards, flyers, social media — all in one sitting."<br><b>— Anthony, Coquina Ridge Shoreline Solutions, Brevard County</b></p>
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="bottom">
+      <div class="left">
+        <b>Alex Weatherspoon</b> &bull; Creative Director<br>
+        Xela Elite AI Creative Studio<br>
+        Brevard County, FL &bull; (321) 375-9685
+      </div>
+      <div class="right">
+        <div class="slogan">From Pain to Purpose.</div>
+        Build It. Brand It. Break Free.
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

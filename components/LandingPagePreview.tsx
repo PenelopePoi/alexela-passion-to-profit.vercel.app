@@ -72,7 +72,7 @@ export const LandingPagePreview: React.FC<LandingPageProps> = ({
         }
 
         // Create a new instance right before call as per guidelines
-        const apiKey = process.env.API_KEY || '';
+        const apiKey = (import.meta as any).env?.VITE_API_KEY || '';
         const ai = new GoogleGenAI({ apiKey });
         
         const finalPrompt = userPrompt 

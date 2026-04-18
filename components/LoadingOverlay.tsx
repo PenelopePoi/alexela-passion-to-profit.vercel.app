@@ -1,74 +1,118 @@
 
-import React, { useEffect, useState } from 'react';
-import { Sprout, Palette, PenTool, LayoutTemplate, Loader2 } from 'lucide-react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
+import { Loader2 } from 'lucide-react';
+import { XelaLogo } from './XelaLogo';
 
-const STEPS = [
-  { icon: Sprout, label: "Analyzing Market Landscape", detail: "Scanning industry trends & competitors..." },
-  { icon: PenTool, label: "Defining Core Identity", detail: "Crafting mission, vision & values..." },
-  { icon: Palette, label: "Synthesizing Visual Language", detail: "Selecting typography & color psychology..." },
-  { icon: PenTool, label: "Drafting Brand Voice", detail: "Generating taglines & communication style..." },
-  { icon: LayoutTemplate, label: "Designing Marketing Assets", detail: "Creating social posts & ad concepts..." },
-  { icon: LayoutTemplate, label: "Finalizing Brand Package", detail: "Assembling your unique strategy..." },
+const STATUS_MESSAGES = [
+  'Analyzing your industry...',
+  'Crafting your brand voice...',
+  'Designing your color palette...',
+  'Building your marketing plan...',
+  'Polishing the final details...',
 ];
 
-export const LoadingOverlay = () => {
-  const [currentStep, setCurrentStep] = useState(0);
+interface LoadingOverlayProps {
+  onCancel?: () => void;
+}
+
+export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({ onCancel }) => {
+  const [progress, setProgress] = useState(0);
+  const [msgIndex, setMsgIndex] = useState(0);
+  const [showCancel, setShowCancel] = useState(false);
+  const rafRef = useRef<number>(0);
+  const startRef = useRef(Date.now());
+  const mountedRef = useRef(true);
+
+  // Fake progress curve: fast → medium → slow → done
+  const tick = useCallback(() => {
+    if (!mountedRef.current) return;
+    const elapsed = (Date.now() - startRef.current) / 1000; // seconds
+    let next: number;
+    if (elapsed < 2) {
+      next = (elapsed / 2) * 30;
+    } else if (elapsed < 6) {
+      next = 30 + ((elapsed - 2) / 4) * 40;
+    } else if (elapsed < 12) {
+      next = 70 + ((elapsed - 6) / 6) * 20;
+    } else {
+      next = Math.min(90 + (elapsed - 12) * 0.5, 99);
+    }
+    setProgress(next);
+    rafRef.current = requestAnimationFrame(tick);
+  }, []);
 
   useEffect(() => {
-    // Simulate progress through steps
-    const interval = setInterval(() => {
-      setCurrentStep((prev) => (prev < STEPS.length - 1 ? prev + 1 : prev));
-    }, 1500); // Change step every 1.5 seconds
+    mountedRef.current = true;
+    rafRef.current = requestAnimationFrame(tick);
+    return () => {
+      mountedRef.current = false;
+      cancelAnimationFrame(rafRef.current);
+    };
+  }, [tick]);
 
-    return () => clearInterval(interval);
+  // Rotate status messages
+  useEffect(() => {
+    const iv = setInterval(() => {
+      setMsgIndex((p) => (p + 1) % STATUS_MESSAGES.length);
+    }, 2800);
+    return () => clearInterval(iv);
+  }, []);
+
+  // Show cancel button after 10 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => setShowCancel(true), 10000);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-brand-black/40 backdrop-blur-xl transition-all duration-500">
-      <div className="bg-white/95 p-8 rounded-3xl shadow-2xl max-w-md w-full mx-4 border-2 border-white relative overflow-hidden">
-        {/* Animated Background Blob */}
-        <div className="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-brand-teal rounded-full blur-3xl opacity-20 animate-pulse"></div>
-        <div className="absolute bottom-0 left-0 -mb-10 -ml-10 w-40 h-40 bg-brand-lavender rounded-full blur-3xl opacity-20 animate-pulse delay-700"></div>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-brand-black/60 backdrop-blur-xl transition-all duration-500">
+      <div className="relative bg-white/10 backdrop-blur-2xl border border-white/15 rounded-3xl shadow-2xl max-w-md w-full mx-4 p-10 overflow-hidden">
+        {/* Ambient blobs */}
+        <div className="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-brand-teal rounded-full blur-3xl opacity-20 animate-pulse" />
+        <div className="absolute bottom-0 left-0 -mb-10 -ml-10 w-40 h-40 bg-brand-lavender rounded-full blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '0.7s' }} />
 
-        <div className="relative z-10">
-          <h2 className="text-2xl font-serif font-bold text-brand-black mb-8 text-center">Growing Your Brand</h2>
-          
-          <div className="space-y-4">
-            {STEPS.map((step, index) => {
-              const Icon = step.icon;
-              const isActive = index === currentStep;
-              const isCompleted = index < currentStep;
+        <div className="relative z-10 flex flex-col items-center">
+          {/* Logo */}
+          <XelaLogo className="h-8 mb-6" color="white" />
 
-              return (
-                <div 
-                  key={index} 
-                  className={`flex items-center gap-4 transition-all duration-500 ${
-                    isActive ? 'scale-105 opacity-100' : isCompleted ? 'opacity-50 blur-[0.5px]' : 'opacity-30'
-                  }`}
-                >
-                  <div className={`
-                    p-3 rounded-xl transition-colors duration-500
-                    ${isActive ? 'bg-brand-black text-white shadow-lg' : isCompleted ? 'bg-brand-teal/20 text-brand-teal' : 'bg-stone-100 text-stone-400'}
-                  `}>
-                    {isActive ? <Icon size={20} className="animate-bounce" /> : isCompleted ? <CheckMark /> : <Icon size={20} />}
-                  </div>
-                  <div>
-                    <p className={`font-bold text-sm ${isActive ? 'text-brand-black' : 'text-stone-600'}`}>
-                      {step.label}
-                    </p>
-                    <p className="text-xs text-stone-500 h-4">
-                      {isActive && <span className="animate-pulse">{step.detail}</span>}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
+          {/* Progress bar */}
+          <div className="w-full h-1.5 rounded-full bg-white/10 mb-8 overflow-hidden">
+            <div
+              className="h-full rounded-full bg-gradient-to-r from-brand-teal to-brand-lavender transition-[width] duration-300 ease-out"
+              style={{ width: `${progress}%` }}
+            />
           </div>
 
-          <div className="mt-8 pt-6 border-t border-stone-100 flex items-center justify-center gap-2 text-xs text-stone-400 font-mono">
-            <Loader2 size={12} className="animate-spin text-brand-lavender" />
-            AI GENERATION IN PROGRESS
+          {/* Rotating status message */}
+          <div className="h-6 flex items-center justify-center mb-2 overflow-hidden">
+            <p
+              key={msgIndex}
+              className="text-sm text-white/90 font-medium animate-fade-in-up"
+            >
+              {STATUS_MESSAGES[msgIndex]}
+            </p>
           </div>
+
+          {/* Percentage */}
+          <p className="text-xs text-white/40 font-mono tabular-nums mb-6">
+            {Math.round(progress)}%
+          </p>
+
+          {/* Footer */}
+          <div className="flex items-center gap-2 text-[10px] text-white/30 font-mono uppercase tracking-widest">
+            <Loader2 size={10} className="animate-spin text-brand-lavender" />
+            AI Generation in Progress
+          </div>
+
+          {/* Cancel button — appears after 10s */}
+          {showCancel && onCancel && (
+            <button
+              onClick={onCancel}
+              className="mt-4 px-6 py-2 rounded-full text-xs font-bold text-white/50 hover:text-white border border-white/15 hover:border-white/30 transition-all"
+            >
+              Cancel
+            </button>
+          )}
         </div>
       </div>
     </div>

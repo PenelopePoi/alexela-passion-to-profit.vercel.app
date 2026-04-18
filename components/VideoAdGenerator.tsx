@@ -1,9 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
 import { BrandStrategy, BrandInput } from '../types';
-import { Video, Sparkles, Play, Loader2, Download, Send, X, Film, Volume2, Share2, Zap, Music, Mic } from 'lucide-react';
+import { Video, Sparkles, Play, Loader2, Download, Send, X, Film, Volume2, Share2, Zap, Music, Mic, Crown, Coins } from 'lucide-react';
 import { GoogleGenAI } from "@google/genai";
-import { generateSongLyrics, generateSpeech } from '../services/geminiService';
+import { generateSongLyrics, generateSpeech, VIDEO_TIERS } from '../services/geminiService';
+import type { VideoTierConfig } from '../types';
 
 interface VideoAdGeneratorProps {
   data: BrandStrategy;
@@ -32,6 +33,7 @@ const LOADING_MESSAGES = [
 export const VideoAdGenerator: React.FC<VideoAdGeneratorProps> = ({ data, input, primaryColor }) => {
   const [activeTab, setActiveTab] = useState<'video' | 'audio'>('video');
   const [adType, setAdType] = useState(AD_TYPES[0]);
+  const [selectedTier, setSelectedTier] = useState<VideoTierConfig>(VIDEO_TIERS[1]);
   const [isGenerating, setIsGenerating] = useState(false);
   const [videoUrl, setVideoUrl] = useState<string | null>(null);
   const [loadingMsgIdx, setLoadingMsgIdx] = useState(0);
@@ -58,7 +60,7 @@ export const VideoAdGenerator: React.FC<VideoAdGeneratorProps> = ({ data, input,
   const handleEnhancePrompt = async () => {
     setIsEnhancingPrompt(true);
     try {
-        const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+        const ai = new GoogleGenAI({ apiKey: (import.meta as any).env?.VITE_API_KEY || '' });
         const response = await ai.models.generateContent({
             model: 'gemini-3-flash-preview',
             contents: `Create a detailed, cinematic visual prompt for a ${adType.label} video ad for ${input.companyName}, a ${input.industry} company. 
@@ -87,14 +89,14 @@ export const VideoAdGenerator: React.FC<VideoAdGeneratorProps> = ({ data, input,
         }
       }
 
-      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-      
+      const ai = new GoogleGenAI({ apiKey: (import.meta as any).env?.VITE_API_KEY || '' });
+
       let operation = await ai.models.generateVideos({
-        model: 'veo-3.1-fast-generate-preview',
-        prompt: `${prompt}. Professional lighting, 4k, cinematic movement, commercial quality.`,
+        model: selectedTier.model,
+        prompt: `${prompt}. Professional lighting, ${selectedTier.resolution}, cinematic movement, commercial quality.`,
         config: {
           numberOfVideos: 1,
-          resolution: adType.resolution as any,
+          resolution: selectedTier.resolution as any,
           aspectRatio: adType.aspect as any
         }
       });
@@ -108,7 +110,7 @@ export const VideoAdGenerator: React.FC<VideoAdGeneratorProps> = ({ data, input,
       if (uri) {
         const res = await fetch(uri, {
           headers: {
-            'x-goog-api-key': process.env.API_KEY || ''
+            'x-goog-api-key': (import.meta as any).env?.VITE_API_KEY || ''
           }
         });
         const blob = await res.blob();
@@ -186,10 +188,11 @@ export const VideoAdGenerator: React.FC<VideoAdGeneratorProps> = ({ data, input,
         {activeTab === 'video' ? (
             <>
                 {/* Video Content */}
-                <div className="absolute top-8 right-8 z-10 flex gap-2">
+                <div className="absolute top-8 right-8 z-10 flex flex-col gap-3 items-end">
+                    <div className="flex gap-2">
                     {AD_TYPES.map(type => (
-                        <button 
-                        key={type.id} 
+                        <button
+                        key={type.id}
                         onClick={() => setAdType(type)}
                         style={adType.id === type.id ? { backgroundColor: primaryColor, borderColor: primaryColor } : {}}
                         className={`px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all border border-transparent ${adType.id === type.id ? 'text-white shadow-lg' : 'bg-stone-100 text-stone-400 hover:text-stone-600'}`}
@@ -197,6 +200,20 @@ export const VideoAdGenerator: React.FC<VideoAdGeneratorProps> = ({ data, input,
                         {type.label}
                         </button>
                     ))}
+                    </div>
+                    <div className="flex gap-2">
+                    {VIDEO_TIERS.map(tier => (
+                        <button
+                        key={tier.tier}
+                        onClick={() => setSelectedTier(tier)}
+                        className={`px-3 py-1.5 rounded-lg text-[9px] font-black uppercase tracking-widest transition-all flex items-center gap-1.5 ${selectedTier.tier === tier.tier ? 'bg-brand-black text-white shadow-lg' : 'bg-white/80 text-stone-400 hover:text-stone-600 border border-stone-200'}`}
+                        >
+                        {tier.tier === '4k' && <Crown size={10} className="text-yellow-400" />}
+                        {tier.tier === 'lite' && <Coins size={10} className="text-green-400" />}
+                        {tier.resolution} · ${tier.costPerSecond}/s
+                        </button>
+                    ))}
+                    </div>
                 </div>
 
                 {isGenerating ? (

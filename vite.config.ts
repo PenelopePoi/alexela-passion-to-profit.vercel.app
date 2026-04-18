@@ -12,13 +12,37 @@ export default defineConfig(({ mode }) => {
       },
       plugins: [react(), tailwindcss()],
       define: {
-        'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
+        'process.env.API_KEY': JSON.stringify(env.VITE_API_KEY || ''),
       },
       resolve: {
         alias: {
           '@': path.resolve(__dirname, '.'),
         }
-      }
+      },
+      build: {
+        target: 'es2022',
+        rollupOptions: {
+          output: {
+            manualChunks: {
+              'vendor-react': ['react', 'react-dom'],
+              'vendor-firebase': ['@firebase/app', '@firebase/auth', '@firebase/firestore'],
+              'vendor-motion': ['motion/react'],
+              'vendor-genai': ['@google/genai'],
+              'services': [
+                './services/geminiService',
+                './services/brandFlowPipeline',
+                './services/clientEncryption',
+                './services/provenanceTracer',
+                './services/binaryFilter',
+                './services/guardianVoters',
+                './services/simulationArchitect',
+                './services/guardianSentinel',
+                './services/supplyChainAuditor',
+              ],
+            }
+          }
+        },
+        chunkSizeWarningLimit: 600,
+      },
     };
 });

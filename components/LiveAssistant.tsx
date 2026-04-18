@@ -56,7 +56,7 @@ export const LiveAssistant: React.FC<LiveAssistantProps> = ({ className }) => {
             const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
             streamRef.current = stream;
 
-            const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+            const ai = new GoogleGenAI({ apiKey: (import.meta as any).env?.VITE_API_KEY || '' });
             
             const sessionPromise = ai.live.connect({
                 model: 'gemini-2.5-flash-native-audio-preview-12-2025',
@@ -69,7 +69,7 @@ export const LiveAssistant: React.FC<LiveAssistantProps> = ({ className }) => {
                 },
                 callbacks: {
                     onopen: () => {
-                        console.log('Gemini Live Connected');
+                        // Connection established
                         setIsConnecting(false);
                         setIsActive(true);
 

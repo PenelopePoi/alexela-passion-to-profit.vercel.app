@@ -62,7 +62,7 @@ export default function Studio({ assets, brandInput, primaryColor }: StudioProps
     setTimeout(() => {
       setIsExporting(false);
       alert(`Music Video Exported! Sequence contains ${orderedAssets.length} clips.`);
-      console.log('Exported Sequence:', orderedAssets.map(a => a.id));
+      // Export complete
     }, 2000);
   };
 

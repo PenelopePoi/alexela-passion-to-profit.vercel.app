@@ -9,7 +9,10 @@ export interface BrandInput {
   location: string;
   audience: string;
   additionalNotes?: string;
-  existingLogo?: string; // Base64 string of uploaded logo
+  existingLogo?: string; // Base64 string of uploaded logo (primary/first)
+  existingLogos?: string[]; // Multiple logo references/ideas
+  logoDescription?: string; // What they want if they have ideas but no final logo
+  logoStatus?: 'have' | 'iterate' | 'none'; // Whether they have a logo, want to iterate, or need one created
   existingMotto?: string; // User's existing slogan if they have one
   existingTagline?: string; // User's existing catchphrase
   existingMission?: string;
@@ -172,4 +175,95 @@ export interface ChatMessage {
   role: 'user' | 'model';
   text: string;
   timestamp: number;
+  toolResults?: Array<{
+    toolName: string;
+    displayType: string;
+    data: any;
+    summary: string;
+  }>;
+}
+
+// --- News-to-Feature Types (April 2026) ---
+
+export interface VideoTierConfig {
+  tier: 'lite' | 'standard' | '4k';
+  resolution: '720p' | '1080p' | '4K';
+  model: string;
+  costPerSecond: number;
+  maxDuration: number;
+  nativeAudio: boolean;
+}
+
+export interface BrandVoiceProfile {
+  id: string;
+  name: string;
+  sampleAudioUrl?: string;
+  clonedVoiceId?: string;
+  greetingScript?: string;
+  adScript?: string;
+  podcastIntro?: string;
+  generatedAudios: Array<{
+    type: 'greeting' | 'ad' | 'podcast' | 'custom';
+    audioUrl: string;
+    script: string;
+    timestamp: number;
+  }>;
+}
+
+export interface SpokespersonConfig {
+  id: string;
+  personaName: string;
+  style: 'professional' | 'friendly' | 'energetic' | 'luxury';
+  avatarDescription: string;
+  scriptTone: string;
+  generatedVideos: Array<{
+    videoUrl: string;
+    script: string;
+    musicStyle: string;
+    timestamp: number;
+  }>;
+}
+
+export interface BrandMemoryEntry {
+  id: string;
+  type: 'conversation' | 'asset' | 'guideline' | 'competitor' | 'feedback';
+  content: string;
+  timestamp: number;
+  source: string;
+}
+
+export interface ContractTemplate {
+  id: string;
+  type: 'branding' | 'nda' | 'license' | 'retainer' | 'custom';
+  title: string;
+  parties: { provider: string; client: string };
+  sections: Array<{ heading: string; body: string }>;
+  packageRef?: string;
+  generatedAt: number;
+}
+
+export interface GreenScoreData {
+  totalApiCalls: number;
+  estimatedKWh: number;
+  carbonOffsetKg: number;
+  efficiencyRating: 'A' | 'B' | 'C' | 'D';
+  badgeEligible: boolean;
+  breakdown: Array<{ service: string; calls: number; energy: number }>;
+}
+
+export interface MCPToolExport {
+  toolName: string;
+  description: string;
+  inputSchema: Record<string, any>;
+  endpoint: string;
+}
+
+export interface DeployableAgent {
+  id: string;
+  name: string;
+  type: 'chat' | 'faq' | 'recommender' | 'booking';
+  brandContext: string;
+  embedCode: string;
+  deployedAt?: number;
+  status: 'draft' | 'deployed' | 'paused';
 }

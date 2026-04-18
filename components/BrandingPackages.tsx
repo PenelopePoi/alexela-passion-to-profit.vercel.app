@@ -14,9 +14,10 @@ interface BrandingPackagesProps {
   data: BrandStrategy;
   input: BrandInput;
   adAssets?: any;
+  onPaymentRequest?: () => void;
 }
 
-export const BrandingPackages: React.FC<BrandingPackagesProps> = ({ data, input, adAssets }) => {
+export const BrandingPackages: React.FC<BrandingPackagesProps> = ({ data, input, adAssets, onPaymentRequest }) => {
   const [pitch, setPitch] = useState<string>('');
   const [isGeneratingPitch, setIsGeneratingPitch] = useState(false);
   const [isFriend, setIsFriend] = useState(true);
@@ -355,7 +356,10 @@ export const BrandingPackages: React.FC<BrandingPackagesProps> = ({ data, input,
               </div>
             </div>
 
-            <button className={`w-full mt-8 py-5 rounded-2xl text-white font-black text-sm shadow-xl transition-all hover:scale-105 active:scale-95 ${pkg.tier === 'Elite' ? 'bg-brand-lavender' : pkg.tier === 'Premium' ? 'bg-brand-teal' : 'bg-brand-black'}`}>
+            <button
+              onClick={() => onPaymentRequest?.()}
+              className={`w-full mt-8 py-5 rounded-2xl text-white font-black text-sm shadow-xl transition-all hover:scale-105 active:scale-95 ${pkg.tier === 'Elite' ? 'bg-brand-lavender' : pkg.tier === 'Premium' ? 'bg-brand-teal' : 'bg-brand-black'}`}
+            >
               Select {pkg.name}
             </button>
           </div>

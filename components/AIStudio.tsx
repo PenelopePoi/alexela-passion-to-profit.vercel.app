@@ -211,7 +211,7 @@ export const AIStudio: React.FC = () => {
                   {uploadedFile ? (
                     <div className="relative w-full h-full p-4">
                       {uploadedFile.startsWith('data:image') ? (
-                        <img src={uploadedFile} className="w-full h-full object-contain rounded-xl" />
+                        <img src={uploadedFile} alt="Uploaded media preview" className="w-full h-full object-contain rounded-xl" />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center gap-3">
                           <FileText className="text-brand-lavender" />
@@ -334,7 +334,7 @@ export const AIStudio: React.FC = () => {
                       {activeTool === 'video' ? (
                         <video src={result} controls className="w-full aspect-video object-cover" />
                       ) : (
-                        <img src={result} className="w-full object-contain max-h-[500px]" />
+                        <img src={result} alt="AI-generated result" className="w-full object-contain max-h-[500px]" />
                       )}
                       <div className="absolute inset-0 bg-brand-black/60 opacity-0 group-hover:opacity-100 transition-all flex items-center justify-center gap-4">
                         <button className="p-4 bg-white text-brand-black rounded-2xl hover:scale-110 transition-all">

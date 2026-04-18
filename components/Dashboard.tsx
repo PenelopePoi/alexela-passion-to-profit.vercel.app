@@ -1,31 +1,124 @@
 
 import React, { useState, useEffect } from 'react';
 import { BrandInput, BrandStrategy, LogoCandidate } from '../types';
-import { LogoGenerator } from './LogoGenerator';
-import { ColorPaletteDisplay } from './ColorPalette';
-import { BusinessCard } from './BusinessCard';
-import { LandingPagePreview } from './LandingPagePreview';
-import { SocialProfilePreview } from './SocialProfilePreview';
-import { MarketingMaterials } from './MarketingMaterials';
-import { VideoAdGenerator } from './VideoAdGenerator';
-import { VinylStickerGenerator } from './VinylStickerGenerator';
-import { BrandingPackages } from './BrandingPackages';
-import { BusinessManagementStudio } from './BusinessManagementStudio';
-import { Launchpad } from './Launchpad';
-import { TypographyStudio } from './TypographyStudio';
-import { StudioTutorial } from './StudioTutorial';
-import { Target, Sparkles, ArrowLeft, RefreshCw, Save, Check, FolderOpen, Loader2, Layers, Film, ShoppingCart, Scissors, Type, Briefcase, Star, Zap, Package, PlayCircle, LogIn, LogOut, User as UserIcon, BrainCircuit, Anchor, FileText, Download, TrendingUp } from 'lucide-react';
+const LogoGenerator = React.lazy(() => import('./LogoGenerator').then(m => ({ default: m.LogoGenerator })));
+const ColorPaletteDisplay = React.lazy(() => import('./ColorPalette').then(m => ({ default: m.ColorPaletteDisplay })));
+const BusinessCard = React.lazy(() => import('./BusinessCard').then(m => ({ default: m.BusinessCard })));
+const LandingPagePreview = React.lazy(() => import('./LandingPagePreview').then(m => ({ default: m.LandingPagePreview })));
+const SocialProfilePreview = React.lazy(() => import('./SocialProfilePreview').then(m => ({ default: m.SocialProfilePreview })));
+const MarketingMaterials = React.lazy(() => import('./MarketingMaterials').then(m => ({ default: m.MarketingMaterials })));
+const VideoAdGenerator = React.lazy(() => import('./VideoAdGenerator').then(m => ({ default: m.VideoAdGenerator })));
+const VinylStickerGenerator = React.lazy(() => import('./VinylStickerGenerator').then(m => ({ default: m.VinylStickerGenerator })));
+const BrandingPackages = React.lazy(() => import('./BrandingPackages').then(m => ({ default: m.BrandingPackages })));
+const BusinessManagementStudio = React.lazy(() => import('./BusinessManagementStudio').then(m => ({ default: m.BusinessManagementStudio })));
+const Launchpad = React.lazy(() => import('./Launchpad').then(m => ({ default: m.Launchpad })));
+const TypographyStudio = React.lazy(() => import('./TypographyStudio').then(m => ({ default: m.TypographyStudio })));
+const StudioTutorial = React.lazy(() => import('./StudioTutorial').then(m => ({ default: m.StudioTutorial })));
+import { Target, Sparkles, ArrowLeft, RefreshCw, Save, Check, FolderOpen, Loader2, Layers, Film, ShoppingCart, Scissors, Type, Briefcase, Star, Zap, Package, PlayCircle, LogIn, LogOut, User as UserIcon, BrainCircuit, Anchor, FileText, Download, TrendingUp, ZoomIn, Eye, ShieldCheck, BarChart3, DollarSign, Rocket, Bot, Phone, Trophy, Gift, Box, Shield, Fingerprint, Lock, Users, Mic, Video, Brain, Server, Leaf, Scale, Menu, Handshake, Inbox } from 'lucide-react';
 import { motion } from 'motion/react';
 import { regenerateTaglines, generateFlyerCopy, generateBrandStrategy, generateBrandingPackages, generateAdAssets } from '../services/geminiService';
 import { auth, signInWithGoogle, logout, db, handleFirestoreError, OperationType } from '../firebase';
-import { onAuthStateChanged, User } from 'firebase/auth';
-import { doc, setDoc, getDoc, serverTimestamp } from 'firebase/firestore';
-import { Chatbot } from './Chatbot';
-import { AIStudio } from './AIStudio';
-import { PortfolioGallery } from './PortfolioGallery';
-import { BrandAssets } from './BrandAssets';
-import { BrandIntelligence } from './BrandIntelligence';
+import { onAuthStateChanged, User } from '@firebase/auth';
+import { doc, setDoc, getDoc, serverTimestamp } from '@firebase/firestore';
+const Chatbot = React.lazy(() => import('./Chatbot').then(m => ({ default: m.Chatbot })));
+const AIStudio = React.lazy(() => import('./AIStudio').then(m => ({ default: m.AIStudio })));
+const SkillScouter = React.lazy(() => import('./SkillScouter').then(m => ({ default: m.SkillScouter })));
+const PortfolioGallery = React.lazy(() => import('./PortfolioGallery').then(m => ({ default: m.PortfolioGallery })));
+const BrandAssets = React.lazy(() => import('./BrandAssets').then(m => ({ default: m.BrandAssets })));
+const BrandIntelligence = React.lazy(() => import('./BrandIntelligence').then(m => ({ default: m.BrandIntelligence })));
+const AssetUpscaler = React.lazy(() => import('./AssetUpscaler').then(m => ({ default: m.AssetUpscaler })));
+const AttentionHeatmap = React.lazy(() => import('./AttentionHeatmap').then(m => ({ default: m.AttentionHeatmap })));
+import { getClientKey, encryptData, isEncryptionEnabled } from '../services/clientEncryption';
+import { hasValidLicense, getDaysRemaining, LICENSE_TIERS, LicenseTier } from '../services/studioLicense';
+import LicenseModal from './LicenseModal';
+const BrandConsistencyChecker = React.lazy(() => import('./BrandConsistencyChecker').then(m => ({ default: m.BrandConsistencyChecker })));
+const UsageAnalytics = React.lazy(() => import('./UsageAnalytics').then(m => ({ default: m.UsageAnalytics })));
+const RevenueProjector = React.lazy(() => import('./RevenueProjector').then(m => ({ default: m.RevenueProjector })));
+const InvestorReadyDeck = React.lazy(() => import('./InvestorReadyDeck').then(m => ({ default: m.InvestorReadyDeck })));
+const BrandFlowStatus = React.lazy(() => import('./BrandFlowStatus'));
+const AgentMarketplace = React.lazy(() => import('./AgentMarketplace').then(m => ({ default: m.AgentMarketplace })));
+const BrandBotBuilder = React.lazy(() => import('./BrandBotBuilder').then(m => ({ default: m.BrandBotBuilder })));
+const BrandEmployee = React.lazy(() => import('./BrandEmployee').then(m => ({ default: m.BrandEmployee })));
+const CallCoach = React.lazy(() => import('./CallCoach').then(m => ({ default: m.CallCoach })));
+const SpotlightChallenge = React.lazy(() => import('./SpotlightChallenge').then(m => ({ default: m.SpotlightChallenge })));
+const GrantProposalGenerator = React.lazy(() => import('./GrantProposalGenerator').then(m => ({ default: m.GrantProposalGenerator })));
+const BrandAssetBundle = React.lazy(() => import('./BrandAssetBundle').then(m => ({ default: m.BrandAssetBundle })));
+const BrandFormatBridge = React.lazy(() => import('./BrandFormatBridge').then(m => ({ default: m.BrandFormatBridge })));
+const AIPowerGrid = React.lazy(() => import('./AIPowerGrid').then(m => ({ default: m.AIPowerGrid })));
+const BrandVault = React.lazy(() => import('./BrandVault').then(m => ({ default: m.BrandVault })));
+const BrandDNALockbox = React.lazy(() => import('./BrandDNALockbox').then(m => ({ default: m.BrandDNALockbox })));
+const DataSovereignty = React.lazy(() => import('./DataSovereignty').then(m => ({ default: m.DataSovereignty })));
+const ProvenanceDashboard = React.lazy(() => import('./ProvenanceDashboard').then(m => ({ default: m.ProvenanceDashboard })));
+const SimulationVisualizer = React.lazy(() => import('./SimulationVisualizer').then(m => ({ default: m.SimulationVisualizer })));
+const GuardianCouncil = React.lazy(() => import('./GuardianCouncil').then(m => ({ default: m.GuardianCouncil })));
+import { SentinelBadge } from './SentinelBadge';
+const SentinelDashboard = React.lazy(() => import('./SentinelDashboard').then(m => ({ default: m.SentinelDashboard })));
+const VoterGeometry = React.lazy(() => import('./VoterGeometry').then(m => ({ default: m.VoterGeometry })));
+const BrandVoiceStudio = React.lazy(() => import('./BrandVoiceStudio').then(m => ({ default: m.BrandVoiceStudio })));
+const BrandSpokesperson = React.lazy(() => import('./BrandSpokesperson').then(m => ({ default: m.BrandSpokesperson })));
+const BrandMemory = React.lazy(() => import('./BrandMemory').then(m => ({ default: m.BrandMemory })));
+const MCPClientPortal = React.lazy(() => import('./MCPClientPortal').then(m => ({ default: m.MCPClientPortal })));
+const GreenBadge = React.lazy(() => import('./GreenBadge').then(m => ({ default: m.GreenBadge })));
+const ContractGenerator = React.lazy(() => import('./ContractGenerator').then(m => ({ default: m.ContractGenerator })));
+const ClientCRM = React.lazy(() => import('./ClientCRM').then(m => ({ default: m.ClientCRM })));
+const BrotherhoodAlliance = React.lazy(() => import('./BrotherhoodAlliance').then(m => ({ default: m.BrotherhoodAlliance })));
+const SubmissionsInbox = React.lazy(() => import('./SubmissionsInbox').then(m => ({ default: m.SubmissionsInbox })));
+import { getSubmissionStats } from '../services/submissionLog';
+import { createInitialFlowState, FlowNodeId, getTabForNode } from '../services/brandFlowPipeline';
 import { ChatMessage } from '../types';
+
+const BG_ANIM_1 = { x: [0, 100, 0], y: [0, -50, 0], rotate: [0, 10, 0] };
+const BG_ANIM_2 = { x: [0, -100, 0], y: [0, 50, 0], rotate: [0, -10, 0] };
+
+const SIDEBAR_TABS = [
+  { id: 'inbox', label: 'Submissions Inbox', icon: Inbox, color: 'text-brand-teal' },
+  { id: 'identity', label: 'Identity Studio', icon: Layers, color: 'text-brand-teal' },
+  { id: 'marketing', label: 'Ad Integration', icon: Film, color: 'text-brand-lavender' },
+  { id: 'packages', label: 'Elite Packages', icon: Package, color: 'text-brand-teal' },
+  { id: 'management', label: 'Business Hub', icon: Briefcase, color: 'text-brand-lavender' },
+  { id: 'aistudio', label: 'Xela AI Studio', icon: BrainCircuit, color: 'text-brand-teal' },
+  { id: 'intelligence', label: 'Intelligence', icon: BrainCircuit, color: 'text-brand-lavender' },
+  { id: 'upscaler', label: 'AI Upscaler', icon: ZoomIn, color: 'text-brand-teal' },
+  { id: 'heatmap', label: 'Attention Map', icon: Eye, color: 'text-red-400' },
+  { id: 'consistency', label: 'Brand Checker', icon: ShieldCheck, color: 'text-brand-teal' },
+  { id: 'analytics', label: 'Usage & PII', icon: BarChart3, color: 'text-blue-500' },
+  { id: 'assets', label: 'Brand Assets', icon: FileText, color: 'text-brand-lavender' },
+  { id: 'agents', label: 'Agent Market', icon: Sparkles, color: 'text-pink-500' },
+  { id: 'botbuilder', label: 'My BrandBot', icon: BrainCircuit, color: 'text-cyan-500' },
+  { id: 'revenue', label: 'Revenue', icon: DollarSign, color: 'text-green-500' },
+  { id: 'investor', label: 'Investor Ready', icon: Rocket, color: 'text-orange-500' },
+  { id: 'employee', label: 'AI Employee', icon: Bot, color: 'text-violet-500' },
+  { id: 'callcoach', label: 'Call Coach', icon: Phone, color: 'text-emerald-500' },
+  { id: 'spotlight', label: 'Spotlight', icon: Trophy, color: 'text-yellow-500' },
+  { id: 'grants', label: 'Fund Proposals', icon: Gift, color: 'text-indigo-500' },
+  { id: 'assetpacks', label: 'Asset Packs', icon: Box, color: 'text-amber-500' },
+  { id: 'bridge', label: 'Format Bridge', icon: Anchor, color: 'text-brand-teal' },
+  { id: 'powergrid', label: 'Power Grid', icon: Zap, color: 'text-yellow-400' },
+  { id: 'vault', label: 'Brand Vault', icon: Shield, color: 'text-emerald-600' },
+  { id: 'dna', label: 'Brand DNA', icon: Fingerprint, color: 'text-violet-600' },
+  { id: 'sovereignty', label: 'Data Rights', icon: Lock, color: 'text-red-500' },
+  { id: 'provenance', label: 'Provenance', icon: Fingerprint, color: 'text-teal-600' },
+  { id: 'simulation', label: 'Sim Stack', icon: Layers, color: 'text-indigo-500' },
+  { id: 'council', label: 'AI Council', icon: Users, color: 'text-blue-600' },
+  { id: 'sentinel', label: 'Sentinel', icon: Shield, color: 'text-green-600' },
+  { id: 'geometry', label: 'Geometry', icon: Eye, color: 'text-fuchsia-500' },
+  { id: 'crm', label: 'Client CRM', icon: Users, color: 'text-emerald-500' },
+  { id: 'brotherhood', label: 'Brotherhood', icon: Handshake, color: 'text-amber-500' },
+  { id: 'voicestudio', label: 'Voice Studio', icon: Mic, color: 'text-pink-500' },
+  { id: 'spokesperson', label: 'Spokesperson', icon: Video, color: 'text-cyan-400' },
+  { id: 'brandmemory', label: 'Brand Memory', icon: Brain, color: 'text-purple-500' },
+  { id: 'mcpportal', label: 'MCP Portal', icon: Server, color: 'text-blue-400' },
+  { id: 'greenbadge', label: 'Green Badge', icon: Leaf, color: 'text-green-500' },
+  { id: 'contracts', label: 'Contracts', icon: Scale, color: 'text-amber-600' },
+  { id: 'portfolio', label: 'Elite Portfolio', icon: Star, color: 'text-brand-lavender' }
+] as const;
+
+const TabLoader = () => (
+  <div className="flex flex-col items-center justify-center py-20 space-y-4">
+    <Loader2 className="animate-spin text-brand-lavender" size={48} />
+    <p className="text-stone-400 font-black uppercase tracking-widest text-xs">Loading module...</p>
+  </div>
+);
 
 interface DashboardProps {
   data: BrandStrategy;
@@ -39,6 +132,7 @@ interface DashboardProps {
   onOpenProjects: () => void;
   isSaving: boolean;
   saveSuccess: boolean;
+  onPaymentRequest?: () => void;
 }
 
 export const Dashboard: React.FC<DashboardProps> = ({ 
@@ -52,14 +146,22 @@ export const Dashboard: React.FC<DashboardProps> = ({
   onReset,
   onOpenProjects,
   isSaving,
-  saveSuccess
+  saveSuccess,
+  onPaymentRequest
 }) => {
   const [data, setData] = useState<BrandStrategy>(initialData);
   const [isRegeneratingTaglines, setIsRegeneratingTaglines] = useState(false);
   const [isPromotingSelf, setIsPromotingSelf] = useState(false);
+  const [showLicenseModal, setShowLicenseModal] = useState(false);
+  const [licenseValid, setLicenseValid] = useState(hasValidLicense());
+  const [daysRemaining, setDaysRemaining] = useState(getDaysRemaining());
   const [isGeneratingPackages, setIsGeneratingPackages] = useState(false);
   const [adAssets, setAdAssets] = useState<any>(null);
-  const [activeTab, setActiveTab] = useState<'identity' | 'marketing' | 'packages' | 'management' | 'aistudio' | 'portfolio' | 'assets' | 'intelligence'>('identity');
+  const [activeTab, setActiveTab] = useState<'identity' | 'marketing' | 'packages' | 'management' | 'aistudio' | 'portfolio' | 'assets' | 'intelligence' | 'upscaler' | 'heatmap' | 'consistency' | 'analytics' | 'revenue' | 'investor' | 'agents' | 'botbuilder' | 'employee' | 'callcoach' | 'spotlight' | 'grants' | 'assetpacks' | 'bridge' | 'powergrid' | 'vault' | 'dna' | 'sovereignty' | 'provenance' | 'simulation' | 'council' | 'sentinel' | 'geometry' | 'voicestudio' | 'spokesperson' | 'brandmemory' | 'mcpportal' | 'greenbadge' | 'contracts' | 'crm' | 'brotherhood' | 'inbox'>('identity');
+  const [newLeadsCount, setNewLeadsCount] = useState<number>(0);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [flowState, setFlowState] = useState(createInitialFlowState());
+  const [isFlowRunning, setIsFlowRunning] = useState(false);
   const [showTutorial, setShowTutorial] = useState(false);
   const [user, setUser] = useState<User | null>(null);
   const [isLoggingIn, setIsLoggingIn] = useState(false);
@@ -70,6 +172,19 @@ export const Dashboard: React.FC<DashboardProps> = ({
     });
     return () => unsubscribe();
   }, []);
+
+  useEffect(() => {
+    const updateLeadCount = () => {
+      try {
+        setNewLeadsCount(getSubmissionStats().new || 0);
+      } catch (e) {
+        setNewLeadsCount(0);
+      }
+    };
+    updateLeadCount();
+    const interval = setInterval(updateLeadCount, 15000);
+    return () => clearInterval(interval);
+  }, [activeTab]);
 
   useEffect(() => {
     if (!data.flyerCopy) {
@@ -108,19 +223,36 @@ export const Dashboard: React.FC<DashboardProps> = ({
       return;
     }
     
-    const projectId = `${input.companyName.toLowerCase().replace(/\s+/g, '-')}-${Date.now()}`;
+    const projectId = crypto.randomUUID();
     const projectRef = doc(db, 'projects', projectId);
     
     try {
-      await setDoc(projectRef, {
+      let projectData: any = {
         uid: user.uid,
         input,
         strategy: data,
         logoCandidates,
         activeTemplate,
+        encrypted: false,
         createdAt: serverTimestamp(),
         updatedAt: serverTimestamp()
-      });
+      };
+
+      // Encrypt if enabled — Firebase only sees ciphertext
+      if (isEncryptionEnabled()) {
+        const key = await getClientKey(false);
+        if (key) {
+          projectData = {
+            uid: user.uid,
+            encryptedPayload: await encryptData({ input, strategy: data, logoCandidates, activeTemplate }, key),
+            encrypted: true,
+            createdAt: serverTimestamp(),
+            updatedAt: serverTimestamp()
+          };
+        }
+      }
+
+      await setDoc(projectRef, projectData);
       onSave(data, input, logoCandidates, activeTemplate);
     } catch (e) {
       handleFirestoreError(e, OperationType.CREATE, `projects/${projectId}`);
@@ -151,10 +283,12 @@ export const Dashboard: React.FC<DashboardProps> = ({
   };
 
   const handleExport = () => {
+    const selectedLogo_ = logoCandidates.find(c => c.status === 'liked') || (logoCandidates.length > 0 ? logoCandidates[0] : undefined);
     const exportData = {
       input,
       strategy: data,
       logoCandidates,
+      logoImageUrl: selectedLogo_?.imageUrl || null,
       activeTemplate,
       exportedAt: new Date().toISOString()
     };
@@ -163,6 +297,67 @@ export const Dashboard: React.FC<DashboardProps> = ({
     const a = document.createElement('a');
     a.href = url;
     a.download = `${input.companyName.toLowerCase().replace(/\s+/g, '-')}-brand-package.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
+  const handleDownloadBrandKit = () => {
+    const selectedLogo_ = logoCandidates.find(c => c.status === 'liked') || (logoCandidates.length > 0 ? logoCandidates[0] : undefined);
+    const colors = data.colorPalette;
+    const fonts = data.typographyRecommendation;
+    const lines = [
+      `====================================`,
+      `  ${input.companyName} — Brand Kit`,
+      `  Generated by XELA Creative Branding Studio`,
+      `  ${new Date().toLocaleDateString()}`,
+      `====================================`,
+      ``,
+      `--- BRAND IDENTITY ---`,
+      `Company: ${input.companyName}`,
+      `Owner: ${input.ownerName || 'N/A'}`,
+      `Industry: ${input.industry || 'N/A'}`,
+      `Taglines: ${data.taglines?.join(' | ') || 'N/A'}`,
+      `Mission: ${data.missionStatement || 'N/A'}`,
+      `Vision: ${data.visionStatement || 'N/A'}`,
+      `Brand Voice: ${data.brandVoice || 'N/A'}`,
+      ``,
+      `--- COLOR PALETTE ---`,
+      `Primary: ${colors?.primary || 'N/A'}`,
+      `Secondary: ${colors?.secondary || 'N/A'}`,
+      `Accent: ${colors?.accent || 'N/A'}`,
+      `Background: ${colors?.background || 'N/A'}`,
+      `Reasoning: ${colors?.explanation || 'N/A'}`,
+      ``,
+      `--- TYPOGRAPHY ---`,
+      `Heading Font: ${fonts?.headingFont || 'N/A'}`,
+      `Body Font: ${fonts?.bodyFont || 'N/A'}`,
+      `Reasoning: ${fonts?.reasoning || 'N/A'}`,
+      ``,
+      `--- LOGO ---`,
+      selectedLogo_?.imageUrl ? `Logo URL: ${selectedLogo_.imageUrl}` : 'No logo generated yet',
+      ``,
+      `--- MARKETING COPY ---`,
+      `Flyer Headline: ${data.flyerCopy?.headline || 'N/A'}`,
+      `Flyer Hook: ${data.flyerCopy?.hook || 'N/A'}`,
+      `Flyer CTA: ${data.flyerCopy?.callToAction || 'N/A'}`,
+      ``,
+      `--- SOCIAL MEDIA IDEAS ---`,
+      ...(data.socialMediaPostIdeas || []).map((p, i) => `${i + 1}. [${p.platform}] ${p.caption}`),
+      ``,
+      `--- CONTACT ---`,
+      `Phone: ${input.phone || 'N/A'}`,
+      `Email: ${input.email || 'N/A'}`,
+      `Website: ${input.website || 'N/A'}`,
+      ``,
+      `© XELA Creative Branding Studio — xelabrandingstudio@gmail.com — (321) 375-9685`,
+    ];
+    const blob = new Blob([lines.join('\n')], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${input.companyName.toLowerCase().replace(/\s+/g, '-')}-brand-kit.txt`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -213,9 +408,13 @@ export const Dashboard: React.FC<DashboardProps> = ({
   };
 
   const handlePromoteSelf = async () => {
+    if (!hasValidLicense()) {
+      setShowLicenseModal(true);
+      return;
+    }
     setIsPromotingSelf(true);
     const selfInput: BrandInput = {
-        companyName: "Xela Elite AI Creative Studio",
+        companyName: "XELA Creative Branding Studio",
         industry: "Elite Branding & Business Development",
         services: ["AI Strategy", "Logo Engineering", "Business Registration", "Marketing Automation", "E-commerce Ecosystems"],
         vibe: "Elite, Artistic, High-Conversion, Professional",
@@ -235,24 +434,16 @@ export const Dashboard: React.FC<DashboardProps> = ({
   };
 
   return (
-    <div className="flex flex-col min-h-screen pb-20 overflow-visible mesh-gradient relative">
+    <div className="flex flex-col min-h-screen pb-20 pt-24 overflow-visible mesh-gradient relative">
       {/* Dynamic Background Elements */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-        <motion.div 
-          animate={{ 
-            x: [0, 100, 0], 
-            y: [0, -50, 0],
-            rotate: [0, 10, 0]
-          }}
+        <motion.div
+          animate={BG_ANIM_1}
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
           className="absolute -top-20 -left-20 w-[40rem] h-[40rem] bg-brand-lavender/5 rounded-full blur-[100px]"
         />
-        <motion.div 
-          animate={{ 
-            x: [0, -100, 0], 
-            y: [0, 50, 0],
-            rotate: [0, -10, 0]
-          }}
+        <motion.div
+          animate={BG_ANIM_2}
           transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
           className="absolute -bottom-20 -right-20 w-[30rem] h-[30rem] bg-brand-teal/5 rounded-full blur-[100px]"
         />
@@ -260,8 +451,20 @@ export const Dashboard: React.FC<DashboardProps> = ({
 
       <header className="sticky top-0 z-40 glass border-b border-stone-200/50 shadow-sm bg-white/70 backdrop-blur-2xl">
         <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between gap-6">
-          <div className="flex items-center gap-6">
-             <button onClick={onReset} className="p-3 bg-stone-100/50 hover:bg-brand-lavender hover:text-white rounded-full transition-all text-stone-600 border border-white/50">
+          <div className="flex items-center gap-4 md:gap-6">
+             <button
+               onClick={onReset}
+               aria-label="Home"
+               className="group flex items-center gap-2 hover:opacity-80 transition-opacity"
+             >
+               <img
+                 src="/xela-logo-new.png"
+                 alt="XELA Creative Branding Studio"
+                 className="h-10 md:h-12 w-auto object-contain drop-shadow-lg group-hover:scale-105 transition-transform"
+               />
+             </button>
+             <div className="w-px h-8 bg-stone-300 hidden md:block" />
+             <button onClick={onReset} aria-label="Go back" className="p-3 bg-stone-100/50 hover:bg-brand-lavender hover:text-white rounded-full transition-all text-stone-600 border border-white/50">
                 <ArrowLeft size={20} />
              </button>
              <div className="flex items-center gap-4">
@@ -284,9 +487,12 @@ export const Dashboard: React.FC<DashboardProps> = ({
           </div>
           
           <div className="flex items-center gap-4">
-            <div className="hidden lg:flex items-center gap-2 px-4 py-2 bg-stone-100/50 rounded-full border border-white/50">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-              <span className="text-[10px] font-black uppercase tracking-widest text-stone-500">Xela AI Core Active</span>
+            <div className="hidden lg:flex items-center gap-3">
+              <div className="flex items-center gap-2 px-4 py-2 bg-stone-100/50 rounded-full border border-white/50">
+                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                <span className="text-[10px] font-black uppercase tracking-widest text-stone-500">Xela AI Core Active</span>
+              </div>
+              <SentinelBadge onClick={() => setActiveTab('sentinel')} />
             </div>
 
             {user ? (
@@ -294,7 +500,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
                 <div className="w-10 h-10 rounded-full border-2 border-brand-lavender overflow-hidden shadow-lg transform hover:scale-110 transition-transform cursor-pointer">
                   <img src={user.photoURL || `https://ui-avatars.com/api/?name=${user.displayName}`} alt="User" className="w-full h-full object-cover" />
                 </div>
-                <button onClick={handleLogout} className="p-3 bg-stone-100/50 hover:bg-red-500 hover:text-white rounded-xl transition-all text-stone-600 border border-white/50">
+                <button onClick={handleLogout} aria-label="Log out" className="p-3 bg-stone-100/50 hover:bg-red-500 hover:text-white rounded-xl transition-all text-stone-600 border border-white/50">
                   <LogOut size={18} />
                 </button>
               </div>
@@ -313,6 +519,34 @@ export const Dashboard: React.FC<DashboardProps> = ({
       </header>
 
       <main className="max-w-7xl mx-auto px-6 pt-10 relative z-10">
+        {/* BrandFlow Status Bar */}
+        <React.Suspense fallback={<TabLoader />}>
+        <BrandFlowStatus
+          flowState={flowState}
+          onToggleAutoFlow={() => setFlowState(prev => ({ ...prev, isAutoFlowEnabled: !prev.isAutoFlowEnabled }))}
+          onRunFullPackage={async () => {
+            setIsFlowRunning(true);
+            try {
+              await handleRegenerate();
+              const updatedNodes = { ...flowState.nodes };
+              Object.keys(updatedNodes).forEach(key => {
+                updatedNodes[key as FlowNodeId] = { ...updatedNodes[key as FlowNodeId], status: 'done' };
+              });
+              setFlowState(prev => ({ ...prev, nodes: updatedNodes, lastRunAt: Date.now() }));
+            } catch (e) {
+              console.error(e);
+            } finally {
+              setIsFlowRunning(false);
+            }
+          }}
+          onNodeClick={(nodeId) => {
+            const tab = getTabForNode(nodeId);
+            if (tab) setActiveTab(tab as any);
+          }}
+          isRunning={isFlowRunning}
+        />
+        </React.Suspense>
+
         {/* Self-Promotion Banner */}
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
@@ -334,31 +568,40 @@ export const Dashboard: React.FC<DashboardProps> = ({
                 Xela can engineer your own AI-powered branding agency. From custom models to automated fulfillment.
               </p>
             </div>
-            <button 
+            <button
               onClick={handlePromoteSelf}
               disabled={isPromotingSelf}
               className="px-10 py-5 bg-white text-brand-black rounded-2xl font-black uppercase tracking-widest hover:bg-brand-lavender hover:text-white transition-all shadow-xl hover:scale-105 active:scale-95 whitespace-nowrap flex items-center gap-3 relative z-10"
             >
-              {isPromotingSelf ? <Loader2 size={18} className="animate-spin" /> : <BrainCircuit size={18} />}
-              Clone This Studio
+              {isPromotingSelf ? (
+                <Loader2 size={18} className="animate-spin" />
+              ) : licenseValid ? (
+                <BrainCircuit size={18} />
+              ) : (
+                <span className="text-base">🔒</span>
+              )}
+              {licenseValid ? 'Clone This Studio' : `Unlock Cloning — from $${LICENSE_TIERS.starter.price}`}
             </button>
+            {licenseValid && daysRemaining !== null && daysRemaining !== Infinity && daysRemaining < 7 && (
+              <p className="text-[10px] text-amber-500 mt-2 font-bold uppercase tracking-wider">
+                License expires in {daysRemaining} day{daysRemaining !== 1 ? 's' : ''}
+              </p>
+            )}
           </div>
         </motion.div>
 
         <div className="flex flex-col lg:flex-row gap-10 mb-20">
+          {/* Mobile Sidebar Toggle */}
+          <button
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+            className="lg:hidden mb-4 p-3 bg-brand-black text-white rounded-xl font-black text-[10px] uppercase tracking-widest flex items-center gap-2"
+          >
+            <Menu size={18} /> {sidebarOpen ? 'Hide Menu' : 'Show Menu'}
+          </button>
           {/* Sidebar Navigation */}
-          <aside className="lg:w-72 space-y-4 shrink-0">
+          <aside className={`lg:w-72 space-y-4 shrink-0 ${sidebarOpen ? 'block' : 'hidden lg:block'}`}>
             <div className="glass-dark rounded-[2.5rem] p-4 space-y-2">
-              {[
-                { id: 'identity', label: 'Identity Studio', icon: Layers, color: 'text-brand-teal' },
-                { id: 'marketing', label: 'Ad Integration', icon: Film, color: 'text-brand-lavender' },
-                { id: 'packages', label: 'Elite Packages', icon: Package, color: 'text-brand-teal' },
-                { id: 'management', label: 'Business Hub', icon: Briefcase, color: 'text-brand-lavender' },
-                { id: 'aistudio', label: 'Xela AI Studio', icon: BrainCircuit, color: 'text-brand-teal' },
-                { id: 'intelligence', label: 'Intelligence', icon: BrainCircuit, color: 'text-brand-lavender' },
-                { id: 'assets', label: 'Brand Assets', icon: FileText, color: 'text-brand-lavender' },
-                { id: 'portfolio', label: 'Elite Portfolio', icon: Star, color: 'text-brand-lavender' }
-              ].map((tab) => (
+              {SIDEBAR_TABS.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id as any)}
@@ -366,7 +609,12 @@ export const Dashboard: React.FC<DashboardProps> = ({
                 >
                   <tab.icon size={18} className={activeTab === tab.id ? tab.color : 'group-hover:text-white transition-colors'} />
                   {tab.label}
-                  {activeTab === tab.id && <motion.div layoutId="activeTab" className="ml-auto w-1.5 h-1.5 bg-brand-teal rounded-full" />}
+                  {tab.id === 'inbox' && newLeadsCount > 0 && (
+                    <span className="ml-auto inline-flex items-center justify-center min-w-[18px] h-[18px] px-1.5 rounded-full bg-red-500 text-white text-[9px] font-black">
+                      {newLeadsCount}
+                    </span>
+                  )}
+                  {activeTab === tab.id && tab.id !== 'inbox' && <motion.div layoutId="activeTab" className="ml-auto w-1.5 h-1.5 bg-brand-teal rounded-full" />}
                 </button>
               ))}
             </div>
@@ -411,7 +659,13 @@ export const Dashboard: React.FC<DashboardProps> = ({
           </aside>
 
           <div className="flex-1">
+            {activeTab === 'inbox' && (
+              <React.Suspense fallback={<TabLoader />}>
+                <SubmissionsInbox />
+              </React.Suspense>
+            )}
             {activeTab === 'identity' && (
+          <React.Suspense fallback={<TabLoader />}>
           <div className="space-y-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <div className="grid lg:grid-cols-12 gap-10">
               <div className="lg:col-span-7 space-y-10">
@@ -551,15 +805,17 @@ export const Dashboard: React.FC<DashboardProps> = ({
                </div>
             </div>
 
-            <VinylStickerGenerator 
-              logoUrl={brandingLogo} 
-              companyName={input.companyName} 
-              primaryColor={data.colorPalette.primary} 
+            <VinylStickerGenerator
+              logoUrl={brandingLogo}
+              companyName={input.companyName}
+              primaryColor={data.colorPalette.primary}
             />
           </div>
+          </React.Suspense>
         )}
 
         {activeTab === 'marketing' && (
+          <React.Suspense fallback={<TabLoader />}>
           <div className="space-y-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <div className="flex items-center gap-4 px-2">
                 <Film className="text-brand-lavender" />
@@ -587,9 +843,11 @@ export const Dashboard: React.FC<DashboardProps> = ({
               hasSavedData={true}
             />
           </div>
+          </React.Suspense>
         )}
 
         {activeTab === 'packages' && (
+          <React.Suspense fallback={<TabLoader />}>
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
             {isGeneratingPackages ? (
               <div className="flex flex-col items-center justify-center py-20 space-y-4">
@@ -597,47 +855,306 @@ export const Dashboard: React.FC<DashboardProps> = ({
                 <p className="text-stone-500 font-black uppercase tracking-widest text-xs">Engineering Elite Packages...</p>
               </div>
             ) : (
-              <BrandingPackages data={data} input={input} adAssets={adAssets} />
+              <BrandingPackages data={data} input={input} adAssets={adAssets} onPaymentRequest={onPaymentRequest} />
             )}
           </div>
+          </React.Suspense>
         )}
 
         {activeTab === 'management' && (
+          <React.Suspense fallback={<TabLoader />}>
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
             <BusinessManagementStudio />
           </div>
+          </React.Suspense>
         )}
 
         {activeTab === 'aistudio' && (
+          <React.Suspense fallback={<TabLoader />}>
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
             <AIStudio />
           </div>
+          </React.Suspense>
         )}
 
         {activeTab === 'portfolio' && (
+          <React.Suspense fallback={<TabLoader />}>
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
             <PortfolioGallery />
           </div>
+          </React.Suspense>
+        )}
+
+        {activeTab === 'upscaler' && (
+          <React.Suspense fallback={<TabLoader />}>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <AssetUpscaler input={input} strategy={data} />
+          </div>
+          </React.Suspense>
+        )}
+
+        {activeTab === 'heatmap' && (
+          <React.Suspense fallback={<TabLoader />}>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <AttentionHeatmap input={input} strategy={data} />
+          </div>
+          </React.Suspense>
+        )}
+
+        {activeTab === 'consistency' && (
+          <React.Suspense fallback={<TabLoader />}>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <BrandConsistencyChecker input={input} strategy={data} />
+          </div>
+          </React.Suspense>
+        )}
+
+        {activeTab === 'analytics' && (
+          <React.Suspense fallback={<TabLoader />}>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <UsageAnalytics input={input} strategy={data} />
+          </div>
+          </React.Suspense>
         )}
 
         {activeTab === 'assets' && (
+          <React.Suspense fallback={<TabLoader />}>
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <BrandAssets 
-              input={input} 
-              strategy={data} 
-              onUpdateStrategy={handleUpdateStrategy} 
+            <BrandAssets
+              input={input}
+              strategy={data}
+              onUpdateStrategy={handleUpdateStrategy}
             />
           </div>
+          </React.Suspense>
         )}
 
         {activeTab === 'intelligence' && (
+          <React.Suspense fallback={<TabLoader />}>
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <BrandIntelligence 
-              input={input} 
-              strategy={data} 
-              onUpdateStrategy={handleUpdateStrategy} 
+            <BrandIntelligence
+              input={input}
+              strategy={data}
+              onUpdateStrategy={handleUpdateStrategy}
             />
           </div>
+          </React.Suspense>
+        )}
+
+        {activeTab === 'agents' && (
+          <React.Suspense fallback={<TabLoader />}>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <AgentMarketplace input={input} strategy={data} onUpdateStrategy={handleUpdateStrategy} />
+          </div>
+          </React.Suspense>
+        )}
+
+        {activeTab === 'botbuilder' && (
+          <React.Suspense fallback={<TabLoader />}>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <BrandBotBuilder input={input} strategy={data} />
+          </div>
+          </React.Suspense>
+        )}
+
+        {activeTab === 'revenue' && (
+          <React.Suspense fallback={<TabLoader />}>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <RevenueProjector input={input} strategy={data} />
+          </div>
+          </React.Suspense>
+        )}
+
+        {activeTab === 'investor' && (
+          <React.Suspense fallback={<TabLoader />}>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <InvestorReadyDeck input={input} strategy={data} />
+          </div>
+          </React.Suspense>
+        )}
+
+        {activeTab === 'employee' && (
+          <React.Suspense fallback={<TabLoader />}>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <BrandEmployee input={input} strategy={data} onUpdateStrategy={handleUpdateStrategy} />
+          </div>
+          </React.Suspense>
+        )}
+
+        {activeTab === 'callcoach' && (
+          <React.Suspense fallback={<TabLoader />}>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <CallCoach input={input} strategy={data} />
+          </div>
+          </React.Suspense>
+        )}
+
+        {activeTab === 'spotlight' && (
+          <React.Suspense fallback={<TabLoader />}>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <SpotlightChallenge input={input} strategy={data} />
+          </div>
+          </React.Suspense>
+        )}
+
+        {activeTab === 'grants' && (
+          <React.Suspense fallback={<TabLoader />}>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <GrantProposalGenerator input={input} strategy={data} />
+          </div>
+          </React.Suspense>
+        )}
+
+        {activeTab === 'assetpacks' && (
+          <React.Suspense fallback={<TabLoader />}>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <BrandAssetBundle input={input} strategy={data} />
+          </div>
+          </React.Suspense>
+        )}
+
+        {activeTab === 'bridge' && (
+          <React.Suspense fallback={<TabLoader />}>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <BrandFormatBridge input={input} strategy={data} />
+          </div>
+          </React.Suspense>
+        )}
+
+        {activeTab === 'powergrid' && (
+          <React.Suspense fallback={<TabLoader />}>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <AIPowerGrid input={input} strategy={data} onUpdateStrategy={handleUpdateStrategy} />
+          </div>
+          </React.Suspense>
+        )}
+
+        {activeTab === 'vault' && (
+          <React.Suspense fallback={<TabLoader />}>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <BrandVault input={input} strategy={data} logoCandidates={logoCandidates} />
+          </div>
+          </React.Suspense>
+        )}
+
+        {activeTab === 'dna' && (
+          <React.Suspense fallback={<TabLoader />}>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <BrandDNALockbox input={input} strategy={data} />
+          </div>
+          </React.Suspense>
+        )}
+
+        {activeTab === 'sovereignty' && (
+          <React.Suspense fallback={<TabLoader />}>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <DataSovereignty input={input} strategy={data} logoCandidates={logoCandidates} />
+          </div>
+          </React.Suspense>
+        )}
+
+        {activeTab === 'provenance' && (
+          <React.Suspense fallback={<TabLoader />}>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <ProvenanceDashboard input={input} strategy={data} />
+          </div>
+          </React.Suspense>
+        )}
+
+        {activeTab === 'simulation' && (
+          <React.Suspense fallback={<TabLoader />}>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <SimulationVisualizer input={input} strategy={data} />
+          </div>
+          </React.Suspense>
+        )}
+
+        {activeTab === 'council' && (
+          <React.Suspense fallback={<TabLoader />}>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <GuardianCouncil input={input} strategy={data} />
+          </div>
+          </React.Suspense>
+        )}
+
+        {activeTab === 'sentinel' && (
+          <React.Suspense fallback={<TabLoader />}>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <SentinelDashboard input={input} strategy={data} />
+          </div>
+          </React.Suspense>
+        )}
+
+        {activeTab === 'geometry' && (
+          <React.Suspense fallback={<TabLoader />}>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <VoterGeometry input={input} strategy={data} />
+          </div>
+          </React.Suspense>
+        )}
+
+        {activeTab === 'crm' && (
+          <React.Suspense fallback={<TabLoader />}>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <ClientCRM input={input} strategy={data} />
+          </div>
+          </React.Suspense>
+        )}
+
+        {activeTab === 'brotherhood' && (
+          <React.Suspense fallback={<TabLoader />}>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <BrotherhoodAlliance input={input} strategy={data} />
+          </div>
+          </React.Suspense>
+        )}
+
+        {activeTab === 'voicestudio' && (
+          <React.Suspense fallback={<TabLoader />}>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <BrandVoiceStudio input={input} strategy={data} />
+          </div>
+          </React.Suspense>
+        )}
+
+        {activeTab === 'spokesperson' && (
+          <React.Suspense fallback={<TabLoader />}>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <BrandSpokesperson input={input} strategy={data} />
+          </div>
+          </React.Suspense>
+        )}
+
+        {activeTab === 'brandmemory' && (
+          <React.Suspense fallback={<TabLoader />}>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <BrandMemory input={input} strategy={data} />
+          </div>
+          </React.Suspense>
+        )}
+
+        {activeTab === 'mcpportal' && (
+          <React.Suspense fallback={<TabLoader />}>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <MCPClientPortal input={input} strategy={data} />
+          </div>
+          </React.Suspense>
+        )}
+
+        {activeTab === 'greenbadge' && (
+          <React.Suspense fallback={<TabLoader />}>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <GreenBadge input={input} strategy={data} />
+          </div>
+          </React.Suspense>
+        )}
+
+        {activeTab === 'contracts' && (
+          <React.Suspense fallback={<TabLoader />}>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <ContractGenerator input={input} strategy={data} />
+          </div>
+          </React.Suspense>
         )}
           </div>
         </div>
@@ -691,28 +1208,57 @@ export const Dashboard: React.FC<DashboardProps> = ({
             {saveSuccess ? 'Saved' : 'Save Project'}
           </button>
           <div className="w-px h-6 bg-white/10"></div>
-          <button 
+          <button
             onClick={handleExport}
             className="flex items-center gap-2 text-white/70 hover:text-white transition-colors text-[10px] font-black uppercase tracking-widest"
+            aria-label="Export brand package as JSON"
           >
             <Download size={18} className="text-orange-500" /> Export JSON
           </button>
           <div className="w-px h-6 bg-white/10"></div>
-          <Launchpad 
+          <button
+            onClick={handleDownloadBrandKit}
+            className="flex items-center gap-2 text-white/70 hover:text-white transition-colors text-[10px] font-black uppercase tracking-widest"
+            aria-label="Download brand kit as text file"
+          >
+            <Download size={18} className="text-brand-teal" /> Brand Kit
+          </button>
+          <div className="w-px h-6 bg-white/10"></div>
+          <React.Suspense fallback={<Loader2 size={18} className="animate-spin text-brand-lavender" />}>
+          <Launchpad
             input={input}
             strategy={data}
           />
+          </React.Suspense>
         </div>
       </div>
 
-      <Chatbot />
+      <React.Suspense fallback={null}>
+        <Chatbot brandInput={input} strategy={data} />
+      </React.Suspense>
+      <React.Suspense fallback={null}>
+        <SkillScouter />
+      </React.Suspense>
       
       {showTutorial && (
-        <StudioTutorial 
-          onClose={() => setShowTutorial(false)} 
+        <React.Suspense fallback={<TabLoader />}>
+        <StudioTutorial
+          onClose={() => setShowTutorial(false)}
           onTabChange={setActiveTab}
         />
+        </React.Suspense>
       )}
+
+      <LicenseModal
+        isOpen={showLicenseModal}
+        onClose={() => setShowLicenseModal(false)}
+        onPurchase={(tier: LicenseTier) => {
+          setLicenseValid(true);
+          setDaysRemaining(getDaysRemaining());
+          // Auto-proceed with clone after successful purchase
+          setTimeout(() => handlePromoteSelf(), 100);
+        }}
+      />
     </div>
   );
 };
