@@ -68,7 +68,7 @@ AI-powered branding package generator for small businesses. Enter your business 
 
 ```bash
 git clone https://github.com/AAlexandre00/xela-elite-ai-creative-studio.git
-cd xela-elite-ai-creative-studio
+cd xela-creative-branding-studio
 npm install
 ```
 

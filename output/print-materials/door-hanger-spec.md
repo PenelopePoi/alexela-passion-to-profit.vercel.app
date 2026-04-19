@@ -171,7 +171,7 @@ Two-column layout or single stacked list with checkboxes:
 
 **Inside panel:**
 - Left: XELA icon mark, small (0.25"), **#00E0C6**
-- Center: **"xela-elite-ai-creative-studio.vercel.app"** — Montserrat Regular, 8pt, **#FFFFFF**
+- Center: **"xela-creative-branding.vercel.app"** — Montserrat Regular, 8pt, **#FFFFFF**
 - Right: **(321) 375-9685** — Montserrat Bold, 8pt, **#00E0C6**
 
 **Above panel:**

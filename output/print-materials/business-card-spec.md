@@ -68,7 +68,7 @@
 | Line | Content | Font | Size | Color |
 |------|---------|------|------|-------|
 | 1 | **(321) 375-9685** | Montserrat SemiBold | 9pt | #FFFFFF |
-| 2 | **xela-elite-ai-creative-studio.vercel.app** | Montserrat Regular | 7.5pt | #00E0C6 |
+| 2 | **xela-creative-branding.vercel.app** | Montserrat Regular | 7.5pt | #00E0C6 |
 | 3 | **xelabrandingstudio@gmail.com** | Montserrat Regular | 7pt | #AAAAAA |
 | 4 | *(0.1" spacer)* | — | — | — |
 | 5 | **Brevard County / Space Coast, FL** | Montserrat Light | 6.5pt | #888888 |
@@ -83,7 +83,7 @@
 #### QR Code
 - Position: Bottom-right corner, 0.25" from safe zone edges
 - Size: 0.55" x 0.55"
-- Content: Link to booking page (e.g., `https://xela-elite-ai-creative-studio.vercel.app/book`)
+- Content: Link to booking page (e.g., `https://xela-creative-branding.vercel.app/book`)
 - Style: White modules on transparent/dark background
 - Quiet zone: minimum 2 modules
 - Add micro-text below QR: **"Scan to Book"** — Montserrat Light, 5pt, #888888

@@ -2,7 +2,7 @@
 # encrypt-local.sh — Encrypt sensitive behavioral profiles
 # Snowden Principle: "Your skill usage pattern IS your threat model"
 #
-# Usage: bash ~/xela-elite-ai-creative-studio/scripts/encrypt-local.sh
+# Usage: bash ~/xela-creative-branding-studio/scripts/encrypt-local.sh
 # You will be prompted for an encryption password (twice: once per archive).
 # Keep that password safe — there is NO recovery without it.
 

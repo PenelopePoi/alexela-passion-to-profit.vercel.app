@@ -44,7 +44,7 @@ export const GreenBadge: React.FC<GreenBadgeProps> = ({ input, strategy }) => {
   }, []);
 
   const handleCopyEmbed = async () => {
-    const embedHtml = `<a href="https://xela-elite-ai-creative-studio.vercel.app/green-badge/${input.companyName.toLowerCase().replace(/\s+/g, '-')}" target="_blank" rel="noopener"><img src="https://xela-elite-ai-creative-studio.vercel.app/badges/green-certified.svg" alt="Certified Green Brand - ${input.companyName}" width="180" /></a>`;
+    const embedHtml = `<a href="https://xela-creative-branding.vercel.app/green-badge/${input.companyName.toLowerCase().replace(/\s+/g, '-')}" target="_blank" rel="noopener"><img src="https://xela-creative-branding.vercel.app/badges/green-certified.svg" alt="Certified Green Brand - ${input.companyName}" width="180" /></a>`;
     await navigator.clipboard.writeText(embedHtml);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
@@ -190,8 +190,8 @@ export const GreenBadge: React.FC<GreenBadgeProps> = ({ input, strategy }) => {
                   </button>
                 </div>
                 <pre className="font-mono text-xs bg-stone-50 rounded-xl p-4 overflow-x-auto text-stone-600 whitespace-pre-wrap">
-{`<a href="https://xela-elite-ai-creative-studio.vercel.app/green-badge/${input.companyName.toLowerCase().replace(/\s+/g, '-')}" target="_blank">
-  <img src="https://xela-elite-ai-creative-studio.vercel.app/badges/green-certified.svg"
+{`<a href="https://xela-creative-branding.vercel.app/green-badge/${input.companyName.toLowerCase().replace(/\s+/g, '-')}" target="_blank">
+  <img src="https://xela-creative-branding.vercel.app/badges/green-certified.svg"
        alt="Certified Green Brand - ${input.companyName}" width="180" />
 </a>`}
                 </pre>

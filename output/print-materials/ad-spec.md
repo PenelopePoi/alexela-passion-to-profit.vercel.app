@@ -87,7 +87,7 @@ Show real (or mockup) brand packages XELA has created. Aspirational — "this co
    - "Your brand could be next." — Outfit Regular, 30px, #AAAAAA
    - Teal CTA pill: "Tap to Book" — Outfit Bold, 32px, #111111 on #00E0C6
 6. **Contact bar** — bottom 150px, dark with subtle border-top
-   - (321) 375-9685 | xela-elite-ai-creative-studio.vercel.app — Montserrat Regular, 24px, #FFFFFF
+   - (321) 375-9685 | xela-creative-branding.vercel.app — Montserrat Regular, 24px, #FFFFFF
 
 #### Instagram Ad Copy
 ```

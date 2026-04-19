@@ -1,4 +1,4 @@
-// Xela-Elite Access Control & Audit System
+// XELA Creative Branding — Access Control & Audit System
 // Enforces environment isolation, identity binding, and action logging
 
 export type UserRole = 'owner' | 'contributor';

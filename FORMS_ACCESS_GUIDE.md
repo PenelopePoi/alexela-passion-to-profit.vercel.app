@@ -1,7 +1,7 @@
 # XELA Creative Branding Studio — Forms Access Guide
 
 **Last updated:** 2026-04-09
-**Live site:** https://xela-elite-ai-creative-studio.vercel.app
+**Live site:** https://xela-creative-branding.vercel.app
 
 ---
 
@@ -10,35 +10,35 @@
 The XELA site has **6 different intake paths**. Each collects the same core data but offers a different experience. All submissions email `xelastudios@gmail.com` via formsubmit.co and log to localStorage for the SubmissionsInbox dashboard.
 
 ### 1. Consultation Wizard (primary path)
-- **URL:** https://xela-elite-ai-creative-studio.vercel.app/?view=consult
+- **URL:** https://xela-creative-branding.vercel.app/?view=consult
 - **Format:** 8-step guided wizard with brand personality profiling
 - **Features:** localStorage auto-save, animated pricing, downloadable brand profile, confetti on completion
 - **Best for:** Clients who want a premium, guided experience
 - **Text to client:** "Here's a quick 3-minute brand quiz → [link]"
 
 ### 2. AI Chat Intake
-- **URL:** https://xela-elite-ai-creative-studio.vercel.app/?view=chat
+- **URL:** https://xela-creative-branding.vercel.app/?view=chat
 - **Format:** Conversational, one question at a time, with live "Brand Brief" sidebar
 - **Features:** Smart parsing (extracts multiple fields from one response), friendly tone
 - **Best for:** Clients who prefer chatting over forms
 - **Text to client:** "Chat with our AI brand consultant → [link]"
 
 ### 3. Intake Shuffler (20 variants)
-- **URL:** https://xela-elite-ai-creative-studio.vercel.app/?view=shuffle
+- **URL:** https://xela-creative-branding.vercel.app/?view=shuffle
 - **Format:** Randomly picks 1 of 20 intake styles per visit, with like/dislike learning
 - **Features:** Pattern detection, adaptive to user preferences, never repeats disliked variants
 - **Best for:** Curious clients who want variety / UX testing
 - **Text to client:** "Try our surprise intake experience → [link]"
 
 ### 4. Standalone HTML Form (email-only, no login)
-- **URL:** https://xela-elite-ai-creative-studio.vercel.app/intake.html
+- **URL:** https://xela-creative-branding.vercel.app/intake.html
 - **Format:** Pure HTML, 6 sections, works with JavaScript disabled
 - **Features:** Mobile-first, no framework, always works
 - **Best for:** Clients on slow connections, old devices, or who click directly from email
 - **Text to client:** "Fill out our intake form → [link]" (simplest, most reliable)
 
 ### 5. Classic Input Form
-- **URL:** https://xela-elite-ai-creative-studio.vercel.app (scroll to intake) or package selection → intake
+- **URL:** https://xela-creative-branding.vercel.app (scroll to intake) or package selection → intake
 - **Format:** 5-step form with AI-powered name generation and logo suggestions
 - **Features:** Uses Gemini for business name/motto generation, vibe chips, auto-populated industries
 - **Best for:** Clients who know what they want and need a fast path
@@ -65,7 +65,7 @@ The site auto-assigns a variant to each visitor. To manually show a specific var
 
 Append `&debug=true` to show the variant switcher overlay.
 
-**Example:** https://xela-elite-ai-creative-studio.vercel.app/?v=b&debug=true
+**Example:** https://xela-creative-branding.vercel.app/?v=b&debug=true
 
 ---
 
@@ -97,25 +97,25 @@ Copy these short messages to send via SMS or WhatsApp:
 ### For warm leads:
 ```
 Hey! Here's that quick intake — takes 3 minutes:
-https://xela-elite-ai-creative-studio.vercel.app/?view=consult
+https://xela-creative-branding.vercel.app/?view=consult
 ```
 
 ### For curious browsers:
 ```
 Chat with our AI brand consultant (free):
-https://xela-elite-ai-creative-studio.vercel.app/?view=chat
+https://xela-creative-branding.vercel.app/?view=chat
 ```
 
 ### For the simplest path:
 ```
 Fill out our form — no login needed:
-https://xela-elite-ai-creative-studio.vercel.app/intake.html
+https://xela-creative-branding.vercel.app/intake.html
 ```
 
 ### For a phone consultation:
 ```
 Call us: (321) 375-9685
-Or book online: https://xela-elite-ai-creative-studio.vercel.app/book.html
+Or book online: https://xela-creative-branding.vercel.app/book.html
 ```
 
 ---

@@ -3,14 +3,14 @@
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://xela-elite-ai-creative-studio.vercel.app/services/cardcut-calibrated",
+      "@id": "https://xela-creative-branding.vercel.app/services/cardcut-calibrated",
       "name": "CardCut Calibrated — Professional Business Cards",
       "description": "Hand someone a card that makes them call you back. Includes a professional business card design with your brand colors and fonts locked in, a QR code linking to your phone, site, or booking page, and print-ready files you can take to any printer the same day. Precision-cut on a Cricut Explorer 3 for flawless edges.",
       "serviceType": "Brand Identity",
       "provider": {
         "@type": "LocalBusiness",
         "name": "XELA Creative Branding Studio",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app",
+        "url": "https://xela-creative-branding.vercel.app",
         "telephone": "(321) 375-9685"
       },
       "areaServed": {
@@ -23,19 +23,19 @@
         "priceCurrency": "USD",
         "priceValidUntil": "2027-04-08",
         "availability": "https://schema.org/InStock",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app/services/cardcut-calibrated"
+        "url": "https://xela-creative-branding.vercel.app/services/cardcut-calibrated"
       }
     },
     {
       "@type": "Service",
-      "@id": "https://xela-elite-ai-creative-studio.vercel.app/services/promotion-pal",
+      "@id": "https://xela-creative-branding.vercel.app/services/promotion-pal",
       "name": "Promotion Pal — Starter Branding Package",
       "description": "Look like you've been in business for years with this complete starter branding package. Includes 3 professional logo options, a slogan and mission statement that sounds like you, a color palette and fonts matched to your vibe, and a Florida business name check through Sunbiz. The most popular Budget-tier package at XELA Creative Branding Studio.",
       "serviceType": "Brand Identity",
       "provider": {
         "@type": "LocalBusiness",
         "name": "XELA Creative Branding Studio",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app",
+        "url": "https://xela-creative-branding.vercel.app",
         "telephone": "(321) 375-9685"
       },
       "areaServed": {
@@ -48,19 +48,19 @@
         "priceCurrency": "USD",
         "priceValidUntil": "2027-04-08",
         "availability": "https://schema.org/InStock",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app/services/promotion-pal"
+        "url": "https://xela-creative-branding.vercel.app/services/promotion-pal"
       }
     },
     {
       "@type": "Service",
-      "@id": "https://xela-elite-ai-creative-studio.vercel.app/services/sticker-system",
+      "@id": "https://xela-creative-branding.vercel.app/services/sticker-system",
       "name": "Sticker System — Custom Vinyl Stickers & Business Cards",
       "description": "Put your name on everything — vehicles, laptops, coolers, and more. Includes custom vinyl stickers that are die-cut and weatherproof, a business card design, 6 slogans you'll actually use, and all files ready to print. Cut with precision on a Cricut Explorer 3 for professional results every time.",
       "serviceType": "Brand Identity",
       "provider": {
         "@type": "LocalBusiness",
         "name": "XELA Creative Branding Studio",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app",
+        "url": "https://xela-creative-branding.vercel.app",
         "telephone": "(321) 375-9685"
       },
       "areaServed": {
@@ -73,19 +73,19 @@
         "priceCurrency": "USD",
         "priceValidUntil": "2027-04-08",
         "availability": "https://schema.org/InStock",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app/services/sticker-system"
+        "url": "https://xela-creative-branding.vercel.app/services/sticker-system"
       }
     },
     {
       "@type": "Service",
-      "@id": "https://xela-elite-ai-creative-studio.vercel.app/services/brand-bible",
+      "@id": "https://xela-creative-branding.vercel.app/services/brand-bible",
       "name": "Brand Bible — Complete Brand Guidelines Document",
       "description": "Every color, font, and rule documented forever. Your Brand Bible includes a complete brand guidelines PDF, logo usage rules and spacing, color codes in HEX, RGB, and CMYK, and a typography hierarchy with pairing recommendations. Essential for any Florida business that wants consistent branding across every touchpoint.",
       "serviceType": "Brand Identity",
       "provider": {
         "@type": "LocalBusiness",
         "name": "XELA Creative Branding Studio",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app",
+        "url": "https://xela-creative-branding.vercel.app",
         "telephone": "(321) 375-9685"
       },
       "areaServed": {
@@ -98,19 +98,19 @@
         "priceCurrency": "USD",
         "priceValidUntil": "2027-04-08",
         "availability": "https://schema.org/InStock",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app/services/brand-bible"
+        "url": "https://xela-creative-branding.vercel.app/services/brand-bible"
       }
     },
     {
       "@type": "Service",
-      "@id": "https://xela-elite-ai-creative-studio.vercel.app/services/logo-evolution",
+      "@id": "https://xela-creative-branding.vercel.app/services/logo-evolution",
       "name": "Logo Evolution Suite — 5 Logo Variations",
       "description": "Five logo variations for every surface imaginable. Includes your primary logo plus 4 alternates, an icon-only mark, light and dark versions, and deliverables in SVG, PNG, and PDF formats. Built with AI-powered design tools for rapid iteration and pixel-perfect output.",
       "serviceType": "Brand Identity",
       "provider": {
         "@type": "LocalBusiness",
         "name": "XELA Creative Branding Studio",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app",
+        "url": "https://xela-creative-branding.vercel.app",
         "telephone": "(321) 375-9685"
       },
       "areaServed": {
@@ -123,19 +123,19 @@
         "priceCurrency": "USD",
         "priceValidUntil": "2027-04-08",
         "availability": "https://schema.org/InStock",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app/services/logo-evolution"
+        "url": "https://xela-creative-branding.vercel.app/services/logo-evolution"
       }
     },
     {
       "@type": "Service",
-      "@id": "https://xela-elite-ai-creative-studio.vercel.app/services/naming-workshop",
+      "@id": "https://xela-creative-branding.vercel.app/services/naming-workshop",
       "name": "Naming Workshop — Business Name Research & Selection",
       "description": "Find the perfect business name, checked and cleared. Includes 20 name options with rationale, domain availability check, Florida Sunbiz name search, and a social handle availability audit across all major platforms. Delivered in 3 hours so you can move fast on securing your brand.",
       "serviceType": "Brand Identity",
       "provider": {
         "@type": "LocalBusiness",
         "name": "XELA Creative Branding Studio",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app",
+        "url": "https://xela-creative-branding.vercel.app",
         "telephone": "(321) 375-9685"
       },
       "areaServed": {
@@ -148,19 +148,19 @@
         "priceCurrency": "USD",
         "priceValidUntil": "2027-04-08",
         "availability": "https://schema.org/InStock",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app/services/naming-workshop"
+        "url": "https://xela-creative-branding.vercel.app/services/naming-workshop"
       }
     },
     {
       "@type": "Service",
-      "@id": "https://xela-elite-ai-creative-studio.vercel.app/services/flyer-factory",
+      "@id": "https://xela-creative-branding.vercel.app/services/flyer-factory",
       "name": "Flyer Factory — Professional Flyers & Door Hangers",
       "description": "Flyers that don't end up in the trash. Includes 2 flyer designs at 8.5x11, print-ready PDFs plus editable source files, QR codes with tracking, and a door hanger variant included at no extra cost. Printed with HP precision printing equipment for sharp, professional results. Serving Brevard County and all of Florida.",
       "serviceType": "Print Materials",
       "provider": {
         "@type": "LocalBusiness",
         "name": "XELA Creative Branding Studio",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app",
+        "url": "https://xela-creative-branding.vercel.app",
         "telephone": "(321) 375-9685"
       },
       "areaServed": {
@@ -173,19 +173,19 @@
         "priceCurrency": "USD",
         "priceValidUntil": "2027-04-08",
         "availability": "https://schema.org/InStock",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app/services/flyer-factory"
+        "url": "https://xela-creative-branding.vercel.app/services/flyer-factory"
       }
     },
     {
       "@type": "Service",
-      "@id": "https://xela-elite-ai-creative-studio.vercel.app/services/selling-sales-set",
+      "@id": "https://xela-creative-branding.vercel.app/services/selling-sales-set",
       "name": "Selling Sales Set — Complete Marketing Starter Kit",
       "description": "Start getting customers this week. The Selling Sales Set includes a marketing plan that makes sense, flyer and ad copy ready to post, social media graphics for 4 platforms, and a lead magnet concept. One of our most popular Premium-tier packages, designed for Florida small businesses ready to grow.",
       "serviceType": "Marketing",
       "provider": {
         "@type": "LocalBusiness",
         "name": "XELA Creative Branding Studio",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app",
+        "url": "https://xela-creative-branding.vercel.app",
         "telephone": "(321) 375-9685"
       },
       "areaServed": {
@@ -198,19 +198,19 @@
         "priceCurrency": "USD",
         "priceValidUntil": "2027-04-08",
         "availability": "https://schema.org/InStock",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app/services/selling-sales-set"
+        "url": "https://xela-creative-branding.vercel.app/services/selling-sales-set"
       }
     },
     {
       "@type": "Service",
-      "@id": "https://xela-elite-ai-creative-studio.vercel.app/services/landing-page",
+      "@id": "https://xela-creative-branding.vercel.app/services/landing-page",
       "name": "Landing Page — Custom One-Page Website",
       "description": "One page, one goal, more calls. Your custom landing page includes mobile-optimized design and build, a contact form or booking widget, and SEO basics configured so you show up in local search. Perfect for Brevard County businesses that need an online presence fast without the complexity of a full website.",
       "serviceType": "Digital Presence",
       "provider": {
         "@type": "LocalBusiness",
         "name": "XELA Creative Branding Studio",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app",
+        "url": "https://xela-creative-branding.vercel.app",
         "telephone": "(321) 375-9685"
       },
       "areaServed": {
@@ -223,19 +223,19 @@
         "priceCurrency": "USD",
         "priceValidUntil": "2027-04-08",
         "availability": "https://schema.org/InStock",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app/services/landing-page"
+        "url": "https://xela-creative-branding.vercel.app/services/landing-page"
       }
     },
     {
       "@type": "Service",
-      "@id": "https://xela-elite-ai-creative-studio.vercel.app/services/full-website",
+      "@id": "https://xela-creative-branding.vercel.app/services/full-website",
       "name": "Full Website Build — 5-Page Responsive Website",
       "description": "A multi-page site that ranks and converts. Includes a 5-page responsive website, a blog or news section, full SEO optimization, and analytics and tracking setup. Built with modern frameworks and deployed on fast hosting so your Space Coast business loads instantly on any device.",
       "serviceType": "Digital Presence",
       "provider": {
         "@type": "LocalBusiness",
         "name": "XELA Creative Branding Studio",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app",
+        "url": "https://xela-creative-branding.vercel.app",
         "telephone": "(321) 375-9685"
       },
       "areaServed": {
@@ -248,19 +248,19 @@
         "priceCurrency": "USD",
         "priceValidUntil": "2027-04-08",
         "availability": "https://schema.org/InStock",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app/services/full-website"
+        "url": "https://xela-creative-branding.vercel.app/services/full-website"
       }
     },
     {
       "@type": "Service",
-      "@id": "https://xela-elite-ai-creative-studio.vercel.app/services/google-business-setup",
+      "@id": "https://xela-creative-branding.vercel.app/services/google-business-setup",
       "name": "Google Business Setup — Google Business Profile Optimization",
       "description": "Show up when people search your city. Includes complete Google Business Profile creation, category and service optimization, 5 starter posts scheduled, and a review request template. Critical for any Florida business that wants to appear in local search results across Brevard County, Orlando, Tampa, and Miami.",
       "serviceType": "Digital Presence",
       "provider": {
         "@type": "LocalBusiness",
         "name": "XELA Creative Branding Studio",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app",
+        "url": "https://xela-creative-branding.vercel.app",
         "telephone": "(321) 375-9685"
       },
       "areaServed": {
@@ -273,19 +273,19 @@
         "priceCurrency": "USD",
         "priceValidUntil": "2027-04-08",
         "availability": "https://schema.org/InStock",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app/services/google-business-setup"
+        "url": "https://xela-creative-branding.vercel.app/services/google-business-setup"
       }
     },
     {
       "@type": "Service",
-      "@id": "https://xela-elite-ai-creative-studio.vercel.app/services/social-starter",
+      "@id": "https://xela-creative-branding.vercel.app/services/social-starter",
       "name": "Social Starter Kit — Social Media Profile Setup",
       "description": "Profiles that look like a real business, not a side hustle. Includes profile and cover photos for 4 platforms, bio copy optimized per platform, a link-in-bio page setup, and Instagram highlight cover icons. Designed for Florida entrepreneurs and small businesses launching their social media presence.",
       "serviceType": "Digital Presence",
       "provider": {
         "@type": "LocalBusiness",
         "name": "XELA Creative Branding Studio",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app",
+        "url": "https://xela-creative-branding.vercel.app",
         "telephone": "(321) 375-9685"
       },
       "areaServed": {
@@ -298,19 +298,19 @@
         "priceCurrency": "USD",
         "priceValidUntil": "2027-04-08",
         "availability": "https://schema.org/InStock",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app/services/social-starter"
+        "url": "https://xela-creative-branding.vercel.app/services/social-starter"
       }
     },
     {
       "@type": "Service",
-      "@id": "https://xela-elite-ai-creative-studio.vercel.app/services/content-calendar",
+      "@id": "https://xela-creative-branding.vercel.app/services/content-calendar",
       "name": "30-Day Content Calendar — Social Media Content Plan",
       "description": "Never wonder what you should post again. Includes 30 days of post ideas with captions written for each, hashtag sets per post, and a best-times-to-post schedule optimized for your audience. AI-powered content generation means you get a full month of professionally written content delivered in just 4 hours.",
       "serviceType": "Content",
       "provider": {
         "@type": "LocalBusiness",
         "name": "XELA Creative Branding Studio",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app",
+        "url": "https://xela-creative-branding.vercel.app",
         "telephone": "(321) 375-9685"
       },
       "areaServed": {
@@ -323,19 +323,19 @@
         "priceCurrency": "USD",
         "priceValidUntil": "2027-04-08",
         "availability": "https://schema.org/InStock",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app/services/content-calendar"
+        "url": "https://xela-creative-branding.vercel.app/services/content-calendar"
       }
     },
     {
       "@type": "Service",
-      "@id": "https://xela-elite-ai-creative-studio.vercel.app/services/blog-starter",
+      "@id": "https://xela-creative-branding.vercel.app/services/blog-starter",
       "name": "Blog Starter Pack — SEO Blog Articles",
       "description": "SEO-rich articles that bring in organic traffic. Includes 4 blog articles at 800+ words each, SEO keyword research, meta descriptions and titles, and an internal linking strategy. Written to rank for local Florida search terms so your Brevard County business gets found by the right people.",
       "serviceType": "Content",
       "provider": {
         "@type": "LocalBusiness",
         "name": "XELA Creative Branding Studio",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app",
+        "url": "https://xela-creative-branding.vercel.app",
         "telephone": "(321) 375-9685"
       },
       "areaServed": {
@@ -348,19 +348,19 @@
         "priceCurrency": "USD",
         "priceValidUntil": "2027-04-08",
         "availability": "https://schema.org/InStock",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app/services/blog-starter"
+        "url": "https://xela-creative-branding.vercel.app/services/blog-starter"
       }
     },
     {
       "@type": "Service",
-      "@id": "https://xela-elite-ai-creative-studio.vercel.app/services/registered-rebellion",
+      "@id": "https://xela-creative-branding.vercel.app/services/registered-rebellion",
       "name": "Registered Rebellion — Florida Business Launch Package",
       "description": "Look legit, be legit. The Registered Rebellion package includes a Florida business launch roadmap, brand guidelines document, LLC filing guidance, and a 30-day action plan. Built specifically for Florida entrepreneurs who need to go from idea to registered business with professional branding in place from day one.",
       "serviceType": "Strategy",
       "provider": {
         "@type": "LocalBusiness",
         "name": "XELA Creative Branding Studio",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app",
+        "url": "https://xela-creative-branding.vercel.app",
         "telephone": "(321) 375-9685"
       },
       "areaServed": {
@@ -373,19 +373,19 @@
         "priceCurrency": "USD",
         "priceValidUntil": "2027-04-08",
         "availability": "https://schema.org/InStock",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app/services/registered-rebellion"
+        "url": "https://xela-creative-branding.vercel.app/services/registered-rebellion"
       }
     },
     {
       "@type": "Service",
-      "@id": "https://xela-elite-ai-creative-studio.vercel.app/services/email-templates",
+      "@id": "https://xela-creative-branding.vercel.app/services/email-templates",
       "name": "Email Template Pack — Branded Email Marketing",
       "description": "Emails that get opened, read, and clicked. Includes 5 branded email templates, a welcome sequence of 3 emails, a promotional template, and a review request template. Designed to match your brand identity so every email you send builds trust with your Florida customers.",
       "serviceType": "Marketing",
       "provider": {
         "@type": "LocalBusiness",
         "name": "XELA Creative Branding Studio",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app",
+        "url": "https://xela-creative-branding.vercel.app",
         "telephone": "(321) 375-9685"
       },
       "areaServed": {
@@ -398,19 +398,19 @@
         "priceCurrency": "USD",
         "priceValidUntil": "2027-04-08",
         "availability": "https://schema.org/InStock",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app/services/email-templates"
+        "url": "https://xela-creative-branding.vercel.app/services/email-templates"
       }
     },
     {
       "@type": "Service",
-      "@id": "https://xela-elite-ai-creative-studio.vercel.app/services/brand-intro-video",
+      "@id": "https://xela-creative-branding.vercel.app/services/brand-intro-video",
       "name": "Brand Intro Video — 60-Second Brand Story Video",
       "description": "Sixty seconds that tell your whole story. Includes a 60-second brand video with professional voiceover, music and motion graphics, optimized for both web and social media platforms. AI-powered production means you get broadcast-quality video at a fraction of traditional agency costs.",
       "serviceType": "Video & Media",
       "provider": {
         "@type": "LocalBusiness",
         "name": "XELA Creative Branding Studio",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app",
+        "url": "https://xela-creative-branding.vercel.app",
         "telephone": "(321) 375-9685"
       },
       "areaServed": {
@@ -423,19 +423,19 @@
         "priceCurrency": "USD",
         "priceValidUntil": "2027-04-08",
         "availability": "https://schema.org/InStock",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app/services/brand-intro-video"
+        "url": "https://xela-creative-branding.vercel.app/services/brand-intro-video"
       }
     },
     {
       "@type": "Service",
-      "@id": "https://xela-elite-ai-creative-studio.vercel.app/services/ecommerce-store",
+      "@id": "https://xela-creative-branding.vercel.app/services/ecommerce-store",
       "name": "E-Commerce Store — Online Store Setup",
       "description": "Sell products online from setup to first sale. Includes a Shopify or WooCommerce store with up to 20 products listed, payment processing setup, and shipping configuration. Our Elite-tier e-commerce package gives Florida businesses a fully operational online store ready to take orders from day one.",
       "serviceType": "Web & Development",
       "provider": {
         "@type": "LocalBusiness",
         "name": "XELA Creative Branding Studio",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app",
+        "url": "https://xela-creative-branding.vercel.app",
         "telephone": "(321) 375-9685"
       },
       "areaServed": {
@@ -448,19 +448,19 @@
         "priceCurrency": "USD",
         "priceValidUntil": "2027-04-08",
         "availability": "https://schema.org/InStock",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app/services/ecommerce-store"
+        "url": "https://xela-creative-branding.vercel.app/services/ecommerce-store"
       }
     },
     {
       "@type": "Service",
-      "@id": "https://xela-elite-ai-creative-studio.vercel.app/services/crm-setup",
+      "@id": "https://xela-creative-branding.vercel.app/services/crm-setup",
       "name": "CRM Setup & Automation — Customer Relationship Management",
       "description": "Never lose a lead again. Includes CRM platform setup on HubSpot or GoHighLevel, pipeline configuration, automated follow-up sequences, and lead scoring rules. Perfect for growing Florida businesses that are getting inquiries but losing track of prospects.",
       "serviceType": "Web & Development",
       "provider": {
         "@type": "LocalBusiness",
         "name": "XELA Creative Branding Studio",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app",
+        "url": "https://xela-creative-branding.vercel.app",
         "telephone": "(321) 375-9685"
       },
       "areaServed": {
@@ -473,19 +473,19 @@
         "priceCurrency": "USD",
         "priceValidUntil": "2027-04-08",
         "availability": "https://schema.org/InStock",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app/services/crm-setup"
+        "url": "https://xela-creative-branding.vercel.app/services/crm-setup"
       }
     },
     {
       "@type": "Service",
-      "@id": "https://xela-elite-ai-creative-studio.vercel.app/services/social-management-monthly",
+      "@id": "https://xela-creative-branding.vercel.app/services/social-management-monthly",
       "name": "Social Media Management — Monthly Social Media Service",
       "description": "We post for you, consistently and professionally. Includes 20 posts per month across 2 platforms, custom graphics for each post, hashtag research, and a monthly performance report. A hands-off solution for Brevard County and Space Coast businesses that want a professional social media presence without the daily time commitment.",
       "serviceType": "Social Media",
       "provider": {
         "@type": "LocalBusiness",
         "name": "XELA Creative Branding Studio",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app",
+        "url": "https://xela-creative-branding.vercel.app",
         "telephone": "(321) 375-9685"
       },
       "areaServed": {
@@ -498,7 +498,7 @@
         "priceCurrency": "USD",
         "priceValidUntil": "2027-04-08",
         "availability": "https://schema.org/InStock",
-        "url": "https://xela-elite-ai-creative-studio.vercel.app/services/social-management-monthly"
+        "url": "https://xela-creative-branding.vercel.app/services/social-management-monthly"
       }
     }
   ]

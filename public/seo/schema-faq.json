@@ -1,7 +1,7 @@
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": "https://xela-elite-ai-creative-studio.vercel.app/#faq",
+  "@id": "https://xela-creative-branding.vercel.app/#faq",
   "mainEntity": [
     {
       "@type": "Question",
@@ -120,7 +120,7 @@
       "name": "How do I get started with XELA Creative Branding Studio?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Getting started is simple. Call us at (321) 375-9685 or visit xela-elite-ai-creative-studio.vercel.app to book a free consultation. We'll discuss your business, your goals, and recommend the right package for your budget. If you already know what you need, you can order directly from our services page and we'll start working immediately. Most Budget-tier services are delivered the same day. For new businesses just starting out, we recommend the Promotion Pal at $125 as the perfect first step, or the Registered Rebellion at $500 if you need help with the full Florida business registration process."
+        "text": "Getting started is simple. Call us at (321) 375-9685 or visit xela-creative-branding.vercel.app to book a free consultation. We'll discuss your business, your goals, and recommend the right package for your budget. If you already know what you need, you can order directly from our services page and we'll start working immediately. Most Budget-tier services are delivered the same day. For new businesses just starting out, we recommend the Promotion Pal at $125 as the perfect first step, or the Registered Rebellion at $500 if you need help with the full Florida business registration process."
       }
     }
   ]

@@ -67,7 +67,7 @@ export const MCPClientPortal: React.FC<MCPClientPortalProps> = ({ input, strateg
   const configSnippet = JSON.stringify({
     mcpServers: {
       [`${input.companyName.toLowerCase().replace(/\s+/g, '-')}-brand`]: {
-        url: `https://xela-elite-ai-creative-studio.vercel.app/api/mcp/v1/${input.companyName.toLowerCase().replace(/\s+/g, '-')}`,
+        url: `https://xela-creative-branding.vercel.app/api/mcp/v1/${input.companyName.toLowerCase().replace(/\s+/g, '-')}`,
         apiKey: apiKey || '<YOUR_API_KEY>',
         tools: MCP_TOOLS.map(t => t.toolName),
       }

@@ -68,4 +68,4 @@ When the user gives a prompt, silently apply these refinements before executing:
 - Add console.logs or debugging code
 - Restructure files or folders without being asked
 - Add npm packages without being asked
-- Use "Xela Elite AI Creative Studio" — the name is "XELA Creative Branding Studio"
+- Use "Xela Elite AI Creative Studio" or any old name — the correct name is "XELA Creative Branding Studio"

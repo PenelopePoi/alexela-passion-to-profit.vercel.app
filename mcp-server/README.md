@@ -57,7 +57,7 @@ export STRIPE_SECRET_KEY="sk_live_or_test_..."
 
 ### 3. Claude Code Integration
 
-The MCP config is at `~/.claude/projects/-Users-TroubleshootGuest-xela-elite-ai-creative-studio/.mcp.json`.
+The MCP config is at `~/.claude/projects/-Users-TroubleshootGuest-xela-creative-branding-studio/.mcp.json`.
 
 Restart Claude Code to pick up the new MCP server. The tools will appear automatically.
 

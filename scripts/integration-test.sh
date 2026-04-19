@@ -4,7 +4,7 @@
 
 set -e
 
-PROJECT_DIR="/Users/TroubleshootGuest/xela-elite-ai-creative-studio"
+PROJECT_DIR="/Users/TroubleshootGuest/xela-creative-branding-studio"
 cd "$PROJECT_DIR"
 
 PASS=0

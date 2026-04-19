@@ -130,7 +130,7 @@ After creating each, copy the Price ID (`price_xxx`) — you'll need these in th
 
 ```bash
 # From project root
-cd ~/xela-elite-ai-creative-studio
+cd ~/xela-creative-branding-studio
 
 # Install Firebase CLI if not already
 npm install -g firebase-tools
@@ -149,7 +149,7 @@ This creates the `functions/` directory with `src/index.ts`.
 ### Step 6: Install Stripe in Functions
 
 ```bash
-cd ~/xela-elite-ai-creative-studio/functions
+cd ~/xela-creative-branding-studio/functions
 npm install stripe
 ```
 
@@ -203,7 +203,7 @@ Create `functions/src/index.ts` with these minimum functions to accept payments:
 ### Step 10: Deploy Firebase Functions
 
 ```bash
-cd ~/xela-elite-ai-creative-studio
+cd ~/xela-creative-branding-studio
 firebase deploy --only functions
 ```
 
@@ -355,7 +355,7 @@ But `Pricing.tsx` shows individual packages ($75-$2,000), not tier-level pricing
 ```bash
 # Already in package.json: "@stripe/stripe-js": "9.0.1"
 # If somehow missing:
-cd ~/xela-elite-ai-creative-studio && npm install @stripe/stripe-js
+cd ~/xela-creative-branding-studio && npm install @stripe/stripe-js
 ```
 
 ### 2. Firebase CLI + Functions setup
@@ -367,7 +367,7 @@ npm install -g firebase-tools
 firebase login
 
 # Initialize Functions from project root
-cd ~/xela-elite-ai-creative-studio
+cd ~/xela-creative-branding-studio
 firebase init functions
 # → Select existing project: inner-lightning-484702-r4
 # → Language: TypeScript
@@ -404,7 +404,7 @@ stripe login
 stripe listen --forward-to http://localhost:5001/inner-lightning-484702-r4/us-central1/stripeWebhook
 
 # In another terminal, run Firebase emulators
-cd ~/xela-elite-ai-creative-studio
+cd ~/xela-creative-branding-studio
 firebase emulators:start --only functions
 
 # Trigger a test event
@@ -414,7 +414,7 @@ stripe trigger checkout.session.completed
 ### 6. Test a checkout flow
 ```bash
 # Start dev server
-cd ~/xela-elite-ai-creative-studio && npm run dev
+cd ~/xela-creative-branding-studio && npm run dev
 
 # Use test card: 4242 4242 4242 4242
 # Any future expiration, any 3-digit CVC, any ZIP

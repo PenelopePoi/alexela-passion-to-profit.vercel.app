@@ -1,7 +1,7 @@
 # XELA Creative Branding Studio — Full Session Audit
 
 **Session date:** 2026-04-09
-**Live URL:** https://xela-elite-ai-creative-studio.vercel.app
+**Live URL:** https://xela-creative-branding.vercel.app
 **Final build:** 10/10 integration tests passing, zero TypeScript errors
 
 ---
@@ -149,7 +149,7 @@ These were in the master plan but not critical-path so didn't ship this session:
 ## 🎯 NEXT STEPS RECOMMENDED
 
 1. **Create `xelastudios@gmail.com`** (5 min, manual) — use `gmail-business-creator` skill for guided flow
-2. **Verify live site** — Visit https://xela-elite-ai-creative-studio.vercel.app and click through Start Now → should route to Consultation Wizard
+2. **Verify live site** — Visit https://xela-creative-branding.vercel.app and click through Start Now → should route to Consultation Wizard
 3. **Test email pipeline** — Submit an intake → verify email arrives at the created Gmail
 4. **Optional polish wave** — Retry the polish variant agent in a fresh session when API isn't overloaded
 5. **Build Client Portal** — Highest-value remaining feature (C2 from plan)

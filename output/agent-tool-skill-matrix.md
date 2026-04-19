@@ -1,5 +1,5 @@
 K
-# XELA Elite AI Creative Studio — Agent / Tool / Skill Matrix
+# XELA Creative Branding Studio — Agent / Tool / Skill Matrix
 ## Definitive Cross-Reference for the Entire Ecosystem
 **Generated:** 2026-04-04
 **Total Skills:** 190+ | **Agents:** 71+ | **Cron Jobs:** 17 | **Modes:** 15 | **Automation Scripts:** 25
@@ -527,4 +527,4 @@ K
 
 ---
 
-*This matrix is the single source of truth for the XELA Elite AI Creative Studio ecosystem. Every agent, tool, skill, cron job, and workflow is cross-referenced here. Update this document when adding new components.*
+*This matrix is the single source of truth for the XELA Creative Branding Studio ecosystem. Every agent, tool, skill, cron job, and workflow is cross-referenced here. Update this document when adding new components.*

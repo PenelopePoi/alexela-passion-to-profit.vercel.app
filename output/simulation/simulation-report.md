@@ -1,4 +1,4 @@
-# XELA Elite AI Creative Studio — Pipeline Simulation Report
+# XELA Creative Branding Studio — Pipeline Simulation Report
 
 **Generated:** 2026-04-04
 **Simulation Size:** 20,000 synthetic clients

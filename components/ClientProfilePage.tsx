@@ -156,7 +156,7 @@ export const ClientProfilePage: React.FC<ClientProfilePageProps> = ({ profile })
           <p className="text-[10px] text-white/30 uppercase tracking-widest">
             Profile by <a href="/" className="text-brand-teal hover:underline">XELA Creative Branding Studio</a>
           </p>
-          <p className="text-[9px] text-white/20 mt-1">Get yours at xela-elite-ai-creative-studio.vercel.app</p>
+          <p className="text-[9px] text-white/20 mt-1">Get yours at xela-creative-branding.vercel.app</p>
         </div>
       </div>
     </div>

@@ -1738,7 +1738,7 @@ const App: React.FC = () => {
                     <Globe size={14} /> <span className="text-[10px] font-bold uppercase tracking-widest">Google Business</span>
                   </a>
                   <span className="text-white/10">|</span>
-                  <a href="https://xela-elite-ai-creative-studio.vercel.app" className="flex items-center gap-1.5 text-stone-400 hover:text-brand-lavender transition-colors" aria-label="Website">
+                  <a href="https://xela-creative-branding.vercel.app" className="flex items-center gap-1.5 text-stone-400 hover:text-brand-lavender transition-colors" aria-label="Website">
                     <ExternalLink size={14} /> <span className="text-[10px] font-bold uppercase tracking-widest">Website</span>
                   </a>
                 </div>

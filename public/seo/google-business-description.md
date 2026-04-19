@@ -61,4 +61,4 @@ We're proud to serve entrepreneurs and small businesses across Brevard County, M
 
 ## Get Started Today
 
-Ready to build a brand that gets you customers? Call XELA Creative Branding Studio at **(321) 375-9685** or visit **xela-elite-ai-creative-studio.vercel.app** to browse our 68 services and book your free consultation. Most Budget-tier services are delivered the same day. Your brand is waiting.
+Ready to build a brand that gets you customers? Call XELA Creative Branding Studio at **(321) 375-9685** or visit **xela-creative-branding.vercel.app** to browse our 68 services and book your free consultation. Most Budget-tier services are delivered the same day. Your brand is waiting.

@@ -143,7 +143,7 @@
 - Label below: **"Scan to Book Online"** — Montserrat Regular, 8pt, #555555
 
 #### Secondary Info
-- Text: **xela-elite-ai-creative-studio.vercel.app | Brevard County, FL**
+- Text: **xela-creative-branding.vercel.app | Brevard County, FL**
 - Font: Montserrat Regular, 9pt, #888888
 - Centered below QR
 
@@ -163,7 +163,7 @@
 #### Each Tab Contains (rotated 90deg clockwise):
 - **Line 1:** "XELA Creative" — Outfit Bold, 7pt, #111111
 - **Line 2:** "(321) 375-9685" — Montserrat Bold, 8pt, #111111
-- **Line 3:** "xela-elite-ai-creative-studio.vercel.app" — Montserrat Regular, 6pt, #00E0C6
+- **Line 3:** "xela-creative-branding.vercel.app" — Montserrat Regular, 6pt, #00E0C6
 
 #### Tab Styling:
 - Dashed lines between each tab (vertical)

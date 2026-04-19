@@ -16,7 +16,7 @@ Our three tiers make it simple: **Get Started** (Budget), **Get Customers** (Pre
 
 We are your marketing team. Digital, print, everything.
 
-Call us at (321) 375-9685 or visit xela-elite-ai-creative-studio.vercel.app to browse services and book your free consultation. Welcome to the XELA family.
+Call us at (321) 375-9685 or visit xela-creative-branding.vercel.app to browse services and book your free consultation. Welcome to the XELA family.
 
 ---
 
@@ -34,7 +34,7 @@ This is our most popular service at XELA Creative Branding Studio, and it's easy
 
 The Promotion Pal is just the beginning. Add a Sticker System ($175) for branded vinyl stickers, or a Social Starter Kit ($150) to get your profiles looking professional across every platform.
 
-Ready to look legit? Call (321) 375-9685 or order at xela-elite-ai-creative-studio.vercel.app. Same-day delivery on all Budget-tier services.
+Ready to look legit? Call (321) 375-9685 or order at xela-creative-branding.vercel.app. Same-day delivery on all Budget-tier services.
 
 ---
 
@@ -50,7 +50,7 @@ What our clients are saying: brands that used to take weeks now arrive in hours.
 
 Our 10 service categories cover everything a small business needs: Brand Identity, Print Materials, Digital Presence, Marketing, Content, Strategy, Web Development, Video & Media, Social Media, and Consulting. That's 68 services total, all available to businesses in Brevard County, the Space Coast, and across Florida.
 
-Visit xela-elite-ai-creative-studio.vercel.app to see our full portfolio and explore what we can build for your business. Or call (321) 375-9685 to schedule a free consultation. We'll show you exactly what your brand could look like.
+Visit xela-creative-branding.vercel.app to see our full portfolio and explore what we can build for your business. Or call (321) 375-9685 to schedule a free consultation. We'll show you exactly what your brand could look like.
 
 ---
 
@@ -68,7 +68,7 @@ The Selling Sales Set is delivered in one business day. That means you can order
 
 Want to go bigger? Upgrade to the Premiere Passion Pal ($650) which adds email templates, multi-platform ad copy, and a brand story your customers will trust.
 
-Call (321) 375-9685 or visit xela-elite-ai-creative-studio.vercel.app to order. Start getting customers this week.
+Call (321) 375-9685 or visit xela-creative-branding.vercel.app to order. Start getting customers this week.
 
 ---
 
@@ -106,7 +106,7 @@ Here are our most popular summer bundles:
 
 Florida summers are long and hot, but they're also when many service businesses do their best numbers. Landscapers, pool services, pressure washers, pest control, mobile detailers — if your customers need you when it's 95 degrees, now is the time to make sure they can find you.
 
-This offer runs through the end of the month. Call (321) 375-9685 or visit xela-elite-ai-creative-studio.vercel.app to build your bundle. We'll have your brand ready before your next job.
+This offer runs through the end of the month. Call (321) 375-9685 or visit xela-creative-branding.vercel.app to build your bundle. We'll have your brand ready before your next job.
 
 ---
 
@@ -124,7 +124,7 @@ Most Florida small business websites we build start generating leads within the 
 
 Don't need a full site yet? Our Landing Page service at $500 gives you a single focused page with a contact form or booking widget — perfect for businesses that just need an online presence fast.
 
-Call (321) 375-9685 or visit xela-elite-ai-creative-studio.vercel.app to schedule your website consultation. We'll have your site live in 5-7 days.
+Call (321) 375-9685 or visit xela-creative-branding.vercel.app to schedule your website consultation. We'll have your site live in 5-7 days.
 
 ---
 
@@ -144,7 +144,7 @@ This matters because consistency builds trust. When your business cards, flyers,
 
 For $200, your Brand Bible pays for itself the first time it prevents a bad print job or an off-brand social post.
 
-Order yours at xela-elite-ai-creative-studio.vercel.app or call (321) 375-9685. Delivered in 6 hours.
+Order yours at xela-creative-branding.vercel.app or call (321) 375-9685. Delivered in 6 hours.
 
 ---
 
@@ -160,7 +160,7 @@ Google Business Profile is the single most important piece of your digital prese
 
 This is the foundation of what we call a Google Property Stack — a network of Google-owned properties that signal to the algorithm that your business is legitimate, active, and relevant. The Business Profile is step one.
 
-For $100, there's no excuse not to have this set up properly. Call (321) 375-9685 or visit xela-elite-ai-creative-studio.vercel.app to get started. We'll have your profile live and optimized in 2 hours.
+For $100, there's no excuse not to have this set up properly. Call (321) 375-9685 or visit xela-creative-branding.vercel.app to get started. We'll have your profile live and optimized in 2 hours.
 
 ---
 
@@ -176,7 +176,7 @@ We understand the local market because we're in it. We know that Nextdoor is whe
 
 That local knowledge is baked into every service we offer, from our Nextdoor Domination strategy ($175) to our Google Business Setup ($100) to our Florida-specific Registered Rebellion business launch package ($500).
 
-To every Brevard County entrepreneur reading this: we see you, we're for you, and we're ready to build your brand. Call (321) 375-9685 or visit xela-elite-ai-creative-studio.vercel.app. Let's make your business the one people remember.
+To every Brevard County entrepreneur reading this: we see you, we're for you, and we're ready to build your brand. Call (321) 375-9685 or visit xela-creative-branding.vercel.app. Let's make your business the one people remember.
 
 ---
 
@@ -197,7 +197,7 @@ Here are some packages that qualify:
 
 The holidays are also the perfect time to invest in gift-worthy branding services for the entrepreneur in your life. A Promotion Pal ($125), Naming Workshop ($150), or 1-on-1 Strategy Call ($150) makes a better gift than another coffee mug.
 
-This offer is available through December 31. Call (321) 375-9685 or visit xela-elite-ai-creative-studio.vercel.app to claim your free business cards. Happy holidays from XELA Creative Branding Studio — Brevard County's branding team.
+This offer is available through December 31. Call (321) 375-9685 or visit xela-creative-branding.vercel.app to claim your free business cards. Happy holidays from XELA Creative Branding Studio — Brevard County's branding team.
 
 ---
 
@@ -217,4 +217,4 @@ Some numbers from our year: 68 services offered across 10 categories, three tier
 
 **New Year Everything** — Ultimate Premium Suite at $2,000. Every deliverable we offer, priority delivery, lifetime access. The complete business launch package for entrepreneurs who are done waiting.
 
-January is when competitors are still on vacation. Get your brand ready now and own the first month of the new year. Call (321) 375-9685 or visit xela-elite-ai-creative-studio.vercel.app. Here's to 2027 — let's make it your year.
+January is when competitors are still on vacation. Get your brand ready now and own the first month of the new year. Call (321) 375-9685 or visit xela-creative-branding.vercel.app. Here's to 2027 — let's make it your year.
