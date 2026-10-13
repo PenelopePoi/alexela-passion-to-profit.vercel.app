@@ -5,6 +5,7 @@ import { XelaLogo } from './components/XelaLogo';
 import { FloatingCTA } from './components/FloatingCTA';
 import SmartNav from './components/SmartNav';
 import MobileBottomNav from './components/MobileBottomNav';
+import ClientProductionStudio from './components/ClientProductionStudio';
 
 /* ── Lazy-loaded components — reduces initial bundle ── */
 const InputForm = lazy(() => import('./components/InputForm').then(m => ({ default: m.InputForm })));
@@ -1625,6 +1626,8 @@ const App: React.FC = () => {
               </a>
             </div>
           </section>
+
+          <ClientProductionStudio />
 
           {/* ═══════════ 8. PRICING SECTION ═══════════ */}
           <div id="pricing">
