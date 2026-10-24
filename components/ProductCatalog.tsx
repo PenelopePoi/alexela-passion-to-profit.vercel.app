@@ -1,5 +1,5 @@
 import React from 'react';
-import { Bike, CarFront, Coffee, ShoppingBag, Sticker, Sparkles, Phone } from 'lucide-react';
+import { Bike, CarFront, ShoppingBag } from 'lucide-react';
 
 const groups = [
  { title: 'BMX & Motorcycle Decal Sets', icon: Bike, items: [
