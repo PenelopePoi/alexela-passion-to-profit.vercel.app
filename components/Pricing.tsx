@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import ProductCatalog from './ProductCatalog';
 import { motion, AnimatePresence } from 'motion/react';
 import { Check, Zap, Shield, Rocket, Star, Globe, ChevronRight, ShoppingCart, MessageCircle, FileText, Scissors, Printer, Phone, Sparkles, TrendingUp, Clock, ArrowRight, Mail, ExternalLink } from 'lucide-react';
 
@@ -169,6 +170,8 @@ export const Pricing: React.FC<PricingProps> = ({ onSelectPackage }) => {
           </div>
         </motion.section>
       ))}
+
+      <ProductCatalog />
 
       {/* ════ GOAL-BASED SELLING ════ */}
       <motion.section initial={{opacity:0,y:40}} whileInView={{opacity:1,y:0}} viewport={{once:true}}
