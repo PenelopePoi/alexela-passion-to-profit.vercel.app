@@ -551,3 +551,38 @@ html, body {
     padding: 1.25rem;
   }
 }
+
+/* AleXelA flyer-inspired visual layer: cyan, magenta, electric gold and legible charcoal. */
+:root { --alexela-gold:#f4bd5f; }
+body {
+  background-color:#080718;
+  background-image:radial-gradient(ellipse at 85% 0%,rgba(20,120,240,.22),transparent 45%),radial-gradient(ellipse at 0% 25%,rgba(198,48,247,.14),transparent 36%);
+}
+.alexela-cosmic-hero {
+  isolation:isolate;
+  background:radial-gradient(circle at 82% 22%,rgba(0,193,255,.16),transparent 27%),
+             radial-gradient(circle at 10% 75%,rgba(232,34,243,.15),transparent 32%),
+             linear-gradient(125deg,#060814,#100722 62%,#050914);
+}
+.alexela-cosmic-hero::before {
+  content:""; position:absolute; inset:0; z-index:0; opacity:.35; pointer-events:none;
+  background-image:radial-gradient(1.4px 1.4px at 15% 20%,#fff 95%,transparent),
+                   radial-gradient(1.8px 1.8px at 76% 33%,#ffe2a2 95%,transparent),
+                   radial-gradient(1.2px 1.2px at 53% 76%,#6defff 95%,transparent);
+  background-size:210px 210px,330px 300px,260px 270px;
+}
+.alexela-cosmic-hero::after {
+  content:""; pointer-events:none; position:absolute; inset:0; z-index:0;
+  background:linear-gradient(90deg,rgba(3,5,17,.3),transparent 55%,rgba(3,5,17,.2));
+}
+.alexela-cosmic-hero .alexela-hero-copy {
+  position:relative; z-index:2; padding:clamp(1rem,3vw,2rem);
+  border-radius:1.6rem; background:rgba(4,6,20,.7);
+  backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+  border:1px solid rgba(98,224,246,.22); box-shadow:0 0 42px rgba(0,190,255,.08);
+}
+.alexela-cosmic-hero h1 {text-shadow:0 3px 20px rgba(0,0,0,.9),0 0 32px rgba(248,188,82,.25)}
+.alexela-cosmic-hero .alexela-hero-copy p {text-shadow:0 2px 6px rgba(0,0,0,.95)}
+#portfolio-peek,#pricing {scroll-margin-top:90px}
+#portfolio-peek {background-image:radial-gradient(ellipse at 50% 0%,rgba(186,42,248,.12),transparent 55%)}
+@media(max-width:640px){.alexela-cosmic-hero .alexela-hero-copy{padding:1.25rem}.alexela-cosmic-hero{min-height:85vh}}
