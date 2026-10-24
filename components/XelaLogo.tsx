@@ -31,7 +31,7 @@ export const XelaLogo: React.FC<XelaLogoProps> = ({ className = "h-10", color = 
         letterSpacing="-1"
         fontStyle="italic"
       >
-        Xela
+        AleXelA
       </text>
     </svg>
   );
