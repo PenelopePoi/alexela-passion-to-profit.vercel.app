@@ -1,8 +1,8 @@
-# XELA Creative Branding Studio
+# AleXelA Creative Branding Studio
 
 AI-powered branding package generator for small businesses. Enter your business details and receive a complete brand strategy — color palettes, typography, logo concepts, marketing materials, business cards, and more — generated in real time by Google Gemini AI.
 
-**XELA Creative Branding Studio** is a Florida-based creative agency (Brevard County / Space Coast) operating under Reconsumeralization LLC. We are your marketing team — digital, print, everything.
+**AleXelA Creative Branding Studio** is a Florida-based creative agency (Brevard County / Space Coast) operating under Reconsumeralization LLC. We are your marketing team — digital, print, everything.
 
 ## Features
 
