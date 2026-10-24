@@ -653,12 +653,12 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const titles: Record<string, string> = {
-      landing: 'XELA Creative Branding Studio | Same-Day Brand Kits from $75',
-      consult: 'Free Brand Consultation | XELA Creative Branding Studio',
-      dashboard: 'Your Brand Dashboard | XELA Creative Branding Studio',
-      chat: 'AI Brand Chat | XELA Creative Branding Studio',
-      intake: 'Brand Intake | XELA Creative Branding Studio',
-      shuffle: 'Brand Explorer | XELA Creative Branding Studio',
+      landing: 'AleXelA Creative Branding Studio | Same-Day Brand Kits from $75',
+      consult: 'Free Brand Consultation | AleXelA Creative Branding Studio',
+      dashboard: 'Your Brand Dashboard | AleXelA Creative Branding Studio',
+      chat: 'AI Brand Chat | AleXelA Creative Branding Studio',
+      intake: 'Brand Intake | AleXelA Creative Branding Studio',
+      shuffle: 'Brand Explorer | AleXelA Creative Branding Studio',
     };
     document.title = titles[step] || titles.landing;
   }, [step]);
@@ -804,7 +804,7 @@ const App: React.FC = () => {
             <div className="text-center">
               <h1 className="text-3xl font-black text-white mb-3">Profile Not Found</h1>
               <p className="text-white/60 mb-6">This client profile doesn't exist.</p>
-              <a href="/" className="px-6 py-3 bg-brand-teal text-brand-black rounded-full font-bold uppercase tracking-widest text-xs inline-block">Visit XELA Studio</a>
+              <a href="/" className="px-6 py-3 bg-brand-teal text-brand-black rounded-full font-bold uppercase tracking-widest text-xs inline-block">Visit AleXelA Studio</a>
             </div>
           </div>
         )}
@@ -846,7 +846,7 @@ const App: React.FC = () => {
           <button onClick={() => { setStep('landing'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="flex items-center gap-1 group cursor-pointer">
             <img
               src="/xela-logo-new.png"
-              alt="XELA"
+              alt="AleXelA"
               width={160}
               height={64}
               className="h-9 sm:h-12 md:h-16 w-auto max-w-[120px] sm:max-w-none object-contain group-hover:scale-105 transition-transform"
@@ -929,10 +929,10 @@ const App: React.FC = () => {
             <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-10 py-2.5 md:py-4 flex justify-between items-center gap-4 sm:gap-6">
 
               {/* LOGO */}
-              <button onClick={handleReset} className="flex items-center shrink-0 group cursor-pointer" aria-label="XELA Home">
+              <button onClick={handleReset} className="flex items-center shrink-0 group cursor-pointer" aria-label="AleXelA Home">
                 <img
                   src="/xela-logo-new.png"
-                  alt="XELA Creative Branding Studio"
+                  alt="AleXelA Creative Branding Studio"
                   width={200}
                   height={80}
                   className="h-14 sm:h-18 md:h-24 w-auto max-w-[200px] sm:max-w-[240px] md:max-w-none object-contain group-hover:scale-105 transition-transform duration-300"
@@ -1122,7 +1122,7 @@ const App: React.FC = () => {
                 <div className="relative w-full max-w-md mx-auto rounded-[3rem] shadow-2xl shadow-brand-teal/10 group">
                   <img
                     src="/xela-iquit-flyer.png"
-                    alt="The I Quit Accelerator — XELA Creative Branding Studio"
+                    alt="The I Quit Accelerator — AleXelA Creative Branding Studio"
                     className="w-full h-auto object-contain rounded-[3rem] group-hover:scale-[1.02] transition-all duration-1000"
                     referrerPolicy="no-referrer"
                     width={800}
@@ -1158,7 +1158,7 @@ const App: React.FC = () => {
 
             {/* Background Text — muted watermark, pushed to 0.02 so it never competes */}
             <div className="absolute bottom-0 left-0 w-full overflow-hidden pointer-events-none opacity-[0.02] select-none">
-              <span className="text-[30vw] font-serif font-black whitespace-nowrap leading-none uppercase -mb-10 block text-white">Xela Studio</span>
+              <span className="text-[30vw] font-serif font-black whitespace-nowrap leading-none uppercase -mb-10 block text-white">AleXelA Studio</span>
             </div>
 
             {/* Scroll indicator */}
@@ -1337,7 +1337,7 @@ const App: React.FC = () => {
                   <div className="absolute top-0 right-0 w-96 h-96 bg-brand-teal/10 rounded-full blur-[120px] pointer-events-none"></div>
                   <div className="absolute bottom-0 left-0 w-64 h-64 bg-brand-lavender/10 rounded-full blur-[100px] pointer-events-none"></div>
                   <div className="relative z-10 max-w-4xl mx-auto">
-                    <h3 className="text-3xl sm:text-4xl font-serif font-black text-center mb-10 sm:mb-16 uppercase tracking-tight">The Xela Advantage</h3>
+                    <h3 className="text-3xl sm:text-4xl font-serif font-black text-center mb-10 sm:mb-16 uppercase tracking-tight">The AleXelA Advantage</h3>
                     <div className="space-y-4">
                       {[
                         { label: "Time to First Draft", agency: "2-4 Weeks", xela: "30 Minutes", highlight: true },
@@ -1404,9 +1404,9 @@ const App: React.FC = () => {
               <div className="grid md:grid-cols-2 gap-8">
                 {[
                   { icon: "✦", title: "Built With Integrity", quote: "Whatever you do, work at it with all your heart, as working for the Lord, not for human masters.", source: "Colossians 3:23" },
-                  { icon: "✦", title: "Your Brand, Your Future", quote: "We don't cut corners. Every logo, every flyer, every word — crafted like it's for our own business. Because your success is our success.", source: "The XELA Promise" },
+                  { icon: "✦", title: "Your Brand, Your Future", quote: "We don't cut corners. Every logo, every flyer, every word — crafted like it's for our own business. Because your success is our success.", source: "The AleXelA Promise" },
                   { icon: "✦", title: "AI + Human Heart", quote: "Technology handles the speed. We bring the soul. Every brand gets the same care — whether it's a $75 card set or a $2,000 full launch.", source: "Our Approach" },
-                  { icon: "✦", title: "Florida Entrepreneurs First", quote: "We built XELA for the hustlers, the dreamers, the people working two jobs while building something on the side. You deserve to look legit.", source: "Why We Exist" },
+                  { icon: "✦", title: "Florida Entrepreneurs First", quote: "We built AleXelA for the hustlers, the dreamers, the people working two jobs while building something on the side. You deserve to look legit.", source: "Why We Exist" },
                 ].map((t, i) => (
                   <ScrollReveal key={i} delay={i * 0.15}>
                     <TiltCard className="bg-white/5 backdrop-blur rounded-2xl p-8 border border-white/10 shadow-lg border-l-4 border-l-brand-teal relative group cursor-default h-full hover:bg-white/[0.07] transition-colors">
@@ -1435,7 +1435,7 @@ const App: React.FC = () => {
                     <Layers size={14} className="text-brand-lavender" />
                     <span className="text-[9px] font-black uppercase tracking-[0.4em] text-white">Transformations</span>
                   </div>
-                  <h2 className="text-3xl sm:text-5xl md:text-7xl font-serif font-black text-white leading-[0.9] uppercase">Before Xela. <span className="text-brand-teal italic">After Xela.</span></h2>
+                  <h2 className="text-3xl sm:text-5xl md:text-7xl font-serif font-black text-white leading-[0.9] uppercase">Before AleXelA. <span className="text-brand-teal italic">After AleXelA.</span></h2>
                 </div>
               </ScrollReveal>
 
@@ -1604,7 +1604,7 @@ const App: React.FC = () => {
                   <div className="w-12 h-12 sm:w-16 sm:h-16 bg-brand-teal/20 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6">
                     <MessageSquare size={22} className="text-brand-teal sm:hidden" /><MessageSquare size={28} className="text-brand-teal hidden sm:block" />
                   </div>
-                  <h3 className="text-white text-base sm:text-xl font-black tracking-tight mb-2">Chat with Xela</h3>
+                  <h3 className="text-white text-base sm:text-xl font-black tracking-tight mb-2">Chat with AleXelA</h3>
                   <p className="text-white/60 text-xs sm:text-sm">AI-powered brand consultation</p>
                 </button>
                 <a href="mailto:xelabrandingstudio@gmail.com" className="group bg-white/5 border border-white/10 rounded-3xl p-6 sm:p-10 hover:bg-white/10 transition-all hover:scale-[1.02] text-center block">
@@ -1616,7 +1616,7 @@ const App: React.FC = () => {
                 </a>
               </div>
               <a
-                href="https://www.google.com/search?q=XELA+Creative+Branding+Studio+Cocoa+FL"
+                href="https://www.google.com/search?q=AleXelA+Creative+Branding+Studio+Cocoa+FL"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-10 inline-flex items-center gap-2 px-8 py-4 bg-white/5 border border-white/10 rounded-full text-white/70 hover:text-white hover:bg-white/10 transition-all text-sm font-bold tracking-wide"
@@ -1714,7 +1714,7 @@ const App: React.FC = () => {
             <div className="max-w-[1600px] mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-10 sm:gap-16 text-xs leading-relaxed">
               <div className="col-span-2 space-y-6">
                 <div className="flex items-center gap-3">
-                  <img src="/xela-logo-new.png" alt="XELA Creative Branding Studio" className="h-10 sm:h-14 w-auto max-w-[160px] object-contain brightness-0 invert opacity-90" loading="lazy" width={140} height={56} />
+                  <img src="/xela-logo-new.png" alt="AleXelA Creative Branding Studio" className="h-10 sm:h-14 w-auto max-w-[160px] object-contain brightness-0 invert opacity-90" loading="lazy" width={140} height={56} />
                 </div>
                 <p className="max-w-sm">Your full-service marketing team. Digital, print, everything. Brevard County / Space Coast, FL — serving all of Florida.</p>
                 <a href="tel:3213759685" className="flex items-center gap-2 text-brand-teal hover:text-white transition-colors mt-2">
@@ -1734,7 +1734,7 @@ const App: React.FC = () => {
                     <Mail size={14} /> <span className="text-[10px] font-bold uppercase tracking-widest">Email</span>
                   </a>
                   <span className="text-white/10">|</span>
-                  <a href="https://www.google.com/search?q=XELA+Creative+Branding+Studio+Cocoa+FL" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-stone-400 hover:text-brand-teal transition-colors" aria-label="Google Business">
+                  <a href="https://www.google.com/search?q=AleXelA+Creative+Branding+Studio+Cocoa+FL" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-stone-400 hover:text-brand-teal transition-colors" aria-label="Google Business">
                     <Globe size={14} /> <span className="text-[10px] font-bold uppercase tracking-widest">Google Business</span>
                   </a>
                   <span className="text-white/10">|</span>
@@ -1743,12 +1743,12 @@ const App: React.FC = () => {
                   </a>
                 </div>
 
-                <p className="mt-4">&copy; {new Date().getFullYear()} XELA Creative Branding Studio. All rights reserved.</p>
+                <p className="mt-4">&copy; {new Date().getFullYear()} AleXelA Creative Branding Studio. All rights reserved.</p>
               </div>
               <div>
                 <h4 className="text-white font-bold uppercase tracking-widest mb-4">Legal Disclaimer</h4>
                 <p className="mb-2">
-                  Xela is a branding automation tool, not a law firm. Information regarding LLC filing, business licenses, and insurance is for educational purposes only.
+                  AleXelA is a branding automation tool, not a law firm. Information regarding LLC filing, business licenses, and insurance is for educational purposes only.
                 </p>
                 <p>
                   Consult with a qualified attorney or tax professional for advice specific to your business situation.
@@ -1762,7 +1762,7 @@ const App: React.FC = () => {
                   <li><button onClick={scrollToPortfolio} className="hover:text-white transition-colors text-left">Our Portfolio</button></li>
                   <li><a href="tel:3213759685" className="hover:text-white transition-colors flex items-center gap-1"><Phone size={10} /> Call Us</a></li>
                   <li><a href="mailto:xelabrandingstudio@gmail.com" className="hover:text-white transition-colors flex items-center gap-1"><Mail size={10} /> Email Us</a></li>
-                  <li><a href="https://www.google.com/search?q=XELA+Creative+Branding+Studio+Cocoa+FL" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-1"><Globe size={10} /> Google Business</a></li>
+                  <li><a href="https://www.google.com/search?q=AleXelA+Creative+Branding+Studio+Cocoa+FL" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-1"><Globe size={10} /> Google Business</a></li>
                   <li><button onClick={() => setIsPrivacyOpen(true)} className="hover:text-white transition-colors text-left">Privacy Policy</button></li>
                 </ul>
               </div>
@@ -1776,7 +1776,7 @@ const App: React.FC = () => {
         <div className="flex flex-col w-full min-h-screen bg-stone-50 animate-fade-in-up pt-24">
           <div className="py-6 px-6 border-b border-stone-200 bg-white flex justify-between items-center shadow-sm">
             <div className="text-left">
-              <div className="text-[10px] font-black uppercase tracking-widest text-stone-400">Consultant: Xela</div>
+              <div className="text-[10px] font-black uppercase tracking-widest text-stone-400">Consultant: AleXelA</div>
             </div>
             <div className="text-right">
               <div className="text-xl font-serif font-black text-brand-teal capitalize italic">
@@ -1948,7 +1948,7 @@ const App: React.FC = () => {
               </button>
             </div>
             <div className="flex-1 overflow-y-auto p-6 space-y-5 text-stone-300 text-sm leading-relaxed scrollbar-thin">
-              <p className="text-stone-400 text-xs uppercase tracking-widest font-bold">XELA Creative Branding Studio</p>
+              <p className="text-stone-400 text-xs uppercase tracking-widest font-bold">AleXelA Creative Branding Studio</p>
 
               <div>
                 <h3 className="text-white font-bold mb-1">Data We Collect</h3>
