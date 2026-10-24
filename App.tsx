@@ -1558,7 +1558,7 @@ const App: React.FC = () => {
               </ScrollReveal>
 
               <ScrollReveal delay={0.2}>
-                <GalleryStrip />
+                <PortfolioGallery />
               </ScrollReveal>
 
               <ScrollReveal delay={0.3}>
