@@ -10,7 +10,7 @@ interface PricingProps {
 
 const P = [
   { id:'cardcut',tier:'budget' as const,price:'$75',name:'CardCut Calibrated',desc:'A pro business card design + free online profile, ready in hours',icon:Printer,
-    f:['1 print-ready business card DESIGN file (300 DPI PDF, 3.5" × 2", CMYK — take to VistaPrint, Staples, Moo, or any local printer)','3 signature brand colors — exact hex codes + CMYK + Pantone values (1 primary, 1 accent, 1 neutral) — use forever on cards, signs, socials, trucks, invoices','2 licensed fonts — 1 bold headline + 1 body (Google Fonts, free for commercial use forever, no legal risk)','1 QR code (PNG + SVG) linking to your FREE 1-page XELA-hosted profile site (we build + host your own XELA-hosted profile page — no extra fee, ever)','Same-day digital delivery by email — you own the files, print 100 / 500 / 5,000 copies at any shop, forever']},
+    f:['1 print-ready business card DESIGN file (300 DPI PDF, 3.5" × 2", CMYK — take to VistaPrint, Staples, Moo, or any local printer)','3 signature brand colors — exact hex codes + CMYK + Pantone values (1 primary, 1 accent, 1 neutral) — use forever on cards, signs, socials, trucks, invoices','2 licensed fonts — 1 bold headline + 1 body (Google Fonts, free for commercial use forever, no legal risk)','1 QR code (PNG + SVG) linking to your FREE 1-page AleXelA-hosted profile site (we build + host your own AleXelA-hosted profile page — no extra fee, ever)','Same-day digital delivery by email — you own the files, print 100 / 500 / 5,000 copies at any shop, forever']},
   { id:'promo',tier:'budget' as const,price:'$125',name:'Promotion Pal',desc:'Look like you\'ve been in business for years',icon:Star,
     f:['3 unique logo options (PNG + SVG + transparent) — you pick your favorite, we finalize it','1 slogan + 1 mission statement (under 15 words each, custom written)','Full color palette — 5 hex codes (primary, accent, neutral, light, dark) + 2 licensed fonts (headline + body)','FL business name check on Sunbiz.org — we confirm your name is legally available before you register']},
   { id:'sticker',tier:'budget' as const,price:'$175',name:'Sticker System',desc:'Put your name on everything',icon:Scissors,save:'Save $40',
@@ -26,9 +26,9 @@ const P = [
   { id:'site',tier:'elite' as const,price:'$1,200',name:'Site Sales Solution',desc:'Customers find you and call you',icon:FileText,save:'Save $600+',
     f:['Everything in The Sovereignty Set','1 landing page designed + deployed (live URL in 24 hrs — mobile-friendly, contact form, QR lead capture)','1 neighborhood ad strategy (3 targeted audiences, $5–15/day budgets, exact copy for FB + Nextdoor + Google)','1 thirty-second video ad (vertical 9:16 + square 1:1 — ready for Reels, TikTok, FB, Stories)']},
   { id:'enterprise',tier:'elite' as const,price:'$1,500',name:'Entrepreneurship Enterprise',desc:'From pain to purpose — nothing left out',icon:Rocket,save:'Save $800+',
-    f:['Everything in Site Sales Solution','Every digital + print asset XELA offers (50+ files: logos, cards, flyers, signs, menus, door hangers, social templates, email banners)','1 Full Competitive Campaign (10 competitors analyzed, 30-day paid ad run template, $300/mo recommended budget)','1 Startup Checklist PDF (40 items — LLC, EIN, bank, DBA, license, insurance, website, GBP, taxes, bookkeeping — every legal & operational box checked)']},
+    f:['Everything in Site Sales Solution','Every digital + print asset AleXelA offers (50+ files: logos, cards, flyers, signs, menus, door hangers, social templates, email banners)','1 Full Competitive Campaign (10 competitors analyzed, 30-day paid ad run template, $300/mo recommended budget)','1 Startup Checklist PDF (40 items — LLC, EIN, bank, DBA, license, insurance, website, GBP, taxes, bookkeeping — every legal & operational box checked)']},
   { id:'ultimate',tier:'elite' as const,price:'$2,000',name:'Ultimate Premium Suite',desc:'THE I QUIT ACCELERATOR — everything, priority, lifetime',icon:Zap,save:'Save $1,200+',
-    f:['Every digital deliverable XELA offers (100+ files — nothing held back)','PHYSICAL: 500 printed premium business cards + 100 die-cut stickers + 100 full-color flyers — shipped to your door (real print, not just files)','Landing page (live) + 30-sec video ad + full multi-channel ad strategy + 30-day done-for-you campaign','PRIORITY: 2-hour rush delivery on everything + LIFETIME access (come back anytime for updates, tweaks, new files — forever, no extra fee)']},
+    f:['Every digital deliverable AleXelA offers (100+ files — nothing held back)','PHYSICAL: 500 printed premium business cards + 100 die-cut stickers + 100 full-color flyers — shipped to your door (real print, not just files)','Landing page (live) + 30-sec video ad + full multi-channel ad strategy + 30-day done-for-you campaign','PRIORITY: 2-hour rush delivery on everything + LIFETIME access (come back anytime for updates, tweaks, new files — forever, no extra fee)']},
 ];
 
 export const Pricing: React.FC<PricingProps> = ({ onSelectPackage }) => {
@@ -294,7 +294,7 @@ export const Pricing: React.FC<PricingProps> = ({ onSelectPackage }) => {
             <Mail size={12} /> xelabrandingstudio@gmail.com
           </a>
           <span className="hidden sm:inline text-white/10">|</span>
-          <a href="https://www.google.com/search?q=XELA+Creative+Branding+Studio+Cocoa+FL" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-white/50 hover:text-white transition-colors text-xs font-bold">
+          <a href="https://www.google.com/search?q=AleXelA+Creative+Branding+Studio+Cocoa+FL" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-white/50 hover:text-white transition-colors text-xs font-bold">
             <Globe size={12} /> Find Us on Google <ExternalLink size={10} className="text-white/30" />
           </a>
         </div>
