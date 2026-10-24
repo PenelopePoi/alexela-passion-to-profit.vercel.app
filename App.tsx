@@ -903,7 +903,7 @@ const App: React.FC = () => {
                 {new Date().toLocaleDateString('en-US', { month: 'long' })}
               </span>
               <span className="text-white/40">·</span>
-              <span className="text-white/95">Same-Day Delivery</span>
+              <span className="text-white/95">Rush Options Available</span>
               <span
                 className="inline-block w-1.5 h-1.5 rounded-full ml-1"
                 style={{
@@ -1023,7 +1023,7 @@ const App: React.FC = () => {
           </header>
 
           {/* ═══════════ 2. HERO SECTION ═══════════ */}
-          <div className="relative min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 lg:pt-24 pb-16 overflow-hidden bg-brand-black">
+          <div className="alexela-cosmic-hero relative min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 lg:pt-24 pb-16 overflow-hidden bg-brand-black">
             {/* Floating decorative particles — trimmed to 4, pushed to edges so they frame content */}
             <FloatingParticle x="4%" y="18%" size={6} color="bg-brand-teal/30" delay={0} />
             <FloatingParticle x="94%" y="14%" size={5} color="bg-brand-lavender/30" delay={1.2} />
@@ -1039,7 +1039,7 @@ const App: React.FC = () => {
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="space-y-8 sm:space-y-12"
+                className="alexela-hero-copy space-y-8 sm:space-y-12"
               >
                 <motion.button
                   initial={{ opacity: 0, y: -10 }}
@@ -1067,10 +1067,10 @@ const App: React.FC = () => {
                     />
                     <div className="space-y-3">
                       <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-md font-medium leading-snug">
-                        Logo, business cards, social posts, and marketing copy — delivered today. No contracts, no subscriptions. Built for Florida service businesses.
+                        Real custom branding, flyers, business cards, BMX and motorcycle decals, shirts and promotional products — designed by Alex for entrepreneurs on Florida’s Space Coast.
                       </p>
                       <p className="text-xs font-black uppercase tracking-[0.3em] text-brand-teal">
-                        Passion to Prophet in 60 Seconds
+                        From Idea to Income
                       </p>
                     </div>
                   </div>
@@ -1109,7 +1109,7 @@ const App: React.FC = () => {
                 <div className="flex items-center gap-4 mt-3 text-[10px] font-bold uppercase tracking-widest text-white/40">
                   <span className="flex items-center gap-1.5"><CheckCircle size={12} className="text-green-400" /> Money-back guarantee</span>
                   <span className="flex items-center gap-1.5"><CheckCircle size={12} className="text-green-400" /> You own everything</span>
-                  <span className="flex items-center gap-1.5 hidden sm:flex"><CheckCircle size={12} className="text-green-400" /> Same-day delivery</span>
+                  <span className="flex items-center gap-1.5 hidden sm:flex"><CheckCircle size={12} className="text-green-400" /> Rush options available</span>
                 </div>
               </motion.div>
 
@@ -1122,7 +1122,7 @@ const App: React.FC = () => {
                 <div className="relative w-full max-w-md mx-auto rounded-[3rem] shadow-2xl shadow-brand-teal/10 group">
                   <img
                     src="/xela-iquit-flyer.png"
-                    alt="The I Quit Accelerator — AleXelA Creative Branding Studio"
+                    alt="AleXelA creative branding artwork"
                     className="w-full h-auto object-contain rounded-[3rem] group-hover:scale-[1.02] transition-all duration-1000"
                     referrerPolicy="no-referrer"
                     width={800}
@@ -1176,8 +1176,8 @@ const App: React.FC = () => {
           <div className="bg-brand-black/50 border-y border-white/5 py-3 overflow-hidden">
             <div className="max-w-[1600px] mx-auto px-4 sm:px-8 flex flex-wrap items-center justify-center gap-3 text-[11px] font-bold uppercase tracking-widest">
               <span className="w-2 h-2 bg-brand-teal rounded-full animate-pulse" />
-              <span className="text-white/40">Currently building brands for:</span>
-              <span className="text-brand-teal">Barbershops · Landscapers · Food Trucks · Tattoo Artists · Cleaners · Consultants · Coaches · Pet Services</span>
+              <span className="text-white/40">Featured studio work:</span>
+              <span className="text-brand-teal">BMXela · Tops Down Tree Service · DNA Remodels · Custom Motorcycle Graphics</span>
             </div>
           </div>
 
@@ -1186,7 +1186,7 @@ const App: React.FC = () => {
             <div className="max-w-[1600px] mx-auto flex flex-wrap justify-center items-center gap-x-12 gap-y-4">
               {[
                 { label: "AI-Powered Brand Engine", icon: "◆" },
-                { label: "Same-Day Delivery", icon: "◆" },
+                { label: "Rush Options Available", icon: "◆" },
                 { label: "Brevard County, FL", icon: "◆" },
                 { label: "Col 3:23 — Our Standard", icon: "◆" },
               ].map((item, i) => (
@@ -1203,7 +1203,7 @@ const App: React.FC = () => {
             <div className="animate-marquee flex whitespace-nowrap">
               {[...Array(3)].map((_, rep) => (
                 <span key={rep} className="text-[10px] font-black uppercase tracking-[0.4em] text-brand-teal mx-0 shrink-0">
-                  Same-Day Delivery&nbsp;&nbsp;·&nbsp;&nbsp;AI-Powered Branding&nbsp;&nbsp;·&nbsp;&nbsp;From Pain to Purpose&nbsp;&nbsp;·&nbsp;&nbsp;Look Legit Get Paid&nbsp;&nbsp;·&nbsp;&nbsp;Space Coast FL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  Rush Options Available&nbsp;&nbsp;·&nbsp;&nbsp;AI-Powered Branding&nbsp;&nbsp;·&nbsp;&nbsp;From Pain to Purpose&nbsp;&nbsp;·&nbsp;&nbsp;Look Legit Get Paid&nbsp;&nbsp;·&nbsp;&nbsp;Space Coast FL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </span>
               ))}
             </div>
