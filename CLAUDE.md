@@ -1,3 +1,7 @@
+# AleXelA client-production instructions (October 2026)
+
+The current client-facing brand name is **AleXelA Creative — Passion to Profit**. For every client, FIRST read [the mandatory client production standard](docs/ALEXELA_CLIENT_PRODUCTION_STANDARD.md). It governs logo approval, matching cards/flyers, watermark and clean versions, black/white front/back shirt mockups, 10-up cards, 4-up flyers, large 4-tile Letter transfer sheets, mirrored white/non-mirrored black, and exactly ONE itemized design fee. When older XELA naming or process guidance conflicts with it, follow this current standard.
+
 # XELA Creative Branding Studio
 
 ## Project
