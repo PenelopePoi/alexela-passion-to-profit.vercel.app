@@ -4,15 +4,15 @@ import { Shield, Lock, FolderOpen, Infinity, Star, Clock, UserCheck, BadgeCheck 
 
 const TRUST_POINTS = [
   { icon: Lock, title: 'Secure Payments', desc: 'SSL-encrypted checkout via Stripe' },
-  { icon: FolderOpen, title: 'Own Everything', desc: 'Full commercial rights to every asset' },
-  { icon: Infinity, title: 'Lifetime File Access', desc: 'Download your files anytime, forever' },
+  { icon: FolderOpen, title: 'Own Everything', desc: 'Rights to approved original deliverables as specified in your agreement' },
+  { icon: Infinity, title: 'Lifetime File Access', desc: 'Final files delivered for your records; keep a backup' },
 ] as const;
 
 const TRUST_SIGNALS = [
-  { icon: BadgeCheck, label: '100% Money-Back Guarantee', color: 'text-green-500' },
-  { icon: Clock, label: 'Same-Day Delivery', color: 'text-brand-teal' },
+  { icon: BadgeCheck, label: 'Written Project Terms', color: 'text-green-500' },
+  { icon: Clock, label: 'Agreed Delivery Timeline', color: 'text-brand-teal' },
   { icon: UserCheck, label: 'Real Human Creative Director', color: 'text-brand-lavender' },
-  { icon: Star, label: '5.0 Rating — Clients Love Us', color: 'text-yellow-500' },
+  { icon: Star, label: 'Custom Creative Support', color: 'text-yellow-500' },
 ] as const;
 
 export const TrustGuarantee: React.FC = () => {
@@ -38,11 +38,10 @@ export const TrustGuarantee: React.FC = () => {
             <Shield size={32} className="text-brand-teal" />
           </div>
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-black mb-4">
-            100% Satisfaction Guarantee
+            Clear Deliverables. Professional Service.
           </h2>
           <p className="text-stone-600 max-w-xl leading-relaxed">
-            If you're not completely satisfied with your brand package, we'll revise it until you are
-            — or give you a full refund. No questions asked.
+            We agree on the scope, delivery timeline, included revisions, payment terms and any third-party costs before work begins.
           </p>
         </div>
 
