@@ -33,6 +33,8 @@ const P = [
 
 export const Pricing: React.FC<PricingProps> = ({ onSelectPackage }) => {
   const [hovered, setHovered] = useState<string|null>(null);
+  const [selectedPackageId, setSelectedPackageId] = useState<string|null>(null);
+  const selectedPackage = P.find(p => p.id === selectedPackageId);
 
   const tiers = [
     { key:'budget' as const, label:'Get Started', sub:'Look professional from day one', range:'$75 – $175', pkgs: P.filter(p=>p.tier==='budget'),
@@ -45,6 +47,46 @@ export const Pricing: React.FC<PricingProps> = ({ onSelectPackage }) => {
 
   return (
     <div className="w-full max-w-7xl mx-auto py-28 px-4 sm:px-6 lg:px-8">
+
+      <AnimatePresence>
+        {selectedPackage && (
+          <motion.div role="presentation" className="fixed inset-0 z-[100] bg-[#020914]/95 overflow-y-auto p-4 sm:p-10" initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}
+            onMouseDown={e=>{if(e.target===e.currentTarget)setSelectedPackageId(null);}}>
+            <motion.section role="dialog" aria-modal="true" aria-labelledby="package-detail-title" className="max-w-3xl mx-auto bg-brand-black border border-brand-lavender/40 rounded-3xl p-6 sm:p-10 shadow-2xl"
+              initial={{y:25,opacity:0}} animate={{y:0,opacity:1}} exit={{y:20,opacity:0}}>
+              <div className="flex justify-between items-start gap-4">
+                <p className="text-brand-teal font-black text-xs uppercase tracking-widest">AleXelA — Passion to Profit</p>
+                <button type="button" className="border border-white/20 rounded-full px-4 py-2 text-white" onClick={()=>setSelectedPackageId(null)}>Close ×</button>
+              </div>
+              <h2 id="package-detail-title" className="text-3xl sm:text-5xl font-serif font-bold text-white mt-5">{selectedPackage.name}</h2>
+              <p className="text-brand-lavender text-3xl font-black mt-3">{selectedPackage.price} <span className="text-sm text-white/60">one-time starting price</span></p>
+              <p className="text-white/80 mt-5 leading-relaxed">{selectedPackage.desc}</p>
+              <h3 className="text-white font-black text-xl mt-9 mb-4">Detailed package inclusions</h3>
+              <ol className="space-y-4">
+                {selectedPackage.f.map((feature,i)=>(
+                  <li key={i} className="flex gap-4 rounded-2xl border border-white/10 bg-white/5 p-4">
+                    <span className="shrink-0 bg-brand-teal/15 text-brand-teal rounded-full w-9 h-9 flex items-center justify-center font-black">{i+1}</span>
+                    <div><p className="text-white font-semibold leading-relaxed">{feature}</p>
+                    <p className="text-white/55 text-xs mt-2">Final formats, client inputs, revision allowance and delivery milestones are confirmed in your written project brief.</p></div>
+                  </li>
+                ))}
+              </ol>
+              <div className="mt-8 border border-brand-teal/20 bg-white/5 rounded-2xl p-5">
+                <h3 className="text-brand-teal font-black text-lg mb-3">What happens after you choose this package?</h3>
+                <p className="text-white/80 text-sm leading-relaxed">1. Tell us about your business, audience, style and goals.</p>
+                <p className="text-white/80 text-sm leading-relaxed mt-2">2. Approve a written brief defining each deliverable, included revisions, timeline and file formats.</p>
+                <p className="text-white/80 text-sm leading-relaxed mt-2">3. Review your initial creative proofs and request revisions within the agreed scope.</p>
+                <p className="text-white/80 text-sm leading-relaxed mt-2">4. Approve the work and receive your final files or agreed digital launch.</p>
+                <p className="text-white/50 text-xs mt-4">Printing, shipping, ad spend, hosting, business registration and ongoing management are separate unless expressly included. Results and revenue are not guaranteed.</p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-3 mt-7">
+                <button type="button" className="flex-1 bg-brand-teal text-brand-black rounded-xl py-4 font-black" onClick={()=>{setSelectedPackageId(null);onSelectPackage(selectedPackage.tier);}}>Start This Package <ArrowRight size={15} className="inline"/></button>
+                <button type="button" className="border border-white/20 rounded-xl px-6 py-4 text-white font-bold" onClick={()=>setSelectedPackageId(null)}>Compare Packages</button>
+              </div>
+            </motion.section>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* ════ HEADER ════ */}
       <motion.div initial={{opacity:0,y:40}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{duration:0.7}}
@@ -157,9 +199,9 @@ export const Pricing: React.FC<PricingProps> = ({ onSelectPackage }) => {
                   )}
 
                   {/* CTA */}
-                  <button onClick={()=>onSelectPackage(tier.key)}
+                  <button onClick={()=>setSelectedPackageId(pkg.id)}
                     className={`w-full py-4 rounded-xl font-bold uppercase tracking-[0.12em] text-[10px] transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 active:shadow-md ${tier.btnCls}`}>
-                    Get Started <ArrowRight size={14}/>
+                    View Full Details <ArrowRight size={14}/>
                   </button>
                   <p className="text-center text-[10px] text-white/35 mt-2.5 font-medium flex items-center justify-center gap-1.5">
                     <Shield size={10} className="text-green-500/70" /> Clear scope · Written revision terms
