@@ -362,7 +362,7 @@ const IntakeGallery: React.FC = () => {
                   transition={{ delay: i * 0.05 }}
                   className="aspect-square rounded-xl overflow-hidden group cursor-pointer relative"
                 >
-                  <img src={src} alt={`Work ${i + 1}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" width={200} height={200} />
+                  <img src={src} alt={`AleXelA creative portfolio example ${i + 1}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" width={200} height={200} />
                   <div className="absolute inset-0 bg-brand-black/0 group-hover:bg-brand-black/20 transition-colors duration-300" />
                 </motion.div>
               ))}
@@ -386,7 +386,7 @@ const taglines = [
   "Look Legit. Get Paid.",
   "Your Brand, Ready Today.",
   "Stop Looking Like a Side Hustle.",
-  "Built With Heart. Delivered Same Day.",
+  "Built With Heart. Delivered With Care.",
   "Premium Brand, Budget Price.",
   "The Agency Alternative.",
 ];
@@ -1075,7 +1075,7 @@ const App: React.FC = () => {
                         Real custom branding, flyers, business cards, BMX and motorcycle decals, shirts and promotional products — designed by Alex for entrepreneurs on Florida’s Space Coast.
                       </p>
                       <p className="text-xs font-black uppercase tracking-[0.3em] text-brand-teal">
-                        From Idea to Income
+                        From Passion to Profit · From Idea to Income
                       </p>
                     </div>
                   </div>
@@ -1109,11 +1109,11 @@ const App: React.FC = () => {
                 </div>
                 <p className="text-sm text-white/60 font-medium mt-6 flex items-center gap-2">
                   <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/50" />
-                  No credit card. 3-minute quiz. Instant quote.
+                  No credit card required for your initial consultation. Written quotes before paid work.
                 </p>
                 <div className="flex items-center gap-4 mt-3 text-[10px] font-bold uppercase tracking-widest text-white/40">
                   <span className="flex items-center gap-1.5"><CheckCircle size={12} className="text-green-400" /> Written project terms</span>
-                  <span className="flex items-center gap-1.5"><CheckCircle size={12} className="text-green-400" /> You own everything</span>
+                  <span className="flex items-center gap-1.5"><CheckCircle size={12} className="text-green-400" /> Clear file rights</span>
                   <span className="flex items-center gap-1.5 hidden sm:flex"><CheckCircle size={12} className="text-green-400" /> Rush options available</span>
                 </div>
               </motion.div>
@@ -1580,7 +1580,7 @@ const App: React.FC = () => {
                   <div className="flex -space-x-2">
                     {[1, 2, 3, 4, 5].map(i => (
                       <div key={i} className="w-8 h-8 rounded-full border-2 border-white overflow-hidden">
-                        <img src={`/gallery/work-${String(i + 10).padStart(2, '0')}.jpg`} alt={`Client work sample ${i + 1}`} className="w-full h-full object-cover" loading="lazy" width={32} height={32} />
+                        <img src={`/gallery/work-${String(i + 10).padStart(2, '0')}.jpg`} alt={`AleXelA client portfolio sample ${i + 1}`} className="w-full h-full object-cover" loading="lazy" width={32} height={32} />
                       </div>
                     ))}
                   </div>
@@ -1665,14 +1665,14 @@ const App: React.FC = () => {
 
               <div className="space-y-3">
                 {[
-                  { q: "How fast do I get my brand?", a: "Same day for most packages. The Ultimate Suite is delivered within 2 hours with priority." },
-                  { q: "What if I don't like the design?", a: "We revise until you love it. Unlimited revisions on all packages above $350." },
-                  { q: "Do I own everything you create?", a: "100%. Every file, every design, every word — it's yours forever. No licensing fees, no subscriptions." },
+                  { q: "How fast do I get my brand?", a: "Delivery depends on the scope. Your written project brief confirms the schedule; rush requests are subject to availability." },
+                  { q: "What if I don't like the design?", a: "Each package has a defined revision allowance in its project brief. Additional rounds can be quoted before work begins." },
+                  { q: "Do I own everything you create?", a: "You receive the approved final deliverables and usage rights stated in your agreement. Third-party fonts, photos and other licensed assets may have separate terms." },
                   { q: "I don't have a business yet. Can I still start?", a: "Absolutely. Most of our clients come to us with just an idea. We help you name it, brand it, and launch it." },
-                  { q: "What do I need to bring?", a: "Just your idea and your phone number. We handle everything else." },
-                  { q: "How is this so affordable?", a: "AI-powered design + expert human review. We pass the savings to you because we want Florida businesses to win." },
-                  { q: "Do you do websites?", a: "Yes! The Site Sales Solution ($1,200) includes a landing page. Full websites start at $1,500." },
-                  { q: "Can I add services later?", a: "Yes. Start with any package and upgrade anytime. We keep your brand files on record." },
+                  { q: "What do I need to bring?", a: "Bring your business idea, contact details, preferred colors or examples, and any logos, photos or text you already own. We will explain any other inputs needed." },
+                  { q: "How is this so affordable?", a: "AI-powered design + expert human review. We combine efficient tools with human design review and clearly scoped deliverables." },
+                  { q: "Do you do websites?", a: "Yes! The Site Sales Solution ($1,200) includes a landing page. Custom multi-page websites are quoted separately based on scope." },
+                  { q: "Can I add services later?", a: "Yes. We can quote additional services or upgrades as your business grows. Keep backups of all final files we deliver." },
                 ].map((faq, i) => (
                   <ScrollReveal key={i} delay={i * 0.06}>
                     <FaqItem question={faq.q} answer={faq.a} />
@@ -1728,9 +1728,9 @@ const App: React.FC = () => {
             <div className="max-w-[1600px] mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-10 sm:gap-16 text-xs leading-relaxed">
               <div className="col-span-2 space-y-6">
                 <div className="flex items-center gap-3">
-                  <img src="/xela-logo-new.png" alt="AleXelA Creative Branding Studio" className="h-10 sm:h-14 w-auto max-w-[160px] object-contain brightness-0 invert opacity-90" loading="lazy" width={140} height={56} />
+                  <img src="/xela-logo-new.png" alt="AleXelA Creative Branding Studio" className="h-10 sm:h-14 w-auto max-w-[160px] object-contain" loading="lazy" width={140} height={56} />
                 </div>
-                <p className="max-w-sm">Your full-service marketing team. Digital, print, everything. Brevard County / Space Coast, FL — serving all of Florida.</p>
+                <p className="max-w-sm">AleXelA — Passion to Profit Creative Branding Studio. Custom branding, design, print-ready art and launch guidance from Florida’s Space Coast.</p>
                 <a href="tel:3213759685" className="flex items-center gap-2 text-brand-teal hover:text-white transition-colors mt-2">
                   <Phone size={12} /> (321) 375-9685 — Call or Text Alex
                 </a>
@@ -1752,7 +1752,7 @@ const App: React.FC = () => {
                     <Globe size={14} /> <span className="text-[10px] font-bold uppercase tracking-widest">Google Business</span>
                   </a>
                   <span className="text-white/10">|</span>
-                  <a href="https://xela-creative-branding.vercel.app" className="flex items-center gap-1.5 text-stone-400 hover:text-brand-lavender transition-colors" aria-label="Website">
+                  <a href="https://alexela-passion-to-profit.vercel.app" className="flex items-center gap-1.5 text-stone-400 hover:text-brand-lavender transition-colors" aria-label="Website">
                     <ExternalLink size={14} /> <span className="text-[10px] font-bold uppercase tracking-widest">Website</span>
                   </a>
                 </div>
@@ -1762,7 +1762,7 @@ const App: React.FC = () => {
               <div>
                 <h4 className="text-white font-bold uppercase tracking-widest mb-4">Legal Disclaimer</h4>
                 <p className="mb-2">
-                  AleXelA is a branding automation tool, not a law firm. Information regarding LLC filing, business licenses, and insurance is for educational purposes only.
+                  AleXelA is a creative branding studio, not a law firm. Information regarding LLC filing, business licenses, and insurance is for educational purposes only.
                 </p>
                 <p>
                   Consult with a qualified attorney or tax professional for advice specific to your business situation.
