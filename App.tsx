@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
 import { LoadingOverlay } from './components/LoadingOverlay';
-import { XelaLogo } from './components/XelaLogo';
+import { AleXelALogo } from './components/XelaLogo';
 import { FloatingCTA } from './components/FloatingCTA';
 import SmartNav from './components/SmartNav';
 import MobileBottomNav from './components/MobileBottomNav';
@@ -658,7 +658,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const titles: Record<string, string> = {
-      landing: 'AleXelA Creative Branding Studio | Same-Day Brand Kits from $75',
+      landing: 'AleXelA Creative Branding Studio | Passion to Profit Creative Branding Studio',
       consult: 'Free Brand Consultation | AleXelA Creative Branding Studio',
       dashboard: 'Your Brand Dashboard | AleXelA Creative Branding Studio',
       chat: 'AI Brand Chat | AleXelA Creative Branding Studio',
@@ -1112,7 +1112,7 @@ const App: React.FC = () => {
                   No credit card. 3-minute quiz. Instant quote.
                 </p>
                 <div className="flex items-center gap-4 mt-3 text-[10px] font-bold uppercase tracking-widest text-white/40">
-                  <span className="flex items-center gap-1.5"><CheckCircle size={12} className="text-green-400" /> Money-back guarantee</span>
+                  <span className="flex items-center gap-1.5"><CheckCircle size={12} className="text-green-400" /> Written project terms</span>
                   <span className="flex items-center gap-1.5"><CheckCircle size={12} className="text-green-400" /> You own everything</span>
                   <span className="flex items-center gap-1.5 hidden sm:flex"><CheckCircle size={12} className="text-green-400" /> Rush options available</span>
                 </div>
