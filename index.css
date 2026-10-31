@@ -6,11 +6,11 @@
   --font-serif: "Cormorant Garamond", serif;
   --font-display: "Outfit", sans-serif;
 
-  --color-brand-teal: #00E0C6;
-  --color-brand-teal-dark: #00B8A2;
-  --color-brand-lavender: #D255FF;
-  --color-brand-lavender-light: #E085FF;
-  --color-brand-black: #111111;
+  --color-brand-teal: #00D9F5;
+  --color-brand-teal-dark: #008FCB;
+  --color-brand-lavender: #F5AD31;
+  --color-brand-lavender-light: #FFD46C;
+  --color-brand-black: #061528;
   --color-brand-gray: #F3F4F6;
   --color-brand-paper: #F5F2ED;
   --color-brand-ink: #1A1A1A;
@@ -586,3 +586,9 @@ body {
 #portfolio-peek,#pricing {scroll-margin-top:90px}
 #portfolio-peek {background-image:radial-gradient(ellipse at 50% 0%,rgba(186,42,248,.12),transparent 55%)}
 @media(max-width:640px){.alexela-cosmic-hero .alexela-hero-copy{padding:1.25rem}.alexela-cosmic-hero{min-height:85vh}}
+
+/* AleXelA master identity: electric cyan, flame orange, metallic gold and midnight blue. */
+:root { --alexela-gold: #F5BC50; --alexela-flame: #FF791B; --alexela-electric: #00D9F5; }
+.gradient-text { background-image: linear-gradient(110deg,#00d9f5 0%,#1473df 35%,#ff9b24 68%,#f7d778 100%); }
+.btn-primary { background-image: linear-gradient(110deg,#00c9ec,#37a5f8); box-shadow: 0 8px 26px rgba(0,180,255,.22); }
+.brand-flame-accent { background: linear-gradient(115deg,#ff7418,#ffbb48,#00c8f2); -webkit-background-clip:text; background-clip:text; color:transparent; }
