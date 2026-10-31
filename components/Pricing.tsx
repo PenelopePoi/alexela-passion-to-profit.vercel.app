@@ -10,20 +10,20 @@ interface PricingProps {
 
 const P = [
   { id:'cardcut',tier:'budget' as const,price:'$75',name:'CardCut Calibrated',desc:'A pro business card design + free online profile, ready in hours',icon:Printer,
-    f:['1 print-ready business card DESIGN file (300 DPI PDF, 3.5" × 2", CMYK — take to VistaPrint, Staples, Moo, or any local printer)','3 signature brand colors — exact hex codes + CMYK + Pantone values (1 primary, 1 accent, 1 neutral) — use forever on cards, signs, socials, trucks, invoices','2 licensed fonts — 1 bold headline + 1 body (Google Fonts, free for commercial use forever, no legal risk)','1 QR code (PNG + SVG) linking to a supplied website or profile; optional hosted profile subject to service terms','Digital delivery on the agreed schedule — approved final files supplied, print 100 / 500 / 5,000 copies at any shop, forever']},
+    f:['1 print-ready business card DESIGN file (300 DPI PDF, 3.5" × 2", CMYK — take to VistaPrint, Staples, Moo, or any local printer)','3 signature brand colors — exact hex codes + CMYK + Pantone values (1 primary, 1 accent, 1 neutral) — use forever on cards, signs, socials, trucks, invoices','2 commercially usable fonts — 1 headline + 1 body; licensing information included','1 QR code (PNG + SVG) linking to a supplied website or profile; optional hosted profile subject to service terms','Digital delivery on the agreed schedule — approved final files supplied, print 100 / 500 / 5,000 copies at any shop, forever']},
   { id:'promo',tier:'budget' as const,price:'$125',name:'Promotion Pal',desc:'Look like you\'ve been in business for years',icon:Star,
     f:['2 original logo concepts, 2 revision rounds, final PNG and SVG files','1 slogan + 1 mission statement (under 15 words each, custom written)','Full color palette — 5 hex codes (primary, accent, neutral, light, dark) + 2 licensed fonts (headline + body)','FL business name check on Sunbiz.org — we provide a preliminary public-record search; legal availability and trademark clearance are not guaranteed']},
   { id:'sticker',tier:'budget' as const,price:'$175',name:'Sticker System',desc:'Put your name on everything',icon:Scissors,
-    f:['2 custom vinyl sticker designs (die-cut, weatherproof, 3" size) — ready to print anywhere','1 business card design (same spec as CardCut — 3.5" × 2", 300 DPI, CMYK)','6 ready-to-use slogans (tested phrasing for social posts, trucks, signs)','All print files delivered: PDF + PNG + SVG + source files — yours forever']},
-  { id:'sales',tier:'premium' as const,price:'$350',name:'Selling Sales Set',desc:'Start getting customers this week',icon:ShoppingCart,pop:true,
-    f:['Everything in Sticker System (stickers, card, slogans, files)','1 written marketing plan PDF (4 pages — weekly action steps for 30 days)','1 flyer design (8.5" × 11", print-ready) + 5 ready-to-post ad copy blocks (for FB, Nextdoor, Google, flyers)','12 social media graphics (3 each for Facebook, Instagram, Nextdoor, Google Business)']},
+    f:['2 custom sticker designs sized for 3-inch production; physical durability depends on selected materials and printer','1 business card design (same spec as CardCut — 3.5" × 2", 300 DPI, CMYK)','6 ready-to-use slogans (tested phrasing for social posts, trucks, signs)','All print files delivered: PDF + PNG + SVG + source files — yours forever']},
+  { id:'sales',tier:'premium' as const,price:'$350',name:'Selling Sales Set',desc:'Create coordinated marketing materials to help reach customers',icon:ShoppingCart,pop:true,
+    f:['Everything in Sticker System (stickers, card, slogans, files)','1 written marketing plan PDF (4 pages — weekly action steps for 30 days)','1 flyer design (8.5" × 11", print-ready) + 5 ready-to-post ad copy blocks (for FB, Nextdoor, Google, flyers)','12 branded social graphics in agreed platform sizes']},
   { id:'rebellion',tier:'premium' as const,price:'$500',name:'Registered Rebellion',desc:'Brand identity plus Florida business-startup guidance (not legal filing services)',icon:Shield,
     f:['Everything in Selling Sales Set','1 Florida business launch roadmap PDF — step-by-step: LLC filing ($125), EIN (free), bank account, DBA, licenses, insurance','1 brand guidelines document (8 pages: logo usage, spacing, color codes, font rules, do\'s & don\'ts)','30-day content calendar (30 specific post ideas with captions + hashtags — you just post them)']},
-  { id:'passion',tier:'premium' as const,price:'$650',name:'Premiere Passion Pal',desc:'Full digital presence — emails, ads, everything',icon:MessageCircle,
-    f:['Everything in Registered Rebellion','5 email templates (welcome, follow-up, special offer, thank-you, review request) — ready to paste into Gmail','9 ad copy blocks (3 each for Facebook, Nextdoor, Google) — headline + body + call-to-action, tested phrasing','1 brand story document (500 words — written like a real human, not AI fluff — goes on your About page)']},
-  { id:'sovereign',tier:'elite' as const,price:'$850',name:'The Sovereignty Set',desc:'Look like a franchise on day one',icon:Globe,
+  { id:'passion',tier:'premium' as const,price:'$650',name:'Premiere Passion Pal',desc:'Coordinated email and advertising copy for your brand',icon:MessageCircle,
+    f:['Everything in Registered Rebellion','5 email templates (welcome, follow-up, special offer, thank-you, review request) — ready to paste into Gmail','9 advertising copy drafts (3 each for Facebook, Nextdoor and Google), each with headline, body and call-to-action','1 brand story document (500 words — written like a real human, not AI fluff — goes on your About page)']},
+  { id:'sovereign',tier:'elite' as const,price:'$850',name:'The Sovereignty Set',desc:'Build a consistent professional identity across channels',icon:Globe,
     f:['Everything in Premiere Passion Pal','1 Brand Bible (20-page master PDF — every color, font, logo variant, voice & tone rule, photo style)','1 Competitor Analysis (5 local competitors — their pricing, positioning, weak spots, how to beat them)','Print-ready production files plus an optional print quote for 250 business cards, 50 stickers and 25 flyers; printing and shipping billed separately']},
-  { id:'site',tier:'elite' as const,price:'$1,200',name:'Site Sales Solution',desc:'Customers find you and call you',icon:FileText,
+  { id:'site',tier:'elite' as const,price:'$1,200',name:'Site Sales Solution',desc:'Give prospective customers a clear place to learn about your services',icon:FileText,
     f:['Everything in The Sovereignty Set','1 mobile-friendly landing page with contact form and QR link; launch timing and third-party hosting costs confirmed in proposal','1 neighborhood ad strategy (3 targeted audiences, $5–15/day budgets, exact copy for FB + Nextdoor + Google)','1 short-form promotional video concept and edit, up to 30 seconds, using client-provided or licensed media']},
   { id:'enterprise',tier:'elite' as const,price:'$1,500',name:'Entrepreneurship Enterprise',desc:'From passion to profit — your launch toolkit',icon:Rocket,
     f:['Selected deliverables from Site Sales Solution, as agreed in the project brief','Coordinated launch asset set: logo variants, cards, flyers, social templates and one signage concept','Competitor positioning brief and 30-day advertising plan; advertising spend is separate','1 Startup Checklist PDF (40 items — LLC, EIN, bank, DBA, license, insurance, website, GBP, taxes, bookkeeping — every legal & operational box checked)']},
@@ -34,12 +34,13 @@ const P = [
 export const Pricing: React.FC<PricingProps> = ({ onSelectPackage }) => {
   const [hovered, setHovered] = useState<string|null>(null);
   const [selectedPackageId, setSelectedPackageId] = useState<string|null>(null);
+  const [showAllFeatures, setShowAllFeatures] = useState(true);
   const selectedPackage = P.find(p => p.id === selectedPackageId);
 
   const tiers = [
     { key:'budget' as const, label:'Get Started', sub:'Look professional from day one', range:'$75 – $175', pkgs: P.filter(p=>p.tier==='budget'),
       cls:'tier-section-budget bg-white/[0.03] border border-white/10', textCls:'text-white', priceCls:'text-brand-teal drop-shadow-[0_0_20px_rgba(0,224,198,0.35)]', accentCls:'text-brand-teal', btnCls:'bg-brand-teal text-brand-black hover:bg-white', featureAccent:'bg-brand-teal/15 text-brand-teal' },
-    { key:'premium' as const, label:'Get Customers', sub:'The engine that gets you paid', range:'$350 – $650', pkgs: P.filter(p=>p.tier==='premium'),
+    { key:'premium' as const, label:'Get Customers', sub:'Practical marketing assets for growing businesses', range:'$350 – $650', pkgs: P.filter(p=>p.tier==='premium'),
       cls:'tier-section-premium bg-white/[0.04] border border-white/10 bg-gradient-to-br from-brand-lavender/[0.06] to-transparent', textCls:'text-white', priceCls:'text-brand-lavender drop-shadow-[0_0_20px_rgba(210,85,255,0.4)]', accentCls:'text-brand-lavender', btnCls:'bg-brand-lavender text-white hover:bg-white hover:text-brand-lavender', featureAccent:'bg-brand-lavender/15 text-brand-lavender' },
     { key:'elite' as const, label:'Get Everything', sub:'Full business launch — passion to profit', range:'$850 – $2,000', pkgs: P.filter(p=>p.tier==='elite'),
       cls:'tier-section-elite', textCls:'text-white', priceCls:'gradient-text drop-shadow-[0_0_24px_rgba(210,85,255,0.5)]', accentCls:'text-brand-lavender', btnCls:'bg-brand-lavender text-white hover:bg-white hover:text-brand-lavender', featureAccent:'bg-brand-lavender/10 text-brand-lavender' },
@@ -52,7 +53,7 @@ export const Pricing: React.FC<PricingProps> = ({ onSelectPackage }) => {
         {selectedPackage && (
           <motion.div role="presentation" className="fixed inset-0 z-[100] bg-[#020914]/95 overflow-y-auto p-4 sm:p-10" initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}
             onMouseDown={e=>{if(e.target===e.currentTarget)setSelectedPackageId(null);}}>
-            <motion.section role="dialog" aria-modal="true" aria-labelledby="package-detail-title" className="max-w-3xl mx-auto bg-brand-black border border-brand-lavender/40 rounded-3xl p-6 sm:p-10 shadow-2xl"
+            <motion.section role="dialog" aria-modal="true" aria-labelledby="package-detail-title" aria-describedby="package-detail-description" className="max-w-3xl mx-auto bg-brand-black border border-brand-lavender/40 rounded-3xl p-6 sm:p-10 shadow-2xl"
               initial={{y:25,opacity:0}} animate={{y:0,opacity:1}} exit={{y:20,opacity:0}}>
               <div className="flex justify-between items-start gap-4">
                 <p className="text-brand-teal font-black text-xs uppercase tracking-widest">AleXelA — Passion to Profit</p>
@@ -60,7 +61,7 @@ export const Pricing: React.FC<PricingProps> = ({ onSelectPackage }) => {
               </div>
               <h2 id="package-detail-title" className="text-3xl sm:text-5xl font-serif font-bold text-white mt-5">{selectedPackage.name}</h2>
               <p className="text-brand-lavender text-3xl font-black mt-3">{selectedPackage.price} <span className="text-sm text-white/60">one-time starting price</span></p>
-              <p className="text-white/80 mt-5 leading-relaxed">{selectedPackage.desc}</p>
+              <p id="package-detail-description" className="text-white/80 mt-5 leading-relaxed">{selectedPackage.desc}</p>
               <h3 className="text-white font-black text-xl mt-9 mb-4">Detailed package inclusions</h3>
               <ol className="space-y-4">
                 {selectedPackage.f.map((feature,i)=>(
@@ -99,7 +100,7 @@ export const Pricing: React.FC<PricingProps> = ({ onSelectPackage }) => {
           <span className="gradient-text">to Profit.</span>
         </h2>
         <p className="text-lg text-white/60 max-w-2xl mx-auto font-medium leading-relaxed">
-          Get more calls. Look legit. Make money.<br className="hidden sm:block"/>
+          Get more calls. Present your business professionally and grow with purpose.<br className="hidden sm:block"/>
           Built for Florida entrepreneurs, creators and service businesses.
         </p>
         <p className="text-sm text-white/40 italic">"And whatsoever ye do, do it heartily, as to the Lord, and not unto men." — Colossians 3:23 (KJV)</p>
@@ -199,7 +200,7 @@ export const Pricing: React.FC<PricingProps> = ({ onSelectPackage }) => {
                   )}
 
                   {/* CTA */}
-                  <button onClick={()=>setSelectedPackageId(pkg.id)}
+                  <button onClick={()=>{setSelectedPackageId(pkg.id);}}
                     className={`w-full py-4 rounded-xl font-bold uppercase tracking-[0.12em] text-[10px] transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 active:shadow-md ${tier.btnCls}`}>
                     View Full Details <ArrowRight size={14}/>
                   </button>
@@ -263,7 +264,7 @@ export const Pricing: React.FC<PricingProps> = ({ onSelectPackage }) => {
             {[
               {name:'Rush Delivery',sub:'Priority review',price:'$49',desc:'Rush scheduling subject to project scope and availability',icon:Clock},
               {name:'Call Script',sub:'+ Voicemail',price:'$35',desc:'Know exactly what to say when the phone rings',icon:Phone},
-              {name:'5-Star Reviews',sub:'Automated',price:'$45',desc:'Review-request message templates and setup guidance; no review outcome guaranteed.',icon:Star},
+              {name:'Review Requests',sub:'Automated',price:'$45',desc:'Review-request message templates and setup guidance; no review outcome guaranteed.',icon:Star},
             ].map((a,i)=>(
               <div key={i} className="addon-card rounded-2xl p-6">
                 <div className="flex items-center gap-3 mb-4">
