@@ -10,25 +10,25 @@ interface PricingProps {
 
 const P = [
   { id:'cardcut',tier:'budget' as const,price:'$75',name:'CardCut Calibrated',desc:'A pro business card design + free online profile, ready in hours',icon:Printer,
-    f:['1 print-ready business card DESIGN file (300 DPI PDF, 3.5" × 2", CMYK — take to VistaPrint, Staples, Moo, or any local printer)','3 signature brand colors — exact hex codes + CMYK + Pantone values (1 primary, 1 accent, 1 neutral) — use forever on cards, signs, socials, trucks, invoices','2 licensed fonts — 1 bold headline + 1 body (Google Fonts, free for commercial use forever, no legal risk)','1 QR code (PNG + SVG) linking to your FREE 1-page AleXelA-hosted profile site (we build + host your own AleXelA-hosted profile page — no extra fee, ever)','Same-day digital delivery by email — you own the files, print 100 / 500 / 5,000 copies at any shop, forever']},
+    f:['1 print-ready business card DESIGN file (300 DPI PDF, 3.5" × 2", CMYK — take to VistaPrint, Staples, Moo, or any local printer)','3 signature brand colors — exact hex codes + CMYK + Pantone values (1 primary, 1 accent, 1 neutral) — use forever on cards, signs, socials, trucks, invoices','2 licensed fonts — 1 bold headline + 1 body (Google Fonts, free for commercial use forever, no legal risk)','1 QR code (PNG + SVG) linking to a supplied website or profile; optional hosted profile subject to service terms','Digital delivery on the agreed schedule — approved final files supplied, print 100 / 500 / 5,000 copies at any shop, forever']},
   { id:'promo',tier:'budget' as const,price:'$125',name:'Promotion Pal',desc:'Look like you\'ve been in business for years',icon:Star,
-    f:['3 unique logo options (PNG + SVG + transparent) — you pick your favorite, we finalize it','1 slogan + 1 mission statement (under 15 words each, custom written)','Full color palette — 5 hex codes (primary, accent, neutral, light, dark) + 2 licensed fonts (headline + body)','FL business name check on Sunbiz.org — we confirm your name is legally available before you register']},
+    f:['3 unique logo options (PNG + SVG + transparent) — you pick your favorite, we finalize it','1 slogan + 1 mission statement (under 15 words each, custom written)','Full color palette — 5 hex codes (primary, accent, neutral, light, dark) + 2 licensed fonts (headline + body)','FL business name check on Sunbiz.org — we provide a preliminary public-record search; legal availability and trademark clearance are not guaranteed']},
   { id:'sticker',tier:'budget' as const,price:'$175',name:'Sticker System',desc:'Put your name on everything',icon:Scissors,save:'Save $40',
     f:['2 custom vinyl sticker designs (die-cut, weatherproof, 3" size) — ready to print anywhere','1 business card design (same spec as CardCut — 3.5" × 2", 300 DPI, CMYK)','6 ready-to-use slogans (tested phrasing for social posts, trucks, signs)','All print files delivered: PDF + PNG + SVG + source files — yours forever']},
   { id:'sales',tier:'premium' as const,price:'$350',name:'Selling Sales Set',desc:'Start getting customers this week',icon:ShoppingCart,pop:true,save:'Save $175',
     f:['Everything in Sticker System (stickers, card, slogans, files)','1 written marketing plan PDF (4 pages — weekly action steps for 30 days)','1 flyer design (8.5" × 11", print-ready) + 5 ready-to-post ad copy blocks (for FB, Nextdoor, Google, flyers)','12 social media graphics (3 each for Facebook, Instagram, Nextdoor, Google Business)']},
-  { id:'rebellion',tier:'premium' as const,price:'$500',name:'Registered Rebellion',desc:'Look legit, be legit — LLC + brand + plan',icon:Shield,save:'Save $250',
+  { id:'rebellion',tier:'premium' as const,price:'$500',name:'Registered Rebellion',desc:'Brand identity plus Florida business-startup guidance (not legal filing services)',icon:Shield,save:'Save $250',
     f:['Everything in Selling Sales Set','1 Florida business launch roadmap PDF — step-by-step: LLC filing ($125), EIN (free), bank account, DBA, licenses, insurance','1 brand guidelines document (8 pages: logo usage, spacing, color codes, font rules, do\'s & don\'ts)','30-day content calendar (30 specific post ideas with captions + hashtags — you just post them)']},
   { id:'passion',tier:'premium' as const,price:'$650',name:'Premiere Passion Pal',desc:'Full digital presence — emails, ads, everything',icon:MessageCircle,save:'Save $350+',
     f:['Everything in Registered Rebellion','5 email templates (welcome, follow-up, special offer, thank-you, review request) — ready to paste into Gmail','9 ad copy blocks (3 each for Facebook, Nextdoor, Google) — headline + body + call-to-action, tested phrasing','1 brand story document (500 words — written like a real human, not AI fluff — goes on your About page)']},
   { id:'sovereign',tier:'elite' as const,price:'$850',name:'The Sovereignty Set',desc:'Look like a franchise on day one',icon:Globe,save:'Save $400+',
-    f:['Everything in Premiere Passion Pal','1 Brand Bible (20-page master PDF — every color, font, logo variant, voice & tone rule, photo style)','1 Competitor Analysis (5 local competitors — their pricing, positioning, weak spots, how to beat them)','PHYSICAL printed package shipped: 250 business cards + 50 stickers + 25 flyers (real paper, delivered to your door)']},
+    f:['Everything in Premiere Passion Pal','1 Brand Bible (20-page master PDF — every color, font, logo variant, voice & tone rule, photo style)','1 Competitor Analysis (5 local competitors — their pricing, positioning, weak spots, how to beat them)','Print-ready production files plus an optional print quote for 250 business cards, 50 stickers and 25 flyers; printing and shipping billed separately']},
   { id:'site',tier:'elite' as const,price:'$1,200',name:'Site Sales Solution',desc:'Customers find you and call you',icon:FileText,save:'Save $600+',
-    f:['Everything in The Sovereignty Set','1 landing page designed + deployed (live URL in 24 hrs — mobile-friendly, contact form, QR lead capture)','1 neighborhood ad strategy (3 targeted audiences, $5–15/day budgets, exact copy for FB + Nextdoor + Google)','1 thirty-second video ad (vertical 9:16 + square 1:1 — ready for Reels, TikTok, FB, Stories)']},
-  { id:'enterprise',tier:'elite' as const,price:'$1,500',name:'Entrepreneurship Enterprise',desc:'From pain to purpose — nothing left out',icon:Rocket,save:'Save $800+',
-    f:['Everything in Site Sales Solution','Every digital + print asset AleXelA offers (50+ files: logos, cards, flyers, signs, menus, door hangers, social templates, email banners)','1 Full Competitive Campaign (10 competitors analyzed, 30-day paid ad run template, $300/mo recommended budget)','1 Startup Checklist PDF (40 items — LLC, EIN, bank, DBA, license, insurance, website, GBP, taxes, bookkeeping — every legal & operational box checked)']},
-  { id:'ultimate',tier:'elite' as const,price:'$2,000',name:'Ultimate Premium Suite',desc:'THE I QUIT ACCELERATOR — everything, priority, lifetime',icon:Zap,save:'Save $1,200+',
-    f:['Every digital deliverable AleXelA offers (100+ files — nothing held back)','PHYSICAL: 500 printed premium business cards + 100 die-cut stickers + 100 full-color flyers — shipped to your door (real print, not just files)','Landing page (live) + 30-sec video ad + full multi-channel ad strategy + 30-day done-for-you campaign','PRIORITY: 2-hour rush delivery on everything + LIFETIME access (come back anytime for updates, tweaks, new files — forever, no extra fee)']},
+    f:['Everything in The Sovereignty Set','1 mobile-friendly landing page with contact form and QR link; launch timing and third-party hosting costs confirmed in proposal','1 neighborhood ad strategy (3 targeted audiences, $5–15/day budgets, exact copy for FB + Nextdoor + Google)','1 short-form promotional video concept and edit, up to 30 seconds, using client-provided or licensed media']},
+  { id:'enterprise',tier:'elite' as const,price:'$1,500',name:'Entrepreneurship Enterprise',desc:'From passion to profit — your launch toolkit',icon:Rocket,save:'Save $800+',
+    f:['Selected deliverables from Site Sales Solution, as agreed in the project brief','Coordinated launch asset set: logo variants, cards, flyers, social templates and one signage concept','Competitor positioning brief and 30-day advertising plan; advertising spend is separate','1 Startup Checklist PDF (40 items — LLC, EIN, bank, DBA, license, insurance, website, GBP, taxes, bookkeeping — every legal & operational box checked)']},
+  { id:'ultimate',tier:'elite' as const,price:'$2,000',name:'Ultimate Premium Suite',desc:'Passion to Profit — coordinated premium launch',icon:Zap,save:'Save $1,200+',
+    f:['A coordinated premium launch kit with an agreed written deliverables checklist','Print-ready files for 500 business cards, 100 stickers and 100 flyers; physical production and shipping quoted separately','Landing page (live) + 30-sec video ad + full multi-channel ad strategy + 30-day done-for-you campaign','PRIORITY: scheduled delivery milestones, 2 revision rounds per deliverable, and 30 days of post-delivery corrections; new requests quoted separately']},
 ];
 
 export const Pricing: React.FC<PricingProps> = ({ onSelectPackage }) => {
@@ -39,7 +39,7 @@ export const Pricing: React.FC<PricingProps> = ({ onSelectPackage }) => {
       cls:'tier-section-budget bg-white/[0.03] border border-white/10', textCls:'text-white', priceCls:'text-brand-teal drop-shadow-[0_0_20px_rgba(0,224,198,0.35)]', accentCls:'text-brand-teal', btnCls:'bg-brand-teal text-brand-black hover:bg-white', featureAccent:'bg-brand-teal/15 text-brand-teal' },
     { key:'premium' as const, label:'Get Customers', sub:'The engine that gets you paid', range:'$350 – $650', pkgs: P.filter(p=>p.tier==='premium'),
       cls:'tier-section-premium bg-white/[0.04] border border-white/10 bg-gradient-to-br from-brand-lavender/[0.06] to-transparent', textCls:'text-white', priceCls:'text-brand-lavender drop-shadow-[0_0_20px_rgba(210,85,255,0.4)]', accentCls:'text-brand-lavender', btnCls:'bg-brand-lavender text-white hover:bg-white hover:text-brand-lavender', featureAccent:'bg-brand-lavender/15 text-brand-lavender' },
-    { key:'elite' as const, label:'Get Everything', sub:'Full business launch — pain to purpose', range:'$850 – $2,000', pkgs: P.filter(p=>p.tier==='elite'),
+    { key:'elite' as const, label:'Get Everything', sub:'Full business launch — passion to profit', range:'$850 – $2,000', pkgs: P.filter(p=>p.tier==='elite'),
       cls:'tier-section-elite', textCls:'text-white', priceCls:'gradient-text drop-shadow-[0_0_24px_rgba(210,85,255,0.5)]', accentCls:'text-brand-lavender', btnCls:'bg-brand-lavender text-white hover:bg-white hover:text-brand-lavender', featureAccent:'bg-brand-lavender/10 text-brand-lavender' },
   ];
 
@@ -50,17 +50,17 @@ export const Pricing: React.FC<PricingProps> = ({ onSelectPackage }) => {
       <motion.div initial={{opacity:0,y:40}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{duration:0.7}}
         className="text-center mb-16 space-y-8">
         <span className="section-label text-brand-teal inline-block px-5 py-2 rounded-full bg-brand-teal/5 border border-brand-teal/15">
-          The "I Quit" Accelerator
+          AleXelA Passion to Profit Packages
         </span>
         <h2 className="text-4xl sm:text-6xl md:text-8xl tier-title text-white leading-[0.85]">
-          From Pain<br/>
-          <span className="gradient-text">to Purpose.</span>
+          From Passion<br/>
+          <span className="gradient-text">to Profit.</span>
         </h2>
         <p className="text-lg text-white/60 max-w-2xl mx-auto font-medium leading-relaxed">
           Get more calls. Look legit. Make money.<br className="hidden sm:block"/>
-          Built for Florida service businesses — delivered today.
+          Built for Florida entrepreneurs, creators and service businesses.
         </p>
-        <p className="text-sm text-white/40 italic">"Whatever you do, work at it with all your heart, as working for the Lord." — Col 3:23</p>
+        <p className="text-sm text-white/40 italic">"And whatsoever ye do, do it heartily, as to the Lord, and not unto men." — Colossians 3:23 (KJV)</p>
       </motion.div>
 
       {/* ════ URGENCY ════ */}
@@ -68,7 +68,7 @@ export const Pricing: React.FC<PricingProps> = ({ onSelectPackage }) => {
         className="urgency-bar text-center mb-20 py-4 px-8 bg-brand-black rounded-2xl max-w-xl mx-auto shadow-2xl">
         <p className="text-white text-[13px] font-bold tracking-wide relative z-10">
           <Clock size={13} className="inline mr-2 -mt-0.5 text-brand-teal"/>
-          Pricing locked for today. <span className="text-brand-teal">Goes up after this visit.</span>
+          Transparent starting prices. <span className="text-brand-teal">Custom quotes for larger projects.</span>
         </p>
       </motion.div>
 
@@ -162,7 +162,7 @@ export const Pricing: React.FC<PricingProps> = ({ onSelectPackage }) => {
                     Get Started <ArrowRight size={14}/>
                   </button>
                   <p className="text-center text-[10px] text-white/35 mt-2.5 font-medium flex items-center justify-center gap-1.5">
-                    <Shield size={10} className="text-green-500/70" /> 100% money-back guarantee
+                    <Shield size={10} className="text-green-500/70" /> Clear scope · Written revision terms
                   </p>
                 </motion.div>
               );
@@ -219,9 +219,9 @@ export const Pricing: React.FC<PricingProps> = ({ onSelectPackage }) => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto">
             {[
-              {name:'Rush Delivery',sub:'2 hours',price:'$49',desc:'Get your brand today, not tomorrow',icon:Clock},
+              {name:'Rush Delivery',sub:'Priority review',price:'$49',desc:'Rush scheduling subject to project scope and availability',icon:Clock},
               {name:'Call Script',sub:'+ Voicemail',price:'$35',desc:'Know exactly what to say when the phone rings',icon:Phone},
-              {name:'5-Star Reviews',sub:'Automated',price:'$45',desc:'More reviews = more calls. Set it and forget it.',icon:Star},
+              {name:'5-Star Reviews',sub:'Automated',price:'$45',desc:'Review-request message templates and setup guidance; no review outcome guaranteed.',icon:Star},
             ].map((a,i)=>(
               <div key={i} className="addon-card rounded-2xl p-6">
                 <div className="flex items-center gap-3 mb-4">
@@ -249,9 +249,9 @@ export const Pricing: React.FC<PricingProps> = ({ onSelectPackage }) => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto">
           {[
-            {name:'Social Media',price:'$150',desc:'3 posts/week, 2 platforms. We run your socials.',icon:MessageCircle},
+            {name:'Social Media',price:'$150',desc:'3 posts/week, 2 platforms. Monthly content preparation; publishing scope agreed in advance.',icon:MessageCircle},
             {name:'Google Business',price:'$99',desc:'Weekly posts, photos, review responses. Stay on top.',icon:Globe},
-            {name:'FB + Nextdoor Ads',price:'$199',desc:'Targeted ads to your service area. We handle it all.',icon:TrendingUp},
+            {name:'FB + Nextdoor Ads',price:'$199',desc:'Targeted ads to your service area. Campaign setup and optimization; ad spend is extra.',icon:TrendingUp},
           ].map((m,i)=>(
             <div key={i} className="monthly-card bg-white/[0.04] rounded-2xl p-6 border border-white/10 hover:border-brand-lavender/30 transition-colors">
               <div className="flex items-center gap-3 mb-4">
@@ -274,7 +274,7 @@ export const Pricing: React.FC<PricingProps> = ({ onSelectPackage }) => {
           {[
             {icon:Shield,label:'Secure Payments',sub:'Zelle · Cash App · Stripe · Cash'},
             {icon:MessageCircle,label:'Built for Florida',sub:'Service businesses · Contractors · Creators'},
-            {icon:Clock,label:'Same-Day Delivery',sub:'Walk in with an idea, leave with a brand'},
+            {icon:Clock,label:'Agreed Delivery Schedule',sub:'Clear timelines and deliverables agreed before work begins'},
           ].map((t,i)=>(
             <div key={i} className="flex items-center gap-3">
               <div className="w-11 h-11 rounded-xl bg-white/[0.05] shadow-md border border-white/10 flex items-center justify-center text-brand-teal"><t.icon size={20}/></div>
