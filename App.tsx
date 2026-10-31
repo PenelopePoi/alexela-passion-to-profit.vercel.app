@@ -375,8 +375,13 @@ const IntakeGallery: React.FC = () => {
 };
 
 /* ── Tagline Rotator ── */
+const passionMission = "Stop working only to build someone else's dream while your own talents go unfulfilled. Do what you love, develop a real business around it, and discover how your passion can become profitable.";
+
 const taglines = [
+  "From Passion to Profit.",
+  "From Idea to Income.",
   "From Pain to Purpose.",
+  "FIRE YOUR BOSS!",
   "Brand It. Launch It. Own It.",
   "Look Legit. Get Paid.",
   "Your Brand, Ready Today.",
@@ -1198,12 +1203,21 @@ const App: React.FC = () => {
             </div>
           </div>
 
+          <section aria-label="AleXelA mission" className="bg-brand-black text-center px-5 py-10 border-t border-white/10">
+            <p className="text-brand-teal font-black uppercase tracking-[0.2em] text-sm sm:text-lg">AleXelA — Passion to Profit Creative Branding Studio</p>
+            <h2 className="text-white font-black text-2xl sm:text-4xl mt-4">From Passion to Profit.</h2>
+            <p className="text-white/80 mt-2 font-semibold">From Idea to Income. &nbsp; From Pain to Purpose.</p>
+            <p className="text-brand-teal text-2xl sm:text-4xl font-black mt-5">FIRE YOUR BOSS!</p>
+            <p className="text-white/75 max-w-2xl mx-auto mt-4 leading-relaxed">{passionMission}</p>
+            <blockquote className="text-white/70 italic max-w-2xl mx-auto mt-6">“And whatsoever ye do, do it heartily, as to the Lord, and not unto men.” <cite className="not-italic text-brand-teal">— Colossians 3:23 (KJV)</cite></blockquote>
+          </section>
+
           {/* ═══════════ SCROLLING MARQUEE STRIP ═══════════ */}
           <div className="bg-brand-black py-3 overflow-hidden border-y border-white/5">
             <div className="animate-marquee flex whitespace-nowrap">
               {[...Array(3)].map((_, rep) => (
                 <span key={rep} className="text-[10px] font-black uppercase tracking-[0.4em] text-brand-teal mx-0 shrink-0">
-                  Rush Options Available&nbsp;&nbsp;·&nbsp;&nbsp;AI-Powered Branding&nbsp;&nbsp;·&nbsp;&nbsp;From Pain to Purpose&nbsp;&nbsp;·&nbsp;&nbsp;Look Legit Get Paid&nbsp;&nbsp;·&nbsp;&nbsp;Space Coast FL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  From Passion to Profit&nbsp;&nbsp;·&nbsp;&nbsp;From Idea to Income&nbsp;&nbsp;·&nbsp;&nbsp;From Pain to Purpose&nbsp;&nbsp;·&nbsp;&nbsp;FIRE YOUR BOSS!&nbsp;&nbsp;·&nbsp;&nbsp;AI-Powered Branding&nbsp;&nbsp;·&nbsp;&nbsp;Space Coast FL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </span>
               ))}
             </div>
@@ -1403,7 +1417,7 @@ const App: React.FC = () => {
 
               <div className="grid md:grid-cols-2 gap-8">
                 {[
-                  { icon: "✦", title: "Built With Integrity", quote: "Whatever you do, work at it with all your heart, as working for the Lord, not for human masters.", source: "Colossians 3:23" },
+                  { icon: "✦", title: "Built With Integrity", quote: "And whatsoever ye do, do it heartily, as to the Lord, and not unto men.", source: "Colossians 3:23" },
                   { icon: "✦", title: "Your Brand, Your Future", quote: "We don't cut corners. Every logo, every flyer, every word — crafted like it's for our own business. Because your success is our success.", source: "The AleXelA Promise" },
                   { icon: "✦", title: "AI + Human Heart", quote: "Technology handles the speed. We bring the soul. Every brand gets the same care — whether it's a $75 card set or a $2,000 full launch.", source: "Our Approach" },
                   { icon: "✦", title: "Florida Entrepreneurs First", quote: "We built AleXelA for the hustlers, the dreamers, the people working two jobs while building something on the side. You deserve to look legit.", source: "Why We Exist" },
