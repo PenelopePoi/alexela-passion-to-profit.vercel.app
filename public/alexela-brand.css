@@ -1,0 +1,22 @@
+/* Shared master identity for standalone pages; never applied to customer artwork. */
+:root { --teal:#00d9f5; --teal-dark:#00a8cc; --black:#061528; --paper:#081c30; --paper-dark:#102b42; --lavender:#f5bc50; --gray:#c3d1df; --gray-light:#35536a; }
+body { color:#f1f5f9; background:#061528; background-image:radial-gradient(ellipse at 90% 0%,#00d9f51c,transparent 45%),radial-gradient(ellipse at 0% 55%,#ff791b15,transparent 45%); }
+header,.header,footer,.footer { background:#061528; color:#f1f5f9; border-color:#00d9f544; }
+header nav a { color:#f1f5f9; }
+header img,.header-logo img,.nj-logo { object-fit:contain; height:88px; width:auto; max-width:100%; }
+.hero,.cta-section { background:linear-gradient(125deg,#061528,#10354e,#342316); color:#fff; }
+.hero h1,.content h2,.section-title,.brand-teal { color:#00d9f5; }
+.content h3,.brand-peach,.pricing-card .price,.budget-price,.header-brand span { color:#f5bc50; }
+.pricing-card,.card-option,.budget-card,.service-option,.nj-step { background:#102b42; color:#f1f5f9; border-color:#42637a; }
+.hero .cta-btn,.cta-btn,.submit-btn,.nj-cta { background:#00d9f5; color:#061528; }
+input:not([type=checkbox]):not([type=radio]),select,textarea { background-color:#102b42; color:#f1f5f9; border-color:#42637a; }
+input:focus,select:focus,textarea:focus { background-color:#102b42; color:#fff; border-color:#00d9f5; }
+input::placeholder,textarea::placeholder { color:#adc2d4; }
+select option { background:#102b42; color:#f1f5f9; }
+.card-option:hover,.budget-card:hover,.service-option:hover { background:#183d55; border-color:#f5bc50; }
+.card-grid input:checked + .card-option,.budget-grid input:checked + .budget-card { background:#173e53; color:#fff; border-color:#00d9f5; }
+.nj-h1,.form-label,label,.section-header { color:#f1f5f9; }
+.nj-h1 span,.nj-phone,.footer a { color:#00d9f5; }
+.nj-p,.nj-step p,.hint,.subtitle,.section-desc { color:#c3d1df; }
+a:focus-visible,button:focus-visible { outline:2px solid #f5bc50; outline-offset:4px; }
+@media(max-width:600px) { header img,.header-logo img,.nj-logo { height:72px; } }

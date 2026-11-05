@@ -305,7 +305,7 @@ export const ClientCRM: React.FC<ClientCRMProps> = ({ input, strategy }) => {
         </button>
       ))}
       <div className="ml-auto text-xs text-white/30 font-black uppercase tracking-widest">
-        XELA CRM
+        AleXelA CRM
       </div>
     </div>
   );

@@ -68,10 +68,10 @@ export const LicenseModal: React.FC<LicenseModalProps> = ({ isOpen, onClose, onP
                 <Sparkles size={12} className="inline mr-1" /> Unlock Studio Cloning
               </div>
               <h2 className="text-3xl md:text-5xl font-serif font-black text-white mb-3">
-                Get Your Own XELA Studio
+                Get Your Own AleXelA Studio
               </h2>
               <p className="text-white/60 text-base md:text-lg max-w-2xl mx-auto">
-                Clone the XELA template, customize it for your own brand, and start delivering to clients within hours. Choose the license that fits your business.
+                Clone the AleXelA template, customize it for your own brand, and start delivering to clients within hours. Choose the license that fits your business.
               </p>
             </div>
 

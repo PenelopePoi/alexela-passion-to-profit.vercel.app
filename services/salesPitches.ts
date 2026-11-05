@@ -1,5 +1,5 @@
 /**
- * XELA Creative Branding Studio — Sales Pitch Library
+ * AleXelA Creative Branding Studio — Sales Pitch Library
  *
  * 50 pre-written, conversational responses to the most common
  * client questions and objections. Designed to build trust and
@@ -204,7 +204,7 @@ export const SALES_PITCHES: SalesPitch[] = [
     category: 'credibility-check',
     triggerQuestions: ['real business', 'legit', 'are you actually', 'who are you', 'verify you'],
     pitch:
-      "Yes — XELA Creative Branding Studio is a registered Florida LLC, run by Alex, with a real phone number (321) 375-9685 you can call right now. We're not a faceless storefront — Alex puts her actual name on every package that ships.",
+      "Yes — AleXelA Creative Branding Studio is a Florida creative branding business run by Alex, with a real phone number (321) 375-9685 you can call right now. We're not a faceless storefront — Alex puts her actual name on every package that ships.",
     followUp: 'Want our LLC number or to hop on a quick intro call first?',
   },
   {
@@ -300,7 +300,7 @@ export const SALES_PITCHES: SalesPitch[] = [
     category: 'trust-building',
     triggerQuestions: ['tell me about you', 'who are you', 'about yourselves', 'your story'],
     pitch:
-      "Alex runs XELA out of Florida — built it because we kept watching small businesses get priced out of professional branding by agencies that didn't even care about them. Our mission is simple: make every business look like it belongs at the top, no matter their budget.",
+      "Alex runs AleXelA out of Florida — built it because we kept watching small businesses get priced out of professional branding by agencies that didn't even care about them. Our mission is simple: make every business look like it belongs at the top, no matter their budget.",
     followUp: "What's the story of how you got to needing a brand right now?",
   },
   {
@@ -316,7 +316,7 @@ export const SALES_PITCHES: SalesPitch[] = [
     category: 'trust-building',
     triggerQuestions: ['why did you start', 'founding story', 'how did xela begin', 'origin'],
     pitch:
-      "We started XELA because we kept watching friends with real businesses give up on branding — they couldn't afford an agency, didn't trust a freelancer, and Canva left them feeling stuck. We wanted a third path that was fast, affordable, and still felt like real care. So we built it.",
+      "We started AleXelA because we kept watching friends with real businesses give up on branding — they couldn't afford an agency, didn't trust a freelancer, and Canva left them feeling stuck. We wanted a third path that was fast, affordable, and still felt like real care. So we built it.",
     followUp: 'Have you been stuck in that same place yourself?',
   },
   {

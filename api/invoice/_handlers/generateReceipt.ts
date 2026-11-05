@@ -79,7 +79,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       receiptNumber,
       generatedAt: now,
       business: {
-        name: 'XELA Creative Branding Studio',
+        name: 'AleXelA Creative Branding Studio',
         phone: '(321) 375-9685',
         location: 'Brevard County, FL',
       },

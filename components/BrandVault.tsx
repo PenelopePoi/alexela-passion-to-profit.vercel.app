@@ -63,7 +63,7 @@ export const BrandVault: React.FC<BrandVaultProps> = ({ input, strategy, logoCan
 
       const vault = {
         exportedAt: new Date().toISOString(),
-        generator: 'XELA Creative Branding Studio',
+        generator: 'AleXelA Creative Branding Studio',
         version: '1.0',
         brandInput: input,
         brandStrategy: strategy,

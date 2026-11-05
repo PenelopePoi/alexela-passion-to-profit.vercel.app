@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://xela-creative-branding.vercel.app/sitemap.xml
-Sitemap: https://xela-creative-branding.vercel.app/seo/sitemap-services.xml
+Sitemap: https://alexela-passion-to-profit.vercel.app/sitemap.xml
+Sitemap: https://alexela-passion-to-profit.vercel.app/seo/sitemap-services.xml

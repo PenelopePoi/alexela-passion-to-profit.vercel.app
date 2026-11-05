@@ -256,7 +256,7 @@ export const InputForm: React.FC<InputFormProps> = ({ initialData, onSubmit, onS
           <button
             type="button"
             onClick={handleSave}
-            className={`flex items-center gap-2 px-4 py-2 rounded-full bg-stone-100 font-black uppercase tracking-widest text-[10px] transition-all hover:bg-brand-teal hover:text-white ${saveMessage ? 'text-green-600' : 'text-white/60'}`}
+            className={`flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 font-black uppercase tracking-widest text-[10px] transition-all hover:bg-brand-teal hover:text-white ${saveMessage ? 'text-green-600' : 'text-white/60'}`}
           >
             {saveMessage ? <CheckCircle2 size={14} /> : <Save size={14} />} 
             {saveMessage || 'Save Progress'}
@@ -264,7 +264,7 @@ export const InputForm: React.FC<InputFormProps> = ({ initialData, onSubmit, onS
       </div>
 
       <div className="flex justify-between relative">
-        <div className="absolute top-1/2 left-0 w-full h-0.5 bg-stone-100 -translate-y-1/2 z-0"></div>
+        <div className="absolute top-1/2 left-0 w-full h-0.5 bg-white/10 -translate-y-1/2 z-0"></div>
         <div className="absolute top-1/2 left-0 h-0.5 bg-brand-teal -translate-y-1/2 z-0 transition-all duration-700 ease-out" style={{ width: `${(currentStep / (STEPS.length - 1)) * 100}%` }}></div>
         {STEPS.map((step, idx) => {
           const isActive = idx === currentStep;
@@ -273,12 +273,12 @@ export const InputForm: React.FC<InputFormProps> = ({ initialData, onSubmit, onS
             <div key={step.id} className="relative z-10 flex flex-col items-center group cursor-pointer" onClick={() => idx < currentStep && setCurrentStep(idx)}>
               <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-500 border-2 ${
                 isActive ? 'bg-brand-black border-brand-black text-white scale-110 shadow-lg ring-4 ring-brand-black/10 animate-pulse' :
-                isCompleted ? 'bg-brand-teal border-brand-teal text-white hover:scale-105' : 'bg-white border-stone-200 text-stone-300'
+                isCompleted ? 'bg-brand-teal border-brand-teal text-white hover:scale-105' : 'bg-brand-black border-white/15 text-white/60'
               }`}>
                 {isCompleted ? <CheckCircle2 size={20} /> : <step.icon size={16} />}
               </div>
               <div className={`absolute top-12 whitespace-nowrap text-center transition-all duration-300 ${isActive ? 'opacity-100 translate-y-0' : isCompleted ? 'opacity-70 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'}`}>
-                  <p className={`text-[10px] font-black uppercase tracking-widest ${isActive ? 'text-brand-black' : 'text-brand-teal'}`}>{step.title}</p>
+                  <p className={`text-[10px] font-black uppercase tracking-widest ${isActive ? 'text-white' : 'text-brand-teal'}`}>{step.title}</p>
                   {isActive && <p className="text-[8px] text-white/40 mt-0.5">{step.desc}</p>}
               </div>
             </div>
@@ -373,7 +373,7 @@ export const InputForm: React.FC<InputFormProps> = ({ initialData, onSubmit, onS
                           ))
                         ) : (
                           <div
-                            className="p-4 hover:bg-stone-50 cursor-pointer font-bold text-sm text-brand-teal"
+                            className="p-4 hover:bg-white/5 cursor-pointer font-bold text-sm text-brand-teal"
                             onMouseDown={() => handleAddIndustry(industrySearch.trim())}
                           >
                             + Add "{industrySearch}" — your niche, your rules
@@ -424,8 +424,8 @@ export const InputForm: React.FC<InputFormProps> = ({ initialData, onSubmit, onS
 
               {/* Brand promise */}
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}
-                className="text-center pt-4 border-t border-stone-100 mt-6">
-                <p className="text-[10px] text-stone-300 font-bold uppercase tracking-widest">
+                className="text-center pt-4 border-t border-white/10 mt-6">
+                <p className="text-[10px] text-white/60 font-bold uppercase tracking-widest">
                   "Whatever you do, work at it with all your heart" — Col 3:23
                 </p>
               </motion.div>
@@ -470,9 +470,9 @@ export const InputForm: React.FC<InputFormProps> = ({ initialData, onSubmit, onS
                   </select>
                 </div>
                 {formData.companyName && (
-                  <div className="flex items-center gap-3 px-4 py-3 bg-stone-50 rounded-xl">
+                  <div className="flex items-center gap-3 px-4 py-3 bg-white/5 rounded-xl">
                     <span className="text-[9px] font-black text-white/40 uppercase tracking-widest">Preview:</span>
-                    <span className="text-lg font-serif font-black text-brand-black">
+                    <span className="text-lg font-serif font-black text-white">
                       {formData.companyName}{formData.businessSuffix ? ` ${formData.businessSuffix}` : ''}
                     </span>
                   </div>
@@ -485,7 +485,7 @@ export const InputForm: React.FC<InputFormProps> = ({ initialData, onSubmit, onS
                   <label className="text-[10px] font-black text-white/40 uppercase tracking-widest ml-2">Existing Motto / Slogan</label>
                   <input
                     type="text"
-                    className="w-full p-4 rounded-xl border border-stone-200 text-sm focus:border-brand-teal outline-none font-bold"
+                    className="w-full p-4 rounded-xl bg-brand-black text-white border border-white/15 text-sm focus:border-brand-teal outline-none font-bold"
                     placeholder="Got one? Drop it. No? We'll create one."
                     value={formData.existingMotto || ''}
                     onChange={(e) => setFormData({...formData, existingMotto: e.target.value})}
@@ -495,7 +495,7 @@ export const InputForm: React.FC<InputFormProps> = ({ initialData, onSubmit, onS
                   <label className="text-[10px] font-black text-white/40 uppercase tracking-widest ml-2">Existing Tagline</label>
                   <input
                     type="text"
-                    className="w-full p-4 rounded-xl border border-stone-200 text-sm focus:border-brand-teal outline-none font-bold"
+                    className="w-full p-4 rounded-xl bg-brand-black text-white border border-white/15 text-sm focus:border-brand-teal outline-none font-bold"
                     placeholder="A catchphrase, a hook, your elevator pitch"
                     value={formData.existingTagline || ''}
                     onChange={(e) => setFormData({...formData, existingTagline: e.target.value})}
@@ -503,7 +503,7 @@ export const InputForm: React.FC<InputFormProps> = ({ initialData, onSubmit, onS
                 </div>
               </div>
 
-              <div className="p-8 bg-stone-50 rounded-[2.5rem] border border-stone-200 border-dashed">
+              <div className="p-8 bg-white/5 rounded-[2.5rem] border border-white/15 border-dashed">
                 <div className="mb-6 space-y-4">
                   <div className="flex justify-between items-center">
                     <h4 className="text-xs font-black uppercase tracking-widest text-white/40">Stuck? Let the AI throw some names at the wall.</h4>
@@ -513,7 +513,7 @@ export const InputForm: React.FC<InputFormProps> = ({ initialData, onSubmit, onS
                     <input
                       type="text"
                       placeholder="Vibes, keywords, feelings... (e.g. sharp, fresh, elite)"
-                      className="flex-1 p-3 rounded-xl border border-stone-200 text-sm focus:border-brand-teal outline-none"
+                      className="flex-1 p-3 rounded-xl border border-white/15 text-sm focus:border-brand-teal outline-none"
                       value={nameKeywords}
                       onChange={(e) => setNameKeywords(e.target.value)}
                       onKeyDown={(e) => e.key === 'Enter' && handleGenerateNames()}
@@ -537,7 +537,7 @@ export const InputForm: React.FC<InputFormProps> = ({ initialData, onSubmit, onS
                         <button
                           key={name}
                           onClick={() => setFormData({...formData, companyName: name})}
-                          className={`text-left p-4 rounded-xl border-2 transition-all font-bold text-sm ${formData.companyName === name ? 'bg-brand-black border-brand-black text-white shadow-lg' : 'bg-white border-stone-100 hover:border-brand-teal'}`}
+                          className={`text-left p-4 rounded-xl border-2 transition-all font-bold text-sm ${formData.companyName === name ? 'bg-brand-black border-brand-black text-white shadow-lg' : 'bg-white border-white/10 hover:border-brand-teal'}`}
                         >
                           {name}
                         </button>
@@ -607,7 +607,7 @@ export const InputForm: React.FC<InputFormProps> = ({ initialData, onSubmit, onS
                 </label>
 
                 {/* Selected Services — the goods */}
-                <div className="flex flex-wrap gap-2 mb-4 min-h-[40px] p-3 rounded-2xl bg-stone-50/50 border border-dashed border-stone-200">
+                <div className="flex flex-wrap gap-2 mb-4 min-h-[40px] p-3 rounded-2xl bg-white/5/50 border border-dashed border-white/15">
                     {formData.services.length === 0 && (
                       <span className="text-sm text-white/40 font-bold self-center px-2 italic">
                         Nothing here yet — let's fix that, shall we?
@@ -627,7 +627,7 @@ export const InputForm: React.FC<InputFormProps> = ({ initialData, onSubmit, onS
                 </div>
 
                 {/* Quick-Add from Package Deliverables — seamless cross-package picker */}
-                <div className="p-5 bg-gradient-to-br from-stone-50 to-white rounded-2xl border border-stone-100 space-y-4">
+                <div className="p-5 bg-gradient-to-br from-stone-50 to-white rounded-2xl border border-white/10 space-y-4">
                   <div className="flex items-center justify-between">
                     <p className="text-[10px] font-black uppercase tracking-widest text-white/40 flex items-center gap-2">
                       <Sparkles size={12} className="text-brand-lavender" /> Quick-add from our packages
@@ -653,7 +653,7 @@ export const InputForm: React.FC<InputFormProps> = ({ initialData, onSubmit, onS
                                 className={`text-left px-3 py-2 rounded-lg text-[10px] font-bold transition-all flex items-center gap-2 ${
                                   isSelected
                                     ? 'bg-stone-900 text-white cursor-default'
-                                    : 'bg-white border border-stone-100 text-stone-600 hover:bg-stone-900 hover:text-white hover:border-stone-900 hover:shadow-md'
+                                    : 'bg-white border border-white/10 text-white/75 hover:bg-stone-900 hover:text-white hover:border-stone-900 hover:shadow-md'
                                 }`}
                               >
                                 {isSelected ? <Check size={10} /> : <Plus size={10} className="opacity-40" />}
@@ -678,7 +678,7 @@ export const InputForm: React.FC<InputFormProps> = ({ initialData, onSubmit, onS
                            <button
                              key={s}
                              onClick={() => handleAddService(s)}
-                             className="px-3 py-1.5 rounded-lg border border-stone-200 bg-stone-50 text-xs font-bold text-stone-600 hover:bg-brand-black hover:text-white hover:border-brand-black transition-all flex items-center gap-1"
+                             className="px-3 py-1.5 rounded-lg border border-white/15 bg-white/5 text-xs font-bold text-white/75 hover:bg-brand-black hover:text-white hover:border-brand-black transition-all flex items-center gap-1"
                            >
                              <Plus size={10} /> {s}
                            </button>
@@ -691,7 +691,7 @@ export const InputForm: React.FC<InputFormProps> = ({ initialData, onSubmit, onS
                     <input
                       type="text"
                       placeholder="Something custom? Type it — we won't judge..."
-                      className="flex-1 p-4 rounded-xl border-2 border-stone-200 outline-none focus:border-brand-teal font-bold"
+                      className="flex-1 p-4 rounded-xl border-2 border-white/15 outline-none focus:border-brand-teal font-bold"
                       value={serviceSearch}
                       onChange={(e) => {
                         setServiceSearch(e.target.value);
@@ -718,10 +718,10 @@ export const InputForm: React.FC<InputFormProps> = ({ initialData, onSubmit, onS
                           filteredServices.map(s => (
                             <div
                               key={s}
-                              className={`p-4 cursor-pointer font-bold text-sm border-b border-stone-100 last:border-0 ${
+                              className={`p-4 cursor-pointer font-bold text-sm border-b border-white/10 last:border-0 ${
                                 formData.services.includes(s)
-                                  ? 'bg-stone-50 text-stone-300 cursor-default'
-                                  : 'hover:bg-stone-50'
+                                  ? 'bg-white/5 text-white/60 cursor-default'
+                                  : 'hover:bg-white/5'
                               }`}
                               onMouseDown={() => !formData.services.includes(s) && handleAddService(s)}
                             >
@@ -730,7 +730,7 @@ export const InputForm: React.FC<InputFormProps> = ({ initialData, onSubmit, onS
                           ))
                         ) : (
                           <div
-                            className="p-4 hover:bg-stone-50 cursor-pointer font-bold text-sm text-brand-teal"
+                            className="p-4 hover:bg-white/5 cursor-pointer font-bold text-sm text-brand-teal"
                             onMouseDown={() => handleAddService(serviceSearch.trim())}
                           >
                             + Add "{serviceSearch}" — bold move, we like it
@@ -740,35 +740,35 @@ export const InputForm: React.FC<InputFormProps> = ({ initialData, onSubmit, onS
                     )}
                 </div>
 
-                <div className="mt-8 pt-8 border-t border-stone-100">
+                <div className="mt-8 pt-8 border-t border-white/10">
                    <details className="group">
-                      <summary className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-white/40 cursor-pointer hover:text-brand-black transition-colors">
+                      <summary className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-white/40 cursor-pointer hover:text-white transition-colors">
                          <Plus size={12} /> Already have brand statements? Flex on us.
                       </summary>
                       <div className="mt-6 space-y-6 animate-fade-in-up">
                           <div className="space-y-2">
-                             <label className="text-xs font-bold text-stone-600">Existing Mission Statement</label>
+                             <label className="text-xs font-bold text-white/75">Existing Mission Statement</label>
                              <textarea
-                               className="w-full p-4 rounded-xl border border-stone-200 text-sm focus:border-brand-teal outline-none min-h-[80px]"
+                               className="w-full p-4 rounded-xl bg-brand-black text-white border border-white/15 text-sm focus:border-brand-teal outline-none min-h-[80px]"
                                placeholder="Drop that mission — we'll make it hit different."
                                value={formData.existingMission || ''}
                                onChange={(e) => setFormData({...formData, existingMission: e.target.value})}
                              />
                           </div>
                           <div className="space-y-2">
-                             <label className="text-xs font-bold text-stone-600">Existing Vision Statement</label>
+                             <label className="text-xs font-bold text-white/75">Existing Vision Statement</label>
                              <textarea
-                               className="w-full p-4 rounded-xl border border-stone-200 text-sm focus:border-brand-teal outline-none min-h-[80px]"
+                               className="w-full p-4 rounded-xl bg-brand-black text-white border border-white/15 text-sm focus:border-brand-teal outline-none min-h-[80px]"
                                placeholder="Where are you taking this empire?"
                                value={formData.existingVision || ''}
                                onChange={(e) => setFormData({...formData, existingVision: e.target.value})}
                              />
                           </div>
                           <div className="space-y-2">
-                             <label className="text-xs font-bold text-stone-600">Existing Brand Voice/Values</label>
+                             <label className="text-xs font-bold text-white/75">Existing Brand Voice/Values</label>
                              <input
                                type="text"
-                               className="w-full p-4 rounded-xl border border-stone-200 text-sm focus:border-brand-teal outline-none"
+                               className="w-full p-4 rounded-xl bg-brand-black text-white border border-white/15 text-sm focus:border-brand-teal outline-none"
                                placeholder="e.g. Friendly, Professional, Trustworthy — or Unhinged, we don't gatekeep"
                                value={formData.existingVoice || ''}
                                onChange={(e) => setFormData({...formData, existingVoice: e.target.value})}
@@ -835,7 +835,7 @@ export const InputForm: React.FC<InputFormProps> = ({ initialData, onSubmit, onS
               </div>
 
               {/* QR Code Preference */}
-              <div className="p-5 bg-stone-50 rounded-2xl border border-stone-100 space-y-3">
+              <div className="p-5 bg-white/5 rounded-2xl border border-white/10 space-y-3">
                 <p className="text-[10px] font-black uppercase tracking-widest text-white/40">Where should your QR code point?</p>
                 <div className="flex flex-wrap gap-2">
                   {([
@@ -851,7 +851,7 @@ export const InputForm: React.FC<InputFormProps> = ({ initialData, onSubmit, onS
                       className={`px-4 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all ${
                         formData.qrPreference === opt.value
                           ? 'bg-brand-black text-white shadow-lg'
-                          : 'bg-white border border-stone-200 text-white/60 hover:border-brand-teal'
+                          : 'bg-white border border-white/15 text-white/60 hover:border-brand-teal'
                       }`}
                     >
                       {opt.label}
@@ -896,14 +896,14 @@ export const InputForm: React.FC<InputFormProps> = ({ initialData, onSubmit, onS
 
               {/* Upload area — shown for 'have' and 'iterate' */}
               {(formData.logoStatus === 'have' || formData.logoStatus === 'iterate') && (
-                <div className={`border-2 border-dashed rounded-[2.5rem] p-10 transition-all text-center relative group ${(formData.existingLogos?.length || formData.existingLogo) ? 'border-brand-teal bg-brand-teal/5' : 'border-stone-300 bg-white hover:bg-stone-50 hover:border-brand-teal'}`}>
+                <div className={`border-2 border-dashed rounded-[2.5rem] p-10 transition-all text-center relative group ${(formData.existingLogos?.length || formData.existingLogo) ? 'border-brand-teal bg-brand-teal/5' : 'border-white/20 bg-white hover:bg-white/5 hover:border-brand-teal'}`}>
                   {/* Uploaded previews */}
                   {(formData.existingLogos?.length || formData.existingLogo) ? (
                     <div className="space-y-6">
                       <div className="flex flex-wrap justify-center gap-4">
                         {(formData.existingLogos || (formData.existingLogo ? [formData.existingLogo] : [])).map((logo, i) => (
                           <div key={i} className="relative group/img">
-                            <img src={logo} alt={`Logo ${i + 1}`} className="h-28 w-28 object-contain bg-white rounded-2xl shadow-xl p-2" />
+                            <img src={logo} alt={`Logo ${i + 1}`} className="h-28 w-28 object-contain bg-brand-black rounded-2xl shadow-xl p-2" />
                             <button
                               type="button"
                               onClick={() => {
@@ -969,7 +969,7 @@ export const InputForm: React.FC<InputFormProps> = ({ initialData, onSubmit, onS
                           reader.readAsDataURL(file);
                         });
                       }} />
-                      <div className="mx-auto w-16 h-16 bg-white text-brand-lavender rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform"><Upload size={28} /></div>
+                      <div className="mx-auto w-16 h-16 bg-brand-black text-brand-lavender rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform"><Upload size={28} /></div>
                       <p className="text-lg font-bold">{formData.logoStatus === 'have' ? 'Drop your logo here' : 'Upload your references & ideas'}</p>
                       <p className="text-[10px] text-white/40 italic">PNG, JPG, SVG — you can upload multiple files</p>
                     </label>
@@ -1029,12 +1029,12 @@ export const InputForm: React.FC<InputFormProps> = ({ initialData, onSubmit, onS
           )}
         </div>
 
-        <div className="mt-12 pt-8 border-t border-stone-100 flex justify-between items-center">
+        <div className="mt-12 pt-8 border-t border-white/10 flex justify-between items-center">
             <div className="flex gap-4">
                <button 
                 type="button" 
                 onClick={prevStep} 
-                className={`flex items-center gap-2 text-white/40 font-black uppercase tracking-widest text-xs transition-all ${currentStep === 0 ? 'opacity-0 pointer-events-none' : 'hover:text-brand-black'}`}
+                className={`flex items-center gap-2 text-white/40 font-black uppercase tracking-widest text-xs transition-all ${currentStep === 0 ? 'opacity-0 pointer-events-none' : 'hover:text-white'}`}
               >
                   <ArrowLeft size={16} /> Previous
               </button>
@@ -1064,7 +1064,7 @@ export const InputForm: React.FC<InputFormProps> = ({ initialData, onSubmit, onS
                 type="button" 
                 onClick={nextStep}
                 disabled={!isStepValid()}
-                className={`flex items-center gap-3 px-10 py-5 rounded-full font-black uppercase tracking-[0.3em] text-xs shadow-xl transition-all ${isStepValid() ? 'bg-brand-black text-white hover:bg-brand-teal' : 'bg-stone-100 text-stone-300 cursor-not-allowed'}`}
+                className={`flex items-center gap-3 px-10 py-5 rounded-full font-black uppercase tracking-[0.3em] text-xs shadow-xl transition-all ${isStepValid() ? 'bg-brand-black text-white hover:bg-brand-teal' : 'bg-white/10 text-white/60 cursor-not-allowed'}`}
               >
                 {currentStep === 0 ? 'Lock It In' : currentStep === 1 ? 'Name Claimed' : currentStep === 2 ? 'Vibe Set' : currentStep === 3 ? 'Almost Done' : 'Continue'} <ChevronRight size={16} />
               </button>

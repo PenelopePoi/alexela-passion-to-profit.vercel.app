@@ -330,16 +330,16 @@ const IntakeGallery: React.FC = () => {
   const images = GALLERY_IMAGES;
 
   return (
-    <div className="bg-white rounded-3xl border border-stone-200 shadow-lg overflow-hidden">
+    <div className="bg-brand-black rounded-3xl border border-brand-teal/25 shadow-lg overflow-hidden">
       <button
         onClick={() => setIsExpanded(!isExpanded)}
         aria-expanded={isExpanded}
         aria-label={isExpanded ? 'Collapse recent work gallery' : 'Expand recent work gallery'}
-        className="w-full px-6 py-4 flex items-center justify-between hover:bg-stone-50 transition-colors"
+        className="w-full px-6 py-4 flex items-center justify-between hover:bg-white/5 transition-colors"
       >
         <div className="flex items-center gap-3">
           <Eye size={16} className="text-brand-teal" />
-          <span className="text-sm font-black uppercase tracking-widest text-brand-black">Our Recent Work</span>
+          <span className="text-sm font-black uppercase tracking-widest text-white">Our Recent Work</span>
           <span className="text-[10px] font-bold text-stone-400">({images.length} projects)</span>
         </div>
         {isExpanded ? <ChevronUp size={16} className="text-stone-400" /> : <ChevronDown size={16} className="text-stone-400" />}
@@ -826,7 +826,7 @@ const App: React.FC = () => {
       {/* Global logo watermark — 25% opacity, adds dimension */}
       <div className="fixed inset-0 pointer-events-none z-0 flex items-center justify-center overflow-hidden">
         <motion.img
-          src="/xela-logo-new.png"
+          src="/alexela-master-logo.jpg"
           alt=""
           aria-hidden="true"
           loading="lazy"
@@ -850,13 +850,13 @@ const App: React.FC = () => {
         <header className="fixed top-0 left-0 right-0 z-[90] px-4 sm:px-6 py-2.5 sm:py-3 flex justify-between items-center bg-brand-black/90 backdrop-blur-xl border-b border-white/5">
           <button onClick={() => { setStep('landing'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="flex items-center gap-1 group cursor-pointer">
             <img
-              src="/xela-logo-new.png"
+              src="/alexela-master-logo.jpg"
               alt="AleXelA"
               width={160}
               height={64}
               className="h-9 sm:h-12 md:h-16 w-auto max-w-[120px] sm:max-w-none object-contain group-hover:scale-105 transition-transform"
               style={{
-                filter: 'brightness(1.1) saturate(1.3) drop-shadow(0 0 10px rgba(0, 224, 198, 0.55)) drop-shadow(0 0 20px rgba(255, 140, 66, 0.35))',
+                filter: 'none',
               }}
             />
           </button>
@@ -936,13 +936,13 @@ const App: React.FC = () => {
               {/* LOGO */}
               <button onClick={handleReset} className="flex items-center shrink-0 group cursor-pointer" aria-label="AleXelA Home">
                 <img
-                  src="/xela-logo-new.png"
+                  src="/alexela-master-logo.jpg"
                   alt="AleXelA Creative Branding Studio"
                   width={200}
                   height={80}
                   className="h-14 sm:h-18 md:h-24 w-auto max-w-[200px] sm:max-w-[240px] md:max-w-none object-contain group-hover:scale-105 transition-transform duration-300"
                   style={{
-                    filter: 'brightness(1.2) saturate(1.4) drop-shadow(0 0 16px rgba(0, 224, 198, 0.7)) drop-shadow(0 0 32px rgba(255, 140, 66, 0.5)) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.6))',
+                    filter: 'none',
                   }}
                 />
               </button>
@@ -1126,12 +1126,12 @@ const App: React.FC = () => {
               >
                 <div className="relative w-full max-w-md mx-auto rounded-[3rem] shadow-2xl shadow-brand-teal/10 group">
                   <img
-                    src="/xela-iquit-flyer.png"
-                    alt="AleXelA creative branding artwork"
+                    src="/alexela-master-logo.jpg"
+                    alt="AleXelA’s Passion to Profit — approved portrait, golden tree, fire and ice brand artwork"
                     className="w-full h-auto object-contain rounded-[3rem] group-hover:scale-[1.02] transition-all duration-1000"
                     referrerPolicy="no-referrer"
-                    width={800}
-                    height={1000}
+                    width={1088}
+                    height={1536}
                     loading="eager"
                     decoding="async"
                   />
@@ -1728,7 +1728,7 @@ const App: React.FC = () => {
             <div className="max-w-[1600px] mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-10 sm:gap-16 text-xs leading-relaxed">
               <div className="col-span-2 space-y-6">
                 <div className="flex items-center gap-3">
-                  <img src="/xela-logo-new.png" alt="AleXelA Creative Branding Studio" className="h-10 sm:h-14 w-auto max-w-[160px] object-contain" loading="lazy" width={140} height={56} />
+                  <img src="/alexela-master-logo.jpg" alt="AleXelA Creative Branding Studio" className="h-10 sm:h-14 w-auto max-w-[160px] object-contain" loading="lazy" width={140} height={56} />
                 </div>
                 <p className="max-w-sm">AleXelA — Passion to Profit Creative Branding Studio. Custom branding, design, print-ready art and launch guidance from Florida’s Space Coast.</p>
                 <a href="tel:3213759685" className="flex items-center gap-2 text-brand-teal hover:text-white transition-colors mt-2">
@@ -1787,10 +1787,10 @@ const App: React.FC = () => {
 
       {/* ═══════════ INTAKE STEP ═══════════ */}
       {step === 'intake' && (
-        <div className="flex flex-col w-full min-h-screen bg-stone-50 animate-fade-in-up pt-24">
-          <div className="py-6 px-6 border-b border-stone-200 bg-white flex justify-between items-center shadow-sm">
+        <div className="flex flex-col w-full min-h-screen bg-brand-black animate-fade-in-up pt-24">
+          <div className="py-6 px-6 border-b border-white/15 bg-brand-black flex justify-between items-center shadow-sm">
             <div className="text-left">
-              <div className="text-[10px] font-black uppercase tracking-widest text-stone-400">Consultant: AleXelA</div>
+              <div className="text-[10px] font-black uppercase tracking-widest text-white/60">Consultant: AleXelA</div>
             </div>
             <div className="text-right">
               <div className="text-xl font-serif font-black text-brand-teal capitalize italic">
@@ -1801,8 +1801,8 @@ const App: React.FC = () => {
 
           <div className="py-12 px-4 max-w-4xl mx-auto w-full space-y-8">
             <div className="mb-8 text-center">
-              <h2 className="text-3xl font-serif font-black text-brand-black mb-2">Design Brief Intake</h2>
-              <p className="text-stone-500">Tell us about your business so we can build your assets.</p>
+              <h2 className="text-3xl font-serif font-black text-white mb-2">Design Brief Intake</h2>
+              <p className="text-white/70">Tell us about your business so we can build your assets.</p>
             </div>
 
             {submitError && (

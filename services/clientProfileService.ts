@@ -122,6 +122,6 @@ export function trackCallClick(slug: string): void {
   }
 }
 
-export function buildProfileUrl(slug: string, baseUrl: string = 'https://xela-creative-branding.vercel.app'): string {
+export function buildProfileUrl(slug: string, baseUrl: string = 'https://alexela-passion-to-profit.vercel.app'): string {
   return `${baseUrl}/?p=${encodeURIComponent(slug)}`;
 }

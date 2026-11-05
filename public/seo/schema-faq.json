@@ -1,19 +1,19 @@
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": "https://xela-creative-branding.vercel.app/#faq",
+  "@id": "https://alexela-passion-to-profit.vercel.app/#faq",
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What branding services does XELA Creative Branding Studio offer?",
+      "name": "What branding services does AleXelA Creative Branding Studio offer?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "XELA Creative Branding Studio offers 68 services across 10 categories: Brand Identity, Print Materials, Digital Presence, Marketing, Content, Strategy, Web Development, Video & Media, Social Media, and Consulting. Services range from business cards and logo design to full website builds, e-commerce stores, social media management, and complete business launch packages. We serve businesses across Brevard County, the Space Coast, Orlando, Tampa, Miami, and all of Florida. Whether you need a $75 business card or a $2,000 full-service brand launch, we have a package that fits."
+        "text": "AleXelA Creative Branding Studio offers 68 services across 10 categories: Brand Identity, Print Materials, Digital Presence, Marketing, Content, Strategy, Web Development, Video & Media, Social Media, and Consulting. Services range from business cards and logo design to full website builds, e-commerce stores, social media management, and complete business launch packages. We serve businesses across Brevard County, the Space Coast, Orlando, Tampa, Miami, and all of Florida. Whether you need a $75 business card or a $2,000 full-service brand launch, we have a package that fits."
       }
     },
     {
       "@type": "Question",
-      "name": "How much does a branding package cost at XELA Creative Branding Studio?",
+      "name": "How much does a branding package cost at AleXelA Creative Branding Studio?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Our services range from $75 to $2,000 across three tiers. The Budget tier (Get Started) includes essentials like business cards at $75, flyers at $100, and the Promotion Pal starter brand package at $125. The Premium tier (Get Customers) offers marketing kits, email templates, landing pages, and video production from $200 to $650. The Elite tier (Get Everything) includes full website builds at $1,200, e-commerce stores at $1,500, and the Ultimate Premium Suite at $2,000 which includes every deliverable we offer. Bundle three or more services and save 10-15%."
@@ -32,7 +32,7 @@
       "name": "Do you serve businesses outside Florida?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "While XELA Creative Branding Studio is based in Brevard County on Florida's Space Coast, we serve clients across the entire state of Florida and can work with businesses anywhere in the United States. Our digital services including logo design, website builds, social media management, and content creation require no in-person meetings. For print materials, we provide print-ready files that work with any local printer, or we can coordinate printing and shipping. Our Florida-specific services like Sunbiz business name checks and LLC filing guidance are designed specifically for Florida entrepreneurs."
+        "text": "While AleXelA Creative Branding Studio is based in Brevard County on Florida's Space Coast, we serve clients across the entire state of Florida and can work with businesses anywhere in the United States. Our digital services including logo design, website builds, social media management, and content creation require no in-person meetings. For print materials, we provide print-ready files that work with any local printer, or we can coordinate printing and shipping. Our Florida-specific services like Sunbiz business name checks and LLC filing guidance are designed specifically for Florida entrepreneurs."
       }
     },
     {
@@ -40,7 +40,7 @@
       "name": "How fast can you deliver a logo?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Our Promotion Pal package delivers 3 professional logo options in approximately 4 hours. The Logo Evolution Suite, which includes 5 logo variations with light and dark versions in SVG, PNG, and PDF formats, is delivered in about 6 hours. For the absolute fastest turnaround, add our Rush Delivery add-on for $50 to get priority 2-hour processing. Our AI-powered design workflow combined with professional human review means you get quality logos at speeds that traditional agencies can't match. Same-day logo delivery is standard at XELA Creative Branding Studio."
+        "text": "Our Promotion Pal package delivers 3 professional logo options in approximately 4 hours. The Logo Evolution Suite, which includes 5 logo variations with light and dark versions in SVG, PNG, and PDF formats, is delivered in about 6 hours. For the absolute fastest turnaround, add our Rush Delivery add-on for $50 to get priority 2-hour processing. Our AI-powered design workflow combined with professional human review means you get quality logos at speeds that traditional agencies can't match. Same-day logo delivery is standard at AleXelA Creative Branding Studio."
       }
     },
     {
@@ -56,7 +56,7 @@
       "name": "Do you offer payment plans for branding services?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, XELA Creative Branding Studio understands that starting a business means watching every dollar. We offer flexible payment options for our Premium and Elite tier packages. For packages over $500, we can split payments into two installments. For our Elite packages like the Ultimate Premium Suite at $2,000, we offer up to three monthly payments. We accept credit cards, debit cards, Zelle, CashApp, and Stripe. Contact us at (321) 375-9685 to discuss payment options that work for your budget."
+        "text": "Yes, AleXelA Creative Branding Studio understands that starting a business means watching every dollar. We offer flexible payment options for our Premium and Elite tier packages. For packages over $500, we can split payments into two installments. For our Elite packages like the Ultimate Premium Suite at $2,000, we offer up to three monthly payments. We accept credit cards, debit cards, Zelle, CashApp, and Stripe. Contact us at (321) 375-9685 to discuss payment options that work for your budget."
       }
     },
     {
@@ -104,7 +104,7 @@
       "name": "What industries do you work with?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "XELA Creative Branding Studio works with any small business, startup, or entrepreneur across all industries. We have particular experience with service-based businesses in Brevard County and the Space Coast including contractors, landscapers, cleaning services, real estate agents, fitness trainers, restaurants, salons, auto detailers, and home service providers. Our branding packages are designed to be industry-flexible, so whether you're launching a tech startup in Orlando or opening a food truck in Melbourne, we can build your brand. The key is that if you serve customers, we can help you look professional and get found."
+        "text": "AleXelA Creative Branding Studio works with any small business, startup, or entrepreneur across all industries. We have particular experience with service-based businesses in Brevard County and the Space Coast including contractors, landscapers, cleaning services, real estate agents, fitness trainers, restaurants, salons, auto detailers, and home service providers. Our branding packages are designed to be industry-flexible, so whether you're launching a tech startup in Orlando or opening a food truck in Melbourne, we can build your brand. The key is that if you serve customers, we can help you look professional and get found."
       }
     },
     {
@@ -117,10 +117,10 @@
     },
     {
       "@type": "Question",
-      "name": "How do I get started with XELA Creative Branding Studio?",
+      "name": "How do I get started with AleXelA Creative Branding Studio?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Getting started is simple. Call us at (321) 375-9685 or visit xela-creative-branding.vercel.app to book a free consultation. We'll discuss your business, your goals, and recommend the right package for your budget. If you already know what you need, you can order directly from our services page and we'll start working immediately. Most Budget-tier services are delivered the same day. For new businesses just starting out, we recommend the Promotion Pal at $125 as the perfect first step, or the Registered Rebellion at $500 if you need help with the full Florida business registration process."
+        "text": "Getting started is simple. Call us at (321) 375-9685 or visit alexela-passion-to-profit.vercel.app to book a free consultation. We'll discuss your business, your goals, and recommend the right package for your budget. If you already know what you need, you can order directly from our services page and we'll start working immediately. Most Budget-tier services are delivered the same day. For new businesses just starting out, we recommend the Promotion Pal at $125 as the perfect first step, or the Registered Rebellion at $500 if you need help with the full Florida business registration process."
       }
     }
   ]

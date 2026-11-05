@@ -151,12 +151,12 @@ export const ClientProfilePage: React.FC<ClientProfilePageProps> = ({ profile })
           </div>
         )}
 
-        {/* XELA footer attribution */}
+        {/* AleXelA footer attribution */}
         <div className="text-center pt-8 border-t border-white/5">
           <p className="text-[10px] text-white/30 uppercase tracking-widest">
-            Profile by <a href="/" className="text-brand-teal hover:underline">XELA Creative Branding Studio</a>
+            Profile by <a href="/" className="text-brand-teal hover:underline">AleXelA Creative Branding Studio</a>
           </p>
-          <p className="text-[9px] text-white/20 mt-1">Get yours at xela-creative-branding.vercel.app</p>
+          <p className="text-[9px] text-white/20 mt-1">Get yours at alexela-passion-to-profit.vercel.app</p>
         </div>
       </div>
     </div>

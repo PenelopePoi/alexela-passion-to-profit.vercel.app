@@ -29,7 +29,7 @@ export const SalesPitchAssistant: React.FC = () => {
     {
       role: 'assistant',
       text:
-        "Hey! I'm here to answer any questions you have about XELA — pricing, process, quality, anything. What's on your mind?",
+        "Hey! I'm here to answer any questions you have about AleXelA — pricing, process, quality, anything. What's on your mind?",
       timestamp: Date.now(),
     },
   ]);
@@ -146,7 +146,7 @@ export const SalesPitchAssistant: React.FC = () => {
                 <Sparkles className="h-5 w-5 text-white" />
               </div>
               <div className="flex-1">
-                <h3 className="text-sm font-semibold text-white">Ask XELA Anything</h3>
+                <h3 className="text-sm font-semibold text-white">Ask AleXelA Anything</h3>
                 <p className="text-xs text-white/60">Real answers, no pressure</p>
               </div>
               <span className="flex h-2 w-2">
@@ -236,7 +236,7 @@ export const SalesPitchAssistant: React.FC = () => {
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={handleKeyDown}
-                  placeholder="Ask anything about XELA..."
+                  placeholder="Ask anything about AleXelA..."
                   className="flex-1 bg-transparent text-sm text-white placeholder:text-white/40 focus:outline-none"
                 />
                 <button

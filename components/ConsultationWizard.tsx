@@ -284,7 +284,7 @@ function generateProfileText(data: {
     line,
     '  BRAND PERSONALITY PROFILE',
     `  Prepared for ${data.companyName || 'Your Brand'}`,
-    `  by XELA Creative Branding Studio`,
+    `  by AleXelA Creative Branding Studio`,
     line,
     '',
     `  Owner: ${data.ownerName || 'N/A'}`,
@@ -310,7 +310,7 @@ function generateProfileText(data: {
     data.total > 0 ? `  ESTIMATED INVESTMENT: $${data.total.toLocaleString()}` : '',
     '',
     line,
-    '  XELA Creative Branding Studio',
+    '  AleXelA Creative Branding Studio',
     '  (321) 375-9685 | Brevard County, FL',
     '  "From Pain to Purpose."',
     line,
@@ -1022,7 +1022,7 @@ export const ConsultationWizard: React.FC<ConsultationWizardProps> = ({ onComple
             {/* Pro tip */}
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }}
               className="bg-white/5 rounded-2xl p-5 border border-white/10">
-              <span className="text-[10px] font-black uppercase tracking-widest text-brand-lavender">Pro Tip from XELA</span>
+              <span className="text-[10px] font-black uppercase tracking-widest text-brand-lavender">Pro Tip from AleXelA</span>
               <p className="text-white/70 font-medium mt-1 text-sm leading-relaxed">{archetype.tip}</p>
             </motion.div>
 
@@ -1056,7 +1056,7 @@ export const ConsultationWizard: React.FC<ConsultationWizardProps> = ({ onComple
             <span className="text-[10px] font-black uppercase tracking-widest text-brand-lavender">The Transformation</span>
             <h3 className="text-lg font-black text-white mt-1">
               {industry && industry !== 'Other'
-                ? `What a ${industry.toLowerCase()} brand looks like with XELA`
+                ? `What a ${industry.toLowerCase()} brand looks like with AleXelA`
                 : 'What your brand could become'}
             </h3>
           </div>

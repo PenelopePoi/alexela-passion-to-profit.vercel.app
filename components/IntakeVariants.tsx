@@ -26,7 +26,7 @@ export const INTAKE_VARIANTS: IntakeVariant[] = [
   { id: 3,  name: 'Speed Round',      description: '60-second rapid-fire intake',           accent: 'red-400',      emoji: '⏱️' },
   { id: 4,  name: 'Terminal Hacker',  description: 'CLI green monospace prompts',           accent: 'green-400',    emoji: '🖥️' },
   { id: 5,  name: 'Mood Board',       description: 'Pinterest-style image grid',            accent: 'pink-400',     emoji: '🎨' },
-  { id: 6,  name: 'Postcard',         description: 'Letter format, Dear XELA…',             accent: 'amber-300',    emoji: '✉️' },
+  { id: 6,  name: 'Postcard',         description: 'Letter format, Dear AleXelA…',             accent: 'amber-300',    emoji: '✉️' },
   { id: 7,  name: 'Quiz Show',        description: 'Buzzer-style answer buttons',           accent: 'yellow-400',   emoji: '🎯' },
   { id: 8,  name: 'Minimalist',       description: 'Single textarea, AI parses everything', accent: 'white',        emoji: '⬜' },
   { id: 9,  name: 'Comic Book',       description: 'Speech bubbles in comic panels',        accent: 'orange-400',   emoji: '💥' },
@@ -295,7 +295,7 @@ const ChatBot: React.FC<{ data: FormData; setData: any; onComplete: () => void }
     <div className="min-h-screen bg-brand-black p-4 flex flex-col">
       <div className="max-w-lg w-full mx-auto flex-1 flex flex-col">
         <div className="text-center py-4 border-b border-white/10">
-          <div className="text-sky-400 font-bold">XELA Bot</div>
+          <div className="text-sky-400 font-bold">AleXelA Bot</div>
           <div className="text-xs text-white/40">online</div>
         </div>
         <div className="flex-1 py-6 space-y-4 overflow-y-auto">
@@ -398,7 +398,7 @@ const TerminalHacker: React.FC<{ data: FormData; setData: any; onComplete: () =>
   return (
     <div className="min-h-screen bg-black p-6 font-mono text-green-400">
       <div className="max-w-2xl mx-auto">
-        <div className="text-xs opacity-60 mb-4">XELA-OS v1.0 — brand intake module loaded</div>
+        <div className="text-xs opacity-60 mb-4">AleXelA-OS v1.0 — brand intake module loaded</div>
         {FIELDS.slice(0, step).map((f) => (
           <div key={f.key} className="mb-2">
             <div>$ xela --ask "{f.label}"</div>
@@ -465,7 +465,7 @@ const Postcard: React.FC<{ data: FormData; setData: any; onComplete: () => void 
     <div className="max-w-2xl w-full bg-amber-100 border border-amber-300 rounded-lg p-10 shadow-2xl" style={{ fontFamily: 'Georgia, serif' }}>
       <div className="text-right text-amber-700 text-sm mb-6">{new Date().toLocaleDateString()}</div>
       <div className="text-amber-900 text-lg leading-relaxed">
-        <div className="mb-4">Dear XELA,</div>
+        <div className="mb-4">Dear AleXelA,</div>
         <div className="space-y-3">
           <div>My business is called <em className="border-b border-amber-500"><Input value={data.companyName} onChange={(v) => setData((d: FormData) => ({ ...d, companyName: v }))} className="!bg-transparent !border-0 !text-amber-900 inline-block !w-48 !p-0" /></em></div>
           <div>and we work in <em><Input value={data.industry} onChange={(v) => setData((d: FormData) => ({ ...d, industry: v }))} className="!bg-transparent !border-0 !text-amber-900 inline-block !w-48 !p-0" /></em></div>
@@ -609,7 +609,7 @@ const THEMES: Record<number, Theme> = {
   12: { bg: 'bg-gradient-to-b from-red-600 to-red-900', card: 'bg-white/10 rounded-lg p-8 border-4 border-yellow-400', accent: 'yellow-400', title: 'text-white', icon: <Blocks className="w-12 h-12 text-yellow-400" />, preLabel: 'Stack Your Brand' },
   13: { bg: 'bg-gradient-to-b from-indigo-950 to-purple-950', card: 'bg-white/5 rounded-2xl p-8 border border-purple-400/30', accent: 'purple-400', title: 'text-purple-200', icon: <Star className="w-12 h-12 text-purple-300" />, preLabel: 'Your Brand Horoscope' },
   14: { bg: 'bg-gradient-to-b from-fuchsia-900 to-black', card: 'bg-black/60 rounded-lg p-8 border border-fuchsia-400', accent: 'fuchsia-400', title: 'text-fuchsia-300', icon: <Music className="w-12 h-12 text-fuchsia-400" />, preLabel: 'Brand Festival Lineup' },
-  15: { bg: 'bg-stone-100',                           card: 'bg-white rounded p-10 border border-stone-300 shadow-lg', accent: 'amber-600', title: 'text-stone-900', fontFamily: 'Georgia, serif', icon: <UtensilsCrossed className="w-10 h-10 text-amber-700" />, preLabel: 'The XELA Menu' },
+  15: { bg: 'bg-stone-100',                           card: 'bg-white rounded p-10 border border-stone-300 shadow-lg', accent: 'amber-600', title: 'text-stone-900', fontFamily: 'Georgia, serif', icon: <UtensilsCrossed className="w-10 h-10 text-amber-700" />, preLabel: 'The AleXelA Menu' },
   16: { bg: 'bg-cyan-100',                            card: 'bg-white rounded-3xl p-8 border-4 border-cyan-400 shadow-xl', accent: 'cyan-500', title: 'text-cyan-900', icon: <div className="text-6xl">🌟</div>, preLabel: 'Sticker Book Brand' },
   17: { bg: 'bg-brand-black',                         card: 'bg-white/5 rounded-3xl p-8 border border-red-500/30', accent: 'red-500', title: 'text-white', icon: (
     <motion.div animate={{ scale: [1, 1.1, 1] }} transition={{ repeat: Infinity, duration: 1.5 }}>

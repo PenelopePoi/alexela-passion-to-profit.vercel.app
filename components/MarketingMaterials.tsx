@@ -481,7 +481,7 @@ export const MarketingMaterials: React.FC<MarketingMaterialsProps> = ({ data, in
                 </div>
            )}
 
-            {/* XELA ADVANTAGE TAB */}
+            {/* AleXelA ADVANTAGE TAB */}
             {activeTab === 'xela' && (
                 <div className="w-full max-w-4xl space-y-10">
                     <div className="text-center mb-12">

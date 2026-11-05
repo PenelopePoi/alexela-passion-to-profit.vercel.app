@@ -209,7 +209,7 @@ export const SubmissionsInbox: React.FC = () => {
                   )}
                   {selected.data.email && (
                     <a
-                      href={`mailto:${encodeURIComponent(String(selected.data.email))}?subject=${encodeURIComponent('Your XELA Brand Quote')}&body=${encodeURIComponent(`Hi ${selected.data.ownerName || 'there'}!`)}`}
+                      href={`mailto:${encodeURIComponent(String(selected.data.email))}?subject=${encodeURIComponent('Your AleXelA Brand Quote')}&body=${encodeURIComponent(`Hi ${selected.data.ownerName || 'there'}!`)}`}
                       className="flex items-center justify-center gap-2 p-3 bg-brand-lavender text-white rounded-xl font-bold text-sm hover:scale-105 transition-all"
                     >
                       <Mail size={16} /> Email
