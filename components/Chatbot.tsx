@@ -104,7 +104,7 @@ export const Chatbot: React.FC<ChatbotProps> = ({ brandInput, strategy }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([
-    { id: '1', role: 'model', text: "I'm Xela, your Elite Branding Assistant. I can generate logos, brand strategies, packaging, content calendars, marketing materials, and more — just ask. What are we building today?", timestamp: Date.now() }
+    { id: '1', role: 'model', text: "I'm AleXelA, your Elite Branding Assistant. I can generate logos, brand strategies, packaging, content calendars, marketing materials, and more — just ask. What are we building today?", timestamp: Date.now() }
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -216,7 +216,7 @@ export const Chatbot: React.FC<ChatbotProps> = ({ brandInput, strategy }) => {
                         <div className={`p-3 rounded-2xl text-sm ${msg.role === 'user' ? 'bg-brand-teal text-white rounded-tr-none' : 'bg-white text-brand-black shadow-sm border border-stone-100 rounded-tl-none'}`}>
                           <div className="flex items-center gap-2 mb-1">
                             {msg.role === 'user' ? <User size={12} /> : <Bot size={12} className="text-brand-lavender" />}
-                            <span className="text-[10px] font-black uppercase tracking-widest opacity-70">{msg.role === 'user' ? 'You' : 'Xela AI'}</span>
+                            <span className="text-[10px] font-black uppercase tracking-widest opacity-70">{msg.role === 'user' ? 'You' : 'AleXelA AI'}</span>
                           </div>
                           <p className="leading-relaxed whitespace-pre-wrap">{msg.text}</p>
                         </div>

@@ -200,7 +200,7 @@ export const MarketingMaterials: React.FC<MarketingMaterialsProps> = ({ data, in
            <div className="flex bg-stone-100 p-1 rounded-xl overflow-x-auto scrollbar-hide">
                {['flyer', 'sticker', 'cards', 'window', 'classifieds', 'xela'].map((tab) => (
                    <button key={tab} onClick={() => setActiveTab(tab as any)} className={`px-4 py-2 rounded-lg text-xs font-black uppercase tracking-widest transition-all whitespace-nowrap ${activeTab === tab ? 'bg-stone-900 text-white shadow-md' : 'text-stone-400'}`}>
-                       {tab === 'xela' ? 'Xela Advantage' : tab}
+                       {tab === 'xela' ? 'AleXelA Advantage' : tab}
                    </button>
                ))}
            </div>
@@ -486,7 +486,7 @@ export const MarketingMaterials: React.FC<MarketingMaterialsProps> = ({ data, in
                 <div className="w-full max-w-4xl space-y-10">
                     <div className="text-center mb-12">
                         <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-lavender/10 text-brand-lavender rounded-full text-[10px] font-black uppercase tracking-widest mb-4">
-                            <Sparkles size={12} /> The Xela Advantage
+                            <Sparkles size={12} /> The AleXelA Advantage
                         </div>
                         <h3 className="text-4xl font-serif font-black text-brand-black">Your Legacy, Articulated.</h3>
                         <p className="text-stone-500 mt-4 max-w-2xl mx-auto">

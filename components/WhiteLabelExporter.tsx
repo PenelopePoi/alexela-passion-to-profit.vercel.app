@@ -123,7 +123,7 @@ export const WhiteLabelExporter: React.FC<WhiteLabelExporterProps> = ({
               Generate Kit
             </button>
             <p className="text-center text-xs text-stone-400">
-              AI will generate a white-labeled brand kit with no Xela branding
+              AI will generate a white-labeled brand kit with no AleXelA branding
             </p>
           </div>
         )}

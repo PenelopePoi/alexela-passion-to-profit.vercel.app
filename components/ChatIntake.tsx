@@ -19,7 +19,7 @@ interface ChatMsg {
 
 const VIBES = ['Modern', 'Rustic', 'Bold', 'Elegant', 'Playful', 'Industrial', 'Minimal', 'Luxury', 'Retro', 'Organic'];
 const STORAGE_KEY = 'xela-chat-intake';
-const INITIAL_MSG = "Hey there! I'm Xela — think of me as your brand consultant. 👋\n\nI'm so glad you're here. Let's build something you're actually proud of. I'll ask a few quick questions and your brand brief will be ready in under 3 minutes.\n\nLet's start with the fun one — **what's your business called?**";
+const INITIAL_MSG = "Hey there! I'm AleXelA — think of me as your brand consultant. 👋\n\nI'm so glad you're here. Let's build something you're actually proud of. I'll ask a few quick questions and your brand brief will be ready in under 3 minutes.\n\nLet's start with the fun one — **what's your business called?**";
 
 const FIELDS: { key: keyof BrandInput; label: string; ask: string; ack: (d: Partial<BrandInput>) => string }[] = [
   { key: 'companyName', label: 'Business Name', ask: "What's your business called? (Or what are you thinking of naming it?)", ack: d => `**${d.companyName}** — I love that.` },

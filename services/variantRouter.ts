@@ -43,7 +43,7 @@ export const VARIANTS: Record<SiteVariant, VariantConfig> = {
     hero: {
       headline: 'Your Brand, Ready Today.',
       subheadline: 'Chat with us. We build it. You launch.',
-      ctaLabel: 'Chat With Xela',
+      ctaLabel: 'Chat With AleXelA',
       accentColor: 'brand-lavender',
     },
     intakePath: 'chat',

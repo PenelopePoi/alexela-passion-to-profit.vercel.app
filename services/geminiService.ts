@@ -151,7 +151,7 @@ export const generateBrandingPackages = async (input: BrandInput): Promise<Brand
       - Material Costs (Premium Vinyl, 100lb Cardstock, UV Lamination, HP Precision Ink): ~$75-$250 per physical package.
       - Competitor Entry Rate (Basic): $800-$2,500 (Local agencies).
       - Competitor Elite Rate (Full Suite): $5,000-$15,000.
-      - YOUR EDGE: Xela's AI-driven efficiency + Cricut Explorer 3 precision + HP High-Yield printing allows for disruptive pricing.
+      - YOUR EDGE: AleXelA's AI-driven efficiency + Cricut Explorer 3 precision + HP High-Yield printing allows for disruptive pricing.
       - PROFIT MARGIN GOAL: 50-70% net profit after all expenses.
       - LABOR VALUE: $150/hr for elite creative engineering.
       
@@ -587,7 +587,7 @@ export const generateWhiteLabelKit = async (
 ): Promise<WhiteLabelKit> => {
   const model = "gemini-3-flash-preview";
   const prompt = `Generate a white-label brand kit for ${input.companyName} to deliver to client "${clientBusiness}".
-Remove all Xela Studio references. Make it look like ${input.companyName} created it.
+Remove all AleXelA Studio references. Make it look like ${input.companyName} created it.
 
 Brand context:
 - Colors: ${JSON.stringify(strategy.colorPalette)}

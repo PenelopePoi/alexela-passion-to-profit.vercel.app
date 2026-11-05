@@ -105,7 +105,7 @@ export const DataSovereignty: React.FC<DataSovereigntyProps> = ({
         setEncryptionEnabled(true);
       }
     } catch (err) {
-      setError('Invalid key backup file. Please select a valid Xela Vault key file.');
+      setError('Invalid key backup file. Please select a valid AleXelA Vault key file.');
     }
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
@@ -167,7 +167,7 @@ export const DataSovereignty: React.FC<DataSovereigntyProps> = ({
         hash: proof.hash,
         timestamp: proof.timestamp,
         previousHash: proof.previousHash,
-        note: 'Cryptographic proof that all user data was deleted from Xela Studio.',
+        note: 'Cryptographic proof that all user data was deleted from AleXelA Studio.',
       };
       triggerDownload(JSON.stringify(proofDoc, null, 2), `xela-deletion-proof-${Date.now()}.json`);
 
@@ -427,7 +427,7 @@ export const DataSovereignty: React.FC<DataSovereigntyProps> = ({
         ) : (
           <>
             <p className="text-sm text-red-800/70 leading-relaxed mb-2">
-              Permanently delete all your data from Xela Studio. This action cannot be undone.
+              Permanently delete all your data from AleXelA Studio. This action cannot be undone.
             </p>
             <p className="text-xs text-red-700/50 mb-6">
               This will generate a cryptographic proof of deletion (SHA-256 hash chain).

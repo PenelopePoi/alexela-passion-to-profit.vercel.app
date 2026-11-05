@@ -20,7 +20,7 @@ const steps: TutorialStep[] = [
   {
     id: 'welcome',
     title: 'Welcome to AleXelA Creative Branding Studio',
-    description: 'I am Xela, your AI creative branding consultant. I am here to guide you through the process of launching your legacy. We will build your identity, marketing, and legal foundation in 4 easy steps.',
+    description: 'I am AleXelA, your AI creative branding consultant. I am here to guide you through the process of launching your legacy. We will build your identity, marketing, and legal foundation in 4 easy steps.',
     tab: 'identity',
     tip: 'Think of this as your business "Cake" - we are mixing the best ingredients.',
     icon: <Sparkles className="text-brand-lavender" size={32} />

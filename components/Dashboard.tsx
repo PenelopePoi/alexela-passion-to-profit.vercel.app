@@ -76,7 +76,7 @@ const SIDEBAR_TABS = [
   { id: 'marketing', label: 'Ad Integration', icon: Film, color: 'text-brand-lavender' },
   { id: 'packages', label: 'Elite Packages', icon: Package, color: 'text-brand-teal' },
   { id: 'management', label: 'Business Hub', icon: Briefcase, color: 'text-brand-lavender' },
-  { id: 'aistudio', label: 'Xela AI Studio', icon: BrainCircuit, color: 'text-brand-teal' },
+  { id: 'aistudio', label: 'AleXelA AI Studio', icon: BrainCircuit, color: 'text-brand-teal' },
   { id: 'intelligence', label: 'Intelligence', icon: BrainCircuit, color: 'text-brand-lavender' },
   { id: 'upscaler', label: 'AI Upscaler', icon: ZoomIn, color: 'text-brand-teal' },
   { id: 'heatmap', label: 'Attention Map', icon: Eye, color: 'text-red-400' },
@@ -478,7 +478,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
                     )}
                 </div>
                 <div>
-                    <h1 className="font-serif text-2xl font-black text-brand-black uppercase tracking-tight italic">{input.companyName}</h1>
+                    <h1 className="font-serif text-2xl font-black text-white uppercase tracking-tight italic">{input.companyName}</h1>
                     <p className="text-[10px] font-black tracking-widest text-stone-400 uppercase flex items-center gap-2">
                       <Sparkles size={10} className="text-brand-teal" /> Operational Dashboard
                     </p>
@@ -490,7 +490,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
             <div className="hidden lg:flex items-center gap-3">
               <div className="flex items-center gap-2 px-4 py-2 bg-stone-100/50 rounded-full border border-white/50">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="text-[10px] font-black uppercase tracking-widest text-stone-500">Xela AI Core Active</span>
+                <span className="text-[10px] font-black uppercase tracking-widest text-white/80">AleXelA AI Core Active</span>
               </div>
               <SentinelBadge onClick={() => setActiveTab('sentinel')} />
             </div>
@@ -565,7 +565,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
                 Want to build an <span className="text-brand-teal italic">Elite Studio</span> like this?
               </h2>
               <p className="text-stone-400 text-lg font-medium max-w-xl">
-                Xela can engineer your own AI-powered branding agency. From custom models to automated fulfillment.
+                AleXelA can engineer your own AI-powered branding agency. From custom models to automated fulfillment.
               </p>
             </div>
             <button
@@ -619,7 +619,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
               ))}
             </div>
 
-            <div className="bg-white/40 backdrop-blur-md rounded-[2.5rem] p-8 border border-white/50 space-y-6">
+            <div className="bg-brand-black/80 backdrop-blur-md rounded-[2.5rem] p-8 border border-white/50 space-y-6">
               <h4 className="text-[10px] font-black uppercase tracking-widest text-stone-400">Project Health</h4>
               <div className="space-y-4">
                 <div className="space-y-2">
@@ -669,14 +669,14 @@ export const Dashboard: React.FC<DashboardProps> = ({
           <div className="space-y-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <div className="grid lg:grid-cols-12 gap-10">
               <div className="lg:col-span-7 space-y-10">
-                <div className="card-premium relative overflow-hidden bg-white">
+                <div className="card-premium relative overflow-hidden bg-brand-black">
                     <div className="flex justify-between items-center mb-10">
                         <div className="space-y-1">
                             <div className="flex items-center gap-2 mb-2">
                                 <span className="w-6 h-6 rounded-full bg-brand-lavender text-white text-[10px] font-black flex items-center justify-center">1</span>
                                 <span className="text-[10px] font-black uppercase tracking-widest text-brand-lavender">Discovery & Direction</span>
                             </div>
-                            <h3 className="text-xl font-black text-brand-black flex items-center gap-3">
+                            <h3 className="text-xl font-black text-white flex items-center gap-3">
                                 <Sparkles size={20} className="text-brand-lavender" /> Identity Catchphrases
                             </h3>
                             <p className="text-[10px] text-stone-400 font-bold uppercase tracking-widest ml-8">Golden Ratio Balanced • Artistic • Simple</p>
@@ -692,7 +692,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
                               whileHover={{ x: 10 }}
                               className="p-6 bg-stone-50 rounded-2xl border border-stone-100 hover:border-brand-teal hover:shadow-lg transition-all group cursor-pointer"
                             >
-                                 <p className="text-brand-black font-bold font-serif italic text-2xl">"{tag}"</p>
+                                 <p className="text-white font-bold font-serif italic text-2xl">"{tag}"</p>
                             </motion.div>
                         ))}
                     </div>
@@ -791,7 +791,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
                <div className="flex items-center justify-between px-2">
                   <div className="flex items-center gap-4">
                     <Layers className="text-brand-lavender" />
-                    <h2 className="text-3xl font-serif font-black text-brand-black tracking-tight">Visual Identity Studio</h2>
+                    <h2 className="text-3xl font-serif font-black text-white tracking-tight">Visual Identity Studio</h2>
                   </div>
                </div>
                <div className="grid lg:grid-cols-12 gap-10">
@@ -819,7 +819,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
           <div className="space-y-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <div className="flex items-center gap-4 px-2">
                 <Film className="text-brand-lavender" />
-                <h2 className="text-3xl font-serif font-black text-brand-black tracking-tight">AI-Powered Ad Assets</h2>
+                <h2 className="text-3xl font-serif font-black text-white tracking-tight">AI-Powered Ad Assets</h2>
             </div>
             
             <div className="grid lg:grid-cols-3 gap-10">

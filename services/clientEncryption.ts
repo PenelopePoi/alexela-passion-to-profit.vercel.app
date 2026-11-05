@@ -7,7 +7,7 @@
  * - Keys generated and stored CLIENT-SIDE only (localStorage)
  * - Data encrypted BEFORE leaving the browser
  * - Server (Firebase) only sees ciphertext
- * - Even Xela Studio cannot decrypt client data
+ * - Even AleXelA Studio cannot decrypt client data
  */
 
 // --- Key Management ---

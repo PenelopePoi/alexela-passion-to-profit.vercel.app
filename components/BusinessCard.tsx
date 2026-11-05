@@ -152,7 +152,7 @@ export const BusinessCard: React.FC<BusinessCardProps> = ({ data, input, logoUrl
                           { id: 'vertical-corporate', label: 'Corp' },
                           { id: 'bold-dark', label: 'Bold' },
                           { id: 'classic-elegant', label: 'Classic' },
-                          { id: 'xela-advantage', label: 'Xela' }
+                          { id: 'xela-advantage', label: 'AleXelA' }
                         ].map(l => (
                           <button 
                             key={l.id}
