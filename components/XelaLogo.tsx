@@ -7,7 +7,7 @@ interface AleXelALogoProps {
 
 /** Shared AleXelA brand mark. Uses the approved master artwork when available. */
 export const AleXelALogo: React.FC<AleXelALogoProps> = ({ className = 'h-10' }) => (
-  <img src="/alexela-actual-logo-transparent.png" alt="AleXelA Passion to Profit Creative Branding Studio" className={className} style={{objectFit:'contain'}} />
+  <img src="/alexela-logo-cutout.png" alt="AleXelA Passion to Profit Creative Branding Studio" className={className} style={{objectFit:'contain'}} />
 );
 
 /** Compatibility alias for existing imports; not customer-facing branding. */

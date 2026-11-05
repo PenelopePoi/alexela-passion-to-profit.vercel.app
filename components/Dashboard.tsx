@@ -458,7 +458,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
                className="group flex items-center gap-2 hover:opacity-80 transition-opacity"
              >
                <img
-                 src="/alexela-actual-logo-transparent.png"
+                 src="/alexela-logo-cutout.png"
                  alt="AleXelA Creative Branding Studio"
                  className="h-10 md:h-12 w-auto object-contain drop-shadow-lg group-hover:scale-105 transition-transform"
                />
