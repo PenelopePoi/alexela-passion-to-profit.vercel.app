@@ -27,3 +27,10 @@ header,.header,footer,.footer { border-color:#d8ad5455; background-image:linear-
 .checkbox-item,.pricing-card,.card-option,.budget-card,.service-option,.nj-step { border-color:#d8ad5440; background-image:linear-gradient(135deg,#ff791b08,transparent 45%,#00d9f509); }
 .hero .cta-btn,.cta-btn,.submit-btn,.nj-cta { background:linear-gradient(115deg,#00d9f5,#64eaff 58%,#f5bc50); color:#061528; box-shadow:0 5px 25px #00d9f526; }
 img[src="/alexela-logo-cutout.png"] { background:transparent; }
+.section { background:#0c2439; color:#f1f5f9; border:1px solid #d8ad5440; box-shadow:0 12px 32px #0003; }
+h1,.budget-name,.footer strong { color:#f1f5f9; }
+.section-title { border-bottom-color:#f5bc50; }
+.card-option small,.budget-desc,.scripture,.submit-note { color:#b9cddd; }
+.logo-wrap img { width:220px; height:auto; object-fit:contain; border-radius:0; }
+.nj-h1 span { background:linear-gradient(115deg,#00d9f5,#f5bc50); background-clip:text; -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+.nj-step-num { background:#f5bc50; color:#061528; }
