@@ -34,3 +34,7 @@ h1,.budget-name,.footer strong { color:#f1f5f9; }
 .logo-wrap img { width:220px; height:auto; object-fit:contain; border-radius:0; }
 .nj-h1 span { background:linear-gradient(115deg,#00d9f5,#f5bc50); background-clip:text; -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
 .nj-step-num { background:#f5bc50; color:#061528; }
+
+.tier { background:#0c2439; color:#f1f5f9; border-color:#e9b85d55; }
+.pricing-card p,.tier p { color:#b9cddd!important; }
+.tier-price { color:#e9b85d; }

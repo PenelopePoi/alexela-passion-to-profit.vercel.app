@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import ProductCatalog from './ProductCatalog';
+import catalog from '../public/pricing-catalog.json';
 import { motion, AnimatePresence } from 'motion/react';
 import { Check, Zap, Shield, Rocket, Star, Globe, ChevronRight, ShoppingCart, MessageCircle, FileText, Scissors, Printer, Phone, Sparkles, TrendingUp, Clock, ArrowRight, Mail, ExternalLink } from 'lucide-react';
 
@@ -8,28 +9,10 @@ interface PricingProps {
   onSelectPackage: (tier: 'budget' | 'premium' | 'elite') => void;
 }
 
-const P = [
-  { id:'cardcut',tier:'budget' as const,price:'$75',name:'CardCut Calibrated',desc:'A pro business card design + free online profile, ready in hours',icon:Printer,
-    f:['1 print-ready business card DESIGN file (300 DPI PDF, 3.5" × 2", CMYK — take to VistaPrint, Staples, Moo, or any local printer)','3 signature brand colors — exact hex codes + CMYK + Pantone values (1 primary, 1 accent, 1 neutral) — use forever on cards, signs, socials, trucks, invoices','2 commercially usable fonts — 1 headline + 1 body; licensing information included','1 QR code (PNG + SVG) linking to a supplied website or profile; optional hosted profile subject to service terms','Digital delivery on the agreed schedule — approved final files supplied, print 100 / 500 / 5,000 copies at any shop, forever']},
-  { id:'promo',tier:'budget' as const,price:'$125',name:'Promotion Pal',desc:'Look like you\'ve been in business for years',icon:Star,
-    f:['2 original logo concepts, 2 revision rounds, final PNG and SVG files','1 slogan + 1 mission statement (under 15 words each, custom written)','Full color palette — 5 hex codes (primary, accent, neutral, light, dark) + 2 licensed fonts (headline + body)','FL business name check on Sunbiz.org — we provide a preliminary public-record search; legal availability and trademark clearance are not guaranteed']},
-  { id:'sticker',tier:'budget' as const,price:'$175',name:'Sticker System',desc:'Put your name on everything',icon:Scissors,
-    f:['2 custom sticker designs sized for 3-inch production; physical durability depends on selected materials and printer','1 business card design (same spec as CardCut — 3.5" × 2", 300 DPI, CMYK)','6 ready-to-use slogans (tested phrasing for social posts, trucks, signs)','All print files delivered: PDF + PNG + SVG + source files — yours forever']},
-  { id:'sales',tier:'premium' as const,price:'$350',name:'Selling Sales Set',desc:'Create coordinated marketing materials to help reach customers',icon:ShoppingCart,pop:true,
-    f:['Everything in Sticker System (stickers, card, slogans, files)','1 written marketing plan PDF (4 pages — weekly action steps for 30 days)','1 flyer design (8.5" × 11", print-ready) + 5 ready-to-post ad copy blocks (for FB, Nextdoor, Google, flyers)','12 branded social graphics in agreed platform sizes']},
-  { id:'rebellion',tier:'premium' as const,price:'$500',name:'Registered Rebellion',desc:'Brand identity plus Florida business-startup guidance (not legal filing services)',icon:Shield,
-    f:['Everything in Selling Sales Set','1 Florida business launch roadmap PDF — step-by-step: LLC filing ($125), EIN (free), bank account, DBA, licenses, insurance','1 brand guidelines document (8 pages: logo usage, spacing, color codes, font rules, do\'s & don\'ts)','30-day content calendar (30 specific post ideas with captions + hashtags — you just post them)']},
-  { id:'passion',tier:'premium' as const,price:'$650',name:'Premiere Passion Pal',desc:'Coordinated email and advertising copy for your brand',icon:MessageCircle,
-    f:['Everything in Registered Rebellion','5 email templates (welcome, follow-up, special offer, thank-you, review request) — ready to paste into Gmail','9 advertising copy drafts (3 each for Facebook, Nextdoor and Google), each with headline, body and call-to-action','1 brand story document (500 words — written like a real human, not AI fluff — goes on your About page)']},
-  { id:'sovereign',tier:'elite' as const,price:'$850',name:'The Sovereignty Set',desc:'Build a consistent professional identity across channels',icon:Globe,
-    f:['Everything in Premiere Passion Pal','1 Brand Bible (20-page master PDF — every color, font, logo variant, voice & tone rule, photo style)','1 Competitor Analysis (5 local competitors — their pricing, positioning, weak spots, how to beat them)','Print-ready production files plus an optional print quote for 250 business cards, 50 stickers and 25 flyers; printing and shipping billed separately']},
-  { id:'site',tier:'elite' as const,price:'$1,200',name:'Site Sales Solution',desc:'Give prospective customers a clear place to learn about your services',icon:FileText,
-    f:['Everything in The Sovereignty Set','1 mobile-friendly landing page with contact form and QR link; launch timing and third-party hosting costs confirmed in proposal','1 neighborhood ad strategy (3 targeted audiences, $5–15/day budgets, exact copy for FB + Nextdoor + Google)','1 short-form promotional video concept and edit, up to 30 seconds, using client-provided or licensed media']},
-  { id:'enterprise',tier:'elite' as const,price:'$1,500',name:'Entrepreneurship Enterprise',desc:'From passion to profit — your launch toolkit',icon:Rocket,
-    f:['Selected deliverables from Site Sales Solution, as agreed in the project brief','Coordinated launch asset set: logo variants, cards, flyers, social templates and one signage concept','Competitor positioning brief and 30-day advertising plan; advertising spend is separate','1 Startup Checklist PDF (40 items — LLC, EIN, bank, DBA, license, insurance, website, GBP, taxes, bookkeeping — every legal & operational box checked)']},
-  { id:'ultimate',tier:'elite' as const,price:'$2,000',name:'Ultimate Premium Suite',desc:'Passion to Profit — coordinated premium launch',icon:Zap,
-    f:['A coordinated premium launch kit with an agreed written deliverables checklist','Print-ready files for 500 business cards, 100 stickers and 100 flyers; physical production and shipping quoted separately','Landing page (live) + 30-sec video ad + full multi-channel ad strategy + 30-day campaign launch plan; ongoing management quoted separately','PRIORITY: scheduled delivery milestones, 2 revision rounds per deliverable, and 30 days of post-delivery corrections; new requests quoted separately']},
-];
+const P = catalog.packages.map(p => ({
+  id:p.id, tier:p.tier as 'budget'|'premium'|'elite', price:'$'+p.price.toLocaleString(), name:p.name,
+  desc:p.description, icon:Printer, f:p.features, pop:p.id==='sales'
+}));
 
 export const Pricing: React.FC<PricingProps> = ({ onSelectPackage }) => {
   const [hovered, setHovered] = useState<string|null>(null);

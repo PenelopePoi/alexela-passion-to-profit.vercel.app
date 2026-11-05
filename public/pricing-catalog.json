@@ -1,0 +1,403 @@
+{
+  "updated": "2026-11-05",
+  "currency": "USD",
+  "packages": [
+    {
+      "id": "cardcut",
+      "name": "CardCut Calibrated",
+      "price": 75,
+      "tier": "budget",
+      "description": "Start with a card that opens doors.",
+      "features": [
+        "Front-and-back business card design",
+        "Three brand colors and font pairing",
+        "Tested QR code linked to your destination",
+        "Print-ready PDF and digital preview",
+        "Two revision rounds"
+      ]
+    },
+    {
+      "id": "promo",
+      "name": "Promotion Pal",
+      "price": 125,
+      "tier": "budget",
+      "description": "Give your business a recognizable identity.",
+      "features": [
+        "Two logo directions; one approved logo",
+        "Transparent PNG, SVG and PDF logo files",
+        "Five brand colors and font pairing",
+        "Slogan and short mission statement",
+        "Two revision rounds"
+      ]
+    },
+    {
+      "id": "sticker",
+      "name": "Sticker System",
+      "price": 175,
+      "tier": "budget",
+      "description": "Put a consistent identity in more hands.",
+      "features": [
+        "Front-and-back business card design",
+        "Two custom sticker designs",
+        "Six short slogan options",
+        "PDF, PNG and SVG production files as applicable",
+        "Two revision rounds"
+      ]
+    },
+    {
+      "id": "sales",
+      "name": "Selling Sales Set",
+      "price": 350,
+      "tier": "premium",
+      "description": "A practical kit for getting the word out.",
+      "features": [
+        "Everything in Sticker System",
+        "One letter-size flyer design",
+        "Twelve social graphics",
+        "Five advertising copy drafts",
+        "Four-page 30-day marketing action plan"
+      ]
+    },
+    {
+      "id": "rebellion",
+      "name": "Registered Rebellion",
+      "price": 500,
+      "tier": "premium",
+      "description": "Brand structure and a clearer launch path.",
+      "features": [
+        "Everything in Selling Sales Set",
+        "Florida business-startup roadmap",
+        "Eight-page brand usage guide",
+        "Thirty-day content calendar",
+        "Educational guidance; filing fees separate"
+      ]
+    },
+    {
+      "id": "passion",
+      "name": "Premiere Passion Pal",
+      "price": 650,
+      "tier": "premium",
+      "description": "Keep your message consistent across channels.",
+      "features": [
+        "Everything in Registered Rebellion",
+        "Five reusable email templates",
+        "Nine advertising copy drafts in total",
+        "Brand story up to 500 words",
+        "Coordinated campaign messaging"
+      ]
+    },
+    {
+      "id": "sovereign",
+      "name": "The Sovereignty Set",
+      "price": 850,
+      "tier": "elite",
+      "description": "A complete reference for your growing brand.",
+      "features": [
+        "Everything in Premiere Passion Pal",
+        "Twenty-page brand reference guide",
+        "Five-competitor positioning brief",
+        "Production files for cards, stickers and flyers",
+        "Optional print coordination quote"
+      ]
+    },
+    {
+      "id": "site",
+      "name": "Site Sales Solution",
+      "price": 1200,
+      "tier": "elite",
+      "description": "Take your brand from paper to a digital home.",
+      "features": [
+        "Everything in The Sovereignty Set",
+        "One responsive landing page and contact form",
+        "One short promotional edit, up to 30 seconds",
+        "Three-audience advertising strategy",
+        "Client-supplied or licensed video assets"
+      ]
+    },
+    {
+      "id": "enterprise",
+      "name": "Entrepreneurship Enterprise",
+      "price": 1500,
+      "tier": "elite",
+      "description": "Coordinate a more ambitious business launch.",
+      "features": [
+        "Agreed Site Sales Solution deliverables",
+        "Expanded coordinated launch artwork",
+        "One signage design concept",
+        "Forty-item startup checklist",
+        "Launch plan and delivery milestones"
+      ]
+    },
+    {
+      "id": "ultimate",
+      "name": "Ultimate Premium Suite",
+      "price": 2000,
+      "tier": "elite",
+      "description": "Your premium, coordinated launch collection.",
+      "features": [
+        "Logo identity and brand guide",
+        "Front-and-back cards, flyer and sticker artwork",
+        "Landing page and up-to-30-second video edit",
+        "Multi-channel advertising strategy and 30-day plan",
+        "Two revision rounds per agreed deliverable; 30-day corrections"
+      ]
+    }
+  ],
+  "addons": [
+    {
+      "id": "cleanup",
+      "name": "Logo background cleanup",
+      "price": 20,
+      "description": "Clean transparent PNG from supplied artwork",
+      "billing": "one-time"
+    },
+    {
+      "id": "vector",
+      "name": "Simple vector conversion",
+      "price": 35,
+      "description": "Simple supplied logo; complex artwork quoted",
+      "billing": "one-time"
+    },
+    {
+      "id": "flyer",
+      "name": "Extra flyer design",
+      "price": 50,
+      "description": "One letter-size side; two revision rounds",
+      "billing": "one-time"
+    },
+    {
+      "id": "social",
+      "name": "Five extra social graphics",
+      "price": 45,
+      "description": "One campaign; agreed platform sizes",
+      "billing": "one-time"
+    },
+    {
+      "id": "shirt",
+      "name": "Shirt graphic design",
+      "price": 35,
+      "description": "One placement; garment and printing separate",
+      "billing": "one-time"
+    },
+    {
+      "id": "sign",
+      "name": "Yard-sign design",
+      "price": 45,
+      "description": "One design; production separate",
+      "billing": "one-time"
+    },
+    {
+      "id": "revision",
+      "name": "Extra revision round",
+      "price": 25,
+      "description": "One deliverable within the existing brief",
+      "billing": "one-time"
+    },
+    {
+      "id": "rush",
+      "name": "Rush scheduling",
+      "price": 49,
+      "description": "Subject to confirmed availability and scope",
+      "billing": "one-time"
+    },
+    {
+      "id": "calls",
+      "name": "Call script + voicemail",
+      "price": 35,
+      "description": "One coordinated script set",
+      "billing": "one-time"
+    },
+    {
+      "id": "reviews",
+      "name": "Review-request templates",
+      "price": 45,
+      "description": "Email and text wording; no guaranteed reviews",
+      "billing": "one-time"
+    }
+  ],
+  "monthly": [
+    {
+      "name": "Social content",
+      "price": 150,
+      "description": "Three posts/week for two platforms; publishing scope agreed."
+    },
+    {
+      "name": "Google Business support",
+      "price": 99,
+      "description": "Weekly posts, photos and review-response drafts."
+    },
+    {
+      "name": "Ad campaign support",
+      "price": 199,
+      "description": "Campaign setup and optimization; ad spend separate."
+    }
+  ],
+  "terms": "Starting design prices in USD. Physical printing, blanks, shipping, tax, ad spend, domains, hosting and filing fees are separate unless expressly included. Final scope, timing and any third-party costs are confirmed in a written quote. No payment is collected by this estimator.",
+  "products": [
+    {
+      "title": "BMX & Motorcycle Decal Sets",
+      "items": [
+        {
+          "name": "BMX name / number mini set",
+          "price": "$25",
+          "description": "2\u20134 pre-sized single-color decals"
+        },
+        {
+          "name": "BMX frame accent kit",
+          "price": "$45",
+          "description": "6\u201310 decals; one-color cut vinyl"
+        },
+        {
+          "name": "BMX complete custom kit",
+          "price": "$85",
+          "description": "Up to 16 frame, fork and badge decals; 2 colors"
+        },
+        {
+          "name": "BMX premium layered kit",
+          "price": "$125",
+          "description": "Up to 20 decals; up to 3 weedable colors"
+        },
+        {
+          "name": "Motorcycle tank / side accent set",
+          "price": "$65",
+          "description": "2 matched decals; single-color vinyl"
+        },
+        {
+          "name": "Motorcycle lettering / logo set",
+          "price": "$95",
+          "description": "Up to 6 decals; one or two colors"
+        },
+        {
+          "name": "Motorcycle custom multi-panel kit",
+          "price": "$175",
+          "description": "Up to 12 decals; 2-color vinyl"
+        },
+        {
+          "name": "Motorcycle premium layered kit",
+          "price": "$275",
+          "description": "Up to 18 decals; 3 colors; special layout"
+        }
+      ]
+    },
+    {
+      "title": "Vehicle Vinyl & Stickers",
+      "items": [
+        {
+          "name": "Small window / body decal",
+          "price": "$15",
+          "description": "One single-color decal, up to 6 inches"
+        },
+        {
+          "name": "Medium vehicle decal",
+          "price": "$30",
+          "description": "One single-color decal, up to 12 inches"
+        },
+        {
+          "name": "Pair of door logo decals",
+          "price": "$65",
+          "description": "2 matched one-color logos, up to 12 inches"
+        },
+        {
+          "name": "Vehicle mini sticker pack",
+          "price": "$35",
+          "description": "5 small die-cut decals"
+        },
+        {
+          "name": "Vehicle 10-piece decal set",
+          "price": "$65",
+          "description": "10 single-color decals, up to 4 inches each"
+        },
+        {
+          "name": "Custom vehicle accent kit",
+          "price": "$125",
+          "description": "Up to 10 decals; 2 colors; no installation"
+        },
+        {
+          "name": "Reflective / chrome / specialty vinyl",
+          "price": "+25%",
+          "description": "Material surcharge, where available"
+        }
+      ]
+    },
+    {
+      "title": "Custom Merch & Promotional Products",
+      "items": [
+        {
+          "name": "Car-door magnets \u2014 pair 12\u00d718 in",
+          "price": "$79",
+          "description": "Two full-color vehicle-rated magnets"
+        },
+        {
+          "name": "Car-door magnets \u2014 pair 12\u00d724 in",
+          "price": "$99",
+          "description": "Two full-color vehicle-rated magnets"
+        },
+        {
+          "name": "Small fridge magnets \u2014 10",
+          "price": "$30",
+          "description": "Same supplied artwork, standard size"
+        },
+        {
+          "name": "Ceramic mug 11 oz",
+          "price": "$18",
+          "description": "One custom printed mug"
+        },
+        {
+          "name": "Ceramic mug 15 oz",
+          "price": "$23",
+          "description": "One custom printed mug"
+        },
+        {
+          "name": "Sublimation coaster \u2014 single",
+          "price": "$9",
+          "description": "One printed standard coaster"
+        },
+        {
+          "name": "Coasters \u2014 set of 4",
+          "price": "$30",
+          "description": "Four coordinating printed coasters"
+        },
+        {
+          "name": "Canvas tote bag \u2014 one side",
+          "price": "$22",
+          "description": "One standard tote with print"
+        },
+        {
+          "name": "Canvas tote bag \u2014 two sides",
+          "price": "$28",
+          "description": "One standard tote with two prints"
+        },
+        {
+          "name": "Drawstring bag",
+          "price": "$19",
+          "description": "One standard printed drawstring bag"
+        },
+        {
+          "name": "Baseball / trucker cap",
+          "price": "$28",
+          "description": "One standard hat with transfer graphic"
+        },
+        {
+          "name": "Premium embroidered / patch hat",
+          "price": "$38",
+          "description": "One cap; simple front design"
+        },
+        {
+          "name": "Beanie with design",
+          "price": "$26",
+          "description": "One standard decorated beanie"
+        },
+        {
+          "name": "Keychains \u2014 5",
+          "price": "$25",
+          "description": "Five printed standard keychains"
+        },
+        {
+          "name": "Water-bottle stickers \u2014 pack of 5",
+          "price": "$20",
+          "description": "Five laminated small stickers"
+        }
+      ]
+    }
+  ]
+}
