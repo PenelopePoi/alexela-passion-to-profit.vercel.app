@@ -9,8 +9,8 @@ const walk = (dir: string): string[] => readdirSync(dir, { withFileTypes: true }
 
 describe('approved AleXelA identity across public entry points', () => {
   it('preserves the approved master artwork byte for byte', () => {
-    expect(createHash('sha256').update(readFileSync('public/alexela-master-logo.jpg')).digest('hex'))
-      .toBe('55a73a84bdfed0da3ba5196b1048d0438613a1a73fcd49bdff56f29819b7b305');
+    expect(createHash('sha256').update(readFileSync('public/alexela-actual-logo-transparent.png')).digest('hex'))
+      .toBe('08a402ed755cf014a25f41f213e859fd70df58bbaaa50a5562f43a214a48d135');
   });
   it('removes retired logo references and the retired domain from runtime pages', () => {
     const files = ['App.tsx', 'index.html', ...walk('components'), ...walk('src'), ...walk('services'), ...walk('public')]
@@ -22,7 +22,7 @@ describe('approved AleXelA identity across public entry points', () => {
     for (const path of walk('public').filter(path => path.endsWith('.html'))) {
       const html = readFileSync(path, 'utf8');
       expect(html, path).toContain('href="/alexela-brand.css"');
-      expect(html, path).toContain('href="/alexela-master-logo.jpg"');
+      expect(html, path).toContain('href="/alexela-actual-logo-transparent.png"');
     }
   });
 });

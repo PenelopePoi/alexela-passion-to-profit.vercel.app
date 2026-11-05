@@ -815,7 +815,7 @@ const App: React.FC = () => {
       {/* Global logo watermark — 25% opacity, adds dimension */}
       <div className="fixed inset-0 pointer-events-none z-0 flex items-center justify-center overflow-hidden">
         <motion.img
-          src="/alexela-master-logo.jpg"
+          src="/alexela-actual-logo-transparent.png"
           alt=""
           aria-hidden="true"
           loading="lazy"
@@ -839,7 +839,7 @@ const App: React.FC = () => {
         <header className="fixed top-0 left-0 right-0 z-[90] px-4 sm:px-6 py-2.5 sm:py-3 flex justify-between items-center bg-brand-black/90 backdrop-blur-xl border-b border-white/5">
           <button onClick={() => { setStep('landing'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="flex items-center gap-1 group cursor-pointer">
             <img
-              src="/alexela-master-logo.jpg"
+              src="/alexela-actual-logo-transparent.png"
               alt="AleXelA"
               width={160}
               height={64}
@@ -925,7 +925,7 @@ const App: React.FC = () => {
               {/* LOGO */}
               <button onClick={handleReset} className="flex items-center shrink-0 group cursor-pointer" aria-label="AleXelA Home">
                 <img
-                  src="/alexela-master-logo.jpg"
+                  src="/alexela-actual-logo-transparent.png"
                   alt="AleXelA Creative Branding Studio"
                   width={200}
                   height={80}
@@ -1113,21 +1113,17 @@ const App: React.FC = () => {
                 transition={{ duration: 1, delay: 0.2 }}
                 className="relative hidden lg:block"
               >
-                <div className="relative w-full max-w-md mx-auto rounded-[3rem] shadow-2xl shadow-brand-teal/10 group">
+                <div className="relative w-full max-w-md mx-auto group">
                   <img
-                    src="/alexela-master-logo.jpg"
-                    alt="AleXelA’s Passion to Profit — approved portrait, golden tree, fire and ice brand artwork"
-                    className="w-full h-auto object-contain rounded-[3rem] group-hover:scale-[1.02] transition-all duration-1000"
+                    src="/alexela-actual-logo-transparent.png"
+                    alt="AleXelA’s Passion to Profit — actual golden tree, blue X, fire and water logo"
+                    className="w-full h-auto object-contain group-hover:scale-[1.02] transition-all duration-1000"
                     referrerPolicy="no-referrer"
-                    width={1088}
-                    height={1536}
+                    width={1536}
+                    height={1024}
                     loading="eager"
                     decoding="async"
                   />
-                  {/* Dark-theme blend gradients */}
-                  <div className="absolute inset-0 rounded-[3rem] bg-gradient-to-t from-brand-black/60 via-transparent to-transparent pointer-events-none"></div>
-                  <div className="absolute inset-0 rounded-[3rem] bg-gradient-to-b from-brand-black/20 via-transparent to-transparent pointer-events-none"></div>
-                  <div className="absolute inset-0 rounded-[3rem] ring-1 ring-inset ring-white/10 pointer-events-none"></div>
                 </div>
 
                 {/* Floating decorative elements around hero image */}
@@ -1717,7 +1713,7 @@ const App: React.FC = () => {
             <div className="max-w-[1600px] mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-10 sm:gap-16 text-xs leading-relaxed">
               <div className="col-span-2 space-y-6">
                 <div className="flex items-center gap-3">
-                  <img src="/alexela-master-logo.jpg" alt="AleXelA Creative Branding Studio" className="h-10 sm:h-14 w-auto max-w-[160px] object-contain" loading="lazy" width={140} height={56} />
+                  <img src="/alexela-actual-logo-transparent.png" alt="AleXelA Creative Branding Studio" className="h-10 sm:h-14 w-auto max-w-[160px] object-contain" loading="lazy" width={140} height={56} />
                 </div>
                 <p className="max-w-sm">AleXelA — Passion to Profit Creative Branding Studio. Custom branding, design, print-ready art and launch guidance from Florida’s Space Coast.</p>
                 <a href="tel:3213759685" className="flex items-center gap-2 text-brand-teal hover:text-white transition-colors mt-2">
