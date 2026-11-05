@@ -400,18 +400,7 @@ const TaglineRotator: React.FC = () => {
 
   return (
     <div className="relative h-[2.5em] overflow-hidden">
-      <AnimatePresence mode="wait">
-        <motion.span
-          key={index}
-          initial={{ y: 40, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: -40, opacity: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          className="block text-brand-teal italic"
-        >
-          {taglines[index]}
-        </motion.span>
-      </AnimatePresence>
+      <span className="block text-brand-teal italic">{taglines[index]}</span>
     </div>
   );
 };
