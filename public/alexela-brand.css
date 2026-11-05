@@ -21,3 +21,9 @@ select option { background:#102b42; color:#f1f5f9; }
 a:focus-visible,button:focus-visible { outline:2px solid #f5bc50; outline-offset:4px; }
 @media(max-width:600px) { header img,.header-logo img,.nj-logo { height:72px; } }
 
+/* Fire at left, electric blue at right, gold accents around studio controls. */
+header,.header,footer,.footer { border-color:#d8ad5455; background-image:linear-gradient(100deg,#ff791b08,transparent 45%,#00d9f50b); }
+.hero,.cta-section { background:radial-gradient(ellipse at 0% 55%,#ff791b1c,transparent 55%),radial-gradient(ellipse at 100% 20%,#00d9f522,transparent 55%),#061528; }
+.checkbox-item,.pricing-card,.card-option,.budget-card,.service-option,.nj-step { border-color:#d8ad5440; background-image:linear-gradient(135deg,#ff791b08,transparent 45%,#00d9f509); }
+.hero .cta-btn,.cta-btn,.submit-btn,.nj-cta { background:linear-gradient(115deg,#00d9f5,#64eaff 58%,#f5bc50); color:#061528; box-shadow:0 5px 25px #00d9f526; }
+img[src="/alexela-logo-cutout.png"] { background:transparent; }

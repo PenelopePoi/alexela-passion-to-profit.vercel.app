@@ -598,3 +598,26 @@ select option { background: #061528; color: #f8fafc; }
 @media (prefers-reduced-motion: reduce) {
   .animate-float, .animate-fade-in-up, .gradient-text, .popular-glow { animation: none; }
 }
+
+/* Studio chrome follows the approved fire, gold and electric-blue identity. */
+@layer components {
+  .glass, .glass-dark, .card-premium {
+    background-image: linear-gradient(135deg, #ff791b09, transparent 42%, #00d9f509);
+    border-color: #d8ad5438;
+  }
+  .card-premium:hover { border-color: #f5bc5099; box-shadow: 0 16px 50px #00a8cc18, 0 0 24px #ff791b10; }
+  .btn-primary {
+    background-image: linear-gradient(115deg, #00d9f5, #64eaff 58%, #f5bc50);
+    box-shadow: 0 5px 25px #00d9f526;
+  }
+  .btn-secondary { border-color: #f5bc5070; }
+  .btn-secondary:hover { border-color: #f5bc50; background-color: #f5bc5012; }
+}
+body {
+  background-image: radial-gradient(ellipse at 0% 12%, #ff791b12, transparent 42%), radial-gradient(ellipse at 100% 26%, #00d9f515, transparent 45%);
+}
+#main-content > header {
+  border-bottom-color: #d8ad5455;
+  background-image: linear-gradient(100deg, #ff791b08, transparent 45%, #00d9f50b);
+}
+img[src="/alexela-logo-cutout.png"] { background: transparent; }
