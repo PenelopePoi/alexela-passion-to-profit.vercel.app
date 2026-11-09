@@ -2,7 +2,7 @@ import React from 'react';
 import { Bike, CarFront, ShoppingBag } from 'lucide-react';
 import catalog from '../public/pricing-catalog.json';
 
-const groups = catalog.products.map((g,i)=>({...g,icon:[Bike,CarFront,ShoppingBag][i]}));
+const groups = catalog.products.map((g,i)=>({...g,icon:[Bike,CarFront,ShoppingBag][i % 3]}));
 export const ProductCatalog: React.FC = () => (
  <section aria-labelledby="decals-merch-title" className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
   <div className="rounded-3xl border border-amber-300/25 bg-[#0b1a2a] p-5 sm:p-10 shadow-[0_0_55px_rgba(233,184,93,0.06)]">
@@ -19,7 +19,7 @@ export const ProductCatalog: React.FC = () => (
    <p className="text-sm text-white/80 mt-6 leading-relaxed"><strong className="text-amber-200">Design setup: $50</strong> for original custom artwork when needed; waived if supplied production-ready artwork requires no design. Standard products include basic placement and a digital proof. Existing package inclusions are never billed twice. Vinyl prices assume standard outdoor adhesive vinyl; they exclude installation, removal, specialty finishes, tax and shipping. Motorcycle sets are decorative and must not cover safety labels or regulated reflectors. Merch prices are proposed starting retail rates, subject to blank-stock and vendor confirmation; minimum quantities may apply to externally fulfilled items. Bulk orders (12+) are quoted by quantity and material.</p>
    <div className="mt-7 flex flex-wrap justify-center gap-3">
     <a href="sms:+13213759685?body=Hi%20Alex%2C%20I%27d%20like%20a%20quote%20for%20custom%20decals%20or%20merch." className="rounded-full border border-cyan-300 bg-cyan-400 px-6 py-3 font-bold text-black">Text Alex for a quote</a>
-    <a href="mailto:alexelas.studio@gmail.com?subject=Custom%20Decals%20%26%20Merch%20Quote" className="rounded-full border border-amber-200/50 px-6 py-3 font-bold text-white">Email project details</a>
+    <a href="mailto:xelabrandingstudio@gmail.com?subject=Custom%20Decals%20%26%20Merch%20Quote" className="rounded-full border border-amber-200/50 px-6 py-3 font-bold text-white">Email project details</a>
    </div>
   </div>
  </section>
