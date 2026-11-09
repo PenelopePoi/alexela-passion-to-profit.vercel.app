@@ -79,3 +79,7 @@ path=OUT/'AleXelA_Business_Card_Front_Back.pdf';r=PdfReader(path);wr=PdfWriter()
 for p in r.pages:p.trimbox=RectangleObject([9,9,261,153]);p.bleedbox=RectangleObject([0,0,270,162]);wr.add_page(p)
 with open(path,'wb')as f:wr.write(f)
 print('Created price guide, two-page intake, two-sided card and QR asset.')
+
+# Keep the compact customer documents authoritative after legacy card generation.
+import runpy
+runpy.run_path(str(Path(__file__).with_name('build-compact-guides.py')))
