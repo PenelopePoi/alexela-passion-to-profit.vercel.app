@@ -240,12 +240,12 @@
         {
           "name": "BMX name / number mini set",
           "price": "$25",
-          "description": "2\u20134 pre-sized single-color decals"
+          "description": "2–4 pre-sized single-color decals"
         },
         {
           "name": "BMX frame accent kit",
           "price": "$45",
-          "description": "6\u201310 decals; one-color cut vinyl"
+          "description": "6–10 decals; one-color cut vinyl"
         },
         {
           "name": "BMX complete custom kit",
@@ -323,17 +323,17 @@
       "title": "Custom Merch & Promotional Products",
       "items": [
         {
-          "name": "Car-door magnets \u2014 pair 12\u00d718 in",
+          "name": "Car-door magnets — pair 12×18 in",
           "price": "$79",
           "description": "Two full-color vehicle-rated magnets"
         },
         {
-          "name": "Car-door magnets \u2014 pair 12\u00d724 in",
+          "name": "Car-door magnets — pair 12×24 in",
           "price": "$99",
           "description": "Two full-color vehicle-rated magnets"
         },
         {
-          "name": "Small fridge magnets \u2014 10",
+          "name": "Small fridge magnets — 10",
           "price": "$30",
           "description": "Same supplied artwork, standard size"
         },
@@ -348,22 +348,22 @@
           "description": "One custom printed mug"
         },
         {
-          "name": "Sublimation coaster \u2014 single",
+          "name": "Sublimation coaster — single",
           "price": "$9",
           "description": "One printed standard coaster"
         },
         {
-          "name": "Coasters \u2014 set of 4",
+          "name": "Coasters — set of 4",
           "price": "$30",
           "description": "Four coordinating printed coasters"
         },
         {
-          "name": "Canvas tote bag \u2014 one side",
+          "name": "Canvas tote bag — one side",
           "price": "$22",
           "description": "One standard tote with print"
         },
         {
-          "name": "Canvas tote bag \u2014 two sides",
+          "name": "Canvas tote bag — two sides",
           "price": "$28",
           "description": "One standard tote with two prints"
         },
@@ -388,14 +388,59 @@
           "description": "One standard decorated beanie"
         },
         {
-          "name": "Keychains \u2014 5",
+          "name": "Keychains — 5",
           "price": "$25",
           "description": "Five printed standard keychains"
         },
         {
-          "name": "Water-bottle stickers \u2014 pack of 5",
+          "name": "Water-bottle stickers — pack of 5",
           "price": "$20",
           "description": "Five laminated small stickers"
+        }
+      ]
+    },
+    {
+      "title": "Print, Signage & Custom Apparel",
+      "items": [
+        {
+          "name": "Business cards & flyers",
+          "price": "Custom quote",
+          "description": "Two-sided cards, flyers and promotional print; quantity, stock and finish confirmed."
+        },
+        {
+          "name": "Door hangers & bookmarks",
+          "price": "Custom quote",
+          "description": "Custom size and two-sided options; print and finishing quoted."
+        },
+        {
+          "name": "Yard signs, road signs & banners",
+          "price": "Custom quote",
+          "description": "Size, substrate, hardware and placement requirements confirmed before production."
+        },
+        {
+          "name": "Shirts & shorts",
+          "price": "Custom quote",
+          "description": "Garment, sizes, fabric, decoration method and print locations confirmed."
+        },
+        {
+          "name": "Backpacks & bags",
+          "price": "Custom quote",
+          "description": "Blank availability, material and decoration area confirmed."
+        },
+        {
+          "name": "Name tags & luggage tags",
+          "price": "Custom quote",
+          "description": "Names, attachment style, dimensions and compatible blanks confirmed."
+        },
+        {
+          "name": "Labels, packaging & mouse pads",
+          "price": "Custom quote",
+          "description": "Artwork and compatible material or sublimation blanks confirmed."
+        },
+        {
+          "name": "Vehicle wraps",
+          "price": "Custom quote",
+          "description": "Design and specialist production or installation quoted after vehicle measurements and partner availability are confirmed."
         }
       ]
     }
