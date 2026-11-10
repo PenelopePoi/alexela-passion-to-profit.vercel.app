@@ -26,8 +26,22 @@ describe('sectioned portfolio',()=>{
   const trigger=screen.getByRole('button',{name:'View DNA Remodels'});
   fireEvent.click(trigger);
   expect(screen.getByRole('dialog',{name:'DNA Remodels'})).toBeInTheDocument();
-  expect(screen.getByAltText('DNA Remodels full artwork')).toHaveAttribute('src','/gallery/work-11.jpg');
+  expect(screen.getByAltText('DNA Remodels full artwork')).toHaveAttribute('src','/portfolio/dna-remodels-business-card.webp');
   fireEvent.click(screen.getByRole('button',{name:'Close project'}));
   expect(trigger).toHaveFocus();
  });
+ it('navigates within a category and sends the selected project into intake',()=>{
+  HTMLDialogElement.prototype.showModal=vi.fn(function(this:HTMLDialogElement){this.setAttribute('open','');});
+  render(<PortfolioGallery/>);
+  fireEvent.click(screen.getByRole('button',{name:'Business Cards'}));
+  fireEvent.click(screen.getByRole('button',{name:'View AleXelA — services business card'}));
+  fireEvent.click(screen.getByRole('button',{name:'Next project'}));
+  expect(screen.getByRole('dialog',{name:'Coquina Ridge'})).toBeInTheDocument();
+  fireEvent.keyDown(screen.getByRole('dialog'),{key:'ArrowLeft'});
+  expect(screen.getByRole('dialog',{name:'AleXelA — services business card'})).toBeInTheDocument();
+  const destination=new URL(screen.getByRole('link',{name:'Request a similar project'}).getAttribute('href')!,'https://example.com');
+  expect(destination.searchParams.get('package')).toBe('custom');
+  expect(destination.searchParams.get('product')).toBe('Business Cards — AleXelA — services business card');
+ });
+
 });

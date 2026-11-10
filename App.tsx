@@ -575,6 +575,13 @@ function PaymentSuccessView({ onBack }: { onBack: () => void }) {
 const App: React.FC = () => {
   const { config: variantConfig } = useVariant();
   const [step, setStep] = useState<'landing' | 'intake' | 'dashboard' | 'consult' | 'chat' | 'shuffle' | 'payment-success' | 'payment-canceled'>('landing');
+  const [pendingSection, setPendingSection] = useState<string|null>(null);
+  useEffect(() => {
+    if (step === 'landing' && pendingSection) {
+      document.getElementById(pendingSection)?.scrollIntoView({behavior:'smooth',block:'start'});
+      setPendingSection(null);
+    }
+  }, [step, pendingSection]);
   const [selectedPackage, setSelectedPackage] = useState<'budget' | 'premium' | 'elite' | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [brandData, setBrandData] = useState<BrandStrategy | null>(null);
@@ -776,13 +783,12 @@ const App: React.FC = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const scrollToPricing = () => {
-    document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToSection = (id: string) => {
+    if (step !== 'landing') {setPendingSection(id);setStep('landing');}
+    else document.getElementById(id)?.scrollIntoView({behavior:'smooth',block:'start'});
   };
-
-  const scrollToPortfolio = () => {
-    document.getElementById('portfolio-peek')?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const scrollToPricing = () => scrollToSection('pricing');
+  const scrollToPortfolio = () => scrollToSection('portfolio-peek');
 
   /* ── Animated counter data ── */
   const counter1 = useAnimatedCounter(68, 2000);
@@ -1086,6 +1092,7 @@ const App: React.FC = () => {
       )}
 
       <SmartNav
+        onScrollToPricing={scrollToPricing}
         currentView={step}
         scrollY={scrollY}
         hasInteractedSinceAutoNav={hasInteractedSinceAutoNav}
@@ -1094,7 +1101,7 @@ const App: React.FC = () => {
           if (view === 'consult') { setStep('consult'); window.scrollTo({ top: 0, behavior: 'smooth' }); }
           else if (view === 'chat') { setStep('chat'); window.scrollTo({ top: 0, behavior: 'smooth' }); }
           else if (view === 'shuffle') { setStep('shuffle'); window.scrollTo({ top: 0, behavior: 'smooth' }); }
-          else if (view === 'intake') { setSelectedPackage('premium'); setStep('intake'); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+          else if (view === 'intake') { if (brandData && inputData) handleSave(brandData,inputData,logoCandidates,activeTemplate); setInputData(null); setSelectedPackage(null); setStep('intake'); window.scrollTo({ top: 0, behavior: 'smooth' }); }
           else if (view === 'landing') { handleReset(); }
           else if (view === 'dashboard') { /* already there */ }
         }}
