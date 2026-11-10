@@ -1,13 +1,13 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { handleCors } from '../_lib/cors';
+import { handleCors } from '../_lib/cors.js';
 
 // Lazy-load each handler to keep the router thin
-import calculateTaxReserve from './_handlers/calculateTaxReserve';
-import getCashFlowForecast from './_handlers/getCashFlowForecast';
-import getExpenseReport from './_handlers/getExpenseReport';
-import getProfitLoss from './_handlers/getProfitLoss';
-import getRevenueReport from './_handlers/getRevenueReport';
-import recordTransaction from './_handlers/recordTransaction';
+import calculateTaxReserve from './_handlers/calculateTaxReserve.js';
+import getCashFlowForecast from './_handlers/getCashFlowForecast.js';
+import getExpenseReport from './_handlers/getExpenseReport.js';
+import getProfitLoss from './_handlers/getProfitLoss.js';
+import getRevenueReport from './_handlers/getRevenueReport.js';
+import recordTransaction from './_handlers/recordTransaction.js';
 
 const routes: Record<string, (req: VercelRequest, res: VercelResponse) => Promise<void | VercelResponse>> = {
   calculateTaxReserve,
