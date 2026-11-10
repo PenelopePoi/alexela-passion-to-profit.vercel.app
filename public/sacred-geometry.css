@@ -38,3 +38,19 @@
  .doc-title h1 em{color:#ff8a65}
  .doc-shell input[type=checkbox],.studio-site input[type=checkbox]{accent-color:#00ffde}
 }
+
+/* Card + flyer visual continuity: midnight, vivid cyan, violet lettering and restrained metallic gold geometry. */
+@media screen{
+ :root{--sg-gold:#d8ad54;--sg-cyan:#00e0cf;--neon-pink:#b45fff}
+ .studio-site .studio-button,.doc-shell .button,.doc-shell button:not(.secondary){
+   background:linear-gradient(112deg,#00e0cf 0%,#7af9ee 44%,#d8ad54 100%);color:#06101d;
+ }
+ .studio-site .studio-button.outline{background:transparent;color:#00e0cf}
+ .studio-site .studio-hero::before,.doc-title::before,.doc-card::before{
+   background:linear-gradient(135deg,#00e0cf,#b45fff 58%,#d8ad54);
+ }
+ .doc-title h1 em,.studio-site .studio-hero h1 em{color:#b45fff}
+ .doc-shell .eyebrow,.studio-site .studio-eyebrow{color:#00e0cf}
+ .doc-shell .doc-card th,.doc-shell .doc-card td.amount{color:#d8ad54}
+ .studio-site :focus-visible,.doc-shell :focus-visible{outline-color:#00e0cf}
+}
