@@ -5,3 +5,11 @@
 .service-section{border-left:3px solid #ff8a65;padding:4px 20px;margin:32px 0 20px}.service-section h2{font:700 26px Georgia,serif;color:#f2eadc}.service-section p{font-size:13px;color:#b1c1d3}.product-choices{border:1px solid #59758e;border-radius:6px;padding:12px;margin-top:22px;min-width:0}.product-choices legend{font-size:14px;font-weight:700;color:#ff8a65}.product-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}.product-grid label.check-option{margin:0;padding:10px;min-height:44px}.product-grid span{overflow-wrap:anywhere}
 @media(max-width:420px){.doc-nav{flex-wrap:wrap}.doc-nav nav{width:100%;justify-content:space-between}.product-grid{grid-template-columns:1fr}}
 @media print{.doc-nav{display:flex!important;padding:0 0 8px;background:white;border-bottom:2px solid #b48129}.doc-nav nav{display:none}.doc-brand{color:#111}.doc-brand img{width:110px;height:75px}.doc-brand small{color:#333}.doc-shell{padding-top:8px}.doc-title{margin-bottom:10px}.doc-title h1{font-size:20pt}.doc-card{margin-bottom:10px}.doc-card h2,.service-section h2{font:700 12pt Arial,sans-serif;margin:10px 0 6px;color:#111}.doc-card table{margin-top:6px}.doc-card td{padding:4px 5px}.doc-card td span{font-size:8pt;line-height:1.3}.doc-card p,.helper{line-height:1.35}.intake-step label{margin-top:7px}.intake-step input:not([type=checkbox]),.intake-step textarea,.intake-step select{padding:4px;min-height:22px;font-size:9pt}.service-section{margin:12px 0;padding:0 10px}.service-section p{color:#333;font-size:9pt}.product-choices{padding:6px;margin-top:10px}.product-choices legend{color:#111;font-size:10pt}.product-grid{grid-template-columns:repeat(3,1fr);gap:2px}.product-grid label.check-option{width:auto;margin:0;min-height:0;padding:3px;font-size:8pt}.intake-estimate{margin-top:10px}.intake-step .eyebrow{margin-top:8px}}
+
+/* Geometry is a real SVG image in printed guides (visible even when browsers omit background graphics). */
+.print-geometry{display:none}
+@media print{
+ .doc-title{position:relative;min-height:70px;padding-right:105px}
+ .print-geometry{display:block!important;position:absolute;right:2px;top:0;width:88px;height:88px;object-fit:contain;filter:brightness(0);opacity:.16;pointer-events:none}
+ .doc-title h1{position:relative}
+}
