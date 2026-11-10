@@ -1,7 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { GoogleGenAI } from '@google/genai';
-import { requireEnv } from '../_lib/validateEnv';
-import { handleCors } from '../_lib/cors';
+import { requireEnv } from '../_lib/validateEnv.js';
+import { handleCors } from '../_lib/cors.js';
 
 const ai = new GoogleGenAI({ apiKey: requireEnv('GEMINI_API_KEY') });
 
