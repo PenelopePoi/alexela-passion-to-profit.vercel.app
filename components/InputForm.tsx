@@ -1,3 +1,4 @@
+import { useStudioAction } from './studio-actions';
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { BrandInput } from '../types';
@@ -249,6 +250,8 @@ export const InputForm: React.FC<InputFormProps> = ({ initialData, onSubmit, onS
     // Filter out already selected services
     return [...new Set(allSuggestions)].filter(s => !formData.services.includes(s));
   };
+
+  useStudioAction('save', handleSave);
 
   const renderProgress = () => (
     <div className="flex flex-col gap-6 mb-8">

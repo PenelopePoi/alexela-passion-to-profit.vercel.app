@@ -1,3 +1,4 @@
+import { useStudioAction } from './studio-actions';
 
 import React, { useState, useEffect } from 'react';
 import { BrandInput, BrandStrategy, LogoCandidate } from '../types';
@@ -302,6 +303,9 @@ export const Dashboard: React.FC<DashboardProps> = ({
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
   };
+
+  useStudioAction('save', handleSaveProject);
+  useStudioAction('export', handleExport);
 
   const handleDownloadBrandKit = () => {
     const selectedLogo_ = logoCandidates.find(c => c.status === 'liked') || (logoCandidates.length > 0 ? logoCandidates[0] : undefined);
@@ -1175,7 +1179,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
                    onClick={handleSaveProject}
                    className="px-12 py-6 bg-brand-teal text-white rounded-[2rem] text-lg font-black shadow-2xl hover:scale-110 transition-all flex items-center gap-3 group"
                  >
-                    Finalize & Complete Purchase <ShoppingCart size={24} className="group-hover:rotate-12 transition-transform" />
+                    Save completed project <Save size={24} className="group-hover:rotate-12 transition-transform" />
                  </button>
                  <button 
                    onClick={onReset}

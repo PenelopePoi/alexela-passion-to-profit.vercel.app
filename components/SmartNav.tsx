@@ -1,3 +1,4 @@
+import { dispatchStudioAction } from './studio-actions';
 import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowUp, Rocket, Phone, DollarSign, MessageSquare, X, Save, Download, PlusCircle } from 'lucide-react';
@@ -7,6 +8,7 @@ type View = 'landing' | 'intake' | 'dashboard' | 'consult' | 'chat' | 'shuffle';
 interface SmartNavProps {
   currentView: View;
   onNavigate: (view: View) => void;
+  onScrollToPricing: () => void;
   scrollY: number;
   hasInteractedSinceAutoNav: boolean;
   onAutoNavFired: () => void;
@@ -24,7 +26,7 @@ interface PendingAutoNav {
   key: string;
 }
 
-export default function SmartNav({ currentView, onNavigate, scrollY, hasInteractedSinceAutoNav, onAutoNavFired }: SmartNavProps) {
+export default function SmartNav({ currentView, onNavigate, onScrollToPricing, scrollY, hasInteractedSinceAutoNav, onAutoNavFired }: SmartNavProps) {
   const [isScrolling, setIsScrolling] = useState(false);
   const [pendingAutoNav, setPendingAutoNav] = useState<PendingAutoNav | null>(null);
   const [keyboardOpen, setKeyboardOpen] = useState(false);
@@ -64,11 +66,11 @@ export default function SmartNav({ currentView, onNavigate, scrollY, hasInteract
     autoNavTimerRef.current = setTimeout(() => {
       const elapsed = Date.now() - landingTimeRef.current;
       if (elapsed > 45000 && scrollY > 2000 && hasInteractedSinceAutoNav && lastAutoNavRef.current !== 'scroll-cta') {
-        triggerAutoNav({ label: 'pricing', action: () => window.scrollTo({ top: 4000, behavior: 'smooth' }), key: 'scroll-cta' });
+        triggerAutoNav({ label: 'pricing', action: onScrollToPricing, key: 'scroll-cta' });
       }
     }, 5000);
     return () => clearTimeout(autoNavTimerRef.current);
-  }, [currentView, scrollY, hasInteractedSinceAutoNav]);
+  }, [currentView, scrollY, hasInteractedSinceAutoNav, onScrollToPricing]);
 
   const triggerAutoNav = useCallback((nav: PendingAutoNav) => {
     if (lastAutoNavRef.current === nav.key || !hasInteractedSinceAutoNav) return;
@@ -105,13 +107,13 @@ export default function SmartNav({ currentView, onNavigate, scrollY, hasInteract
   const suggestions = useMemo((): Suggestion[] => {
     if (currentView === 'consult') return [];
     if (currentView === 'intake') return [
-      { label: 'Save Progress', icon: <Save size={14} />, action: () => {} },
+      { label: 'Save Progress', icon: <Save size={14} />, action: () => dispatchStudioAction('save') },
       { label: 'Need Help? Call Us', icon: <Phone size={14} />, action: () => window.open('tel:+13213759685') },
     ];
     if (currentView === 'dashboard') return [
-      { label: 'New Project', icon: <PlusCircle size={14} />, action: () => {} },
-      { label: 'Save', icon: <Save size={14} />, action: () => {} },
-      { label: 'Export', icon: <Download size={14} />, action: () => {} },
+      { label: 'New Project', icon: <PlusCircle size={14} />, action: () => onNavigate('intake') },
+      { label: 'Save', icon: <Save size={14} />, action: () => dispatchStudioAction('save') },
+      { label: 'Export JSON', icon: <Download size={14} />, action: () => dispatchStudioAction('export') },
     ];
     // Landing page — scroll-dependent
     if (scrollBucket === 'top') return [];
@@ -125,11 +127,11 @@ export default function SmartNav({ currentView, onNavigate, scrollY, hasInteract
       { label: 'Call Now', icon: <Phone size={14} />, action: () => window.open('tel:+13213759685') },
     ];
     return [
-      { label: 'Start Brand Quiz', icon: <Rocket size={14} />, action: () => onNavigate('intake') },
-      { label: 'See Pricing', icon: <DollarSign size={14} />, action: () => window.scrollTo({ top: 2000, behavior: 'smooth' }) },
+      { label: 'Start Brand Quiz', icon: <Rocket size={14} />, action: () => onNavigate('consult') },
+      { label: 'See Pricing', icon: <DollarSign size={14} />, action: onScrollToPricing },
       { label: 'Call Now', icon: <Phone size={14} />, action: () => window.open('tel:+13213759685') },
     ];
-  }, [currentView, scrollBucket, onNavigate]);
+  }, [currentView, scrollBucket, onNavigate, onScrollToPricing]);
   const visible = suggestions.length > 0 && !isScrolling && !keyboardOpen;
 
   return (
