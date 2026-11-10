@@ -1,21 +1,21 @@
-import * as admin from 'firebase-admin';
+import { getApps, initializeApp, cert, applicationDefault } from 'firebase-admin/app';
+import { getAuth, type DecodedIdToken } from 'firebase-admin/auth';
+import { getFirestore } from 'firebase-admin/firestore';
 
-// Initialize Firebase Admin once across all serverless function invocations
-if (!admin.apps.length) {
-  admin.initializeApp({
-    projectId: process.env.FIREBASE_PROJECT_ID,
-    credential: process.env.FIREBASE_SERVICE_ACCOUNT_KEY
-      ? admin.credential.cert(JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_KEY))
-      : admin.credential.applicationDefault(),
-  });
-}
+// The modular Firebase Admin API avoids CommonJS namespace interop errors on Node.js 24.
+const app = getApps()[0] ?? initializeApp({
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  credential: process.env.FIREBASE_SERVICE_ACCOUNT_KEY
+    ? cert(JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_KEY))
+    : applicationDefault(),
+});
 
-export const db = admin.firestore();
+export const db = getFirestore(app);
 
-export async function verifyAuth(authHeader: string | undefined): Promise<admin.auth.DecodedIdToken> {
+export async function verifyAuth(authHeader: string | undefined): Promise<DecodedIdToken> {
   if (!authHeader?.startsWith('Bearer ')) {
     throw new Error('Missing or invalid Authorization header');
   }
-  const token = authHeader.split('Bearer ')[1];
-  return admin.auth().verifyIdToken(token);
+  const token = authHeader.slice('Bearer '.length);
+  return getAuth(app).verifyIdToken(token);
 }
