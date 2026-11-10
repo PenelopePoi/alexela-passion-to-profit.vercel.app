@@ -1,0 +1,24 @@
+/* Add-on catalog uses the same approved AleXelA palette and sacred geometry as the intake and print guides. */
+.skip-to-content{position:absolute;left:12px;top:-70px;z-index:50;background:#00ffde;color:#061528;padding:12px}
+.skip-to-content:focus{top:12px}
+.addons-shell{max-width:1120px}
+.addons-intro{border-color:#d8ad5466}
+.addons-section{margin:38px 0 45px}
+.addons-heading{margin-bottom:20px;padding:0 4px}
+.addons-heading h2{font:400 clamp(24px,3vw,36px)/1.2 Georgia,serif;color:#f4ecdc;margin:7px 0}
+.addons-heading p:last-child{color:#bdcfe0;font-size:13px;max-width:690px}
+.addons-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.addons-option{display:flex;align-items:flex-start;gap:14px;padding:20px 18px;border:1px solid #d8ad5450;background:linear-gradient(140deg,#102b42,#081c30);border-radius:12px;cursor:pointer;min-height:116px;transition:border-color .2s ease}
+.addons-option:hover,.addons-option:focus-within{border-color:#00ffde}
+.addons-option input{width:20px;height:20px;accent-color:#00ffde;flex-shrink:0;margin-top:3px}
+.addons-description{display:flex;flex-direction:column;gap:8px;flex:1}
+.addons-description strong{font-size:14px;color:#f4f1e9}
+.addons-description small{font-size:12px;line-height:1.5;color:#bdccda}
+.addons-option b{white-space:nowrap;font-size:18px;color:#ff8a65}
+.addons-estimate{border-color:#00ffde66}
+.addons-estimate>strong{font:500 40px/1.3 Georgia,serif;color:#ff8a65;display:block}
+.addons-estimate #selection-summary{overflow-wrap:anywhere}
+.doc-shell .secondary{background:transparent!important;color:#f4ecdc!important;border:1px solid #d8ad5480}
+.doc-nav a[aria-current=page]{color:#ff8a65;border-bottom:1px solid currentColor}
+@media(max-width:700px){.addons-grid{grid-template-columns:1fr}.addons-option{min-height:auto;padding:16px}.doc-nav{flex-wrap:wrap}.doc-nav nav{flex-wrap:wrap;gap:12px}.addons-shell{padding-inline:16px}}
+@media print{.addons-section{margin:10px 0 14px}.addons-heading h2{font:700 13pt Arial;color:#111}.addons-heading p:last-child{font-size:9pt;color:#333}.addons-grid{grid-template-columns:1fr 1fr;gap:5px}.addons-option{min-height:0;background:#fff!important;color:#111;border:1px solid #bbb;padding:7px;break-inside:avoid}.addons-description strong{font-size:9pt;color:#111}.addons-description small{font-size:8pt;color:#333}.addons-option b{color:#111;font-size:10pt}.addons-estimate{display:none}.addons-custom{break-inside:avoid}}
