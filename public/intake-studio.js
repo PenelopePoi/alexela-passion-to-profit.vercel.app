@@ -2,7 +2,39 @@
  const form=document.getElementById('brand-brief'),steps=[...document.querySelectorAll('.intake-step')],next=document.getElementById('next-step'),previous=document.getElementById('previous-step'),error=document.getElementById('form-error'),draftStatus=document.getElementById('draft-status');
  let current=0,catalog;
  try{const r=await fetch('/pricing-catalog.json');if(!r.ok)throw new Error('catalog');catalog=await r.json();}catch{error.textContent='The price catalog could not load. Refresh or call Alex at (321) 375-9685 before sending your brief.';next.disabled=true;return;}
- const packageEl=document.getElementById('package'),boxes=[...form.querySelectorAll('[name="Add_ons[]"]')];
+ const packageEl=document.getElementById('package');
+ // Source of truth for both the live quote and dynamically displayed options.
+ // The static HTML remains usable for printing even without JavaScript.
+ const originalPackage=packageEl.value;
+ if(Array.isArray(catalog.packages)){
+   const options=catalog.packages.map(p=>{
+     const el=document.createElement('option');
+     el.value=p.id;
+     el.textContent=p.name+' — $'+Number(p.price).toLocaleString('en-US');
+     return el;
+   });
+   const custom=document.createElement('option');
+   custom.value='custom';
+   custom.textContent='Custom quote / help me decide';
+   packageEl.replaceChildren(...options,custom);
+   if([...packageEl.options].some(o=>o.value===originalPackage)) packageEl.value=originalPackage;
+ }
+ const addonContainer=form.querySelector('.intake-addons');
+ if(addonContainer && Array.isArray(catalog.addons)){
+   const labels=catalog.addons.map(item=>{
+     const label=document.createElement('label');label.className='check-option';
+     const checkbox=document.createElement('input');
+     checkbox.type='checkbox';checkbox.name='Add_ons[]';checkbox.value=item.id;
+     const details=document.createElement('span');
+     const desc=document.createElement('small');desc.textContent=item.description;
+     details.append(document.createTextNode(item.name),desc);
+     const price=document.createElement('b');price.textContent='+$'+Number(item.price).toLocaleString('en-US');
+     label.append(checkbox,details,price);
+     return label;
+   });
+   addonContainer.replaceChildren(...labels);
+ }
+ const boxes=[...form.querySelectorAll('[name="Add_ons[]"]')];
  const names=['Your business','Package & extras','Creative direction','Review & send'];
  const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  function selectedAddons(){return catalog.addons.filter(a=>boxes.some(b=>b.checked&&b.value===a.id));}
