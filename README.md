@@ -120,5 +120,5 @@ Proprietary. All rights reserved by Reconsumeralization LLC.
 ## Contact
 
 - **Phone:** (321) 375-9685
-- **Email:** xelabrandingstudio@gmail.com
+- **Email:** alexelas.studio@gmail.com
 - **Location:** Brevard County, FL (Space Coast)

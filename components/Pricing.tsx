@@ -316,8 +316,8 @@ export const Pricing: React.FC<PricingProps> = ({ onSelectPackage }) => {
             <Phone size={12} /> (321) 375-9685
           </a>
           <span className="hidden sm:inline text-white/10">|</span>
-          <a href="mailto:xelabrandingstudio@gmail.com" className="flex items-center gap-1.5 text-brand-lavender hover:text-white transition-colors text-xs font-bold">
-            <Mail size={12} /> xelabrandingstudio@gmail.com
+          <a href="mailto:alexelas.studio@gmail.com" className="flex items-center gap-1.5 text-brand-lavender hover:text-white transition-colors text-xs font-bold">
+            <Mail size={12} /> alexelas.studio@gmail.com
           </a>
           <span className="hidden sm:inline text-white/10">|</span>
           <a href="https://www.google.com/search?q=AleXelA+Creative+Branding+Studio+Cocoa+FL" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-white/50 hover:text-white transition-colors text-xs font-bold">

@@ -22,7 +22,7 @@ qr=qrcode.QRCode(box_size=12,border=4,error_correction=qrcode.constants.ERROR_CO
 def chrome(c,d):
  c.saveState();c.setFillColor(NAVY);c.rect(30,678,552,84,fill=1,stroke=0);c.drawImage(LOGO,35,682,110,74,mask='auto',preserveAspectRatio=True)
  c.setFillColor(colors.white);c.setFont('StudioSans-Bold',21);c.drawString(154,733,'AleXelA');c.setFont('StudioSans-Bold',10);c.setFillColor(colors.HexColor('#66e6fa'));c.drawString(154,716,'PASSION TO PROFIT');c.setFont('StudioSans',8);c.setFillColor(colors.white);c.drawString(154,701,'From Idea to Income. From Pain to Purpose.')
- c.drawImage(QR,505,688,64,64);c.setStrokeColor(GOLD);c.line(30,36,582,36);c.setFillColor(NAVY);c.setFont('StudioSans',8);c.drawString(30,23,'(321) 375-9685 | xelabrandingstudio@gmail.com');c.drawRightString(582,23,str(d.page));c.restoreState()
+ c.drawImage(QR,505,688,64,64);c.setStrokeColor(GOLD);c.line(30,36,582,36);c.setFillColor(NAVY);c.setFont('StudioSans',8);c.drawString(30,23,'(321) 375-9685 | alexelas.studio@gmail.com');c.drawRightString(582,23,str(d.page));c.restoreState()
 body=ParagraphStyle('body',fontName='StudioSans',fontSize=8,leading=10,spaceAfter=4,textColor=NAVY)
 head=ParagraphStyle('head',parent=body,fontName='StudioSans-Bold',fontSize=12,leading=14,spaceBefore=7,spaceAfter=5,textColor=CYAN)
 def p(s,style=body):return Paragraph(escape(str(s)).replace('\n','<br/>'),style)

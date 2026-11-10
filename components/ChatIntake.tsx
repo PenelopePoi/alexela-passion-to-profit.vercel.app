@@ -164,7 +164,6 @@ export default function ChatIntake({ onComplete, onSaveDraft }: ChatIntakeProps)
       body.append('_template', 'box');
       body.append('_captcha', 'false');
       body.append('_honey', ''); // formsubmit.co honeypot — bots fill this
-      body.append('_cc', 'bookittyfirepro@yahoo.com,bookityfirepro321@gmail.com');
       body.append('Source', 'Chat Intake');
       body.append('Company', finalData.companyName || 'Not provided');
       body.append('Industry', finalData.industry || 'Not provided');
@@ -175,7 +174,7 @@ export default function ChatIntake({ onComplete, onSaveDraft }: ChatIntakeProps)
       body.append('Phone', finalData.phone || 'Not provided');
       body.append('Email', finalData.email || 'Not provided');
       body.append('Action Items', `1. Review brand brief for ${finalData.companyName || 'client'}\n2. Research ${finalData.industry || 'industry'} competitors\n3. Prepare quote\n4. Call within 2 hours\n5. Send welcome email`);
-      fetch('https://formsubmit.co/ajax/xelabrandingstudio@gmail.com', {
+      fetch('https://formsubmit.co/ajax/alexelas.studio@gmail.com', {
         method: 'POST',
         body,
       }).catch(() => {});

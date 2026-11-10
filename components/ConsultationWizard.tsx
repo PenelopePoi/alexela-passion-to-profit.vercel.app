@@ -540,7 +540,6 @@ export const ConsultationWizard: React.FC<ConsultationWizardProps> = ({ onComple
       body.append('_template', 'box');
       body.append('_captcha', 'false');
       body.append('_honey', ''); // formsubmit.co honeypot — bots fill this
-      body.append('_cc', 'bookittyfirepro@yahoo.com,bookityfirepro321@gmail.com');
       body.append('Name', contactName || ownerName || 'Not provided');
       body.append('Email', contactEmail || 'Not provided');
       body.append('Phone', contactPhone || 'Not provided');
@@ -564,7 +563,7 @@ export const ConsultationWizard: React.FC<ConsultationWizardProps> = ({ onComple
         `5. Draft personalized welcome email with package breakdown`,
       ].join('\n');
       body.append('Action Items For Alex', actionItems);
-      fetch('https://formsubmit.co/ajax/xelabrandingstudio@gmail.com', {
+      fetch('https://formsubmit.co/ajax/alexelas.studio@gmail.com', {
         method: 'POST',
         body,
       }).catch(() => {});

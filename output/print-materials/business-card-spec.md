@@ -69,7 +69,7 @@
 |------|---------|------|------|-------|
 | 1 | **(321) 375-9685** | Montserrat SemiBold | 9pt | #FFFFFF |
 | 2 | **xela-creative-branding.vercel.app** | Montserrat Regular | 7.5pt | #00E0C6 |
-| 3 | **xelabrandingstudio@gmail.com** | Montserrat Regular | 7pt | #AAAAAA |
+| 3 | **alexelas.studio@gmail.com** | Montserrat Regular | 7pt | #AAAAAA |
 | 4 | *(0.1" spacer)* | — | — | — |
 | 5 | **Brevard County / Space Coast, FL** | Montserrat Light | 6.5pt | #888888 |
 

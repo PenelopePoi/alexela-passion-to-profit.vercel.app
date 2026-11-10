@@ -355,7 +355,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
       `Email: ${input.email || 'N/A'}`,
       `Website: ${input.website || 'N/A'}`,
       ``,
-      `© AleXelA Creative Branding Studio — xelabrandingstudio@gmail.com — (321) 375-9685`,
+      `© AleXelA Creative Branding Studio — alexelas.studio@gmail.com — (321) 375-9685`,
     ];
     const blob = new Blob([lines.join('\n')], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);

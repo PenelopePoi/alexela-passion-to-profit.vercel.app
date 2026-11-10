@@ -54,8 +54,8 @@ fi
 
 # 5. Check for new email
 echo "5. New email reference check..."
-if grep -rqF "xelabrandingstudio@gmail.com" dist/ 2>/dev/null; then
-  pass "New email xelabrandingstudio@gmail.com present in dist/"
+if grep -rqF "alexelas.studio@gmail.com" dist/ 2>/dev/null; then
+  pass "New email alexelas.studio@gmail.com present in dist/"
 else
   fail "New email not found in dist/"
 fi

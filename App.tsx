@@ -1082,7 +1082,7 @@ const App: React.FC = () => {
 
               <div>
                 <h3 className="text-white font-bold mb-1">Contact</h3>
-                <p>Questions about this policy? Reach us at <a href="mailto:xelabrandingstudio@gmail.com" className="text-brand-teal hover:underline">xelabrandingstudio@gmail.com</a></p>
+                <p>Questions about this policy? Reach us at <a href="mailto:alexelas.studio@gmail.com" className="text-brand-teal hover:underline">alexelas.studio@gmail.com</a></p>
               </div>
 
               <p className="text-stone-500 text-xs pt-2 border-t border-stone-700">Last updated: April 2026</p>

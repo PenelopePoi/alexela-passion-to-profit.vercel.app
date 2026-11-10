@@ -644,7 +644,6 @@ export const IntakeVariantRenderer: React.FC<IntakeVariantProps> = ({ variantId,
       body.append('_template', 'box');
       body.append('_captcha', 'false');
       body.append('_honey', ''); // formsubmit.co honeypot — bots fill this
-      body.append('_cc', 'bookittyfirepro@yahoo.com,bookityfirepro321@gmail.com');
       body.append('Source', `Shuffler Variant #${variantId}`);
       body.append('Company', data.companyName || 'Not provided');
       body.append('Industry', data.industry || 'Not provided');
@@ -654,7 +653,7 @@ export const IntakeVariantRenderer: React.FC<IntakeVariantProps> = ({ variantId,
       body.append('Owner', data.ownerName || 'Not provided');
       body.append('Phone', data.phone || 'Not provided');
       body.append('Email', data.email || 'Not provided');
-      fetch('https://formsubmit.co/ajax/xelabrandingstudio@gmail.com', {
+      fetch('https://formsubmit.co/ajax/alexelas.studio@gmail.com', {
         method: 'POST',
         body,
       }).catch(() => {});
