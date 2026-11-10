@@ -1,5 +1,5 @@
 /* Shared studio decoration. Background-only, no pointer targets or export artwork. */
-:root{--sg-gold:#e9b85d;--sg-cyan:#55e6ff;--sg-seed:url('/geometry/seed-of-life.svg');--sg-star:url('/geometry/merkaba.svg');--sg-divider:url('/geometry/geometry-divider.svg')}
+:root{--sg-gold:#ff8a65;--sg-cyan:#00ffde;--sg-seed:url('/geometry/seed-of-life.svg');--sg-star:url('/geometry/merkaba.svg');--sg-divider:url('/geometry/geometry-divider.svg')}
 /* Isolated surfaces keep negative layers above their own backgrounds and below content. */
 :where(.studio-hero,.studio-section,.studio-philosophy,.studio-closing,.studio-footer,.doc-title,.doc-card,.hero,.cta-section,.header,.sg-app>.min-h-screen,.content,.main,.layout,.nj-wrap){isolation:isolate}
 :where(.studio-section,.studio-philosophy,.studio-closing,.studio-footer,.doc-title,.doc-card,.hero,.cta-section,.header,.sg-app>.min-h-screen,.content,.main,.layout,.nj-wrap){position:relative}
@@ -17,3 +17,24 @@
 @media(prefers-reduced-motion:reduce){/* All motifs are static. */}
 @media(forced-colors:active){:where(.studio-hero,.studio-section,.studio-philosophy,.studio-closing,.studio-footer,.doc-title,.doc-card,.hero,.cta-section,.header,.sg-app>.min-h-screen,.content,.main,.layout,.nj-wrap)::before,:where(.studio-section-head,.doc-title,.studio-process>div:first-child,.studio-faq>div:first-child)::after{display:none}}
 @media print{:where(.studio-hero,.studio-section,.studio-philosophy,.studio-closing,.studio-footer,.doc-title,.doc-card,.hero,.cta-section,.header,.sg-app>.min-h-screen,.content,.main,.layout,.nj-wrap)::before,:where(.studio-section-head,.doc-title,.studio-process>div:first-child,.studio-faq>div:first-child)::after{display:none!important}}
+
+/* Fluorescent AleXelA interface palette; customer artwork and print exports stay independent. */
+@media screen {
+ :root{--sg-gold:#ff8a65;--sg-cyan:#00ffde;--neon-pink:#ff4fa3;--neon-orange:#ff914d}
+ body .studio-site{--s-cyan:#00ffde;--s-gold:#ff8a65}
+ .studio-hero{background:radial-gradient(ellipse at 90% 35%,#00ffde19,transparent 50%),radial-gradient(ellipse at 25% 80%,#ff4fa315,transparent 55%),#06101d}
+ .studio-site .studio-button,.doc-shell .button,.doc-shell button:not(.secondary){background:linear-gradient(110deg,#00ffde,#7affea 38%,#ff914d 76%,#ff4fa3);color:#06101d}
+ .studio-site .studio-button.outline{background:transparent;color:#00ffde;border-color:#00ffde80}
+ .studio-site .studio-button:hover,.doc-shell .button:hover{box-shadow:0 0 24px #00ffde30,0 0 34px #ff4fa325}
+ .studio-site :focus-visible,.alexela-portfolio :focus-visible,.doc-shell :focus-visible{outline:2px solid #00ffde;outline-offset:5px}
+ .studio-closing{background:radial-gradient(ellipse at 15% 100%,#ff914d24,transparent 60%),radial-gradient(ellipse at 80% 100%,#ff4fa324,transparent 60%),#0b1b2b}
+ .studio-work,.alexela-portfolio{background-image:radial-gradient(ellipse at 95% 0%,#ff4fa313,transparent 48%),radial-gradient(ellipse at 0% 70%,#00ffde0b,transparent 50%)}
+ .portfolio-filters button[aria-pressed=true]{background:linear-gradient(110deg,#00ffde,#ff8a65);color:#06101d}
+ .portfolio-geometry{stroke:#00ffde}
+ :where(.studio-hero,.studio-section,.studio-philosophy,.studio-closing,.studio-footer,.doc-title,.doc-card,.hero,.cta-section,.header,.sg-app>.min-h-screen,.content,.main,.layout,.nj-wrap)::before{background:linear-gradient(135deg,#00ffde,#ff4fa3 55%,#ff914d)}
+ .studio-tabs button[aria-pressed=true]{border-color:#ff4fa3;color:#ff9ebf}
+ .studio-eyebrow,.portfolio-kicker,.doc-title .eyebrow{color:#00ffde}
+ .studio-site .studio-price,.studio-total strong,.estimate-total strong{color:#ff9ebf}
+ .doc-title h1 em{color:#ff8a65}
+ .doc-shell input[type=checkbox],.studio-site input[type=checkbox]{accent-color:#00ffde}
+}

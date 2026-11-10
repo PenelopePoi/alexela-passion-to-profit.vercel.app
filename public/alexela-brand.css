@@ -1,40 +1,40 @@
 /* Shared master identity for standalone pages; never applied to customer artwork. */
-:root { --teal:#00d9f5; --teal-dark:#00a8cc; --black:#061528; --paper:#081c30; --paper-dark:#102b42; --lavender:#f5bc50; --gray:#c3d1df; --gray-light:#35536a; }
-body { color:#f1f5f9; background:#061528; background-image:radial-gradient(ellipse at 90% 0%,#00d9f51c,transparent 45%),radial-gradient(ellipse at 0% 55%,#ff791b15,transparent 45%); }
-header,.header,footer,.footer { background:#061528; color:#f1f5f9; border-color:#00d9f544; }
+:root { --teal:#00ffde; --teal-dark:#00a8cc; --black:#061528; --paper:#081c30; --paper-dark:#102b42; --lavender:#ff8a65; --gray:#c3d1df; --gray-light:#35536a; }
+body { color:#f1f5f9; background:#061528; background-image:radial-gradient(ellipse at 90% 0%,#00ffde1c,transparent 45%),radial-gradient(ellipse at 0% 55%,#ff791b15,transparent 45%); }
+header,.header,footer,.footer { background:#061528; color:#f1f5f9; border-color:#00ffde44; }
 header nav a { color:#f1f5f9; }
 header img,.header-logo img,.nj-logo { object-fit:contain; height:88px; width:auto; max-width:100%; }
 .hero,.cta-section { background:linear-gradient(125deg,#061528,#10354e,#342316); color:#fff; }
-.hero h1,.content h2,.section-title,.brand-teal { color:#00d9f5; }
-.content h3,.brand-peach,.pricing-card .price,.budget-price,.header-brand span { color:#f5bc50; }
+.hero h1,.content h2,.section-title,.brand-teal { color:#00ffde; }
+.content h3,.brand-peach,.pricing-card .price,.budget-price,.header-brand span { color:#ff8a65; }
 .checkbox-item,.pricing-card,.card-option,.budget-card,.service-option,.nj-step { background:#102b42; color:#f1f5f9; border-color:#42637a; }
-.hero .cta-btn,.cta-btn,.submit-btn,.nj-cta { background:#00d9f5; color:#061528; }
+.hero .cta-btn,.cta-btn,.submit-btn,.nj-cta { background:#00ffde; color:#061528; }
 input:not([type=checkbox]):not([type=radio]),select,textarea { background-color:#102b42; color:#f1f5f9; border-color:#42637a; }
-input:focus,select:focus,textarea:focus { background-color:#102b42; color:#fff; border-color:#00d9f5; }
+input:focus,select:focus,textarea:focus { background-color:#102b42; color:#fff; border-color:#00ffde; }
 input::placeholder,textarea::placeholder { color:#adc2d4; }
 select option { background:#102b42; color:#f1f5f9; }
-.checkbox-item:hover,.card-option:hover,.budget-card:hover,.service-option:hover { background:#183d55; border-color:#f5bc50; }
-.checkbox-item.checked,.card-grid input:checked + .card-option,.budget-grid input:checked + .budget-card { background:#173e53; color:#fff; border-color:#00d9f5; }
+.checkbox-item:hover,.card-option:hover,.budget-card:hover,.service-option:hover { background:#183d55; border-color:#ff8a65; }
+.checkbox-item.checked,.card-grid input:checked + .card-option,.budget-grid input:checked + .budget-card { background:#173e53; color:#fff; border-color:#00ffde; }
 .nj-h1,.form-label,label,.section-header { color:#f1f5f9; }
-.nj-h1 span,.nj-phone,.footer a { color:#00d9f5; }
+.nj-h1 span,.nj-phone,.footer a { color:#00ffde; }
 .nj-p,.nj-step p,.hint,.subtitle,.section-desc { color:#c3d1df; }
-a:focus-visible,button:focus-visible { outline:2px solid #f5bc50; outline-offset:4px; }
+a:focus-visible,button:focus-visible { outline:2px solid #ff8a65; outline-offset:4px; }
 @media(max-width:600px) { header img,.header-logo img,.nj-logo { height:72px; } }
 
 /* Fire at left, electric blue at right, gold accents around studio controls. */
-header,.header,footer,.footer { border-color:#d8ad5455; background-image:linear-gradient(100deg,#ff791b08,transparent 45%,#00d9f50b); }
-.hero,.cta-section { background:radial-gradient(ellipse at 0% 55%,#ff791b1c,transparent 55%),radial-gradient(ellipse at 100% 20%,#00d9f522,transparent 55%),#061528; }
-.checkbox-item,.pricing-card,.card-option,.budget-card,.service-option,.nj-step { border-color:#d8ad5440; background-image:linear-gradient(135deg,#ff791b08,transparent 45%,#00d9f509); }
-.hero .cta-btn,.cta-btn,.submit-btn,.nj-cta { background:linear-gradient(115deg,#00d9f5,#64eaff 58%,#f5bc50); color:#061528; box-shadow:0 5px 25px #00d9f526; }
+header,.header,footer,.footer { border-color:#d8ad5455; background-image:linear-gradient(100deg,#ff791b08,transparent 45%,#00ffde0b); }
+.hero,.cta-section { background:radial-gradient(ellipse at 0% 55%,#ff791b1c,transparent 55%),radial-gradient(ellipse at 100% 20%,#00ffde22,transparent 55%),#061528; }
+.checkbox-item,.pricing-card,.card-option,.budget-card,.service-option,.nj-step { border-color:#d8ad5440; background-image:linear-gradient(135deg,#ff791b08,transparent 45%,#00ffde09); }
+.hero .cta-btn,.cta-btn,.submit-btn,.nj-cta { background:linear-gradient(115deg,#00ffde,#64eaff 58%,#ff8a65); color:#061528; box-shadow:0 5px 25px #00ffde26; }
 img[src="/alexela-logo-cutout.png"] { background:transparent; }
 .section { background:#0c2439; color:#f1f5f9; border:1px solid #d8ad5440; box-shadow:0 12px 32px #0003; }
 h1,.budget-name,.footer strong { color:#f1f5f9; }
-.section-title { border-bottom-color:#f5bc50; }
+.section-title { border-bottom-color:#ff8a65; }
 .card-option small,.budget-desc,.scripture,.submit-note { color:#b9cddd; }
 .logo-wrap img { width:220px; height:auto; object-fit:contain; border-radius:0; }
-.nj-h1 span { background:linear-gradient(115deg,#00d9f5,#f5bc50); background-clip:text; -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
-.nj-step-num { background:#f5bc50; color:#061528; }
+.nj-h1 span { background:linear-gradient(115deg,#00ffde,#ff8a65); background-clip:text; -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+.nj-step-num { background:#ff8a65; color:#061528; }
 
-.tier { background:#0c2439; color:#f1f5f9; border-color:#e9b85d55; }
+.tier { background:#0c2439; color:#f1f5f9; border-color:#ff8a6555; }
 .pricing-card p,.tier p { color:#b9cddd!important; }
-.tier-price { color:#e9b85d; }
+.tier-price { color:#ff8a65; }
