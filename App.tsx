@@ -808,7 +808,7 @@ const App: React.FC = () => {
   }
 
   return (
-    <div className="w-full flex flex-col min-h-screen bg-brand-black">
+    <div className="sg-app w-full flex flex-col min-h-screen bg-brand-black">
       {/* Skip to main content — accessibility */}
       <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-[9999] focus:top-4 focus:left-4 focus:px-6 focus:py-3 focus:bg-brand-teal focus:text-brand-black focus:rounded-full focus:font-black focus:text-sm focus:uppercase focus:tracking-widest">
         Skip to main content
