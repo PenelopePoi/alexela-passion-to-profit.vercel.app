@@ -2,7 +2,75 @@
  const form=document.getElementById('brand-brief'),steps=[...document.querySelectorAll('.intake-step')],next=document.getElementById('next-step'),previous=document.getElementById('previous-step'),error=document.getElementById('form-error'),draftStatus=document.getElementById('draft-status');
  let current=0,catalog;
  try{const r=await fetch('/pricing-catalog.json');if(!r.ok)throw new Error('catalog');catalog=await r.json();}catch{error.textContent='The price catalog could not load. Refresh or call Alex at (321) 375-9685 before sending your brief.';next.disabled=true;return;}
- const packageEl=document.getElementById('package'),boxes=[...form.querySelectorAll('[name="Add_ons[]"]')];
+ const packageEl=document.getElementById('package');
+ // The same catalog drives the homepage, add-ons page, and intake estimator.
+ // Static HTML options remain as a fallback for printing without JavaScript.
+ const priorPackage=packageEl.value;
+ if(Array.isArray(catalog.packages)){
+   const choices=catalog.packages.map(p=>{
+     const option=document.createElement('option');
+     option.value=p.id;
+     option.textContent=p.name+' — 
+ const names=['Your business','Package & extras','Creative direction','Review & send'];
+ const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ function selectedAddons(){return catalog.addons.filter(a=>boxes.some(b=>b.checked&&b.value===a.id));}
+ function estimate(){const p=catalog.packages.find(p=>p.id===packageEl.value);const a=selectedAddons();const total=(p?.price||0)+a.reduce((s,a)=>s+a.price,0);return {p,a,total};}
+ function update(){const {p,a,total}=estimate();document.getElementById('estimate-name').textContent=p?.name||'Custom quote';document.getElementById('estimate-lines').innerHTML=(p?`<div class="estimate-line"><span>Package</span><b>$${p.price.toLocaleString()}</b></div>`:'')+a.map(a=>`<div class="estimate-line"><span>${escape(a.name)}</span><b>$${a.price}</b></div>`).join('');document.getElementById('estimate-total').textContent=p?'$'+total.toLocaleString():'Custom quote'+(total?' + $'+total+' extras':'');document.getElementById('package-description').innerHTML=p?'<ul>'+p.features.map(f=>'<li>'+escape(f)+'</li>').join('')+'</ul>':'Tell us what you need. Alex will prepare an individual quote.';document.getElementById('estimate-summary').value=(p?.name||'Custom quote')+'; extras: '+a.map(a=>a.name+' $'+a.price).join(', ')+'; starting design estimate: '+(p?'$'+total:'custom quote');}
+ function validateStep(){for(const el of steps[current].querySelectorAll('input,select,textarea')){if(el.willValidate&&!el.checkValidity()){el.reportValidity();return false;}}return true;}
+ function renderReview(){const skip=new Set(['_subject','_template','_captcha','_honey','Quote_acknowledgment']);const data=new FormData(form);let rows='';for(const [name,value] of data){if(skip.has(name)||name==='Add_ons[]'||value instanceof File||!String(value).trim())continue;const display=name==='Package'?(catalog.packages.find(p=>p.id===value)?.name||'Custom quote'):value;rows+='<div class="review-row"><strong>'+escape(name.replaceAll('_',' ').replace('[]',''))+'</strong>'+escape(display)+'</div>';}const file=form.elements.attachment.files[0];if(file)rows+='<div class="review-row"><strong>Attachment</strong>'+escape(file.name)+'</div>';document.getElementById('review-brief').innerHTML=rows;}
+ function showStep(){steps.forEach((s,i)=>s.hidden=i!==current);previous.hidden=current===0;next.hidden=current===3;next.textContent=['Next: package & extras →','Next: creative direction →','Review my brief →'][current]||'';document.getElementById('step-caption').textContent=`Step ${current+1} of 4 · ${names[current]}`;const progress=document.getElementById('step-progress');progress.value=current+1;progress.textContent=`${current+1} of 4`;progress.setAttribute('aria-valuetext',`Step ${current+1} of 4 · ${names[current]}`);if(current===3)renderReview();error.textContent='';}
+ next.addEventListener('click',()=>{if(validateStep()){current++;showStep();form.scrollIntoView({behavior:'smooth',block:'start'});}});previous.addEventListener('click',()=>{current=Math.max(0,current-1);showStep();form.scrollIntoView({behavior:'smooth',block:'start'});});form.addEventListener('change',update);
+ form.addEventListener('invalid',e=>{const step=e.target.closest('.intake-step');if(step){current=Number(step.dataset.step);showStep();}},true);
+ form.addEventListener('submit',e=>{const file=form.elements.attachment.files[0];if(file&&file.size>5*1024*1024){e.preventDefault();current=2;showStep();error.textContent='The attachment is over 5 MB. Use a smaller file or paste a Drive folder link.';form.elements.attachment.focus();return;}update();form.elements.Package.value=packageEl.value;});
+ document.getElementById('save-draft').addEventListener('click',()=>{try{const data=[...new FormData(form)].filter(([n,v])=>!(v instanceof File)&&!n.startsWith('_')&&n!=='Quote_acknowledgment');localStorage.setItem('alexela-intake-draft',JSON.stringify(data));draftStatus.textContent='Draft saved on this browser. Attachments are not saved. Avoid saving on a shared device.';}catch{draftStatus.textContent='This browser could not save the draft. You can print your current brief instead.';}});
+ document.getElementById('restore-draft').addEventListener('click',()=>{try{const data=JSON.parse(localStorage.getItem('alexela-intake-draft')||'null');if(!data){draftStatus.textContent='No saved draft on this browser.';return;}for(const el of form.elements){if(el.type==='checkbox')el.checked=false;}for(const[n,v]of data){if(n.endsWith('[]')){const b=[...form.querySelectorAll('input[type=checkbox]')].find(b=>b.name===n&&b.value===v);if(b)b.checked=true;continue;}const el=form.elements.namedItem(n);if(n==='Quote_acknowledgment')continue;if(el&&el.type!=='file'){if(el.type==='checkbox')el.checked=true;else el.value=v;}}update();renderReview();draftStatus.textContent='Saved draft restored. Reattach any reference file before sending.';}catch{draftStatus.textContent='The saved draft could not be restored.';}});
+ document.getElementById('clear-draft').addEventListener('click',()=>{localStorage.removeItem('alexela-intake-draft');draftStatus.textContent='Saved draft cleared from this browser. Your current form stays on screen.';});
+ const params=new URLSearchParams(location.search);let saved;try{saved=JSON.parse(sessionStorage.getItem('alexela-quote')||'null');}catch{}const chosen=params.get('package')||saved?.packageId||'promo';if(catalog.packages.some(p=>p.id===chosen)||chosen==='custom')packageEl.value=chosen;const extras=params.has('addons')?params.get('addons').split(','):saved?.addons||[];boxes.forEach(b=>b.checked=extras.includes(b.value));if(params.get('product'))form.elements.Production_details.value=params.get('product');update();showStep();
+})();
++Number(p.price).toLocaleString('en-US');
+     return option;
+   });
+   const custom=document.createElement('option');
+   custom.value='custom';
+   custom.textContent='Custom quote / help me decide';
+   packageEl.replaceChildren(...choices,custom);
+   if([...packageEl.options].some(o=>o.value===priorPackage)) packageEl.value=priorPackage;
+ }
+ const addonContainer=form.querySelector('.intake-addons');
+ if(addonContainer && Array.isArray(catalog.addons)){
+   const labels=catalog.addons.map(item=>{
+     const label=document.createElement('label');label.className='check-option';
+     const checkbox=document.createElement('input');
+     checkbox.type='checkbox';checkbox.name='Add_ons[]';checkbox.value=item.id;
+     const details=document.createElement('span');
+     const description=document.createElement('small');
+     description.textContent=item.description;
+     details.append(document.createTextNode(item.name),description);
+     const amount=document.createElement('b');
+     amount.textContent='+
+ const names=['Your business','Package & extras','Creative direction','Review & send'];
+ const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ function selectedAddons(){return catalog.addons.filter(a=>boxes.some(b=>b.checked&&b.value===a.id));}
+ function estimate(){const p=catalog.packages.find(p=>p.id===packageEl.value);const a=selectedAddons();const total=(p?.price||0)+a.reduce((s,a)=>s+a.price,0);return {p,a,total};}
+ function update(){const {p,a,total}=estimate();document.getElementById('estimate-name').textContent=p?.name||'Custom quote';document.getElementById('estimate-lines').innerHTML=(p?`<div class="estimate-line"><span>Package</span><b>$${p.price.toLocaleString()}</b></div>`:'')+a.map(a=>`<div class="estimate-line"><span>${escape(a.name)}</span><b>$${a.price}</b></div>`).join('');document.getElementById('estimate-total').textContent=p?'$'+total.toLocaleString():'Custom quote'+(total?' + $'+total+' extras':'');document.getElementById('package-description').innerHTML=p?'<ul>'+p.features.map(f=>'<li>'+escape(f)+'</li>').join('')+'</ul>':'Tell us what you need. Alex will prepare an individual quote.';document.getElementById('estimate-summary').value=(p?.name||'Custom quote')+'; extras: '+a.map(a=>a.name+' $'+a.price).join(', ')+'; starting design estimate: '+(p?'$'+total:'custom quote');}
+ function validateStep(){for(const el of steps[current].querySelectorAll('input,select,textarea')){if(el.willValidate&&!el.checkValidity()){el.reportValidity();return false;}}return true;}
+ function renderReview(){const skip=new Set(['_subject','_template','_captcha','_honey','Quote_acknowledgment']);const data=new FormData(form);let rows='';for(const [name,value] of data){if(skip.has(name)||name==='Add_ons[]'||value instanceof File||!String(value).trim())continue;const display=name==='Package'?(catalog.packages.find(p=>p.id===value)?.name||'Custom quote'):value;rows+='<div class="review-row"><strong>'+escape(name.replaceAll('_',' ').replace('[]',''))+'</strong>'+escape(display)+'</div>';}const file=form.elements.attachment.files[0];if(file)rows+='<div class="review-row"><strong>Attachment</strong>'+escape(file.name)+'</div>';document.getElementById('review-brief').innerHTML=rows;}
+ function showStep(){steps.forEach((s,i)=>s.hidden=i!==current);previous.hidden=current===0;next.hidden=current===3;next.textContent=['Next: package & extras →','Next: creative direction →','Review my brief →'][current]||'';document.getElementById('step-caption').textContent=`Step ${current+1} of 4 · ${names[current]}`;const progress=document.getElementById('step-progress');progress.value=current+1;progress.textContent=`${current+1} of 4`;progress.setAttribute('aria-valuetext',`Step ${current+1} of 4 · ${names[current]}`);if(current===3)renderReview();error.textContent='';}
+ next.addEventListener('click',()=>{if(validateStep()){current++;showStep();form.scrollIntoView({behavior:'smooth',block:'start'});}});previous.addEventListener('click',()=>{current=Math.max(0,current-1);showStep();form.scrollIntoView({behavior:'smooth',block:'start'});});form.addEventListener('change',update);
+ form.addEventListener('invalid',e=>{const step=e.target.closest('.intake-step');if(step){current=Number(step.dataset.step);showStep();}},true);
+ form.addEventListener('submit',e=>{const file=form.elements.attachment.files[0];if(file&&file.size>5*1024*1024){e.preventDefault();current=2;showStep();error.textContent='The attachment is over 5 MB. Use a smaller file or paste a Drive folder link.';form.elements.attachment.focus();return;}update();form.elements.Package.value=packageEl.value;});
+ document.getElementById('save-draft').addEventListener('click',()=>{try{const data=[...new FormData(form)].filter(([n,v])=>!(v instanceof File)&&!n.startsWith('_')&&n!=='Quote_acknowledgment');localStorage.setItem('alexela-intake-draft',JSON.stringify(data));draftStatus.textContent='Draft saved on this browser. Attachments are not saved. Avoid saving on a shared device.';}catch{draftStatus.textContent='This browser could not save the draft. You can print your current brief instead.';}});
+ document.getElementById('restore-draft').addEventListener('click',()=>{try{const data=JSON.parse(localStorage.getItem('alexela-intake-draft')||'null');if(!data){draftStatus.textContent='No saved draft on this browser.';return;}for(const el of form.elements){if(el.type==='checkbox')el.checked=false;}for(const[n,v]of data){if(n.endsWith('[]')){const b=[...form.querySelectorAll('input[type=checkbox]')].find(b=>b.name===n&&b.value===v);if(b)b.checked=true;continue;}const el=form.elements.namedItem(n);if(n==='Quote_acknowledgment')continue;if(el&&el.type!=='file'){if(el.type==='checkbox')el.checked=true;else el.value=v;}}update();renderReview();draftStatus.textContent='Saved draft restored. Reattach any reference file before sending.';}catch{draftStatus.textContent='The saved draft could not be restored.';}});
+ document.getElementById('clear-draft').addEventListener('click',()=>{localStorage.removeItem('alexela-intake-draft');draftStatus.textContent='Saved draft cleared from this browser. Your current form stays on screen.';});
+ const params=new URLSearchParams(location.search);let saved;try{saved=JSON.parse(sessionStorage.getItem('alexela-quote')||'null');}catch{}const chosen=params.get('package')||saved?.packageId||'promo';if(catalog.packages.some(p=>p.id===chosen)||chosen==='custom')packageEl.value=chosen;const extras=params.has('addons')?params.get('addons').split(','):saved?.addons||[];boxes.forEach(b=>b.checked=extras.includes(b.value));if(params.get('product'))form.elements.Production_details.value=params.get('product');update();showStep();
+})();
++Number(item.price).toLocaleString('en-US');
+     label.append(checkbox,details,amount);
+     return label;
+   });
+   addonContainer.replaceChildren(...labels);
+ }
+ const boxes=[...form.querySelectorAll('[name="Add_ons[]"]')];
  const names=['Your business','Package & extras','Creative direction','Review & send'];
  const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  function selectedAddons(){return catalog.addons.filter(a=>boxes.some(b=>b.checked&&b.value===a.id));}
