@@ -1,9 +1,8 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import Stripe from 'stripe';
-import { requireEnv } from '../_lib/validateEnv.js';
 import { handleCors } from '../_lib/cors.js';
 
-const stripe = new Stripe(requireEnv('STRIPE_SECRET_KEY'));
+const stripe = process.env.STRIPE_SECRET_KEY ? new Stripe(process.env.STRIPE_SECRET_KEY) : null;
 
 /** Individual package prices in cents — matches Pricing.tsx exactly */
 const PACKAGE_PRICES: Record<string, { amount: number; name: string }> = {
@@ -38,6 +37,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
+
+  if (!stripe) return res.status(503).json({ error: 'Online checkout is not configured. Please request a written quote.' });
 
   try {
     const { packageTier, customerEmail, successUrl, cancelUrl, mode, retainerTier, installments } = req.body;
