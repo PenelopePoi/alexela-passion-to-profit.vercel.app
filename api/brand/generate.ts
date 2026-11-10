@@ -1,9 +1,8 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { GoogleGenAI } from '@google/genai';
-import { requireEnv } from '../_lib/validateEnv.js';
 import { handleCors } from '../_lib/cors.js';
 
-const ai = new GoogleGenAI({ apiKey: requireEnv('GEMINI_API_KEY') });
+const ai = process.env.GEMINI_API_KEY ? new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY }) : null;
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (handleCors(req, res)) return;
@@ -12,7 +11,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { action, ...params } = req.body;
+  if (!ai) return res.status(503).json({ error: 'AI generation is not configured. Please contact the studio.' });
+
+  const { action, ...params } = req.body || {};
 
   try {
     switch (action) {
