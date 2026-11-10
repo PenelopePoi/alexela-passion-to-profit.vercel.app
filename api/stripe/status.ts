@@ -1,7 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import Stripe from 'stripe';
-import { requireEnv } from '../_lib/validateEnv';
-import { handleCors } from '../_lib/cors';
+import { requireEnv } from '../_lib/validateEnv.js';
+import { handleCors } from '../_lib/cors.js';
 
 const stripe = new Stripe(requireEnv('STRIPE_SECRET_KEY'));
 
