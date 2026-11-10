@@ -1,10 +1,9 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import Stripe from 'stripe';
-import { requireEnv } from '../_lib/validateEnv';
-import { db } from '../_lib/auth';
+import { db } from '../_lib/auth.js';
 
-const stripe = new Stripe(requireEnv('STRIPE_SECRET_KEY'));
-const webhookSecret = requireEnv('STRIPE_WEBHOOK_SECRET');
+const stripe = process.env.STRIPE_SECRET_KEY ? new Stripe(process.env.STRIPE_SECRET_KEY) : null;
+const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
 
 export const config = {
   api: { bodyParser: false },
@@ -167,6 +166,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
+  if (!stripe || !webhookSecret || !process.env.FIREBASE_PROJECT_ID || !(process.env.FIREBASE_SERVICE_ACCOUNT_KEY || process.env.GOOGLE_APPLICATION_CREDENTIALS)) {
+    return res.status(503).json({ error: 'Payment webhook backend is not configured.' });
+  }
+
   const sig = req.headers['stripe-signature'];
   if (!sig) {
     return res.status(400).json({ error: 'Missing stripe-signature header' });
@@ -241,7 +244,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   } catch (err) {
     const message = err instanceof Error ? err.message : 'Event processing failed';
     console.error(`[webhook] Error processing ${event.type}: ${message}`);
-    // Return 200 anyway so Stripe doesn't retry — the event was valid, just processing failed
+    // Return an error so Stripe can retry transient delivery failures.
     // Log it for investigation
     try {
       await db.collection('webhook_errors').add({
@@ -251,8 +254,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         createdAt: new Date(),
       });
     } catch {
-      // Silent — don't fail the webhook response over error logging
+      // Keep the primary processing failure as the retry signal.
     }
+    return res.status(500).json({ error: 'Webhook processing failed. Stripe may retry delivery.' });
   }
 
   return res.json({ received: true });

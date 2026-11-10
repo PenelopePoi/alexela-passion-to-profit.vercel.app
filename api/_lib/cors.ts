@@ -6,8 +6,11 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 
 const ALLOWED_ORIGINS = [
+  'https://alexela-passion-to-profit.vercel.app',
+  'https://xela-elite-ai-creative-studio.vercel.app',
   'https://xela-creative-branding.vercel.app',
-  /^https:\/\/.*\.vercel\.app$/,
+  /^https:\/\/alexela-passion-to-profit-[a-z0-9-]+\.vercel\.app$/,
+  /^https:\/\/alexela-passion-to-git-[a-z0-9-]+\.vercel\.app$/,
 ];
 
 function isOriginAllowed(origin: string | undefined): boolean {

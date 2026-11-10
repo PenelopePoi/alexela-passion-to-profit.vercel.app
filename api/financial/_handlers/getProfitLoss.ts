@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { verifyAuth, db } from '../../_lib/auth';
+import { verifyAuth, db } from '../../_lib/auth.js';
 
 const EXPENSE_CATEGORIES = [
   'software', 'hosting', 'ai_compute', 'marketing', 'contractor',

@@ -1,9 +1,8 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import Stripe from 'stripe';
-import { requireEnv } from '../_lib/validateEnv';
-import { handleCors } from '../_lib/cors';
+import { handleCors } from '../_lib/cors.js';
 
-const stripe = new Stripe(requireEnv('STRIPE_SECRET_KEY'));
+const stripe = process.env.STRIPE_SECRET_KEY ? new Stripe(process.env.STRIPE_SECRET_KEY) : null;
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (handleCors(req, res)) return;
@@ -12,7 +11,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { customerId, returnUrl } = req.body;
+  if (!stripe) return res.status(503).json({ error: 'The billing portal is not configured.' });
+
+  const { customerId, returnUrl } = req.body || {};
 
   if (!customerId || !customerId.startsWith('cus_')) {
     return res.status(400).json({ error: 'Valid Stripe customer ID required' });

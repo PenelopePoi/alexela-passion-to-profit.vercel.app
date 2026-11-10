@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { verifyAuth, db } from '../../_lib/auth';
+import { verifyAuth, db } from '../../_lib/auth.js';
 
 // Florida has no state income tax — federal self-employment rate
 const DEFAULT_TAX_RATE = 30; // 30% reserve (federal income + SE tax)

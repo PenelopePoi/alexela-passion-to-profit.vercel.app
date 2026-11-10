@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { verifyAuth, db } from '../../_lib/auth';
+import { verifyAuth, db } from '../../_lib/auth.js';
 
 interface LineItemInput {
   description: string;
