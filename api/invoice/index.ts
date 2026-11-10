@@ -1,11 +1,11 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { handleCors } from '../_lib/cors';
+import { handleCors } from '../_lib/cors.js';
 
-import createInvoice from './_handlers/createInvoice';
-import generateReceipt from './_handlers/generateReceipt';
-import getClientBalance from './_handlers/getClientBalance';
-import markInvoicePaid from './_handlers/markInvoicePaid';
-import sendInvoice from './_handlers/sendInvoice';
+import createInvoice from './_handlers/createInvoice.js';
+import generateReceipt from './_handlers/generateReceipt.js';
+import getClientBalance from './_handlers/getClientBalance.js';
+import markInvoicePaid from './_handlers/markInvoicePaid.js';
+import sendInvoice from './_handlers/sendInvoice.js';
 
 const routes: Record<string, (req: VercelRequest, res: VercelResponse) => Promise<void | VercelResponse>> = {
   createInvoice,
