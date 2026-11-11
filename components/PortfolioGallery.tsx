@@ -5,6 +5,14 @@ export const portfolioSections = ['Logos','Business Cards','Album Covers','Flyer
 type Category = typeof portfolioSections[number];
 type Project = {name:string;category:Category;image:string;stage?:'Before'|'After';comparison?:string};
 const projects:Project[] = [
+ {name:'Cracked to Classy Concrete — before',category:'Business Cards',image:'/portfolio/pair-cracked-cards-before.webp',stage:'Before',comparison:'cracked-cards'},
+ {name:'Cracked to Classy Concrete — after',category:'Business Cards',image:'/portfolio/pair-cracked-cards-after.webp',stage:'After',comparison:'cracked-cards'},
+ {name:'DNA Remodels wordmark — before',category:'Logos',image:'/portfolio/pair-dna-wordmark-before.webp',stage:'Before',comparison:'dna-wordmark'},
+ {name:'DNA Remodels wordmark — after',category:'Logos',image:'/portfolio/pair-dna-wordmark-after.webp',stage:'After',comparison:'dna-wordmark'},
+ {name:'DNA Remodels helix — before',category:'Logos',image:'/portfolio/pair-dna-helix-before.webp',stage:'Before',comparison:'dna-helix'},
+ {name:'DNA Remodels helix — after',category:'Logos',image:'/portfolio/pair-dna-helix-after.webp',stage:'After',comparison:'dna-helix'},
+ {name:'Big Boys Toys — before',category:'Business Cards',image:'/portfolio/pair-big-boys-cards-before.webp',stage:'Before',comparison:'big-boys-cards'},
+ {name:'Big Boys Toys — after',category:'Business Cards',image:'/portfolio/pair-big-boys-cards-after.webp',stage:'After',comparison:'big-boys-cards'},
  {name:'DNA Remodels — before',category:'Business Cards',image:'/portfolio/pair-dna-cards-before.webp',stage:'Before',comparison:'dna-cards'},
  {name:'DNA Remodels — after',category:'Business Cards',image:'/portfolio/pair-dna-cards-after.webp',stage:'After',comparison:'dna-cards'},
  {name:'XELA — before',category:'Album Covers',image:'/portfolio/pair-xela-album-before.webp',stage:'Before',comparison:'xela-album'},
