@@ -15,7 +15,7 @@ describe('sectioned portfolio',()=>{
   fireEvent.click(screen.getByRole('button',{name:'BMX Decal Sets'}));
   expect(screen.queryByRole('region',{name:'Logos'})).not.toBeInTheDocument();
   const region=screen.getByRole('region',{name:'BMX Decal Sets'});
-  expect(within(region).queryByRole('img')).not.toBeInTheDocument();
+  expect(within(region).getAllByRole('img').map(image=>image.getAttribute('alt'))).toEqual(['Hutch to Hitch — before','Hutch to Hitch — after']);
   fireEvent.click(screen.getByRole('button',{name:'Motorcycle Decal Sets'}));
   expect(screen.getByRole('region',{name:'Motorcycle Decal Sets'})).toBeInTheDocument();
  });
@@ -45,7 +45,7 @@ describe('sectioned portfolio',()=>{
  });
 
  it('honors the marked removals and before/after artwork assignments',()=>{
-  for(const removed of ['alexela-sacred-gold-logo.webp','alexela-sacred-dark-logo.webp','alexela-horizontal-logo.webp','dna-remodels-logo-concept.webp','cristinas-cleaning-logo.png','work-29.jpg','alexela-studio-promotional-flyer.webp','work-06.jpg']) expect(portfolioProjects.some(p=>p.image.endsWith(removed))).toBe(false);
+  for(const removed of ['alexela-sacred-gold-logo.webp','alexela-sacred-dark-logo.webp','alexela-horizontal-logo.webp','dna-remodels-logo-concept.webp','work-29.jpg','alexela-studio-promotional-flyer.webp','work-06.jpg']) expect(portfolioProjects.some(p=>p.image.endsWith(removed))).toBe(false);
   expect(portfolioProjects.find(p=>p.image.endsWith('cracked-to-classy-logo.png'))?.stage).toBe('Before');
   expect(portfolioProjects.find(p=>p.image.endsWith('work-16.jpg'))?.stage).toBe('After');
   expect(portfolioProjects.find(p=>p.image.endsWith('rods-ebike-logo.png'))?.stage).toBe('Before');
@@ -55,12 +55,20 @@ describe('sectioned portfolio',()=>{
  it('opens the original before and after artwork together across sections',()=>{
   HTMLDialogElement.prototype.showModal=vi.fn(function(this:HTMLDialogElement){this.setAttribute('open','');});
   render(<PortfolioGallery/>);
-  fireEvent.click(screen.getByRole('button',{name:'Logos',exact:true}));
-  fireEvent.click(screen.getByRole('button',{name:'View Rod’s E-Bike Repair',exact:true}));
+  fireEvent.click(screen.getByRole('button',{name:'Logos'}));
+  fireEvent.click(screen.getByRole('button',{name:'View Rod’s E-Bike Repair'}));
   const comparison=screen.getByRole('group',{name:'Before and after artwork'});
   fireEvent.click(within(comparison).getByRole('button',{name:'After: Rod’s E-Bike Repair flyer'}));
   expect(screen.getByAltText('Rod’s E-Bike Repair flyer full artwork')).toHaveAttribute('src','/gallery/work-31.jpg');
   expect(screen.getByRole('button',{name:'Next project'})).toBeDisabled();
+ });
+
+ it('groups all four clothing brands and restores the full approved cleaning logo',()=>{
+  render(<PortfolioGallery/>);
+  fireEvent.click(screen.getByRole('button',{name:'Clothing Brands'}));
+  const section=screen.getByRole('region',{name:'Clothing Brands'});
+  for(const name of ['God Within','Unmarked','Backwards','S.L.U.G.S.']) expect(within(section).getByRole('button',{name:'View '+name})).toBeInTheDocument();
+  expect(portfolioProjects.find(p=>p.name==='Cristina’s Cleaning')?.image).toBe('/portfolio/cristinas-cleaning-approved.webp');
  });
 
 });
