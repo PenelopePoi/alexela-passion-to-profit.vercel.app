@@ -2,3 +2,15 @@
 @media(max-width:700px){.alexela-portfolio{padding:45px 20px}.portfolio-intro{min-height:260px}.portfolio-geometry{right:-180px;opacity:.18}.portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 12px}.portfolio-category-heading{gap:12px}.portfolio-category-heading small{font-size:10px}.portfolio-filters{gap:6px}.portfolio-filters button{font-size:12px;padding:10px 12px}.portfolio-caption h4{font-size:12px}.portfolio-image{padding:8px}.portfolio-category{padding:30px 0}.portfolio-pending a{margin-left:0;display:flex}}@media(max-width:400px){.portfolio-grid{grid-template-columns:1fr}.portfolio-category-heading small{display:none}}
 .portfolio-viewer-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:18px}.portfolio-viewer-actions button,.portfolio-viewer-actions a{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:10px 14px;border:1px solid #ff8a6570;border-radius:6px;background:#102638;color:#f4f1e9;font-size:13px;cursor:pointer}.portfolio-viewer-actions a{color:#00ffde;text-decoration:none}.portfolio-viewer-actions span{font-size:12px;color:#b4c4d2}.portfolio-viewer-actions button:disabled{opacity:.4;cursor:default}
 .portfolio-stage{display:inline-block;margin:0 8px 5px 0;padding:4px 9px;border:1px solid #ff8a6560;border-radius:4px;color:#ffad8f;background:#ff8a6510;font:600 10px/1.2 'Outfit',sans-serif;letter-spacing:.06em;text-transform:uppercase}.portfolio-stage.after{color:#00ffde;border-color:#00ffde60;background:#00ffde10}.portfolio-comparison{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}.portfolio-comparison button{padding:11px 14px;border:1px solid #ffffff40;border-radius:5px;background:#122736;color:#e9f2ff;cursor:pointer}.portfolio-comparison button[aria-pressed=true]{color:#00ffde;border-color:#00ffde}.portfolio-comparison button:focus-visible{outline:2px solid #ff8a65;outline-offset:3px}
+
+.alexela-portfolio .portfolio-geometry {
+  opacity: .11;
+}
+.alexela-portfolio .portfolio-geometry-backdrop {
+  top: 42%;
+  right: 2%;
+  width: min(52vw, 650px);
+  height: auto;
+  opacity: .065;
+  pointer-events: none;
+}

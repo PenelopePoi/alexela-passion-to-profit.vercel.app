@@ -54,3 +54,37 @@
  .doc-shell .doc-card th,.doc-shell .doc-card td.amount{color:#d8ad54}
  .studio-site :focus-visible,.doc-shell :focus-visible{outline-color:#00e0cf}
 }
+
+/* Thin, stationary linework behind the site and document content. */
+@media screen and (forced-colors: none) {
+  :where(.sg-app, .doc-shell) {
+    position: relative;
+    isolation: isolate;
+  }
+
+  :where(.sg-app, .doc-shell)::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: var(--sg-gold);
+    mask: var(--sg-seed) right 3vw top 130px / clamp(180px, 36vw, 420px) no-repeat;
+    opacity: .1;
+  }
+
+  .studio-site .studio-hero::before {
+    opacity: .1;
+  }
+
+  :where(.studio-section, .studio-philosophy, .studio-closing, .studio-footer, .doc-title, .doc-card)::before {
+    opacity: .085;
+  }
+
+  @media (max-width: 760px) {
+    :where(.sg-app, .doc-shell)::before,
+    :where(.studio-section, .studio-philosophy, .studio-closing, .studio-footer, .doc-title, .doc-card)::before {
+      opacity: .07;
+    }
+  }
+}
