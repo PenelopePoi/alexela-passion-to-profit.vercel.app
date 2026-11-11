@@ -5,6 +5,10 @@ export const portfolioSections = ['Logos','Business Cards','Album Covers','Flyer
 type Category = typeof portfolioSections[number];
 type Project = {name:string;category:Category;image:string;stage?:'Before'|'After';comparison?:string};
 const projects:Project[] = [
+ {name:'AleXelA — Passion to Profit wordmark',category:'Logos',image:'/portfolio/alexela-horizontal.webp'},
+ {name:'AleXelA — fire and ice wordmark',category:'Logos',image:'/portfolio/alexela-fire-and-ice.webp'},
+ {name:'AleXelA — From Idea to Income flyer',category:'Flyers',image:'/portfolio/alexela-studio-flyer.webp'},
+ {name:'AleXelA — Creative Services front and back',category:'Business Cards',image:'/portfolio/alexela-creative-services-card.webp'},
  {name:'AleXelA — graphic tee mockup',category:'Shirts & Apparel',image:'/portfolio/shirt-alexela-mockup.webp'},
  {name:'Tops Down — white tank mockup',category:'Shirts & Apparel',image:'/portfolio/shirt-tops-down-white-tank.webp'},
  {name:'Cracked to Classy — tee mockup',category:'Shirts & Apparel',image:'/portfolio/shirt-cracked-to-classy.webp'},
