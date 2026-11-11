@@ -1,3 +1,4 @@
+import {useLocalQr} from '../hooks/useLocalQr';
 
 import React, { useState } from 'react';
 import { BrandStrategy, BrandInput } from '../types';
@@ -31,19 +32,12 @@ export const MarketingMaterials: React.FC<MarketingMaterialsProps> = ({ data, in
   const [qrTarget, setQrTarget] = useState<BrandInput['qrPreference']>(input.qrPreference || 'website');
   const [stickerSuggestions, setStickerSuggestions] = useState<string[]>([]);
 
-  const phone = input.phone || "(555) 123-4567";
-  const website = input.website || `www.${input.companyName.toLowerCase().replace(/\s/g, '')}.com`;
+  const phone = input.phone || "";
+  const website = input.website || "";
   const owner = input.ownerName || "Founder";
 
-  const getQrUrl = () => {
-    let target = website;
-    if (qrTarget === 'google') target = input.googleBusinessLink || website;
-    if (qrTarget === 'booking') target = input.bookingLink || website;
-    if (qrTarget === 'contact') target = `tel:${phone}`;
-    
-    const qrColor = data.colorPalette.primary.replace('#', '');
-    return `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(target)}&color=${qrColor}&bgcolor=ffffff`;
-  };
+  const qrImage = useLocalQr(qrTarget === 'contact' ? (phone ? `tel:${phone}` : '') : qrTarget === 'google' ? input.googleBusinessLink || website : qrTarget === 'booking' ? input.bookingLink || website : website);
+  const getQrUrl = () => qrImage;
 
   const handleGenerateCopy = async () => {
     setIsGeneratingCopy(true);

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { BrandInput, BrandStrategy, LogoCandidate } from '../types';
 const LogoGenerator = React.lazy(() => import('./LogoGenerator').then(m => ({ default: m.LogoGenerator })));
 const ColorPaletteDisplay = React.lazy(() => import('./ColorPalette').then(m => ({ default: m.ColorPaletteDisplay })));
+const ProductionStudio = React.lazy(() => import('./ProductionStudio'));
 const BusinessCard = React.lazy(() => import('./BusinessCard').then(m => ({ default: m.BusinessCard })));
 const LandingPagePreview = React.lazy(() => import('./LandingPagePreview').then(m => ({ default: m.LandingPagePreview })));
 const SocialProfilePreview = React.lazy(() => import('./SocialProfilePreview').then(m => ({ default: m.SocialProfilePreview })));
@@ -801,6 +802,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
                <div className="grid lg:grid-cols-12 gap-10">
                   <div className="lg:col-span-12 xl:col-span-8">
                      <BusinessCard data={data} input={input} logoUrl={brandingLogo} />
+                     <ProductionStudio data={data} input={input} logoUrl={brandingLogo} />
                   </div>
                   <div className="lg:col-span-12 xl:col-span-4 space-y-10">
                      <ColorPaletteDisplay palette={data.colorPalette} onColorChange={handleColorChange} />
@@ -830,6 +832,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
               <div className="lg:col-span-1 flex flex-col gap-10">
                 <SocialProfilePreview data={data} input={input} logoUrl={brandingLogo} />
                 <MarketingMaterials data={data} input={input} logoUrl={brandingLogo} onUpdateStrategy={handleUpdateStrategy} />
+                <ProductionStudio data={data} input={input} logoUrl={brandingLogo} />
               </div>
               <div className="lg:col-span-2">
                 <VideoAdGenerator data={data} input={input} primaryColor={data.colorPalette.primary} />

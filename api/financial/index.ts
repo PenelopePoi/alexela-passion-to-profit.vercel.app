@@ -1,3 +1,4 @@
+import {firebaseConfiguration} from '../_lib/firebaseConfig.js';
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { handleCors } from '../_lib/cors.js';
 
@@ -20,7 +21,7 @@ const routes: Record<string, (req: VercelRequest, res: VercelResponse) => Promis
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (handleCors(req, res)) return;
-  if (!process.env.FIREBASE_PROJECT_ID || !(process.env.FIREBASE_SERVICE_ACCOUNT_KEY || process.env.GOOGLE_APPLICATION_CREDENTIALS)) {
+  if (!firebaseConfiguration().configured) {
     return res.status(503).json({ error: 'Secure financial and invoice services are not configured.' });
   }
 

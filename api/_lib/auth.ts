@@ -1,10 +1,11 @@
+import {firebaseConfiguration} from './firebaseConfig.js';
 import { getApps, initializeApp, cert, applicationDefault } from 'firebase-admin/app';
 import { getAuth, type DecodedIdToken } from 'firebase-admin/auth';
 import { getFirestore } from 'firebase-admin/firestore';
 
 // The modular Firebase Admin API avoids CommonJS namespace interop errors on Node.js 24.
 const app = getApps()[0] ?? initializeApp({
-  projectId: process.env.FIREBASE_PROJECT_ID,
+  projectId: firebaseConfiguration().projectId,
   credential: process.env.FIREBASE_SERVICE_ACCOUNT_KEY
     ? cert(JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_KEY))
     : applicationDefault(),

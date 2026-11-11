@@ -28,7 +28,7 @@ import VariantBanner from './components/VariantBanner';
 import StudioLanding from './components/StudioLanding';
 import { canAccessView } from './services/authGuard';
 import { pollPaymentStatus, formatCurrency } from './services/stripeService';
-import ClientProfilePage from './components/ClientProfilePage';
+const ClientProfilePage = lazy(() => import('./components/ClientProfilePage'));
 import { getProfileBySlug } from './services/clientProfileService';
 import { FolderOpen, Target, Zap, ArrowDown, TrendingUp, Anchor, CheckCircle, AlertCircle, ArrowLeft, Sparkles, Palette, Rocket, Clock, Users, Award, Star, ChevronDown, ChevronUp, Eye, Layers, BarChart3, Send, Phone, Quote, ArrowRight, Plus, Minus, MessageSquare, Shuffle, Mail, Globe, ExternalLink } from 'lucide-react';
 

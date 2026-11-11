@@ -1,3 +1,4 @@
+import {firebaseConfiguration} from './_lib/firebaseConfig.js';
 /**
  * Health Check Endpoint — XELA Creative Branding Studio
  * Returns service availability based on whether env vars are configured.
@@ -13,10 +14,7 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const firebaseConfigured = !!(
-    process.env.FIREBASE_PROJECT_ID &&
-    (process.env.FIREBASE_SERVICE_ACCOUNT_KEY || process.env.GOOGLE_APPLICATION_CREDENTIALS)
-  );
+  const firebaseConfigured = firebaseConfiguration().configured;
 
   const stripeConfigured = !!(
     process.env.STRIPE_SECRET_KEY &&

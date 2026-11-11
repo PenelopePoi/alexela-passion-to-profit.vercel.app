@@ -13,3 +13,4 @@
  .print-geometry{display:block!important;position:absolute;right:2px;top:0;width:88px;height:88px;object-fit:contain;filter:brightness(0);opacity:.16;pointer-events:none}
  .doc-title h1{position:relative}
 }
+.doc-brand .doc-wordmark{display:flex;align-items:center;justify-content:center;gap:0;font-family:Georgia,serif;font-size:34px;line-height:1;white-space:nowrap}.doc-brand .doc-wordmark img{width:85px;height:58px;object-fit:contain;margin:0 -6px}.doc-brand>span>small{text-align:center;margin-top:0}

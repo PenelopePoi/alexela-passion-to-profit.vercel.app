@@ -1,3 +1,4 @@
+import {useLocalQr} from '../hooks/useLocalQr';
 
 import React, { useState } from 'react';
 import { BrandStrategy, BrandInput } from '../types';
@@ -27,23 +28,16 @@ export const BusinessCard: React.FC<BusinessCardProps> = ({ data, input, logoUrl
   const [orientation, setOrientation] = useState<'landscape' | 'portrait'>('landscape');
   const [qrType, setQrType] = useState<BrandInput['qrPreference']>(input.qrPreference || 'website');
   const [editableDetails, setEditableDetails] = useState({
-    email: input.email || `hello@${input.companyName.toLowerCase().replace(/\s/g, '')}.com`,
-    website: input.website || `www.${input.companyName.toLowerCase().replace(/\s/g, '')}.com`,
-    phone: input.phone || "(555) 123-4567",
+    email: input.email || "",
+    website: input.website || "",
+    phone: input.phone || "",
     owner: input.ownerName || "Founder",
     location: input.location || "Florida, USA"
   });
   const [showEditor, setShowEditor] = useState(false);
 
-  const getQrUrl = () => {
-    let target = editableDetails.website;
-    if (qrType === 'google') target = input.googleBusinessLink || editableDetails.website;
-    if (qrType === 'booking') target = input.bookingLink || editableDetails.website;
-    if (qrType === 'contact') target = `tel:${editableDetails.phone}`;
-    
-    const qrColor = data.colorPalette.primary.replace('#', '');
-    return `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(target)}&color=${qrColor}&bgcolor=ffffff`;
-  };
+  const qrImage = useLocalQr(qrType === 'contact' ? (editableDetails.phone ? `tel:${editableDetails.phone}` : '') : qrType === 'google' ? input.googleBusinessLink || editableDetails.website : qrType === 'booking' ? input.bookingLink || editableDetails.website : editableDetails.website);
+  const getQrUrl = () => qrImage;
 
   const finishes: Record<CardFinish, string> = {
     matte: 'bg-white',
@@ -337,7 +331,7 @@ export const BusinessCard: React.FC<BusinessCardProps> = ({ data, input, logoUrl
                     <div className={`h-full flex ${orientation === 'portrait' ? 'flex-col gap-6' : 'flex-row justify-between'} items-start relative z-10`}>
                         <div className="w-20 h-20 bg-white/10 rounded-2xl flex items-center justify-center p-2 backdrop-blur-md shadow-xl overflow-hidden border border-white/20">
                             {logoUrl ? (
-                                <img src={logoUrl} alt="Logo" className={`w-full h-full object-cover rounded-xl ${isDark ? 'filter brightness-110 contrast-110' : ''}`} />
+                                <img src={logoUrl} alt="Logo" className={`w-full h-full object-contain rounded-xl ${isDark ? 'filter brightness-110 contrast-110' : ''}`} />
                             ) : (
                                 <span className="text-2xl font-serif font-black">{input.companyName.charAt(0)}</span>
                             )}
@@ -354,7 +348,7 @@ export const BusinessCard: React.FC<BusinessCardProps> = ({ data, input, logoUrl
                   {layout === 'minimal-center' && (
                       <div className="h-full flex flex-col items-center justify-center text-center relative z-10">
                          <div className="w-24 h-24 mb-6 flex items-center justify-center shadow-2xl rounded-3xl overflow-hidden bg-white">
-                            {logoUrl ? <img src={logoUrl} alt="Logo" className="w-full h-full object-cover" /> : <span className="text-4xl font-serif font-black">{input.companyName.charAt(0)}</span>}
+                            {logoUrl ? <img src={logoUrl} alt="Logo" className="w-full h-full object-contain" /> : <span className="text-4xl font-serif font-black">{input.companyName.charAt(0)}</span>}
                          </div>
                          <h2 className="text-2xl font-serif font-black mb-2">{input.companyName}</h2>
                          <p className="text-[10px] font-black uppercase tracking-[0.4em] opacity-50" style={{ color: isDark ? 'white' : activeTheme.primary }}>{selectedTagline}</p>
@@ -364,7 +358,7 @@ export const BusinessCard: React.FC<BusinessCardProps> = ({ data, input, logoUrl
                   {layout === 'vertical-corporate' && (
                       <div className="h-full flex flex-col relative z-10">
                           <div className={`flex items-center justify-center border-b border-white/10 ${orientation === 'portrait' ? 'h-1/3' : 'h-1/2'}`}>
-                             {logoUrl ? <img src={logoUrl} alt="Logo" className="h-20 w-20 object-cover rounded-full border-4 border-white shadow-xl" /> : <span className="text-5xl font-serif font-black">{input.companyName.charAt(0)}</span>}
+                             {logoUrl ? <img src={logoUrl} alt="Logo" className="h-20 w-20 object-contain rounded-full border-4 border-white shadow-xl" /> : <span className="text-5xl font-serif font-black">{input.companyName.charAt(0)}</span>}
                           </div>
                           <div className="flex-1 flex flex-col justify-center items-center text-center p-4">
                               <h2 className="text-xl font-serif font-black leading-tight mb-2 uppercase tracking-tighter" style={{ color: activeTheme.primary }}>{input.companyName}</h2>
@@ -378,7 +372,7 @@ export const BusinessCard: React.FC<BusinessCardProps> = ({ data, input, logoUrl
                       <div className="h-full flex flex-col justify-center items-center relative z-10">
                           <div className="absolute top-0 left-0 w-32 h-32 bg-white/5 rounded-full blur-3xl -translate-x-10 -translate-y-10"></div>
                           <div className="relative mb-6">
-                            {logoUrl ? <img src={logoUrl} alt="Logo" className="h-24 w-24 object-cover rounded-full border-4 border-white/20 shadow-2xl" /> : <span className="text-5xl font-serif font-black text-white">{input.companyName.charAt(0)}</span>}
+                            {logoUrl ? <img src={logoUrl} alt="Logo" className="h-24 w-24 object-contain rounded-full border-4 border-white/20 shadow-2xl" /> : <span className="text-5xl font-serif font-black text-white">{input.companyName.charAt(0)}</span>}
                           </div>
                           <h2 className="text-3xl font-serif font-black tracking-tighter italic text-center">{input.companyName}</h2>
                           <p className="text-[10px] font-black uppercase tracking-[0.4em] mt-4 opacity-40">{selectedTagline}</p>
@@ -430,7 +424,7 @@ export const BusinessCard: React.FC<BusinessCardProps> = ({ data, input, logoUrl
                   <div className="flex-1 relative z-10 flex flex-col justify-center">
                       <div className="flex items-center gap-4 mb-8">
                            <div className="w-14 h-14 rounded-2xl bg-stone-50 flex items-center justify-center p-0.5 border border-stone-100 shadow-md overflow-hidden">
-                            {logoUrl ? <img src={logoUrl} alt="Logo" className="h-full w-full object-cover" /> : <span className="font-serif font-black text-xl">{input.companyName.charAt(0)}</span>}
+                            {logoUrl ? <img src={logoUrl} alt="Logo" className="h-full w-full object-contain" /> : <span className="font-serif font-black text-xl">{input.companyName.charAt(0)}</span>}
                            </div>
                            <div>
                               <h3 className="text-xl font-serif font-black leading-none mb-1" style={{color: activeTheme.primary}}>{input.companyName}</h3>

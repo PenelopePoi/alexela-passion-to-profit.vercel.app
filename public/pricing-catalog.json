@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05",
+  "updated": "2026-11-10",
   "currency": "USD",
   "packages": [
     {
@@ -9,6 +9,8 @@
       "tier": "budget",
       "description": "Start with a card that opens doors.",
       "features": [
+        "One simple logo / wordmark concept, or your supplied approved logo",
+        "Three short slogan options; one selected for your card",
         "Front-and-back business card design",
         "Three brand colors and font pairing",
         "Tested QR code linked to your destination",
@@ -37,6 +39,7 @@
       "tier": "budget",
       "description": "Put a consistent identity in more hands.",
       "features": [
+        "One simple logo / wordmark concept, or your supplied approved logo",
         "Front-and-back business card design",
         "Two custom sticker designs",
         "Six short slogan options",

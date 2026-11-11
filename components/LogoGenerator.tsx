@@ -1,3 +1,4 @@
+import {escapeXml} from '../services/productionExport';
 
 import React, { useState, useCallback, useMemo, useRef } from 'react';
 import { BrandInput, LogoCandidate } from '../types';
@@ -66,9 +67,9 @@ const VARIATION_NAMES = ['Classic', 'Bold', 'Refined'];
 function hexToRgb(hex: string): { r: number; g: number; b: number } {
   const clean = hex.replace('#', '');
   return {
-    r: parseInt(clean.substring(0, 2), 16) || 100,
-    g: parseInt(clean.substring(2, 4), 16) || 100,
-    b: parseInt(clean.substring(4, 6), 16) || 100,
+    r: parseInt(clean.substring(0, 2), 16),
+    g: parseInt(clean.substring(2, 4), 16),
+    b: parseInt(clean.substring(4, 6), 16),
   };
 }
 
@@ -691,7 +692,7 @@ function genNatureInspired(name: string, c: ColorPalette, v: number): string {
 // MAIN GENERATOR DISPATCH
 // =============================================================================
 
-function generateSVGLogo(style: LogoStyle, name: string, primaryColor: string, _industry: string, variation: number): string {
+function generateRawSVGLogo(style: LogoStyle, name: string, primaryColor: string, _industry: string, variation: number): string {
   const colors = deriveColors(primaryColor);
   const v = variation % 3;
   switch (style) {
@@ -708,6 +709,22 @@ function generateSVGLogo(style: LogoStyle, name: string, primaryColor: string, _
     case 'diamond-crest': return genDiamondCrest(name, colors, v);
     case 'nature-inspired': return genNatureInspired(name, colors, v);
   }
+}
+
+export function generateSVGLogo(style: LogoStyle, name: string, primaryColor: string, industry: string, variation: number): string {
+  const color = /^#[0-9a-f]{6}$/i.test(primaryColor) ? primaryColor : '#1a1a2e';
+  const svg = generateRawSVGLogo(style, escapeXml(name), color, industry, variation);
+  // Fit existing template type without truncating the customer's business name.
+  return svg.replace(/<text\b([^>]*)>([^<]*)<\/text>/g, (all, attrs, text) => {
+    const size = Number(attrs.match(/font-size="([\d.]+)"/)?.[1]);
+    if (!size || !text.trim()) return all;
+    const plain = text.replace(/&[^;]+;/g, 'X');
+    const spacing = Number(attrs.match(/letter-spacing="([\d.]+)"/)?.[1] || 0);
+    const x = Number(attrs.match(/(?:^|\s)x="([\d.]+)"/)?.[1] || 200);
+    const available = attrs.includes('text-anchor="middle"') ? Math.min(x, 400-x)*2-32 : 380-x;
+    const estimated = plain.length*(size*.62+spacing);
+    return estimated > available && available>0 ? `<text${attrs} textLength="${available}" lengthAdjust="spacingAndGlyphs">${text}</text>` : all;
+  });
 }
 
 function svgToDataUrl(svg: string): string {
@@ -803,7 +820,7 @@ export const LogoGenerator: React.FC<LogoGeneratorProps> = ({ brandInput, primar
           rating: 0,
         });
       }
-      onUpdateCandidates(newCandidates);
+      onUpdateCandidates(prev => [...prev.filter(c => c.status === 'liked'), ...newCandidates]);
       setIsGenerating(false);
     }, 300);
   }, [companyName, effectiveColor, industry, onUpdateCandidates]);
@@ -916,7 +933,7 @@ export const LogoGenerator: React.FC<LogoGeneratorProps> = ({ brandInput, primar
   }, []);
 
   // ---- Filtered candidates ----
-  const filteredCandidates = useMemo(() => {
+  const allFilteredCandidates = useMemo(() => {
     if (selectedStyleFilter === 'all') return candidates;
     return candidates.filter(c => {
       const meta = logoMetaStore.get(c.id);
@@ -924,10 +941,13 @@ export const LogoGenerator: React.FC<LogoGeneratorProps> = ({ brandInput, primar
     });
   }, [candidates, selectedStyleFilter]);
 
+  const [visibleCount, setVisibleCount] = useState(36);
+  const filteredCandidates = allFilteredCandidates.slice(0, visibleCount);
   const hasLikes = candidates.some(c => c.status === 'liked');
 
   return (
     <div className="glass rounded-3xl shadow-lg border-white/50 overflow-hidden h-full flex flex-col group hover:shadow-xl transition-all duration-500">
+      {allFilteredCandidates.length > visibleCount && <button className="p-4 text-teal-700" onClick={() => setVisibleCount(v => v + 36)}>Show 36 more concepts ({allFilteredCandidates.length - visibleCount} remaining)</button>}
       {/* Hidden canvas for PNG export */}
       <canvas ref={canvasRef} className="hidden" />
 

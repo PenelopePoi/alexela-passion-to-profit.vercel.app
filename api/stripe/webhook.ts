@@ -1,3 +1,4 @@
+import {firebaseConfiguration} from '../_lib/firebaseConfig.js';
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import Stripe from 'stripe';
 import { db } from '../_lib/auth.js';
@@ -166,7 +167,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  if (!stripe || !webhookSecret || !process.env.FIREBASE_PROJECT_ID || !(process.env.FIREBASE_SERVICE_ACCOUNT_KEY || process.env.GOOGLE_APPLICATION_CREDENTIALS)) {
+  if (!stripe || !webhookSecret || !firebaseConfiguration().configured) {
     return res.status(503).json({ error: 'Payment webhook backend is not configured.' });
   }
 
