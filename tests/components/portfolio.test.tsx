@@ -63,6 +63,19 @@ describe('sectioned portfolio',()=>{
   expect(screen.getByRole('button',{name:'Next project'})).toBeDisabled();
  });
 
+ it('shows complete comparisons once and keeps related artwork together across categories',()=>{
+  render(<PortfolioGallery/>);
+  expect(screen.getAllByRole('button',{name:'View Rod’s E-Bike Repair flyer'})).toHaveLength(1);
+  fireEvent.click(screen.getByRole('button',{name:'Before & After'}));
+  const region=screen.getByRole('region',{name:'Before & After'});
+  const paired=within(region).getByRole('heading',{name:'Rod’s E-Bike Repair'}).closest('article')!;
+  const before=within(paired).getByRole('heading',{name:'Before'}).parentElement!;
+  const after=within(paired).getByRole('heading',{name:'After'}).parentElement!;
+  expect(within(before).getByRole('button',{name:'View Rod’s E-Bike Repair'})).toBeInTheDocument();
+  expect(within(after).getByRole('button',{name:'View Rod’s E-Bike Repair flyer'})).toBeInTheDocument();
+  expect(within(region).queryByRole('button',{name:'View God Within'})).not.toBeInTheDocument();
+ });
+
  it('groups all four clothing brands and restores the full approved cleaning logo',()=>{
   render(<PortfolioGallery/>);
   fireEvent.click(screen.getByRole('button',{name:'Clothing Brands'}));

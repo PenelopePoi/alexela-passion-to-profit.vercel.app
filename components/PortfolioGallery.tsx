@@ -80,22 +80,111 @@ export const portfolioProjects:Project[] = annotatedProjects.flatMap((project,in
  if(index!==annotatedProjects.indexOf(siblings[0])) return [];
  return [...siblings].sort((a,b)=>(a.stage==='Before'?0:1)-(b.stage==='Before'?0:1));
 });
+const comparisons = new Map<string, Project[]>();
+for (const project of portfolioProjects) {
+ if (project.comparison) {
+  const group = comparisons.get(project.comparison) ?? [];
+  group.push(project);
+  comparisons.set(project.comparison, group);
+ }
+}
+for (const [key, group] of comparisons) {
+ if (!group.some(project => project.stage === 'Before') || !group.some(project => project.stage === 'After')) {
+  comparisons.delete(key);
+ }
+}
+
+const matchesCategory = (project: Project, category: Category) =>
+ project.category === category || project.additionalCategories?.includes(category);
+
+const comparisonTitle = (group: Project[]) =>
+ group.find(project => project.stage === 'Before')!.name.replace(/ — (before|original logo)$/i, '');
+
 function Geometry({backdrop=false}:{backdrop?:boolean}){return <svg className={backdrop?"portfolio-geometry portfolio-geometry-backdrop":"portfolio-geometry"} viewBox="0 0 400 400" fill="none" aria-hidden="true"><circle cx="200" cy="200" r="180"/>{[0,60,120,180,240,300].map(a=><circle key={a} cx="200" cy="120" r="80" transform={`rotate(${a} 200 200)`}/>)}<circle cx="200" cy="200" r="80"/><path d="M200 20 356 290H44ZM200 380 44 110H356Z"/></svg>}
 export const PortfolioGallery:React.FC=()=>{
- const [filter,setFilter]=useState<Category|'All'>('All'),[active,setActive]=useState<Project|null>(null);
+ const [filter,setFilter]=useState<Category|'All'|'Before & After'>('All'),[active,setActive]=useState<Project|null>(null);
  const dialog=useRef<HTMLDialogElement>(null),opener=useRef<HTMLButtonElement|null>(null);
- const visibleProjects=portfolioProjects.filter(project=>filter==='All'||project.category===filter||project.additionalCategories?.includes(filter));
+ const visibleProjects=portfolioProjects.filter(project=>filter === 'All' || (filter === 'Before & After'
+  ? project.comparison && comparisons.has(project.comparison)
+  : matchesCategory(project, filter)));
  const relatedProjects=active?.comparison?portfolioProjects.filter(p=>p.comparison===active.comparison):[];
  const activeIndex=active?visibleProjects.findIndex(project=>project.image===active.image):-1;
  const move=(direction:number)=>{if(activeIndex>=0)setActive(visibleProjects[(activeIndex+direction+visibleProjects.length)%visibleProjects.length]);};
  const inquiry=(category:string,name?:string)=>'/intake.html?package=custom&product='+encodeURIComponent(category+(name?' — '+name:''));
  const close=()=>{dialog.current?.close();setActive(null);opener.current?.focus();};
+ const renderPiece = (project: Project, paired = false) => (
+  <button
+   className="portfolio-piece"
+   key={project.image}
+   aria-label={`View ${project.name}`}
+   onClick={event => {
+    opener.current = event.currentTarget;
+    setActive(project);
+    dialog.current?.showModal();
+   }}
+  >
+   <div className="portfolio-image">
+    <img
+     src={project.image.endsWith('.webp') && !/^\/portfolio\/(pair|shirt)-/.test(project.image)
+      ? project.image.replace('.webp', '-thumb.webp') : project.image}
+     alt={project.name}
+     loading="lazy"
+     decoding="async"
+    />
+    <span aria-hidden="true"><Plus size={20}/></span>
+   </div>
+   {(!paired || !/ — (before|after)$/i.test(project.name)) &&
+    <div className="portfolio-caption"><span className="portfolio-item-name">{project.name}</span><ArrowUpRight size={18}/></div>}
+  </button>
+ );
+
+ const renderComparison = ([key, group]: [string, Project[]], showCategory = false) => (
+  <article className="portfolio-pair" key={key}>
+   <h4>{comparisonTitle(group)}</h4>
+   {showCategory && <p className="portfolio-pair-category">{[...new Set(group.map(project => project.category))].join(' · ')}</p>}
+   <div className="portfolio-pair-columns">
+    {(['Before', 'After'] as const).map(stage => (
+     <div className="portfolio-pair-column" key={stage}>
+      <h5 className={`portfolio-stage ${stage.toLowerCase()}`}>{stage}</h5>
+      {group.filter(project => project.stage === stage).map(project => renderPiece(project, true))}
+     </div>
+    ))}
+   </div>
+  </article>
+ );
  return <section id="portfolio-peek" className="alexela-portfolio" aria-labelledby="portfolio-title">
  <Geometry backdrop/>
  <header className="portfolio-intro"><Geometry/><p className="portfolio-kicker">THE ALEXELA PORTFOLIO</p><h2 id="portfolio-title">Ideas made <em>visible.</em></h2><p>Explore the work by what you need. Open any image to see the full design.</p></header>
- <div className="portfolio-filters" role="group" aria-label="Filter portfolio">{(['All',...portfolioSections] as const).map(name=><button key={name} aria-pressed={filter===name} onClick={()=>setFilter(name)}>{name}</button>)}</div>
+ <div className="portfolio-filters" role="group" aria-label="Filter portfolio">{(['All','Before & After',...portfolioSections] as const).map(name=><button key={name} aria-pressed={filter===name} onClick={()=>setFilter(name)}>{name}</button>)}</div>
  <p aria-live="polite" className="portfolio-result-count">{filter==='All'?'All portfolio sections':filter}</p>
- {portfolioSections.filter(name=>filter==='All'||filter===name).map(name=>{const work=visibleProjects.filter(project=>project.category===name||(filter!=='All'&&project.additionalCategories?.includes(name)));return <section className="portfolio-category" key={name} aria-label={name}><div className="portfolio-category-heading"><span aria-hidden="true">{String(portfolioSections.indexOf(name)+1).padStart(2,'0')}</span><h3>{name}</h3><small>{work.length} {work.length===1?'project':'projects'}</small></div>{name==='Logos'&&<img src="/portfolio/logos-header.webp" alt="AleXelA logo design portfolio collage" width={1536} height={1024} loading="lazy" decoding="async" style={{display:'block',width:'100%',height:'auto',borderRadius:12,marginBottom:24}}/>}{work.length?<div className="portfolio-grid">{work.map(project=><button className="portfolio-piece" key={project.image} aria-label={`View ${project.name}`} onClick={e=>{opener.current=e.currentTarget;setActive(project);dialog.current?.showModal();}}><div className="portfolio-image"><img src={project.image.endsWith('.webp')&&!/^\/portfolio\/(pair|shirt)-/.test(project.image)?project.image.replace('.webp','-thumb.webp'):project.image} alt={project.name} loading="lazy" decoding="async"/><span><Plus size={20}/></span></div><div className="portfolio-caption"><h4>{project.stage&&<span className={`portfolio-stage ${project.stage.toLowerCase()}`}>{project.stage}</span>}{project.name}</h4><ArrowUpRight size={18}/></div></button>)}</div>:<p className="portfolio-pending">Project photos are being added to this section. <a href={inquiry(name)}>Ask about {name.toLowerCase()} <ArrowUpRight size={14}/></a></p>}</section>})}
+ {filter === 'Before & After' && (
+  <section className="portfolio-category" aria-label="Before & After">
+   <div className="portfolio-category-heading"><h3>Before &amp; After</h3></div>
+   <div className="portfolio-pairs">{Array.from(comparisons, entry => renderComparison(entry, true))}</div>
+  </section>
+ )}
+ {portfolioSections.filter(name => filter === 'All' || filter === name).map(name => {
+  const pairs = [...comparisons].filter(([, group]) => filter === 'All'
+   ? group.find(project => project.stage === 'Before')?.category === name
+   : group.some(project => matchesCategory(project, name)));
+  const work = visibleProjects.filter(project =>
+   (project.category === name || (filter !== 'All' && matchesCategory(project, name))) &&
+   !(project.comparison && comparisons.has(project.comparison))
+  );
+  const count = work.length + pairs.length;
+  return (
+   <section className="portfolio-category" key={name} aria-label={name}>
+    <div className="portfolio-category-heading">
+     <h3>{name}</h3><small>{count} {count === 1 ? 'project' : 'projects'}</small>
+    </div>
+    {pairs.length > 0 && <div className="portfolio-pairs">{pairs.map(entry => renderComparison(entry))}</div>}
+    {name === 'Logos' &&
+     <img className="portfolio-logos-header" src="/portfolio/logos-header.webp" alt="AleXelA logo design portfolio collage" width={1536} height={1024} loading="lazy" decoding="async"/>}
+    {work.length > 0 && <div className="portfolio-grid">{work.map(project => renderPiece(project))}</div>}
+    {count === 0 && <p className="portfolio-pending">Project photos are being added to this section. <a href={inquiry(name)}>Ask about {name.toLowerCase()} <ArrowUpRight size={14}/></a></p>}
+   </section>
+  );
+ })}
  <dialog ref={dialog} className="portfolio-lightbox" aria-label={active?.name||'Project artwork'} onCancel={()=>{setActive(null);opener.current?.focus();}} onClick={e=>{if(e.target===e.currentTarget)close();}} onKeyDown={e=>{if(e.key==='ArrowRight'){e.preventDefault();move(1);}if(e.key==='ArrowLeft'){e.preventDefault();move(-1);}}}><button className="portfolio-close" onClick={close} aria-label="Close project"><X/></button>{active&&<><img src={active.image} alt={`${active.name} full artwork`}/><p>{active.category}{active.stage?` · ${active.stage}`:''}</p><h3>{active.name}</h3>{relatedProjects.length>1&&<div className="portfolio-comparison" role="group" aria-label="Before and after artwork">{relatedProjects.map(project=><button key={project.image} aria-pressed={project.image===active.image} onClick={()=>setActive(project)}>{project.stage}: {project.name}</button>)}</div>}<div className="portfolio-viewer-actions"><button onClick={()=>move(-1)} disabled={visibleProjects.length<2||activeIndex<0} aria-label="Previous project"><ChevronLeft size={18}/>Previous</button><span aria-live="polite">{activeIndex>=0?`${activeIndex+1} / ${visibleProjects.length}`:active.stage}</span><button onClick={()=>move(1)} disabled={visibleProjects.length<2||activeIndex<0} aria-label="Next project">Next<ChevronRight size={18}/></button><a href={inquiry(active.category,active.name)}>Request a similar project <ArrowUpRight size={16}/></a><a href={active.image} target="_blank" rel="noopener">Open full-resolution image <ArrowUpRight size={16}/></a></div></>}</dialog>
  </section>;
 };
