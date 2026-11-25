@@ -18,8 +18,9 @@ describe('approved AleXelA identity across public entry points', () => {
     const offenders = files.filter(path => /xela-logo-(?:new|clean|final|cropped)\.png|xela-branding-sheet\.png|xela-creative-branding\.vercel\.app/.test(readFileSync(path, 'utf8')));
     expect(offenders).toEqual([]);
   });
-  it('gives every standalone page the shared identity stylesheet and master favicon', () => {
-    for (const path of walk('public').filter(path => path.endsWith('.html'))) {
+  // Client previews intentionally use each client's approved branding.
+  it('gives every AleXelA standalone page the shared identity stylesheet and master favicon', () => {
+    for (const path of walk('public').filter(path => path.endsWith('.html') && !path.startsWith('public/client-previews/'))) {
       const html = readFileSync(path, 'utf8');
       expect(html, path).toContain('href="/alexela-brand.css"');
       expect(html, path).toContain('href="/alexela-logo-cutout.png"');

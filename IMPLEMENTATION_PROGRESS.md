@@ -31,3 +31,8 @@ Hosting remains blocked for new projects by Vercel account permissions. No new l
 ## Supplied Coquina Ridge flyer set
 - Added the supplied seawall/decorative-rock flyer pair intact under Flyers. Replaced the older shoreline flyer listing; original file retained. Separate from card comparison.
 - Confirms free estimates, individual/bulk rock, hand-selected pieces, Brevard County, and sod/irrigation restoration if disturbed for upcoming client website.
+
+## Coquina Ridge client website preview
+- Standalone responsive customer website at /client-previews/coquina-ridge/index.html matching supplied black/gold cards and flyers. Verified business contact from artwork; quote form prepares an SMS for user to review/send.
+- Functional local-only owner demo: expenses, advances and repayments, per-employee clock-in/out, completed hours, CSV export and browser persistence. No authentication, shared records, payroll or production backend. Explicitly labeled demonstration.
+- Existing coquina-platform repository remains untouched.
