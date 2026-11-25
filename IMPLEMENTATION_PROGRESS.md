@@ -24,3 +24,6 @@ Worksheet DOM interaction checks passed: explicit local save, JSON export creati
 - Vite production build passes.
 
 Hosting remains blocked for new projects by Vercel account permissions. No new live URL is claimed.
+
+## Coquina Ridge supplied cards — November 25
+- Supplied original and approved front/back are one before/after comparison. Web copies preserve proportions. Removed duplicate legacy card listing; source assets retained.

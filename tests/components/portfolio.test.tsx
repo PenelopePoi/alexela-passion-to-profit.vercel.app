@@ -36,7 +36,7 @@ describe('sectioned portfolio',()=>{
   fireEvent.click(screen.getByRole('button',{name:'Business Cards'}));
   fireEvent.click(screen.getByRole('button',{name:'View AleXelA — services business card'}));
   fireEvent.click(screen.getByRole('button',{name:'Next project'}));
-  expect(screen.getByRole('dialog',{name:'Coquina Ridge'})).toBeInTheDocument();
+  expect(screen.getByRole('dialog',{name:'Rod’s E-Bike Repair card'})).toBeInTheDocument();
   fireEvent.keyDown(screen.getByRole('dialog'),{key:'ArrowLeft'});
   expect(screen.getByRole('dialog',{name:'AleXelA — services business card'})).toBeInTheDocument();
   const destination=new URL(screen.getByRole('link',{name:'Request a similar project'}).getAttribute('href')!,'https://example.com');
