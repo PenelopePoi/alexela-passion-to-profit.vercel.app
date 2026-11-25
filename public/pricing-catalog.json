@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10",
+  "updated": "2026-11-25",
   "currency": "USD",
   "packages": [
     {
@@ -421,9 +421,49 @@
           "description": "Size, substrate, hardware and placement requirements confirmed before production."
         },
         {
-          "name": "Shirts & shorts",
+          "name": "Sublimation — small chest",
+          "price": "$8 / $18",
+          "description": "Starting per shirt: customer-supplied compatible garment / standard AleXelA-supplied garment. Artwork separate; specialty materials, size and complexity quoted. 12+ custom quote."
+        },
+        {
+          "name": "Sublimation — chest and back",
+          "price": "$16 / $26",
+          "description": "Starting per shirt: customer-supplied compatible garment / standard AleXelA-supplied garment. Artwork separate; specialty materials, size and complexity quoted. 12+ custom quote."
+        },
+        {
+          "name": "Sublimation — chest, back and both sleeves",
+          "price": "$24 / $34",
+          "description": "Starting per shirt: customer-supplied compatible garment / standard AleXelA-supplied garment. Artwork separate; specialty materials, size and complexity quoted. 12+ custom quote."
+        },
+        {
+          "name": "Single-color HTV — small chest",
+          "price": "$8 / $18",
+          "description": "Starting per shirt: customer-supplied compatible garment / standard AleXelA-supplied garment. Artwork separate; specialty materials, size and complexity quoted. 12+ custom quote."
+        },
+        {
+          "name": "Single-color HTV — chest and back",
+          "price": "$16 / $26",
+          "description": "Starting per shirt: customer-supplied compatible garment / standard AleXelA-supplied garment. Artwork separate; specialty materials, size and complexity quoted. 12+ custom quote."
+        },
+        {
+          "name": "Single-color HTV — four placements",
+          "price": "$28 / $38",
+          "description": "Starting per shirt: customer-supplied compatible garment / standard AleXelA-supplied garment. Artwork separate; specialty materials, size and complexity quoted. 12+ custom quote."
+        },
+        {
+          "name": "Two-color HTV — four placements",
+          "price": "$34 / $44",
+          "description": "Starting per shirt: customer-supplied compatible garment / standard AleXelA-supplied garment. Artwork separate; specialty materials, size and complexity quoted. 12+ custom quote."
+        },
+        {
+          "name": "Three-color HTV — four placements",
+          "price": "$40 / $50",
+          "description": "Starting per shirt: customer-supplied compatible garment / standard AleXelA-supplied garment. Artwork separate; specialty materials, size and complexity quoted. 12+ custom quote."
+        },
+        {
+          "name": "Shorts & specialty apparel",
           "price": "Custom quote",
-          "description": "Garment, sizes, fabric, decoration method and print locations confirmed."
+          "description": "Garment and decoration requirements confirmed."
         },
         {
           "name": "Backpacks & bags",
