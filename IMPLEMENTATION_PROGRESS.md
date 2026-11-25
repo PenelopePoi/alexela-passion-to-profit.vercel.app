@@ -16,3 +16,11 @@ Explicit save in browser storage; JSON download; browser print/PDF; deletion con
 
 ## Validation
 Worksheet DOM interaction checks passed: explicit local save, JSON export creation, print invocation, and deletion. AleXelA calculator valid/invalid margin checks passed. Soul Print and Soul & Sentence builds passed; AleXelA's 92 existing tests passed. Aurality app.js syntax check passed. Full visual/mobile and hardware testing has not been completed; local browser installation failed. No claim is made that all original tools pass end-to-end testing.
+
+## Continued work — Portable business planner
+- Validated import of previously exported notes; cross-workbook and invalid values rejected before modifying any fields.
+- Imports do not silently save to browser storage.
+- 95 tests pass, including pricing, save/delete, and valid/invalid import behavior.
+- Vite production build passes.
+
+Hosting remains blocked for new projects by Vercel account permissions. No new live URL is claimed.
