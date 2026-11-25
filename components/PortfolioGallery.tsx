@@ -41,6 +41,7 @@ const projects:Project[] = [
  {name:'DNA Remodels — after',category:'Business Cards',image:'/portfolio/pair-dna-cards-after.webp',stage:'After',comparison:'dna-cards'},
  {name:'XELA — before',category:'Album Covers',image:'/portfolio/pair-xela-album-before.webp',stage:'Before',comparison:'xela-album'},
  {name:'XELA — after',category:'Album Covers',image:'/portfolio/pair-xela-album-after.webp',stage:'After',comparison:'xela-album'},
+ {name:'Coquina Ridge — seawall and decorative coquina rock flyers',category:'Flyers',image:'/portfolio/coquina-approved-flyers.webp'},
  {name:'Coquina Ridge — before',category:'Business Cards',image:'/portfolio/pair-coquina-cards-before.webp',stage:'Before',comparison:'coquina-cards'},
  {name:'Coquina Ridge — after, front',category:'Business Cards',image:'/portfolio/pair-coquina-cards-after.webp',stage:'After',comparison:'coquina-cards'},
  {name:'Coquina Ridge — after, back',category:'Business Cards',image:'/portfolio/pair-coquina-cards-after-back.webp',stage:'After',comparison:'coquina-cards'},
@@ -61,7 +62,7 @@ const projects:Project[] = [
  ...[['Cracked to Classy','cracked-to-classy-logo'],['Rod’s E-Bike Repair','rods-ebike-logo'],['Big Boy Toys','bigboytoys-logo'],['Cristina’s Cleaning','cristinas-cleaning-approved']].map(([name,file])=>({name,category:'Logos' as const,image:'/portfolio/'+file+(file==='cristinas-cleaning-approved'?'.webp':'.png')})),
  ...[['Danbo Guitar Tech','01'],['Above All Tree Service','20']].map(([name,file])=>({name,category:'Logos' as const,image:'/gallery/work-'+file+'.jpg'})),
  ...[['Rod’s E-Bike Repair card','30']].map(([name,file])=>({name,category:'Business Cards' as const,image:'/gallery/work-'+file+'.jpg'})),
- ...[['Landscaping & Property Services','09'],['Lexi’s Landscaping','13'],['Cut to Classy / Cracked to Classy','16'],['Coquina Ridge Shoreline Services','28'],['Rod’s E-Bike Repair flyer','31']].map(([name,file])=>({name,category:'Flyers' as const,image:'/gallery/work-'+file+'.jpg'})),
+ ...[['Landscaping & Property Services','09'],['Lexi’s Landscaping','13'],['Cut to Classy / Cracked to Classy','16'],['Rod’s E-Bike Repair flyer','31']].map(([name,file])=>({name,category:'Flyers' as const,image:'/gallery/work-'+file+'.jpg'})),
  {name:'DNA Remodels',category:'Business Cards',image:'/portfolio/dna-remodels-business-card.webp'},
  {name:'Remodeling shirt design',category:'Shirts & Apparel',image:'/gallery/work-08.jpg',stage:'Before',comparison:'dna-shirt'},
 ];

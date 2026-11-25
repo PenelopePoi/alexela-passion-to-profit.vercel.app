@@ -27,3 +27,7 @@ Hosting remains blocked for new projects by Vercel account permissions. No new l
 
 ## Coquina Ridge supplied cards — November 25
 - Supplied original and approved front/back are one before/after comparison. Web copies preserve proportions. Removed duplicate legacy card listing; source assets retained.
+
+## Supplied Coquina Ridge flyer set
+- Added the supplied seawall/decorative-rock flyer pair intact under Flyers. Replaced the older shoreline flyer listing; original file retained. Separate from card comparison.
+- Confirms free estimates, individual/bulk rock, hand-selected pieces, Brevard County, and sod/irrigation restoration if disturbed for upcoming client website.
